@@ -1,0 +1,22 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "MSC_crysis"
+        },
+        {
+            "name": "Mikero",
+            "value": "DePbo.dll.8.12"
+        },
+        {
+            "name": "version",
+            "value": "22100102"
+        }
+    ]
+}
