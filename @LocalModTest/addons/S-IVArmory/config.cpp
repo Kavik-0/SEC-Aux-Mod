@@ -52,6 +52,7 @@ class CfgPatches
 	class MA_Mjolnir_Mjolnir_AA_Helmet;
 	class MA_Mjolnir_MKIV_Helmet;
 	class MA_Mjolnir_ODST_Helmet;
+    class MAPO_Mjolnir_ODST_Helmet;
 	class MA_Mjolnir_Pilot_Helmet;
 	class MA_Mjolnir_MP_Helmet;
 	class MA_Mjolnir_H3_EOD_Helmet;
@@ -2537,7 +2538,7 @@ class CfgPatches
 	{
         scope=2;
         scopeArsenal=2;
-		displayName="[EAGLE] Semi-Powered Infiltration Harness (Xeno)";
+		displayName="[EAGLE] Mirage Type II Armor Core (Xeno)";
 		MJOLNIR_isArmor = 0;
 		hiddenSelectionsTextures[]=
 		{
@@ -2702,7 +2703,7 @@ class CfgPatches
 			"S-IVArmory\data\ODST\Sky_ODST_Visor_CO.paa"
 		};
 	};
-	class SEC_MKVB_Slade_Helmet: MA_Mjolnir_ODST_Helmet
+	class SEC_MKVB_Slade_Helmet: SEC_MKVB_ODST_Helmet
 	{
         scope=2;
         scopeArsenal=2;
@@ -2713,6 +2714,23 @@ class CfgPatches
 			"S-IVArmory\data\ODST\ODST_Helmet_Slade_CO.paa",
 			"S-IVArmory\data\ODST\ODST_Visor_Slade_CO.paa"
 		};
+	};
+    class SEC_MKVB_Vikt_Helmet: MAPO_Mjolnir_ODST_Helmet
+	{
+        scope=2;
+        scopeArsenal=2;
+		displayName="[EAGLE] MJOLNIR ODST Helmet (Viktoriya)";
+		MJOLNIR_helmetOutline="S-IVArmory\data\ODST\ODSTHelmetOutline.paa";
+		hiddenSelectionsTextures[]=
+		{
+			"S-IVArmory\data\ODST\MKVB_Bittencourt_ODSTHelm_CO.paa",
+			"S-IVArmory\data\ODST\MKVB_Bittencourt_ODSTVisor_CO.paa"
+		};
+        hiddenSelectionsMaterials[]=
+        {
+            "",
+            "S-IVArmory\data\ODST\MKVB_Bittencourt_ODSTVisor.rvmat"
+        };
 	};
 	class SEC_MKVB_Marsh_Helmet: SEC_MKVB_ODST_Helmet
 	{
@@ -2786,6 +2804,7 @@ class CfgPatches
 			"S-IVArmory\data\ODST\ODST_Visor_Redfield_CO.paa"
 		};
 	};
+    class MAPO_Mjolnir_CQC_Helmet;
 	class SEC_MKVB_CQC_Helmet: MA_Mjolnir_CQC_Helmet
 	{
         scope=2;
@@ -2808,6 +2827,24 @@ class CfgPatches
 		{
 			"S-IVArmory\data\CQC\CQC_Helmet_Stitch_CO.paa",
 			"S-IVArmory\data\CQC\CQC_Visor_Stitch_CO.paa"
+		};
+	};
+    class OPTRE_MJOLNIR_CQC;
+    class SEC_Mordred_CQC_Helmet: OPTRE_MJOLNIR_CQC
+	{
+        scope=2;
+        scopeArsenal=2;
+		displayName="[EAGLE] MJOLNIR CQC Helmet (Mordred)";
+		MJOLNIR_helmetOutline="S-IVArmory\data\CQC\CQCHelmetOutline.paa";
+		hiddenSelectionsTextures[]=
+		{
+			"S-IVArmory\data\CQC\MKVB_Mordred_CQCHelm_CO.paa",
+			"S-IVArmory\data\CQC\MKVB_Mordred_CQCVisor_CO.paa"
+		};
+        hiddenSelectionsMaterials[]=
+		{
+			"",
+			"S-IVArmory\data\CQC\MKVB_Mordred_CQCVisor.rvmat"
 		};
 	};
 	class SEC_Cleatus_CQC_Helmet: SEC_MKVB_CQC_Helmet
@@ -4344,17 +4381,41 @@ class MAPO_Mjolnir_H3_EOD_Helmet;
         MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
 		hiddenSelectionsTextures[] =
 		{
-			"S-IVArmory\data\MKIV\MKIV_Mordred_Upper_CO.paa",
+			"S-IVArmory\data\MKIV\MKIVG2_Mordred_Upper_CO.paa",
 			"S-IVArmory\data\MKIV\MKIV_Lower_CO.paa",
 			"S-IVArmory\data\MKIV\MKIV_Shoulders_CO.paa",
 			"S-IVArmory\data\MKIV\MKIV_Shoulders_CO.paa"
 		};
 		hiddenSelectionsMaterials[] =
 		{
-			"S-IVArmory\data\MKIV\MKIV_Upper.rvmat",
-			"S-IVArmory\data\MKIV\MKIV_Lower.rvmat",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders.rvmat",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders.rvmat"
+			"S-IVArmory\data\MKIV\MKIVG2_Upper.rvmat",
+			"S-IVArmory\data\MKIV\MKIVG2_Lower.rvmat",
+			"S-IVArmory\data\MKIV\MKIVG2_Shoulders.rvmat",
+			"S-IVArmory\data\MKIV\MKIVG2_Shoulders.rvmat"
+		};
+	};
+    class SEC_Vikt_MKIV_Armor : MAPO_MKIV_Armor
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName = "[EAGLE] MJOLNIR Gen 2 Mark IV Armor (Viktoriya)";
+		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        MJOLNIR_shieldStrength = 100;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
+		hiddenSelectionsTextures[] =
+		{
+			"S-IVArmory\data\MKIV\MKIVG2_Viktoriya_Upper_CO.paa",
+			"S-IVArmory\data\MKIV\MKIV_Lower_CO.paa",
+			"S-IVArmory\data\MKIV\MKIV_Shoulders_CO.paa",
+			"S-IVArmory\data\MKIV\MKIV_Shoulders_CO.paa"
+		};
+		hiddenSelectionsMaterials[] =
+		{
+			"S-IVArmory\data\MKIV\MKIVG2_Upper.rvmat",
+			"S-IVArmory\data\MKIV\MKIVG2_Lower.rvmat",
+			"S-IVArmory\data\MKIV\MKIVG2_Shoulders.rvmat",
+			"S-IVArmory\data\MKIV\MKIVG2_Shoulders.rvmat"
 		};
 	};
 	class SEC_Keller_MKIV_Armor : MAPO_MKIV_Armor
@@ -12195,8 +12256,8 @@ class SEC_MKVB_BonezoneII_Shoulders: Mjolnir_MKV_Shoulders
             "MA_Armor\data\Vests\MKVB\Shoulders\Hayabusa\Olive_Hayabusa_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\JFO\Olive_JFO_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\JFO\Olive_JFO_Shoulders_CO.paa",
-            "S-IVArmory\data\MKIV\MKIV_Shoulders_Saber_co.paa",
-            "S-IVArmory\data\MKIV\MKIV_Shoulders_Saber_co.paa",
+            "S-IVArmory\data\MKIV\MKIV_Silver_Shoulders_CO.paa",
+            "S-IVArmory\data\MKIV\MKIV_Silver_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\MKV\Olive_MKV_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\MKV\Olive_MKV_Shoulders_CO.paa",
             "S-IVArmory\data\ODST\ODST_Shoulders_Redfield_CO.paa",
