@@ -5,7 +5,7 @@ class CfgPatches
         units[] = {};
         weapons[] = {};
         requiredVersion = 0.1;
-        requiredAddons[] = {"A3_Weapons_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "A3_CargoPoses_F", "19_UNSC_Weapons", "OPTRE_Weapons", "OPTRE_Weapons_Pistol", "Misriah_Armory_Weapons", "OPTRE_Core", "NSWep_Weapons", "Casey_Halo_melee"};
+        requiredAddons[] = {"A3_Weapons_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "A3_CargoPoses_F", "19_UNSC_Weapons", "OPTRE_Weapons", "OPTRE_Weapons_Pistol", "Misriah_Armory_Weapons", "OPTRE_Core", "NSWep_Weapons", "Casey_Halo_melee", "OPTRE_FC_Weapons"};
         author = "Reiken";
     };
 };
@@ -571,6 +571,18 @@ class SEC_BR85_01_silencerShot_SoundSet
 		{
 			"\SEC_Weapons\data\GunTextures\CTGCY_ARC920_Body_CTGCY.paa",
 			"\SEC_Weapons\data\GunTextures\CTGCY_ARC920_Reticle.paa"
+		};
+		magazines[]=
+		{
+			"SEC_Railgun_HE_Mag",
+			"SEC_Railgun_HEDP_Mag",
+			"SEC_Railgun_Smoke_Red",
+			"SEC_Railgun_Smoke_Blue",
+			"SEC_Railgun_Smoke_Green",
+			"SEC_Railgun_Smoke_Yellow",
+			"SEC_Railgun_Smoke_Purple",
+			"SEC_Railgun_Smoke_White",
+			"SEC_Railgun_Slugs",
 		};
 	};
 	class SEC_SRS99C: NSWep_SRS99CS2
@@ -3721,16 +3733,121 @@ class SEC_BR85_01_silencerShot_SoundSet
 		};
 	};
 };
+class CfgAmmo
+{
+	class OPTRE_FC_16x65mm_Slug;
+	class SEC_16x65mm_Slug: OPTRE_FC_16x65mm_Slug
+	{
+		hit 							= 225;
+		indirectHit 					= 100;
+		indirectHitRange 				= 0.25;
+		caliber 						= 100;
+	};
 
+	class G_40mm_HE;
+	class SEC_16x65mm_HE: G_40mm_HE
+	{
+		ace_frag_skip = 1
+		deflecting = 0
+		explosionTime = -1
+		indirectHitRange = 9;
+	};
+	class SEC_16x65mm_HEDP: SEC_16x65mm_HE
+	{
+		hit = 3000;
+		indirectHit = 200;
+		indirectHitRange = 5;
+		multiSoundHit[] = { "soundHit1", 0.2, "soundHit2", 0.2, "soundHit3", 0.2, "soundHit4", 0.2, "soundHit5", 0.2 };
+		soundHit1[] = { "\A3\Sounds_F\weapons\Explosion\expl_big_1", 2.5118864, 1, 2400 };
+		soundHit2[] = { "\A3\Sounds_F\weapons\Explosion\expl_big_2", 2.5118864, 1, 2400 };
+		soundHit3[] = { "\A3\Sounds_F\weapons\Explosion\expl_big_3", 2.5118864, 1, 2400 };
+		soundHit4[] = { "\A3\Sounds_F\weapons\Explosion\expl_shell_1", 2.5118864, 1, 2400 };
+		soundHit5[] = { "\A3\Sounds_F\weapons\Explosion\expl_shell_2", 2.5118864, 1, 2400 };
+		whistleDist = 24;
+		CraterEffects = "BombCrater";
+		explosionEffects = "BombExplosion";
+		FIR_AWS_Crater = 1;
+	};
+};
 class CfgMagazines
 {
-    
+	class OPTRE_1Rnd_SmokeRed_Grenade_shell;
+    class OPTRE_FC_Railgun_Slug;
     class CA_Magazine;
 	class OPTRE_200Rnd_127x99_M247H_Etilka_Ball;
     class CA_LauncherMagazine;
 	class OPTRE_32Rnd_762x51_Mag;
 	class OPTRE_32Rnd_762x51_Mag_Tracer;
 	class OPTRE_32Rnd_762x51_Mag_Tracer_Yellow;
+
+	class  SEC_Railgun_Smoke_Red: OPTRE_1Rnd_SmokeRed_Grenade_shell
+	{
+		displayname = "16x65mm 3rnd Impact Smoke (Red)";
+		displayNameShort = "3rnd Impact Smoke (Red)";
+		initspeed = 4900;
+		count = 3;
+		mass = 2;
+	};
+	class  SEC_Railgun_Smoke_Blue: SEC_Railgun_Smoke_Red
+	{
+		ammo = "OPTRE_40mm_SmokeBlue";
+		displayname = "16x65mm 3rnd Impact Smoke (Blue)";
+		displayNameShort = "3rnd Impact Smoke (Blue)";
+		picture = "\A3\Weapons_f\Data\UI\gear_UGL_Smokeshell_blue_CA.paa";
+	};
+	class  SEC_Railgun_Smoke_Green: SEC_Railgun_Smoke_Red
+	{
+		ammo = "OPTRE_40mm_SmokeGreen";
+		displayname = "16x65mm 3rnd Impact Smoke (Green)";
+		displayNameShort = "3rnd Impact Smoke (Green)";
+		picture = "\A3\Weapons_f\Data\UI\gear_UGL_Smokeshell_green_CA.paa";
+	};
+	class  SEC_Railgun_Smoke_Yellow: SEC_Railgun_Smoke_Red
+	{
+		ammo = "OPTRE_40mm_SmokeYellow";
+		displayname = "16x65mm 3rnd Impact Smoke (Yellow)";
+		displayNameShort = "3rnd Impact Smoke (Yellow)";
+		picture = "\A3\Weapons_f\Data\UI\gear_UGL_Smokeshell_yellow_CA.paa";
+	};
+	class  SEC_Railgun_Smoke_Purple: SEC_Railgun_Smoke_Red
+	{
+		ammo = "OPTRE_40mm_SmokePurple";
+		displayname = "16x65mm 3rnd Impact Smoke (Purple)";
+		displayNameShort = "3rnd Impact Smoke (Purple)";
+		picture = "\A3\Weapons_f\Data\UI\gear_UGL_Smokeshell_purple_CA.paa";
+	};
+	class  SEC_Railgun_Smoke_White: SEC_Railgun_Smoke_Red
+	{
+		ammo = "OPTRE_40mm_Smoke";
+		displayname = "16x65mm 3rnd Impact Smoke (White)";
+		displayNameShort = "3rnd Impact Smoke (White)";
+		picture = "\A3\Weapons_f\Data\UI\gear_UGL_Smokeshell_white_CA.paa";
+	};
+	class SEC_Railgun_Slugs: OPTRE_FC_Railgun_Slug
+	{
+		ammo = "SEC_16x65mm_Slug";
+		displayname = "16x65mm 3rnd Slug";
+		displayNameShort = "3rnd Slugs";
+		count = 3;
+	};
+	class SEC_Railgun_HE_Mag: OPTRE_FC_Railgun_Slug
+	{
+		displayname = "16x65mm Experimental HE Slug";
+		displayNameShort = "High Explosive";
+		ammo = "SEC_16x65mm_HE";
+		initspeed = 4900;
+		count = 1;
+		mass = 4;
+	};
+	class SEC_Railgun_HEDP_Mag: OPTRE_FC_Railgun_Slug
+	{
+		displayname = "16x65mm Experimental High-Yield HEDP Slug";
+		displayNameShort = "High-Yield HEDP";
+		ammo = "SEC_16x65mm_HEDP";
+		initspeed = 4900;
+		count = 1;
+		mass = 80;
+	};
 	class SEC_600Rnd_127x99_M247H_Etilka_FMJ: OPTRE_200Rnd_127x99_M247H_Etilka_Ball
 	{
 		displayname = "600Rnd M247H Box (FMJ)";
@@ -3738,7 +3855,7 @@ class CfgMagazines
 		count = 600;
 		displayNameShort = "12.7x99 FMJ";
 		lastRoundsTracer = 600;
-	}
+	};
 	class SEC_36Rnd_762x51_Mag: OPTRE_32Rnd_762x51_Mag
 	{
 		displayname							= "36Rnd 7.62x51mm Magazine";
