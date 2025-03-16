@@ -23,34 +23,46 @@ class CfgSoundShaders
 	//###################################### SHOTS ######################################
 	class SEC_BR85_Closure_SoundShader
 	{
-		samples[] = {{ "SEC_Weapons\data\sounds\H5_BR_1.wav", 1 }};
-		volume = 0.4466836;
-		range = 5;
+		samples[] = {{ "SEC_Weapons\data\sounds\H5_DMR_1.ogg", 1}};
+		range=5;
+		volume="db0";
 	};
 	class SEC_BR85_closeShot_SoundShader
 	{
-		samples[] = {{ "SEC_Weapons\data\sounds\H5_BR_Close_1.wav", 1 }};
-		volume = 1.0;
-		range = 50;
-		rangeCurve = "closeShotCurve";
+		samples[] = {{ "SEC_Weapons\data\sounds\H5_BR_Close_1.ogg", 1 }};
+		volume="db0";
+		range=50;
+		rangeCurve="closeShotCurve";
 	};
 	class SEC_BR85_midShot_SoundShader
 	{
-		samples[] = {{ "SEC_Weapons\data\sounds\H5_BR_Med_1.wav", 1 }};
-		volume = 0.7943282;
-		range = 1800;
-		rangeCurve[] = { {0,0.2}, {50,1}, {300,0}, {1800,0} };
+		samples[] = {{ "SEC_Weapons\data\sounds\H5_BR_Med_1.ogg", 1 }};
+		volume="db-3";
+		range=1200;	
+		rangeCurve[]=
+		{
+			{0,0.2},
+			{50,1},
+			{150,0},
+			{1200,0}
+		};
 	};
 	class SEC_BR85_distShot_SoundShader
 	{
-		samples[] = {{ "SEC_Weapons\data\sounds\H5_BR_Very_Far_1.wav", 1 }};
-		volume = 1.0;
-		range = 1800;
-		rangeCurve[] = { {0,0}, {50,0}, {300,1}, {1800,1} };
+		samples[] = {{ "SEC_Weapons\data\sounds\H5_BR_Very_Far_1.ogg", 1 }};
+		volume="db0";
+		range=1200;
+		rangeCurve[]=
+		{
+			{0,0},
+			{50,0},
+			{150,1},
+			{1200,1}
+		};
 	};
 	class SEC_BR85_01_silencerShot_SoundShader
 	{
-		samples[] = {{ "SEC_Weapons\data\sounds\H5_BR_Silenced_1.wav", 1 }};
+		samples[] = {{ "SEC_Weapons\data\sounds\H5_DMR_Silenced_1.ogg", 1 }};
 		volume = 1.0;
 		range = 150;
 		rangeCurve = "closeShotCurve";
@@ -58,33 +70,23 @@ class CfgSoundShaders
 };
 class CfgSoundSets
 {
-	class SEC_BR85_01_Shot_SoundSet
+	class Pistol_Shot_Base_SoundSet;
+	class Rifle_Shot_Base_SoundSet;
+	class BR85_Shot_Soundset: Rifle_Shot_Base_SoundSet
 	{
-		// array of SoundShaders to be played together with 100% synchronization
-		// note that not all SoundShaders will necessarily play, it depends on their specific configuration and also on soundShadersLimit parameter
-		soundShaders[] =
+		soundShaders[]=
 		{
-			SEC_BR85_Closure_SoundShader,
-			SEC_BR85_closeShot_SoundShader,
-			SEC_BR85_midShot_SoundShader,
-			SEC_BR85_distShot_SoundShader
+			"SEC_BR85_Closure_SoundShader",
+			"SEC_BR85_closeShot_SoundShader",
+			"SEC_BR85_midShot_SoundShader",
+			"SEC_BR85_distShot_SoundShader"
 		};
-		volumeFactor = 1.6;
-		volumeCurve = "InverseSquare2Curve";
-		sound3DProcessingType = "WeaponMediumShot3DProcessingType";
-		distanceFilter = "weaponShotDistanceFreqAttenuationFilter";
-		spatial = 1;
-		doppler = 0;
-		loop = 0;
 	};
-
-// Silenced SoundSets ------------------------------------------------
-
-class SEC_BR85_01_silencerShot_SoundSet
+	class BR85_SilencedShot_Soundset: Rifle_Shot_Base_SoundSet
 	{
-		soundShaders[] =
+		soundShaders[]=
 		{
-			SEC_BR85_01_silencerShot_SoundShader
+			"SEC_BR85_01_silencerShot_SoundShader"
 		};
 		volumeFactor = 1.6;
 		volumeCurve = "InverseSquare2Curve";
@@ -114,10 +116,8 @@ class SEC_BR85_01_silencerShot_SoundSet
 	class OPTRE_GuidedATLauncher_Base;
 	class OPTRE_GuidedAALauncher_Base;
 	class MA_Rifle_Base;
-	class OPTRE_MuzzleSlot;
 	class OPTRE_CowsSlot_Rail;
 	class OPTRE_Pointers;
-	class OPTRE_UnderBarrelSlot_rail;
 	class OPTRE_MA5B;
 	class OPTRE_MA5C;
 	class OPTRE_M41_SSR;
