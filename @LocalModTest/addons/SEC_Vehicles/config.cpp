@@ -33,7 +33,8 @@ class CfgPatches
 			"DMNS_Air_F_VTOL_01",
 			"Splits_Vehicles_Air_Pelican",
 			"TCF_DMNS_Vehicles_Nightingale",
-			"FIR_F23A_F"
+			"FIR_F23A_F",
+			"OPTRE_Vehicles_Sabre"
 		};
 	};
 	author="";
@@ -97,6 +98,7 @@ class CfgVehicles
 	class FIR_F23A;
 	class SEC_F29Nandao: FIR_F23A
 	{
+		armor=150;
 		author="Watershed Division";
 		faction="SEC_Faction_Main";
 		editorCategory="SEC_Categ_Main";
@@ -110,11 +112,23 @@ class CfgVehicles
 		fir_f23_custom_name="F-29 Strike Fighter/Interceptor 'Nandao'";
 		fir_f23_custom_code="SEC_F29Nandao";
 		editorPreview="FIR_F23A\ui\preview\pic_my.jpg";
-		driverAction="Plane_Fighter_03_Pilot";
-		driverLeftHandAnimName="throttle";
-		driverRightHandAnimName="stick";
-		driverleftleganimname="pedal";
-		driverrightleganimname="pedal";
+		hiddenselectionstextures[] = {"SEC_Vehicles\data\nandoa\body_co.paa"};
+		weapons[] = {"FIR_MasterArm","SEC_AA_Gauss_Cannon","FIR_CMLauncher","Laserdesignator_mounted"};
+		magazines[] = {"SEC_AA_Gauss_Mag","FIR_240rnd_CMFlare_Chaff_Magazine","Laserbatteries"};
+	};
+	class SEC_UNSC_F29Nandao: SEC_F29Nandao
+	{
+		author="Watershed Division";
+		faction="SEC_Faction_Main";
+		editorCategory="SEC_Categ_Main";
+		editorsubcategory="SEC_Categ_Vic_Fixed";
+		scope=2;
+		scopeCurator=2;
+		scopeArsenal=2;
+		fir_f23_custom_name="F-29 UNSC Strike Fighter/Interceptor 'Nandao'";
+		fir_f23_custom_code="SEC_F29_UNSC_Nandao";
+		hiddenselectionstextures[] = {"SEC_Vehicles\data\nandoa\body_UNSC_co.paa"};
+		displayName="[SEC/FIRAWS]F-29 UNSC Nandao";
 	};
 	class SEC_Nightingale : TCF_UNSC_Nightingale
 	{
@@ -1206,6 +1220,19 @@ class CfgAmmo
 		sideAirFriction=0.18
 		cmImmunity=0.7
 	};
+	class OPTRE_25x130mm_Slug;
+	class SEC_AA_Slug: OPTRE_25x130mm_Slug
+	{
+		access=0
+		timeToLive = 2;
+		model="\A3\Weapons_f\Data\bullettracer\shell_tracer_white"
+		tracerColor[] = {0.7,0.7,0.5,0.04};
+		tracerColorR[] = {0.7,0.7,0.5,0.04};
+		tracerEndTime = 2;
+		tracerScale = 3;
+		tracersEvery = 1;
+		tracerStartTime = 0.01;
+	};
 };
 class CfgMagazines
 {
@@ -1227,7 +1254,26 @@ class CfgMagazines
 		pylonWeapon="OPTRE_STMedusa_AAMissile";
 		maxLeadSpeed=1000;
 	};
+	class OPTRE_15Rnd_ALIM_Gauss_Slugs;
+	class SEC_AA_Gauss_Mag: OPTRE_15Rnd_ALIM_Gauss_Slugs
+	{
+		ammo="SEC_AA_Slug";
+		initSpeed=4900;
+		scope=2;
+		count=1000;
+		displayName="AA Gauss";
+		displayNameShort="AA Gauss";
+		tracersEvery=1;
+		hardpoints[]=
+		{
+			"OPTRE_Hardpoint_M1024_30mm"
+		};
+		pylonWeapon="SEC_AA_Gauss_Cannon";
+	};
 };	
+class Mode_SemiAuto;
+class Mode_Burst;
+class Mode_FullAuto;
 class cfgWeapons
 {
 	class OPTRE_missiles_C2GMLS;
@@ -1246,4 +1292,54 @@ class cfgWeapons
 		airLock=2;
 		aiAmmoUsageFlags="256";
 	};
+	class OPTRE_M1024_ASWAC_30mm_MLA;
+	class SEC_AA_Gauss_Cannon: OPTRE_M1024_ASWAC_30mm_MLA 
+	{
+		magazines[]=
+		{
+			"SEC_AA_Gauss_Mag",
+		};
+		class LowROF: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"OPTRE_Weapons\Vehicle\data\sounds\Gauss_1.wss",
+					5.5,
+					0.85,
+					1500
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			soundContinuous=0;
+			autoFire=1;
+			flash="gunfire";
+			flashSize=0.1;
+			recoil="Empty";
+			ffMagnitude=0.5;
+			ffFrequency=11;
+			ffCount=6;
+			burst=1;
+			showToPlayer=1;
+			reloadTime=0.15;
+			dispersion=0.0004999997;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=10;
+			minRange=0;
+			minRangeProbab=0.0099999998;
+			midRange=1;
+			midRangeProbab=0.0099999998;
+			maxRange=2;
+			maxRangeProbab=0.0099999998;
+		};	
+	};	
 };
