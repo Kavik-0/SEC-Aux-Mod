@@ -9802,7 +9802,7 @@ class SEC_MKVB_SECURITY_Shoulders : Mjolnir_MKV_Shoulders
     };
 };
 class SEC_MKVB_Codex_Shoulders : Mjolnir_MKV_Shoulders
-    {
+{
         scope=2;
 		scopeArsenal=2;
         displayName = "[EAGLE] MJOLNIR Custom Shoulders (Codex)";
@@ -9856,16 +9856,16 @@ class SEC_MKVB_Codex_Shoulders : Mjolnir_MKV_Shoulders
         "mkiv_right",
         "mkv_left",
         "mkv_right",
-        "odst_left",
-        //"odst_right",
+        //"odst_left",
+        "odst_right",
         "operator_left",
         "operator_right",
         "recon_left",
         "recon_right",
         "security_left",
         "security_right",
-      //"scout_left",
-      "scout_right"
+      "scout_left",
+      //"scout_right"
     };
     hiddenSelectionsTextures[]=
     {
@@ -9897,8 +9897,7 @@ class SEC_MKVB_Codex_Shoulders : Mjolnir_MKV_Shoulders
         "S-IVArmory\data\SECURITY\Gray_Security_Shoulders_CO.paa",
         "S-IVArmory\data\SCOUT\Codex_Scout_Shoulders_CO.paa",
         "S-IVArmory\data\SCOUT\Codex_Scout_Shoulders_CO.paa"
-        
-    };
+    };   
 };
 class SEC_MKVB_Grimm_Shoulders : SEC_MKVB_SECURITY_Shoulders
     {
