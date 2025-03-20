@@ -3,13 +3,28 @@ class CfgPatches
     class SEC_Overwrite
     {
         units[] = {};
-        weapons[] = {};
+        weapons[] = {"OPTRE_M45_Flashlight"};
         requiredVersion = 0.1;
-        requiredAddons[] = {"A3_Weapons_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "A3_CargoPoses_F", "19_UNSC_Weapons", "OPTRE_Weapons", "OPTRE_Weapons_Pistol", "Misriah_Armory_Weapons", "OPTRE_Core", "NSWep_Weapons", "Casey_Halo_melee", "OPTRE_FC_Weapons"};
+        requiredAddons[] = {"A3_Weapons_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "A3_CargoPoses_F", "A3_Anims_F", "19_UNSC_Weapons", "OPTRE_Weapons", "OPTRE_Weapons_Pistol", "Misriah_Armory_Weapons", "OPTRE_Core", "NSWep_Weapons", "Casey_Halo_melee", "OPTRE_FC_Weapons"};
         author = "Reiken";
     };
 };
-
+class CfgMovesBasic; // Lines 12 to 27 increase sidearm draw speed.
+class CfgMovesMaleSdr : CfgMovesBasic
+{
+	class States
+	{
+		class TransAnimBase;
+		class AmovPercMstpSrasWrflDnon_AmovPercMstpSrasWpstDnon : TransAnimBase
+		{
+			speed = 4.0; 
+		};
+		class AmovPercMstpSrasWrflDnon_AmovPercMstpSrasWpstDnon_end : AmovPercMstpSrasWrflDnon_AmovPercMstpSrasWpstDnon
+		{
+			speed = 5.0; 
+		};
+	};
+};
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
@@ -97,8 +112,8 @@ class CfgSoundSets
 		loop = 0;
 	};
 };
-	class CfgWeapons
-	{
+class CfgWeapons
+{
 	class launch_RPG7_F;
 	class hgun_Pistol_heavy_02_F;
 	class arifle_19_UNSC_M392_Base_F;
@@ -118,7 +133,6 @@ class CfgSoundSets
 	class MA_Rifle_Base;
 	class OPTRE_CowsSlot_Rail;
 	class OPTRE_Pointers;
-	class OPTRE_MA5B;
 	class OPTRE_MA5C;
 	class OPTRE_M41_SSR;
 	class OPTRE_MA5K;
@@ -157,6 +171,7 @@ class CfgSoundSets
 	class OPTRE_MA37BGL;
 	class OPTRE_BR45_Black;
 	class OPTRE_BR45GL_black;
+	class OPTRE_MA5B;
 	class OPTRE_M6GGNR;
 	class OPTRE_M6G;
 	class OPTRE_M6C;
@@ -187,7 +202,225 @@ class CfgSoundSets
 	class OPTRE_M6D_Carbine_Black_F;
 	class OPTRE_M6DS_Carbine_Foregrip_Black_F;
 	class OPTRE_BR37;
-	
+	class ItemCore;
+	class InventoryFlashLightItem_Base_F;
+	class OPTRE_M6C_Laser;
+	class ItemInfo;
+
+	class OPTRE_M6C_Flashlight: OPTRE_M6C_Laser
+	{
+		displayName = "M6C Laser (Flashlight)";
+		model = "\OPTRE_Weapons_Pistols\M6C\m6c_lam.p3d";
+		MRT_SwitchItemNextClass = "OPTRE_M6C_Laser";
+		MRT_SwitchItemPrevClass = "OPTRE_M6C_Vis_Red_Laser";
+		MRT_switchItemHintText = "Flashlight";
+		picture = "\A3\weapons_F\Data\UI\gear_accv_pointer_CA.paa";
+		scopeArsenal = 1;
+		class ItemInfo: ItemInfo
+		{
+			class FlashLight
+			{
+				color[]={255,251,248};
+				ambient[]={14.2,9,6};
+				intensity=4;
+				size=1;
+				innerAngle=15;
+				outerAngle=120;
+				coneFadeCoef=70;
+				position="laser dir";
+				direction="laser";
+				useFlare=1;
+				flareSize=1;
+				flareMaxDistance=600;
+				dayLight=1;
+				scale[]={0};
+				class Attenuation
+				{
+					start=0;
+					constant=1;
+					linear=1;
+					quadratic=0.1;
+					hardLimitStart=70;
+					hardLimitEnd=120;
+				};
+			};		
+		};	
+	};
+	class OPTRE_M6D_Flashlight: ItemCore
+	{
+		dlc = "OPTRE";
+		author = "Article 2 Studios";	
+		scope               = 2;
+		scopeArsenal        = 2;
+		displayName 		= "M6G Flashlight";
+		descriptionShort 	= "Flashlight for the M6D Handgun";
+		model 				= "\OPTRE_Weapons_Pistols\M6D\M6D_Flashlight.p3d";
+		class ItemInfo: InventoryFlashLightItem_Base_F
+		{
+			mass = 1;
+			class FlashLight
+			{
+				color[]={255,251,248};
+				ambient[]={14.2,9,6};
+				intensity=4;
+				size=1;
+				innerAngle=15;
+				outerAngle=120;
+				coneFadeCoef=70;
+				position="flash dir";
+				direction="flash";
+				useFlare=1;
+				flareSize=1;
+				flareMaxDistance=600;
+				dayLight=1;
+				scale[]={0};
+				class Attenuation
+				{
+					start=0;
+					constant=1;
+					linear=1;
+					quadratic=0.1;
+					hardLimitStart=70;
+					hardLimitEnd=120;
+				};
+			};
+		};	
+		MRT_SwitchItemNextClass = "OPTRE_M6D_IR_Laser";
+		MRT_SwitchItemPrevClass = "OPTRE_M6D_Vis_Red_Laser";
+		MRT_switchItemHintText = "Flashlight";	
+		picture = "\OPTRE_Weapons_Pistols\M6D\Data\icons\attachments\base-flashlight.paa";						
+		inertia = 0.1;
+	};
+	class OPTRE_M6G_Flashlight: ItemCore
+	{
+		dlc = "OPTRE";
+		author = "Article 2 Studios";	
+		scope               = 2;
+		scopeArsenal        = 2;
+		displayName 		= "M6G Flashlight";
+		picture 			= "\OPTRE_Weapons_Pistols\M6G\data\icons\flashlight.paa";
+		descriptionShort 	= "Flashlight for the M6G Handgun";
+		model 				= "\OPTRE_Weapons_Pistols\M6G\m6g_flashlight.p3d";
+		class ItemInfo: InventoryFlashLightItem_Base_F
+		{
+			mass = 1;
+			class FlashLight
+			{
+				color[]={255,251,248};
+				ambient[]={14.2,9,6};
+				intensity=4;
+				size=1;
+				innerAngle=15;
+				outerAngle=120;
+				coneFadeCoef=70;
+				position="flash dir";
+				direction="flash";
+				useFlare=1;
+				flareSize=1;
+				flareMaxDistance=600;
+				dayLight=1;
+				scale[]={0};
+				class Attenuation
+				{
+					start=0;
+					constant=1;
+					linear=1;
+					quadratic=0.1;
+					hardLimitStart=70;
+					hardLimitEnd=120;
+				};
+			};
+		};	
+		MRT_SwitchItemNextClass = "OPTRE_M6G_Laser";
+		MRT_SwitchItemPrevClass = "OPTRE_M6G_Vis_Red_Laser";
+		MRT_switchItemHintText = "Flashlight";							
+		inertia = 0.1;
+	};
+	class OPTRE_M7_Flashlight: ItemCore
+	{
+		dlc="OPTRE";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		displayName="M7 Flashlight";
+		picture="\a3\weapons_f\data\ui\gear_accv_flashlight_ca.paa";
+		descriptionShort="Flashlight for the M7 SMG";
+		model="\OPTRE_Weapons\SMG\m7_flashlight.p3d";
+		class ItemInfo: InventoryFlashLightItem_Base_F
+		{
+			mass=1;
+			class FlashLight
+			{
+				color[]={255,251,248};
+				ambient[]={14.2,9,6};
+				intensity=4;
+				size=1;
+				innerAngle=15;
+				outerAngle=120;
+				coneFadeCoef=70;
+				position="flash dir";
+				direction="flash";
+				useFlare=1;
+				flareSize=1;
+				flareMaxDistance=600;
+				dayLight=1;
+				scale[]={0};
+				class Attenuation
+				{
+					start=0;
+					constant=1;
+					linear=1;
+					quadratic=0.1;
+					hardLimitStart=70;
+					hardLimitEnd=120;
+				};
+			};
+		};
+		inertia=0.1
+		MRT_SwitchItemNextClass="OPTRE_M7_Laser";
+		MRT_SwitchItemPrevClass="OPTRE_M7_Vis_Red_Laser";
+		MRT_switchItemHintText="Flashlight";
+	};
+	class OPTRE_M45_Flashlight: ItemCore
+	{
+		dlc="OPTRE";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		displayName="M45 Flashlight";
+		picture="\a3\weapons_f\data\ui\gear_accv_flashlight_ca.paa";
+		descriptionShort="Flashlight for the M45 Tactical Shotgun";
+		model="\OPTRE_Weapons\Shotgun\flashlight.p3d";
+		class ItemInfo: InventoryFlashLightItem_Base_F
+		{
+			class FlashLight
+			{
+				color[]={255,251,248};
+				ambient[]={14.2,9,6};
+				intensity=4;
+				size=1;
+				innerAngle=15;
+				outerAngle=120;
+				coneFadeCoef=70;
+				position="flash dir";
+				direction="flash";
+				useFlare=1;
+				flareSize=1;
+				flareMaxDistance=600;
+				dayLight=1;
+				scale[]={0};
+				class Attenuation
+				{
+					start=0;
+					constant=1;
+					linear=1;
+					quadratic=0.1;
+					hardLimitStart=70;
+					hardLimitEnd=120;
+				};
+			};
+		};
+	};
 	class SEC_BR85HB: OPTRE_BR37
 	{
 		author="Article 2 Studios, HighLvlPilot and Reiken";
@@ -1198,6 +1431,32 @@ class CfgSoundSets
 			1,
 			30
 		};
+		class FlashLight
+		{
+			color[]={255,251,248};
+			ambient[]={14.2,9,6};
+			intensity=4;
+			size=1;
+			innerAngle=15;
+			outerAngle=120;
+			coneFadeCoef=70;
+			position="flash dir";
+			direction="flash";
+			useFlare=1;
+			flareSize=1;
+			flareMaxDistance=600;
+			dayLight=1;
+			scale[]={0};
+			class Attenuation
+			{
+				start=0;
+				constant=1;
+				linear=1;
+				quadratic=0.1;
+				hardLimitStart=70;
+				hardLimitEnd=120;
+			};
+		};	
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -1950,7 +2209,8 @@ class CfgSoundSets
 					"optre_m45_flashlight_red",
 					"OPTRE_BMR_Laser",
 					"OPTRE_M7_Laser",
-					"OPTRE_M7_Flashlight"
+					"OPTRE_M7_Flashlight",
+					"OPTRE_M7_Laser"
 				};
 			};
 		};
@@ -2794,6 +3054,32 @@ class CfgSoundSets
 			"\optre_weapons\ar\data\coverc_co.paa",
 			"\optre_weapons\optics\data\reticles\MA5_Reticle.paa"
 		};
+		class FlashLight
+		{
+			color[]={255,251,248};
+			ambient[]={14.2,9,6};
+			intensity=4;
+			size=1;
+			innerAngle=15;
+			outerAngle=120;
+			coneFadeCoef=70;
+			position="flash dir";
+			direction="flash";
+			useFlare=1;
+			flareSize=1;
+			flareMaxDistance=600;
+			dayLight=1;
+			scale[]={0};
+			class Attenuation
+			{
+				start=0;
+				constant=1;
+				linear=1;
+				quadratic=0.1;
+				hardLimitStart=70;
+				hardLimitEnd=120;
+			};
+		};	
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -2881,6 +3167,32 @@ class CfgSoundSets
 			"\optre_weapons\ar\data\coverc_co.paa",
 			"\optre_weapons\optics\data\reticles\MA5_Reticle.paa"
 		};
+		class FlashLight
+		{
+			color[]={255,251,248};
+			ambient[]={14.2,9,6};
+			intensity=4;
+			size=1;
+			innerAngle=15;
+			outerAngle=120;
+			coneFadeCoef=70;
+			position="flash dir";
+			direction="flash";
+			useFlare=1;
+			flareSize=1;
+			flareMaxDistance=600;
+			dayLight=1;
+			scale[]={0};
+			class Attenuation
+			{
+				start=0;
+				constant=1;
+				linear=1;
+				quadratic=0.1;
+				hardLimitStart=70;
+				hardLimitEnd=120;
+			};
+		};
 		magazineWell[] = {"SEC_Magwell_MA5D"};
 		class WeaponSlotsInfo
 		{
@@ -2965,6 +3277,32 @@ class CfgSoundSets
 			30
 		};
 		hiddenSelectionsTextures[]  = {"SEC_Weapons\data\GunTextures\CTGCY_MA5K_Body_CTGCY"};
+		class FlashLight
+		{
+			color[]={255,251,248};
+			ambient[]={14.2,9,6};
+			intensity=4;
+			size=1;
+			innerAngle=15;
+			outerAngle=120;
+			coneFadeCoef=70;
+			position="flash dir";
+			direction="flash";
+			useFlare=1;
+			flareSize=1;
+			flareMaxDistance=600;
+			dayLight=1;
+			scale[]={0};
+			class Attenuation
+			{
+				start=0;
+				constant=1;
+				linear=1;
+				quadratic=0.1;
+				hardLimitStart=70;
+				hardLimitEnd=120;
+			};
+		};
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -3142,6 +3480,32 @@ class CfgSoundSets
 			1,
 			30
 		};
+		class FlashLight
+		{
+			color[]={255,251,248};
+			ambient[]={14.2,9,6};
+			intensity=4;
+			size=1;
+			innerAngle=15;
+			outerAngle=120;
+			coneFadeCoef=70;
+			position="flash dir";
+			direction="flash";
+			useFlare=1;
+			flareSize=1;
+			flareMaxDistance=600;
+			dayLight=1;
+			scale[]={0};
+			class Attenuation
+			{
+				start=0;
+				constant=1;
+				linear=1;
+				quadratic=0.1;
+				hardLimitStart=70;
+				hardLimitEnd=120;
+			};
+		};
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -3236,6 +3600,32 @@ class CfgSoundSets
 			"SEC_Weapons\data\GunTextures\CTGCY_MA3_FL_CTGCY.paa", 
 			"SEC_Weapons\data\GunTextures\CTGCY_MA3_Cover_CTGCY.paa",
 			"\optre_weapons\ar\data\r_ar_ca.paa"
+		};		
+		class FlashLight
+		{
+			color[]={255,251,248};
+			ambient[]={14.2,9,6};
+			intensity=4;
+			size=1;
+			innerAngle=15;
+			outerAngle=120;
+			coneFadeCoef=70;
+			position="flash dir";
+			direction="flash";
+			useFlare=1;
+			flareSize=1;
+			flareMaxDistance=600;
+			dayLight=1;
+			scale[]={0};
+			class Attenuation
+			{
+				start=0;
+				constant=1;
+				linear=1;
+				quadratic=0.1;
+				hardLimitStart=70;
+				hardLimitEnd=120;
+			};
 		};
 		class WeaponSlotsInfo
 		{
@@ -3285,6 +3675,32 @@ class CfgSoundSets
 		{
 			"\SEC_Weapons\data\GunTextures\CTGCY_MA3_GL_CTGCY.paa",
 			"\optre_weapons\ar\data\ironsights_co.paa"
+		};
+		class FlashLight
+		{
+			color[]={255,251,248};
+			ambient[]={14.2,9,6};
+			intensity=4;
+			size=1;
+			innerAngle=15;
+			outerAngle=120;
+			coneFadeCoef=70;
+			position="flash dir";
+			direction="flash";
+			useFlare=1;
+			flareSize=1;
+			flareMaxDistance=600;
+			dayLight=1;
+			scale[]={0};
+			class Attenuation
+			{
+				start=0;
+				constant=1;
+				linear=1;
+				quadratic=0.1;
+				hardLimitStart=70;
+				hardLimitEnd=120;
+			};
 		};
 		class WeaponSlotsInfo
 		{
@@ -3889,15 +4305,19 @@ class cfgMagazineWells
 			"SEC_600Rnd_127x99_M247H_Etilka_FMJ"
 		};
 	};
-	class 19_UNSC_M90_Magwell {
-		UNSC_8ga_12rnd[] = {
+	class 19_UNSC_M90_Magwell 
+	{
+		UNSC_8ga_12rnd[] = 
+		{
 			"12Rnd_8Gauge",
 			"12Rnd_8Gauge_slug",
 			"12Rnd_8Gauge_slug_tracer"
 		};
 	};
-	class SEC_Magwell_MA5D {
-		SEC_762x51_36Rnd[] = {
+	class SEC_Magwell_MA5D 
+	{
+		SEC_762x51_36Rnd[] = 
+		{
 			"SEC_36Rnd_762x51_Mag",
 			"SEC_36Rnd_762x51_Mag_Tracer",
 			"SEC_36Rnd_762x51_Mag_Tracer_Yellow"
