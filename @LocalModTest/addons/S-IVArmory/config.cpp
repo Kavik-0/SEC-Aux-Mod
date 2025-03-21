@@ -2978,7 +2978,7 @@ class SEC_MKVB_Horne_Helmet: SEC_MKVB_GUNGNIR_Helmet
         "S-IVArmory\data\JFO\Gray_JFO_Helmet_CO.paa",
         "S-IVArmory\data\JFO\Gold_JFO_Visor_CO.paa"
     };
-
+};
 class MAPO_JFO_Helmet;
 class SEC_MKVB_JFO_Joker_Helmet: MAPO_JFO_Helmet
 {
@@ -3086,7 +3086,7 @@ class SEC_MKVB_HRTBRK_Helmet: SEC_MKVB_PILOT_Helmet
 {
         scope=2;
         scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Mark V.[MP] Helmet";
+		displayName="[EAGLE] MJOLNIR Mark V.[MP] Helmet (Colonial Police)";
 		MJOLNIR_helmetOutline="S-IVArmory\data\MP\MPHelmetOutline_CA.paa";
 		hiddenSelectionsTextures[]=
 		{
