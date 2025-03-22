@@ -2536,18 +2536,6 @@ class SEC_MKVB_Jax_Helmet: SEC_MKVB_MKV_Helmet
         "S-IVArmory\data\MKV\MKV_Visor_Jax_CO.paa"
     };
 };
-class SEC_MKVB_Gambit_Helmet: SEC_MKVB_MKV_Helmet
-{
-    scope=2;
-    scopeArsenal=2;
-    displayName="[EAGLE] MJOLNIR Mark V Helmet (Gambit)";
-	MJOLNIR_helmetOutline="S-IVArmory\data\MKV\MKVHelmetOutline_CA.paa";
-    hiddenSelectionsTextures[]=
-    {
-        "S-IVArmory\data\MKV\Gambit_MKV_Helmet_CO.paa",
-        "S-IVArmory\data\MKV\Gambit_MKV_Visor_CO.paa"
-    };
-};
 class SEC_MKVB_Callahan_Helmet: MA_Mjolnir_Commando_Helmet
 {
     scope=2;
@@ -2589,7 +2577,7 @@ class SEC_Guest34th_Helmet: SEC_MKVB_MKV_Helmet
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR EVA Helmet";
+		displayName="[EAGLE] MJOLNIR Mark V.[V] Helmet";
 		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
 		hiddenSelectionsTextures[]=	
 		{
@@ -2601,7 +2589,7 @@ class SEC_Guest34th_Helmet: SEC_MKVB_MKV_Helmet
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR EVA Helmet (Deadpool)";
+		displayName="[EAGLE] MJOLNIR Mark V.[V] Helmet (Deadpool)";
 		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
 		hiddenSelectionsTextures[]=	
 		{
@@ -2630,7 +2618,7 @@ class SEC_Guest34th_Helmet: SEC_MKVB_MKV_Helmet
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Mark IV/K Helmet (Cain)";
+		displayName="[EAGLE] MJOLNIR Mark IV.[K] Helmet (Cain)";
 		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
 		hiddenSelectionsTextures[]=	
 		{
@@ -2647,7 +2635,7 @@ class SEC_Guest34th_Helmet: SEC_MKVB_MKV_Helmet
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR EVA Helmet (Bittencourt)";
+		displayName="[EAGLE] MJOLNIR Mark V.[V] Helmet (Bittencourt)";
 		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
 		hiddenSelectionsTextures[]=	
 		{
@@ -2664,15 +2652,19 @@ class SEC_Guest34th_Helmet: SEC_MKVB_MKV_Helmet
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR EVA Helmet (NOBLE Wrath)";
+		displayName="[EAGLE] MJOLNIR Mark V.[V] Helmet (NOBLE Wrath)";
 		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
 		hiddenSelectionsTextures[]=	
 		{
 			"S-IVArmory\data\NOBLE\Emile_EVA_Helmet_CO.paa",
 			"S-IVArmory\data\Noble\Emile_EVA_Visor_CO.paa"
 		};
+        hiddenSelectionsMaterials[]=	
+		{
+			"",
+			"S-IVArmory\data\Noble\EVA_Visor.rvmat"
+		};
 	};
-	
 	class SEC_MKVB_COMMANDO_Helmet: MA_Mjolnir_Commando_Helmet
 {
     scope=2;
@@ -2768,18 +2760,6 @@ class SEC_MKVB_Onyx_Helmet: SEC_MKVB_COMMANDO_Helmet
 		{
 			"S-IVArmory\data\RECON\Recon_Helmet_Patterson_CO.paa",
 			"S-IVArmory\data\RECON\Recon_Visor_Patterson_CO.paa"
-		};
-};
-class SEC_RECON_Gambit_Helmet: SEC_MKVB_RECON_Helmet
-{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Mark V.[R] Helmet (Gambit)";
-		MJOLNIR_helmetOutline="S-IVArmory\data\RECON\ReconHelmetOutline.paa";
-		hiddenSelectionsTextures[]=
-		{
-			"S-IVArmory\data\RECON\Gambit_Recon_Helmet_CO.paa",
-			"S-IVArmory\data\RECON\Gambit_Recon_Visor_CO.paa"
 		};
 };
 class SEC_RECON_Hesh_Helmet: SEC_MKVB_RECON_Helmet
@@ -3871,7 +3851,7 @@ class SEC_MKVB_HRTBRK_Helmet: SEC_MKVB_PILOT_Helmet
     {
         scope=2;
 		scopeArsenal=2;
-        displayName = "[EAGLE] MJOLNIR MKV Shoulders";
+        displayName = "[EAGLE] MJOLNIR Mark V Shoulders";
 		maximumLoad = 400;
         mass = 50;
         hiddenSelectionsTextures[] =
@@ -6071,7 +6051,7 @@ class SEC_MKVB_EVA_Shoulders : Mjolnir_MKV_Shoulders
     {
         scope=2;
 		scopeArsenal=2;
-        displayName = "[EAGLE] MJOLNIR EVA Shoulders";
+        displayName = "[EAGLE] MJOLNIR Mark V.[V] Shoulders";
 		maximumLoad = 400;
         mass = 50;
         hiddenSelections[]=
@@ -7351,7 +7331,7 @@ class SEC_MKVB_OPER_Shoulders : Mjolnir_MKV_Shoulders
     {
         scope=2;
 		scopeArsenal=2;
-        displayName = "[EAGLE] MJOLNIR Operator Shoulders";
+        displayName = "[EAGLE] MJOLNIR Mark V.[O] Shoulders";
 		maximumLoad = 400;
         mass = 50;
         hiddenSelections[]=
@@ -8286,7 +8266,7 @@ class SEC_MKVB_SECURITY_Shoulders : Mjolnir_MKV_Shoulders
     {
         scope=2;
 		scopeArsenal=2;
-        displayName = "[EAGLE] MJOLNIR Security Shoulders";
+        displayName = "[EAGLE] MJOLNIR Mark V.[M] Shoulders";
 		maximumLoad = 400;
         mass = 50;
         hiddenSelections[]=
