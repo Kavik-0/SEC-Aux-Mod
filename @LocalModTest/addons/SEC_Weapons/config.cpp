@@ -5,7 +5,7 @@ class CfgPatches
         units[] = {};
         weapons[] = {"OPTRE_M45_Flashlight"};
         requiredVersion = 0.1;
-        requiredAddons[] = {"A3_Weapons_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "A3_CargoPoses_F", "A3_Anims_F", "19_UNSC_Weapons", "OPTRE_Weapons", "OPTRE_Weapons_Pistol", "Misriah_Armory_Weapons", "OPTRE_Core", "NSWep_Weapons", "Casey_Halo_melee", "OPTRE_FC_Weapons"};
+        requiredAddons[] = {"A3_Weapons_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "A3_CargoPoses_F", "A3_Anims_F", "OPTRE_Weapons", "OPTRE_Weapons_Pistol", "Misriah_Armory_Weapons", "OPTRE_Core", "NSWep_Weapons", "Casey_Halo_melee", "OPTRE_FC_Weapons"};
         author = "Reiken";
     };
 };
@@ -33,94 +33,10 @@ class CowsSlot;
 class PointerSlot;
 class UnderBarrelSlot;
 class BaseSoundModeType;
-class CfgSoundShaders
-{
-	//###################################### SHOTS ######################################
-	class SEC_BR85_Closure_SoundShader
-	{
-		samples[] = {{ "SEC_Weapons\data\sounds\H5_DMR_1.ogg", 1}};
-		range=5;
-		volume="db0";
-	};
-	class SEC_BR85_closeShot_SoundShader
-	{
-		samples[] = {{ "SEC_Weapons\data\sounds\H5_BR_Close_1.ogg", 1 }};
-		volume="db0";
-		range=50;
-		rangeCurve="closeShotCurve";
-	};
-	class SEC_BR85_midShot_SoundShader
-	{
-		samples[] = {{ "SEC_Weapons\data\sounds\H5_BR_Med_1.ogg", 1 }};
-		volume="db-3";
-		range=1200;	
-		rangeCurve[]=
-		{
-			{0,0.2},
-			{50,1},
-			{150,0},
-			{1200,0}
-		};
-	};
-	class SEC_BR85_distShot_SoundShader
-	{
-		samples[] = {{ "SEC_Weapons\data\sounds\H5_BR_Very_Far_1.ogg", 1 }};
-		volume="db0";
-		range=1200;
-		rangeCurve[]=
-		{
-			{0,0},
-			{50,0},
-			{150,1},
-			{1200,1}
-		};
-	};
-	class SEC_BR85_01_silencerShot_SoundShader
-	{
-		samples[] = {{ "SEC_Weapons\data\sounds\H5_DMR_Silenced_1.ogg", 1 }};
-		volume = 1.0;
-		range = 150;
-		rangeCurve = "closeShotCurve";
-	};
-};
-class CfgSoundSets
-{
-	class Pistol_Shot_Base_SoundSet;
-	class Rifle_Shot_Base_SoundSet;
-	class BR85_Shot_Soundset: Rifle_Shot_Base_SoundSet
-	{
-		soundShaders[]=
-		{
-			"SEC_BR85_Closure_SoundShader",
-			"SEC_BR85_closeShot_SoundShader",
-			"SEC_BR85_midShot_SoundShader",
-			"SEC_BR85_distShot_SoundShader"
-		};
-	};
-	class BR85_SilencedShot_Soundset: Rifle_Shot_Base_SoundSet
-	{
-		soundShaders[]=
-		{
-			"SEC_BR85_01_silencerShot_SoundShader"
-		};
-		volumeFactor = 1.6;
-		volumeCurve = "InverseSquare2Curve";
-		sound3DProcessingType = "WeaponMediumShot3DProcessingType";
-		distanceFilter = "weaponShotDistanceFreqAttenuationFilter";
-		spatial = 1;
-		doppler = 0;
-		loop = 0;
-	};
-};
 class CfgWeapons
 {
 	class launch_RPG7_F;
 	class hgun_Pistol_heavy_02_F;
-	class arifle_19_UNSC_M392_Base_F;
-	class apistol_19_UNSC_M6C_Base_F;
-	class arifle_19_UNSC_m7_Base_F;
-	class arifle_19_UNSC_M90_Base_F;
-	class arifle_19_UNSC_SRS99AM_Base_F;
 	class OPTRE_Handgun_Base;
 	class arifle_Mk20_F;
 	class OPTRE_DMR_Base;
@@ -146,11 +62,6 @@ class CfgWeapons
 	class NSWep_BR55HBM1CQC;
 	class NSWep_BR55HBM1GL;
 	class NSWep_MA5BGL;
-	class 19_UNSC_M392;
-	class 19_UNSC_M6C;
-	class 19_UNSC_M7;
-	class 19_UNSC_M7_Side;
-	class 19_UNSC_M90;
 	class NSWep_SRS99AM;
 	class OPTRE_M247;
 	class OPTRE_M73;
@@ -421,218 +332,6 @@ class CfgWeapons
 			};
 		};
 	};
-	class SEC_BR85HB: OPTRE_BR37
-	{
-		author="Article 2 Studios, HighLvlPilot and Reiken";
-		scope=2;
-		scopeArsenal=2;
-		baseWeapon = "SEC_BR85HB";
-		displayName="[EAGLE] BR-85HB Service Rifle";
-		descriptionShort="A Post-War Battle Rifle designed for anti-alien combat, optimized for 3-round Burst.";
-		model="OPTRE_Weapons\BR\BR37.p3d";
-		picture 				= "\OPTRE_weapons\br\icons\br37_icon.paa";
-		magazines[] 			= {"OPTRE_36Rnd_95x40_Mag"};
-		ODST_1					= "OPTRE_ODST_HUD_AmmoCount_BR";
-		Glasses					= "OPTRE_GLASS_HUD_AmmoCount_BR";
-		Eye						= "OPTRE_EYE_HUD_AmmoCount_BR";
-		HUD_BulletInARows		= 1;
-		HUD_TotalPosibleBullet	= 36;
-		dispersion				= 0.00001;
-		maxZeroing				=	1500;
-        magazineWell[] 			= {"OPTRE_Magwell_BR55"};
-		handAnim[] =
-		{
-			"OFP2_ManSkeleton", "\OPTRE_Weapons\DMR\anim\Handanim_M395.rtm",
-			"Spartan_ManSkeleton", "\OPTRE_MJOLNIR\data\anims\OPTRE_anims\Weapons\Handanim_M395_Spartan.rtm"
-		};
-		hiddenSelections[]= {
-			"camo1",
-			"camo2",
-			"camo3"
-		};
-		hiddenSelectionsTextures[] = {
-			"SEC_Weapons\data\BR85\br85_1_co.paa",
-			"SEC_Weapons\data\BR85\br85_2_co.paa",
-			"SEC_Weapons\data\BR85\br85_3_co.paa"
-		};
-		hiddenSelectionsMaterials[] = {
-			"SEC_Weapons\data\BR85\br85_1.rvmat",
-			"SEC_Weapons\data\BR85\br85_2.rvmat",
-			"SEC_Weapons\data\BR85\br85_3.rvmat"
-		};
-		modes[]= {
-			"Single","Burst"
-		};
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\BR55_Reload.ogg",
-			5,
-			1,
-			30
-		};
-		class WeaponSlotsInfo
-		{
-			mass=84;
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleitems[]=
-				{
-					"NSWep_BR55M1_Suppressor",
-					"optre_ma5suppressor",
-					"OPTRE_M7_Silencer",
-					"41st_Bayonet2",
-					"145_Inches_Barrel_Bayonet"
-				};
-			};
-			class CowsSlot: CowsSlot
-			{
-				compatibleitems[]=
-				{
-				"NSWep_BR55M1A2_Optic",
-				"NSWep_BR55M1A2_3D_Optic",
-				"NSWep_BR55M1A2LR_Optic",
-				"NSWep_BR55M1A2M1_Optic",
-				"OPTRE_M7_Sight",
-				"OPTRE_M12_Optic",
-				"OPTRE_M12_Optic_Red",
-				"OPTRE_M12_Optic_Green",
-				"OPTRE_M6C_Scope",
-				"Optre_Recon_Sight",
-				"Optre_Recon_Sight_Red",
-				"Optre_Recon_Sight_Green",
-				"Optre_Recon_Sight_Desert",
-				"Optre_Recon_Sight_UNSC",
-				"Optre_Recon_Sight_Snow",
-				"OPTRE_BR45_Scope",
-				"OPTRE_BR55HB_Scope",
-				"OPTRE_BR55HB_Scope_Grey",
-				"OPTRE_BMR_Scope",
-				"OPTRE_M392_Scope",
-				"OPTRE_M393_Scope",
-				"OPTRE_M393_ACOG",
-				"OPTRE_M393_EOTECH",
-				"OPTRE_M73_SmartLink",
-				"Optre_Evo_Sight_Riser",
-				"Optre_Evo_Sight",
-				"optic_MRCO",
-				"optic_Hamr",
-				"optic_ERCO_blk_F",
-				"optic_Holosight_blk_F",
-				"optic_Arco_blk_F",
-				"optic_dms",
-				"optic_Nightstalker",
-				"optic_SOS"
-				};
-			};
-			class PointerSlot: PointerSlot
-			{
-				compatibleitems[]=
-				{
-					"acc_pointer_ir",
-					"ace_acc_pointer_green",
-					"acc_flashlight",
-					"optre_m45_flashlight",
-					"optre_m45_flashlight_red",
-					"OPTRE_BMR_Laser"
-				};
-			};
-		};
-	};
-	class SEC_BR85N: SEC_BR85HB
-	{
-		author="Article 2 Studios, HighLvlPilot and Reiken";
-		scope=2;
-		scopeArsenal=2;
-		baseWeapon = "SEC_BR85N";
-		displayName="[EAGLE] BR-85N Service Rifle";
-		descriptionShort="A Post-War Battle Rifle designed for anti-alien combat, optimized for 3-round Burst.";
-		hiddenSelections[]= {
-			"camo1",
-			"camo2",
-			"camo3"
-		};
-		hiddenSelectionsTextures[] = {
-			"SEC_Weapons\data\BR85\br85n_1_co.paa",
-			"SEC_Weapons\data\BR85\br85n_2_co.paa",
-			"SEC_Weapons\data\BR85\br85n_3_co.paa"
-		};
-	};
-	class SEC_BR85WDL: SEC_BR85HB
-	{
-		author="Article 2 Studios, HighLvlPilot and Reiken";
-		scope=2;
-		scopeArsenal=2;
-		baseWeapon = "SEC_BR85WDL";
-		displayName="[EAGLE] BR-85N Service Rifle (Woodland)";
-		descriptionShort="A Post-War Battle Rifle designed for anti-alien combat, optimized for 3-round Burst.";
-		hiddenSelections[]= {
-			"camo1",
-			"camo2",
-			"camo3"
-		};
-		hiddenSelectionsTextures[] = {
-			"SEC_Weapons\data\BR85\br85wdl_1_co.paa",
-			"SEC_Weapons\data\BR85\br85wdl_2_co.paa",
-			"SEC_Weapons\data\BR85\br85wdl_3_co.paa"
-		};
-	};
-	class SEC_BR85ARC: SEC_BR85HB
-	{
-		author="Article 2 Studios, HighLvlPilot and Reiken";
-		scope=2;
-		scopeArsenal=2;
-		baseWeapon = "SEC_BR85ARC";
-		displayName="[EAGLE] BR-85N Service Rifle (Arctic)";
-		descriptionShort="A Post-War Battle Rifle designed for anti-alien combat, optimized for 3-round Burst.";
-		hiddenSelections[]= {
-			"camo1",
-			"camo2",
-			"camo3"
-		};
-		hiddenSelectionsTextures[] = {
-			"SEC_Weapons\data\BR85\br85arc_1_co.paa",
-			"SEC_Weapons\data\BR85\br85arc_2_co.paa",
-			"SEC_Weapons\data\BR85\br85arc_3_co.paa"
-		};
-	};
-	class SEC_BR85DES: SEC_BR85HB
-	{
-		author="Article 2 Studios, HighLvlPilot and Reiken";
-		scope=2;
-		scopeArsenal=2;
-		baseWeapon = "SEC_BR85DES";
-		displayName="[EAGLE] BR-85N Service Rifle (Desert)";
-		descriptionShort="A Post-War Battle Rifle designed for anti-alien combat, optimized for 3-round Burst.";
-		hiddenSelections[]= {
-			"camo1",
-			"camo2",
-			"camo3"
-		};
-		hiddenSelectionsTextures[] = {
-			"SEC_Weapons\data\BR85\br85des_1_co.paa",
-			"SEC_Weapons\data\BR85\br85des_2_co.paa",
-			"SEC_Weapons\data\BR85\br85des_3_co.paa"
-		};
-	};
-	class SEC_BR85NAV: SEC_BR85HB
-	{
-		author="Article 2 Studios, HighLvlPilot and Reiken";
-		scope=2;
-		scopeArsenal=2;
-		baseWeapon = "SEC_BR85NAV";
-		displayName="[EAGLE] BR-85N Service Rifle (Naval)";
-		descriptionShort="A Post-War Battle Rifle designed for anti-alien combat, optimized for 3-round Burst.";
-		hiddenSelections[]= {
-			"camo1",
-			"camo2",
-			"camo3"
-		};
-		hiddenSelectionsTextures[] = {
-			"SEC_Weapons\data\BR85\br85nav_1_co.paa",
-			"SEC_Weapons\data\BR85\br85nav_2_co.paa",
-			"SEC_Weapons\data\BR85\br85nav_3_co.paa"
-		};
-	};
 	class SEC_M6D_Carbine: OPTRE_M6D_Carbine_Black_F
 	{
 		displayName="[EAGLE] M6D Carbine"
@@ -781,13 +480,7 @@ class CfgWeapons
 	{
 		displayName="[EAGLE] M99A2S3 SASR"
 		baseWeapon="SEC_M99A2S3";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\SRS_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 	};
 	class SEC_M7SCaseless: MA_M7_SMG
 	{
@@ -823,13 +516,7 @@ class CfgWeapons
 		displayName="[EAGLE] SRS99-CS2 Sniper Rifle"
 		baseWeapon="SEC_SRS99C";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\SniperRifles\srs99c.paa";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\SRS_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -890,13 +577,7 @@ class CfgWeapons
 		displayName="[EAGLE] SRS99-DS2 Sniper Rifle"
 		baseWeapon="SEC_SRS99D";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\SniperRifles\srs99c.paa";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\SRS_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -957,13 +638,7 @@ class CfgWeapons
 		displayName="[EAGLE] SRS99-AM Sniper Rifle"
 		baseWeapon="SEC_SRS99AM";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\SniperRifles\srs99c.paa";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\SRS_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -1107,13 +782,7 @@ class CfgWeapons
 	{
 		displayName="[EAGLE] BR-75 Service Rifle";
 		baseWeapon="SEC_BR75";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\BR55_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		hiddenSelectionsTextures[]=
 		{
 			"\SEC_Weapons\data\GunTextures\CTGCY_BR55_Body1_CTGCY.paa",
@@ -1345,13 +1014,7 @@ class CfgWeapons
 		baseWeapon="SEC_MA2B_AR";
 		picture="SEC_Weapons\data\weaponIcons\ma2b_icon.paa";
 		reloadAction="GestureReloadBR55";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\MA5A_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -1424,13 +1087,7 @@ class CfgWeapons
 		displayName="[EAGLE] MA5B Gen 1 ICWS";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\AssaultRifles\MA5C_icon.paa";
 		baseWeapon="SEC_MA5B_GEN1";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\MA5B_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		class FlashLight
 		{
 			color[]={255,251,248};
@@ -1527,13 +1184,7 @@ class CfgWeapons
 		displayName="[EAGLE] MA5B Gen 1 ICWS (UGL)";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\AssaultRifles\MA5C_icon.paa";
 		baseWeapon="SEC_MA5B_gl";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\MA5B_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -1602,13 +1253,7 @@ class CfgWeapons
 		displayName="[EAGLE] BR-55HB Service Rifle (UGL)";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\BattleRifles\BR55_icon.paa";
 		baseWeapon="SEC_BR55GL";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\BR55_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		modes[]= {
 			"Single","Burst"
 		};
@@ -1689,13 +1334,7 @@ class CfgWeapons
 		displayName="[EAGLE] BR-55 Service Rifle";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\BattleRifles\BR55_icon.paa";
 		baseWeapon="SEC_BR55";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\BR55_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		modes[]= {
 			"Single","Burst"
 		};
@@ -1778,13 +1417,7 @@ class CfgWeapons
 		displayName="[EAGLE] BR-55 Carbine";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\BattleRifles\BR55_icon.paa";
 		baseWeapon="SEC_BR55CQC";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\BR55_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -1864,13 +1497,7 @@ class CfgWeapons
 		displayName="[EAGLE] BR-55 Marksman Rifle";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\BattleRifles\BR55_icon.paa";
 		baseWeapon="SEC_BR55MKM";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\BR55_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		modes[]= {
 			"Single","Burst"
 		};
@@ -1953,13 +1580,7 @@ class CfgWeapons
 		displayName="[EAGLE] BR-55HB Service Rifle";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\BattleRifles\BR55_icon.paa";
 		baseWeapon="SEC_BR55HB";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\BR55_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		modes[]= {
 			"Single","Burst"
 		};
@@ -2126,13 +1747,6 @@ class CfgWeapons
 		displayName="[EAGLE] M7/Caseless Submachine Gun (Gen1)";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\SubmachineGuns\m7_icon.paa";
 		baseWeapon="SEC_M7_Gen1";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\M7_Reload.ogg",
-			5,
-			1,
-			30
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\SEC_Weapons\data\GunTextures\CTGCY_M7_Body_CTGCY.paa",
@@ -2357,13 +1971,6 @@ class CfgWeapons
 		displayName="[EAGLE] M7/Caseless Submachine Gun (Gen2)";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\SubmachineGuns\m7_icon.paa";
 		baseWeapon="SEC_M7_Gen2";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\M7_Reload.ogg",
-			5,
-			1,
-			30
-		};
 	};
 	class SEC_M7_Gen2_Sidearm: 19_UNSC_M7_Side
 	{
@@ -3041,13 +2648,7 @@ class CfgWeapons
 	{
 		displayName="[EAGLE] MA5B ICWS (Gen2)";
 		baseWeapon="SEC_MA5B_GEN2";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\MA5B_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		hiddenSelectionsTextures[] = {
 			"SEC_Weapons\data\GunTextures\CTGCY_MA5_FL_CTGCY.paa",
 			"SEC_Weapons\data\GunTextures\CTGCY_MA5B_Cover_BLANK.paa",
@@ -3154,13 +2755,7 @@ class CfgWeapons
 		displayName="[EAGLE] MA5D ICWS";
 		baseWeapon="SEC_MA5D";
 		magazines[] 			= {"SEC_36Rnd_762x51_Mag"};
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\MA5B_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		hiddenSelectionsTextures[] = {
 			"SEC_Weapons\data\GunTextures\CTGCY_MA5_FL_CTGCY.paa",
 			"SEC_Weapons\data\GunTextures\CTGCY_MA5C_Cover_CTGCY.paa",
@@ -3269,13 +2864,7 @@ class CfgWeapons
 		baseWeapon="SEC_MA5K";
 		magazines[] 			= {"SEC_36Rnd_762x51_Mag"};
 		magazineWell[] = {"SEC_Magwell_MA5D"};
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\MA5B_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		hiddenSelectionsTextures[]  = {"SEC_Weapons\data\GunTextures\CTGCY_MA5K_Body_CTGCY"};
 		class FlashLight
 		{
@@ -3473,13 +3062,7 @@ class CfgWeapons
 		reloadAction="GestureReloadBR55";
 		magazines[] = {"SEC_36Rnd_762x51_Mag"};
 		magazineWell[] = {"SEC_Magwell_MA5D"};
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\MA5A_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		class FlashLight
 		{
 			color[]={255,251,248};
@@ -3583,13 +3166,7 @@ class CfgWeapons
 		displayName="[EAGLE] MA40 ICWS";
 		baseWeapon="SEC_MA40";
 		magazines[] 			= {"SEC_36Rnd_762x51_Mag"};
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\MA5B_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		handAnim[] =
 		{
 			"OFP2_ManSkeleton", "\OPTRE_Weapons\AR\data\anim\hand_anim_ma37.rtm",
@@ -3663,13 +3240,7 @@ class CfgWeapons
 		displayName="[EAGLE] MA40A ICWS";
 		baseWeapon="SEC_MA40A";
 		magazines[] 			= {"SEC_36Rnd_762x51_Mag"};
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\MA5B_Reload.ogg",
-			5,
-			1,
-			30
-		};
+
 		magazineWell[] = {"SEC_Magwell_MA5D"};
 		hiddenSelectionsTextures[]=
 		{
@@ -3779,13 +3350,6 @@ class CfgWeapons
 		displayName="[EAGLE] MA40 ICWS (UGL)";
 		baseWeapon="SEC_MA40GL";
 		magazines[] 			= {"SEC_36Rnd_762x51_Mag"};
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\MA5B_Reload.ogg",
-			5,
-			1,
-			30
-		};
 		magazineWell[] = {"SEC_Magwell_MA5D"};
 		hiddenSelectionsTextures[] = {
 			"\SEC_Weapons\data\GunTextures\CTGCY_MA3_GL_CTGCY.paa",
@@ -3827,13 +3391,6 @@ class CfgWeapons
 	{
 		displayName="[EAGLE] BR-45 Service Rifle";
 		baseWeapon="SEC_BR45";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\BR55_Reload.ogg",
-			5,
-			1,
-			30
-		};
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -3918,13 +3475,6 @@ class CfgWeapons
 	{
 		displayName="[EAGLE] BR-45 Service Rifle (UGL)";
 		baseWeapon="SEC_BR45GL";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\BR55_Reload.ogg",
-			5,
-			1,
-			30
-		};
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -4004,64 +3554,29 @@ class CfgWeapons
 		displayName="[EAGLE] M6G PDWS";
 		baseWeapon="SEC_M6G";
 		reloadAction="SCI_FI_Pistol_Reload";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\M6_Reload.ogg",
-			2,
-			1,
-			30
-		};
 	};
 	class SEC_M6C_Gen1: OPTRE_M6C
 	{
 		displayName="[EAGLE] M6C PDWS Gen 1";
 		baseWeapon="SEC_M6C_Gen1";
 		reloadAction="SCI_FI_Pistol_Reload";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\M6_Reload.ogg",
-			2,
-			1,
-			30
-		};
 	};
 	class SEC_M6B: OPTRE_M6B
 	{
 		displayName="[EAGLE] M6B PDWS";
 		baseWeapon="SEC_M6B";
 		reloadAction="SCI_FI_Pistol_Reload";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\M6_Reload.ogg",
-			2,
-			1,
-			30
-		};
 	};
 	class SEC_M6D: OPTRE_M6D
 	{
 		displayName="[EAGLE] M6D PDWS";
 		baseWeapon="SEC_M6D";
 		reloadAction="SCI_FI_Pistol_Reload";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\M6_Reload.ogg",
-			2,
-			1,
-			30
-		};
 	};
 	class SEC_M393: OPTRE_M393_DMR
 	{
 		displayName="[EAGLE] M395 Designated Marksman Rifle";
 		baseWeapon="SEC_M393";
-		reloadMagazineSound[]=
-		{
-			"wep_f_improve\animsounds\BR55_Reload.ogg",
-			5,
-			1,
-			30
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\SEC_Weapons\data\GunTextures\CTGCY_M395_Body1_CTGCY.paa",
