@@ -37,6 +37,11 @@ class CfgWeapons
 {
 	class launch_RPG7_F;
 	class hgun_Pistol_heavy_02_F;
+	class arifle_19_UNSC_M392_Base_F;
+	class apistol_19_UNSC_M6C_Base_F;
+	class arifle_19_UNSC_m7_Base_F;
+	class arifle_19_UNSC_M90_Base_F;
+	class arifle_19_UNSC_SRS99AM_Base_F;
 	class OPTRE_Handgun_Base;
 	class arifle_Mk20_F;
 	class OPTRE_DMR_Base;
@@ -54,6 +59,11 @@ class CfgWeapons
 	class OPTRE_MA5K;
 	class MA_MA2B_AR;
 	class MA_H4_SAW;
+	class 19_UNSC_M392;
+	class 19_UNSC_M6C;
+	class 19_UNSC_M7;
+	class 19_UNSC_M7_Side;
+	class 19_UNSC_M90;
 	class OPTRE_Commando;
 	class NSWep_MA5B;
 	class NSWep_BR55HBM1;
