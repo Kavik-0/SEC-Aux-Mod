@@ -5,7 +5,7 @@ class CfgPatches
         units[] = {};
         weapons[] = {"OPTRE_M45_Flashlight"};
         requiredVersion = 0.1;
-        requiredAddons[] = {"A3_Weapons_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "A3_CargoPoses_F", "A3_Anims_F", "OPTRE_Weapons", "OPTRE_Weapons_Pistol", "Misriah_Armory_Weapons", "OPTRE_Core", "NSWep_Weapons", "Casey_Halo_melee", "OPTRE_FC_Weapons"};
+        requiredAddons[] = {"A3_Weapons_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "A3_CargoPoses_F", "A3_Anims_F", "19_UNSC_Weapons", "OPTRE_Weapons", "OPTRE_Weapons_Pistol", "Misriah_Armory_Weapons", "OPTRE_Core", "NSWep_Weapons", "Casey_Halo_melee", "OPTRE_FC_Weapons"};
         author = "Reiken";
     };
 };
@@ -126,6 +126,7 @@ class CfgWeapons
 	class ItemCore;
 	class InventoryFlashLightItem_Base_F;
 	class OPTRE_M6C_Laser;
+	class NSWep_MA5K;
 	class ItemInfo;
 
 	class OPTRE_M6C_Flashlight: OPTRE_M6C_Laser
@@ -503,6 +504,7 @@ class CfgWeapons
 	{
 		displayName="[EAGLE] Asymmetric Recoilless Carbine-920"
 		baseWeapon="SEC_ARC920_Railgun";
+		reloadAction="SCI_FI_Sniperlike_Reload";
 		hiddenSelectionsTextures[]=
 		{
 			"\SEC_Weapons\data\GunTextures\CTGCY_ARC920_Body_CTGCY.paa",
@@ -526,7 +528,7 @@ class CfgWeapons
 		displayName="[EAGLE] SRS99-CS2 Sniper Rifle"
 		baseWeapon="SEC_SRS99C";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\SniperRifles\srs99c.paa";
-
+		reloadAction = "WBK_SRS99C_Reload";
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -587,7 +589,7 @@ class CfgWeapons
 		displayName="[EAGLE] SRS99-DS2 Sniper Rifle"
 		baseWeapon="SEC_SRS99D";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\SniperRifles\srs99c.paa";
-
+		reloadAction = "WBK_SRS99C_Reload";
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -648,7 +650,7 @@ class CfgWeapons
 		displayName="[EAGLE] SRS99-AM Sniper Rifle"
 		baseWeapon="SEC_SRS99AM";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\SniperRifles\srs99c.paa";
-
+		reloadAction = "WBK_SRS99C_Reload";
 		class WeaponSlotsInfo
 		{
 			mass=84;
@@ -1097,7 +1099,7 @@ class CfgWeapons
 		displayName="[EAGLE] MA5B Gen 1 ICWS";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\AssaultRifles\MA5C_icon.paa";
 		baseWeapon="SEC_MA5B_GEN1";
-
+		reloadAction= "GestureReloadMA5";
 		class FlashLight
 		{
 			color[]={255,251,248};
@@ -1124,302 +1126,32 @@ class CfgWeapons
 				hardLimitEnd=120;
 			};
 		};	
-		class WeaponSlotsInfo
-		{
-			mass=84;
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleitems[]=
-				{
-					"NSWep_BR55M1_Suppressor",
-					"41st_Bayonet2",
-					"145_Inches_Barrel_Bayonet"
-				};
-			};
-			class CowsSlot: CowsSlot
-			{
-				compatibleitems[]=
-				{
-				"NSWep_BR55M1A2_Optic",
-				"NSWep_BR55M1A2_3D_Optic",
-				"NSWep_BR55M1A2LR_Optic",
-				"NSWep_BR55M1A2M1_Optic",
-				"OPTRE_M7_Sight",
-				"OPTRE_M12_Optic",
-				"OPTRE_M12_Optic_Red",
-				"OPTRE_M12_Optic_Green",
-				"OPTRE_M6C_Scope",
-				"OPTRE_M6G_Scope",
-				"Optre_Recon_Sight",
-				"Optre_Recon_Sight_Red",
-				"Optre_Recon_Sight_Green",
-				"Optre_Recon_Sight_Desert",
-				"Optre_Recon_Sight_UNSC",
-				"Optre_Recon_Sight_Snow",
-				"OPTRE_BR45_Scope",
-				"OPTRE_BR55HB_Scope",
-				"OPTRE_BR55HB_Scope_Grey",
-				"OPTRE_BMR_Scope",
-				"OPTRE_M392_Scope",
-				"OPTRE_M393_Scope",
-				"OPTRE_M393_ACOG",
-				"OPTRE_M393_EOTECH",
-				"OPTRE_M73_SmartLink",
-				"OPTRE_MA5_SmartLink",
-				"OPTRE_MA5C_SmartLink",
-				"OPTRE_MA5_BUIS",
-				"Optre_Evo_Sight_Riser",
-				"Optre_Evo_Sight",
-				"optic_MRCO",
-				"optic_Hamr",
-				"optic_ERCO_blk_F",
-				"optic_Holosight_blk_F",
-				"optic_Arco_blk_F",
-				"optic_dms",
-				"NSWEP_MA5_Optic",
-				"optic_Nightstalker",
-				"optic_SOS"
-				};
-			};
-			class PointerSlot: PointerSlot
-			{
-				compatibleitems[]=
-				{
-				};
-			};
-		};
 	};
 	class SEC_MA5B_gl: NSWep_MA5BGL
 	{
 		displayName="[EAGLE] MA5B Gen 1 ICWS (UGL)";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\AssaultRifles\MA5C_icon.paa";
 		baseWeapon="SEC_MA5B_gl";
-
-		class WeaponSlotsInfo
-		{
-			mass=84;
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleitems[]=
-				{
-					"NSWep_BR55M1_Suppressor"
-				};
-			};
-			class CowsSlot: CowsSlot
-			{
-				compatibleitems[]=
-				{
-				"NSWep_BR55M1A2_Optic",
-				"NSWep_BR55M1A2_3D_Optic",
-				"NSWep_BR55M1A2LR_Optic",
-				"NSWep_BR55M1A2M1_Optic",
-				"OPTRE_M7_Sight",
-				"OPTRE_M12_Optic",
-				"OPTRE_M12_Optic_Red",
-				"OPTRE_M12_Optic_Green",
-				"OPTRE_M6C_Scope",
-				"OPTRE_M6G_Scope",
-				"Optre_Recon_Sight",
-				"Optre_Recon_Sight_Red",
-				"Optre_Recon_Sight_Green",
-				"Optre_Recon_Sight_Desert",
-				"Optre_Recon_Sight_UNSC",
-				"Optre_Recon_Sight_Snow",
-				"OPTRE_BR45_Scope",
-				"OPTRE_BR55HB_Scope",
-				"OPTRE_BR55HB_Scope_Grey",
-				"OPTRE_BMR_Scope",
-				"OPTRE_M392_Scope",
-				"OPTRE_M393_Scope",
-				"OPTRE_M393_ACOG",
-				"OPTRE_M393_EOTECH",
-				"OPTRE_M73_SmartLink",
-				"OPTRE_MA5_SmartLink",
-				"OPTRE_MA5C_SmartLink",
-				"OPTRE_MA5_BUIS",
-				"Optre_Evo_Sight_Riser",
-				"Optre_Evo_Sight",
-				"optic_MRCO",
-				"optic_Hamr",
-				"optic_ERCO_blk_F",
-				"optic_Holosight_blk_F",
-				"optic_Arco_blk_F",
-				"optic_dms",
-				"NSWEP_MA5_Optic",
-				"optic_Nightstalker",
-				"optic_SOS"
-				};
-			};
-			class PointerSlot: PointerSlot
-			{
-				compatibleitems[]=
-				{
-				};
-			};
-		};
+		reloadAction= "GestureReloadMA5";
 	};
 	class SEC_BR55GL: NSWep_BR55HBM1GL
 	{
 		displayName="[EAGLE] BR-55HB Service Rifle (UGL)";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\BattleRifles\BR55_icon.paa";
 		baseWeapon="SEC_BR55GL";
-
 		modes[]= {
 			"Single","Burst"
 		};
-		class WeaponSlotsInfo
-		{
-			mass=84;
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleitems[]=
-				{
-					"NSWep_BR55M1_FlashHider",
-					"NSWep_BR55M1_Suppressor",
-					"NSWep_BR55M1_ThreadCover",
-					"optre_ma5suppressor",
-					"OPTRE_M7_Silencer"
-				};
-			};
-			class CowsSlot: CowsSlot
-			{
-				compatibleitems[]=
-				{
-				"NSWep_BR55M1A2_Optic",
-				"NSWep_BR55M1A2_3D_Optic",
-				"NSWep_BR55M1A2LR_Optic",
-				"NSWep_BR55M1A2M1_Optic",
-				"OPTRE_M7_Sight",
-				"OPTRE_M12_Optic",
-				"OPTRE_M12_Optic_Red",
-				"OPTRE_M12_Optic_Green",
-				"OPTRE_M6C_Scope",
-				"OPTRE_M6G_Scope",
-				"Optre_Recon_Sight",
-				"Optre_Recon_Sight_Red",
-				"Optre_Recon_Sight_Green",
-				"Optre_Recon_Sight_Desert",
-				"Optre_Recon_Sight_UNSC",
-				"Optre_Recon_Sight_Snow",
-				"OPTRE_BR45_Scope",
-				"OPTRE_BR55HB_Scope",
-				"OPTRE_BR55HB_Scope_Grey",
-				"OPTRE_BMR_Scope",
-				"OPTRE_M392_Scope",
-				"OPTRE_M393_Scope",
-				"OPTRE_M393_ACOG",
-				"OPTRE_M393_EOTECH",
-				"OPTRE_M73_SmartLink",
-				"OPTRE_MA5_SmartLink",
-				"OPTRE_MA5C_SmartLink",
-				"OPTRE_MA5_BUIS",
-				"Optre_Evo_Sight_Riser",
-				"Optre_Evo_Sight",
-				"optic_MRCO",
-				"optic_Hamr",
-				"optic_ERCO_blk_F",
-				"optic_Holosight_blk_F",
-				"optic_Arco_blk_F",
-				"optic_dms",
-				"optic_Nightstalker",
-				"optic_SOS"
-				};
-			};
-			class PointerSlot: PointerSlot
-			{
-				compatibleitems[]=
-				{
-					"acc_pointer_ir",
-					"ace_acc_pointer_green",
-					"acc_flashlight",
-					"optre_m45_flashlight",
-					"optre_m45_flashlight_red",
-					"OPTRE_BMR_Laser"
-				};
-			};
-		};
+		reloadAction= "GestureReloadBR55";
 	};
 	class SEC_BR55: NSWep_XBR55
 	{
 		displayName="[EAGLE] BR-55 Service Rifle";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\BattleRifles\BR55_icon.paa";
 		baseWeapon="SEC_BR55";
-
+		reloadAction= "GestureReloadBR55";
 		modes[]= {
 			"Single","Burst"
-		};
-		class WeaponSlotsInfo
-		{
-			mass=84;
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleitems[]=
-				{
-					"NSWep_BR55M1_FlashHider",
-					"NSWep_BR55M1_Suppressor",
-					"NSWep_BR55M1_ThreadCover",
-					"optre_ma5suppressor",
-					"OPTRE_M7_Silencer",
-					"41st_Bayonet2",
-					"145_Inches_Barrel_Bayonet"
-				};
-			};
-			class CowsSlot: CowsSlot
-			{
-				compatibleitems[]=
-				{
-				"NSWep_BR55M1A2_Optic",
-				"NSWep_BR55M1A2_3D_Optic",
-				"NSWep_BR55M1A2LR_Optic",
-				"NSWep_BR55M1A2M1_Optic",
-				"OPTRE_M7_Sight",
-				"OPTRE_M12_Optic",
-				"OPTRE_M12_Optic_Red",
-				"OPTRE_M12_Optic_Green",
-				"OPTRE_M6C_Scope",
-				"OPTRE_M6G_Scope",
-				"Optre_Recon_Sight",
-				"Optre_Recon_Sight_Red",
-				"Optre_Recon_Sight_Green",
-				"Optre_Recon_Sight_Desert",
-				"Optre_Recon_Sight_UNSC",
-				"Optre_Recon_Sight_Snow",
-				"OPTRE_BR45_Scope",
-				"OPTRE_BR55HB_Scope",
-				"OPTRE_BR55HB_Scope_Grey",
-				"OPTRE_BMR_Scope",
-				"OPTRE_M392_Scope",
-				"OPTRE_M393_Scope",
-				"OPTRE_M393_ACOG",
-				"OPTRE_M393_EOTECH",
-				"OPTRE_M73_SmartLink",
-				"OPTRE_MA5_SmartLink",
-				"OPTRE_MA5C_SmartLink",
-				"OPTRE_MA5_BUIS",
-				"Optre_Evo_Sight_Riser",
-				"Optre_Evo_Sight",
-				"optic_MRCO",
-				"optic_Hamr",
-				"optic_ERCO_blk_F",
-				"optic_Holosight_blk_F",
-				"optic_Arco_blk_F",
-				"optic_dms",
-				"optic_Nightstalker",
-				"optic_SOS"
-				};
-			};
-			class PointerSlot: PointerSlot
-			{
-				compatibleitems[]=
-				{
-					"acc_pointer_ir",
-					"ace_acc_pointer_green",
-					"acc_flashlight",
-					"optre_m45_flashlight",
-					"optre_m45_flashlight_red",
-					"OPTRE_BMR_Laser"
-				};
-			};
 		};
 	};
 	class SEC_BR55CQC: NSWep_BR55HBM1CQC
@@ -1427,162 +1159,16 @@ class CfgWeapons
 		displayName="[EAGLE] BR-55 Carbine";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\BattleRifles\BR55_icon.paa";
 		baseWeapon="SEC_BR55CQC";
-
-		class WeaponSlotsInfo
-		{
-			mass=84;
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleitems[]=
-				{
-					"NSWep_BR55M1_FlashHider",
-					"NSWep_BR55M1_Suppressor",
-					"NSWep_BR55M1_ThreadCover",
-					"optre_ma5suppressor",
-					"OPTRE_M7_Silencer",
-					"41st_Bayonet2",
-					"145_Inches_Barrel_Bayonet"
-				};
-			};
-			class CowsSlot: CowsSlot
-			{
-				compatibleitems[]=
-				{
-				"NSWep_BR55M1A2_Optic",
-				"NSWep_BR55M1A2_3D_Optic",
-				"NSWep_BR55M1A2LR_Optic",
-				"NSWep_BR55M1A2M1_Optic",
-				"OPTRE_M7_Sight",
-				"OPTRE_M12_Optic",
-				"OPTRE_M12_Optic_Red",
-				"OPTRE_M12_Optic_Green",
-				"OPTRE_M6C_Scope",
-				"OPTRE_M6G_Scope",
-				"Optre_Recon_Sight",
-				"Optre_Recon_Sight_Red",
-				"Optre_Recon_Sight_Green",
-				"Optre_Recon_Sight_Desert",
-				"Optre_Recon_Sight_UNSC",
-				"Optre_Recon_Sight_Snow",
-				"OPTRE_BR45_Scope",
-				"OPTRE_BR55HB_Scope",
-				"OPTRE_BR55HB_Scope_Grey",
-				"OPTRE_BMR_Scope",
-				"OPTRE_M392_Scope",
-				"OPTRE_M393_Scope",
-				"OPTRE_M393_ACOG",
-				"OPTRE_M393_EOTECH",
-				"OPTRE_M73_SmartLink",
-				"OPTRE_MA5_SmartLink",
-				"OPTRE_MA5C_SmartLink",
-				"OPTRE_MA5_BUIS",
-				"Optre_Evo_Sight_Riser",
-				"Optre_Evo_Sight",
-				"optic_MRCO",
-				"optic_Hamr",
-				"optic_ERCO_blk_F",
-				"optic_Holosight_blk_F",
-				"optic_Arco_blk_F",
-				"optic_dms",
-				"optic_Nightstalker",
-				"optic_SOS"
-				};
-			};
-			class PointerSlot: PointerSlot
-			{
-				compatibleitems[]=
-				{
-					"acc_pointer_ir",
-					"ace_acc_pointer_green",
-					"acc_flashlight",
-					"optre_m45_flashlight",
-					"optre_m45_flashlight_red",
-					"OPTRE_BMR_Laser"
-				};
-			};
-		};
+		reloadAction= "GestureReloadBR55";
 	};
 	class SEC_BR55MKM: NSWep_BR55HBM1LR
 	{
 		displayName="[EAGLE] BR-55 Marksman Rifle";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\BattleRifles\BR55_icon.paa";
 		baseWeapon="SEC_BR55MKM";
-
+		reloadAction= "GestureReloadBR55";
 		modes[]= {
 			"Single","Burst"
-		};
-		class WeaponSlotsInfo
-		{
-			mass=84;
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleitems[]=
-				{
-					"NSWep_BR55M1_FlashHider",
-					"NSWep_BR55M1_Suppressor",
-					"NSWep_BR55M1_ThreadCover",
-					"optre_ma5suppressor",
-					"OPTRE_M7_Silencer",
-					"41st_Bayonet2",
-					"145_Inches_Barrel_Bayonet"
-				};
-			};
-			class CowsSlot: CowsSlot
-			{
-				compatibleitems[]=
-				{
-				"NSWep_BR55M1A2_Optic",
-				"NSWep_BR55M1A2_3D_Optic",
-				"NSWep_BR55M1A2LR_Optic",
-				"NSWep_BR55M1A2M1_Optic",
-				"OPTRE_M7_Sight",
-				"OPTRE_M12_Optic",
-				"OPTRE_M12_Optic_Red",
-				"OPTRE_M12_Optic_Green",
-				"OPTRE_M6C_Scope",
-				"OPTRE_M6G_Scope",
-				"Optre_Recon_Sight",
-				"Optre_Recon_Sight_Red",
-				"Optre_Recon_Sight_Green",
-				"Optre_Recon_Sight_Desert",
-				"Optre_Recon_Sight_UNSC",
-				"Optre_Recon_Sight_Snow",
-				"OPTRE_BR45_Scope",
-				"OPTRE_BR55HB_Scope",
-				"OPTRE_BR55HB_Scope_Grey",
-				"OPTRE_BMR_Scope",
-				"OPTRE_M392_Scope",
-				"OPTRE_M393_Scope",
-				"OPTRE_M393_ACOG",
-				"OPTRE_M393_EOTECH",
-				"OPTRE_M73_SmartLink",
-				"OPTRE_MA5_SmartLink",
-				"OPTRE_MA5C_SmartLink",
-				"OPTRE_MA5_BUIS",
-				"Optre_Evo_Sight_Riser",
-				"Optre_Evo_Sight",
-				"optic_MRCO",
-				"optic_Hamr",
-				"optic_ERCO_blk_F",
-				"optic_Holosight_blk_F",
-				"optic_Arco_blk_F",
-				"optic_dms",
-				"optic_Nightstalker",
-				"optic_SOS"
-				};
-			};
-			class PointerSlot: PointerSlot
-			{
-				compatibleitems[]=
-				{
-					"acc_pointer_ir",
-					"ace_acc_pointer_green",
-					"acc_flashlight",
-					"optre_m45_flashlight",
-					"optre_m45_flashlight_red",
-					"OPTRE_BMR_Laser"
-				};
-			};
 		};
 	};
 	class SEC_BR55HB: NSWep_BR55HBM1
@@ -1590,82 +1176,9 @@ class CfgWeapons
 		displayName="[EAGLE] BR-55HB Service Rifle";
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\BattleRifles\BR55_icon.paa";
 		baseWeapon="SEC_BR55HB";
-
+		reloadAction= "GestureReloadBR55";
 		modes[]= {
 			"Single","Burst"
-		};
-		class WeaponSlotsInfo
-		{
-			mass=84;
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleitems[]=
-				{
-					"NSWep_BR55M1_FlashHider",
-					"NSWep_BR55M1_Suppressor",
-					"NSWep_BR55M1_ThreadCover",
-					"optre_ma5suppressor",
-					"OPTRE_M7_Silencer",
-					"41st_Bayonet2",
-					"145_Inches_Barrel_Bayonet"
-				};
-			};
-			class CowsSlot: CowsSlot
-			{
-				compatibleitems[]=
-				{
-				"NSWep_BR55M1A2_Optic",
-				"NSWep_BR55M1A2_3D_Optic",
-				"NSWep_BR55M1A2LR_Optic",
-				"NSWep_BR55M1A2M1_Optic",
-				"OPTRE_M7_Sight",
-				"OPTRE_M12_Optic",
-				"OPTRE_M12_Optic_Red",
-				"OPTRE_M12_Optic_Green",
-				"OPTRE_M6C_Scope",
-				"OPTRE_M6G_Scope",
-				"Optre_Recon_Sight",
-				"Optre_Recon_Sight_Red",
-				"Optre_Recon_Sight_Green",
-				"Optre_Recon_Sight_Desert",
-				"Optre_Recon_Sight_UNSC",
-				"Optre_Recon_Sight_Snow",
-				"OPTRE_BR45_Scope",
-				"OPTRE_BR55HB_Scope",
-				"OPTRE_BR55HB_Scope_Grey",
-				"OPTRE_BMR_Scope",
-				"OPTRE_M392_Scope",
-				"OPTRE_M393_Scope",
-				"OPTRE_M393_ACOG",
-				"OPTRE_M393_EOTECH",
-				"OPTRE_M73_SmartLink",
-				"OPTRE_MA5_SmartLink",
-				"OPTRE_MA5C_SmartLink",
-				"OPTRE_MA5_BUIS",
-				"Optre_Evo_Sight_Riser",
-				"Optre_Evo_Sight",
-				"optic_MRCO",
-				"optic_Hamr",
-				"optic_ERCO_blk_F",
-				"optic_Holosight_blk_F",
-				"optic_Arco_blk_F",
-				"optic_dms",
-				"optic_Nightstalker",
-				"optic_SOS"
-				};
-			};
-			class PointerSlot: PointerSlot
-			{
-				compatibleitems[]=
-				{
-					"acc_pointer_ir",
-					"ace_acc_pointer_green",
-					"acc_flashlight",
-					"optre_m45_flashlight",
-					"optre_m45_flashlight_red",
-					"OPTRE_BMR_Laser"
-				};
-			};
 		};
 	};
 	class SEC_M392_Gen1: 19_UNSC_M392
@@ -2868,9 +2381,15 @@ class CfgWeapons
 			};
 		};
 	};
+	class SEC_MA5KG1: NSWep_MA5K
+	{
+		displayName="[EAGLE] MA5K Gen 1 Carbine";
+		baseWeapon="SEC_MA5KG1";
+		reloadAction="GestureReloadMA5";
+	};
 	class SEC_MA5K: OPTRE_MA5K
 	{
-		displayName="[EAGLE] MA5K Carbine";
+		displayName="[EAGLE] MA5K Gen 2 Carbine";
 		baseWeapon="SEC_MA5K";
 		magazines[] 			= {"SEC_36Rnd_762x51_Mag"};
 		magazineWell[] = {"SEC_Magwell_MA5D"};
