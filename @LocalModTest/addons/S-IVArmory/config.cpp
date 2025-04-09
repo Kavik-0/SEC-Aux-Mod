@@ -2218,20 +2218,381 @@ class CfgPatches
             "S-IVArmory\data\SPI\SPI_Visor_Xeno.rvmat"
         };
 	};
-	class SEC_SPI_ArmorCore: MA_SPI_Armor
+	class SEC_SPI_ArmorCore: MAPO_SPI_Armor
 	{
         scope=2;
         scopeArsenal=2;
 		displayName="[EAGLE] Semi-Powered Infiltration Harness";
-		MJOLNIR_isArmor = 0;
+		MJOLNIR_isArmor = 1;
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in second
 		hiddenSelectionsTextures[]=
 		{
-			"MA_Armor\data\Vests\SPI\Color_Variants\Green_SPI_Armour_CO.paa"
+			"S-IVArmory\data\SPI\SPI_Armour_CO.paa"
 		};
         hiddenSelectionsMaterials[]=
         {
-            "S-IVArmory\data\SPI\SPI_Mordred.rvmat"
+            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
         };
+        class ItemInfo: VestItem
+		{
+			containerClass="Supply250";
+			mass=20;
+			uniformModel="MA_Armor_ORION\data\Vests\SPI\SPI_Spartan.p3d";
+			hiddenSelections[]=
+			{
+				"camo"
+			};
+			hiddenSelectionsTextures[]=
+		    {
+			"S-IVArmory\data\SPI\SPI_Armour_CO.paa"
+		    };
+            hiddenSelectionsMaterials[]=
+            {
+            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
+            };
+            passThrough = 0.1;
+			modelSides[] = { 6 };
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName="HitNeck";
+					armor=30;
+					passThrough=0.5;
+				};
+				class Legs
+				{
+					hitpointName="HitLegs";
+					armor=30;
+					passThrough=0.5;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=35;
+					passThrough=0.1;
+				};
+				class Hands
+				{
+					hitpointName="HitHands";
+					armor=30;
+					passThrough=0.1;
+				};
+				class Chest
+				{
+					hitpointName="HitChest";
+					armor=45;
+					passThrough=0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName="HitDiaphragm";
+					armor=40;
+					passThrough=0.1;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=40;
+					passThrough=0.1;
+				};
+				class Pelvis
+				{
+					hitpointName="HitPelvis";
+					armor=40;
+					passThrough=0.1;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					passThrough=0.1;
+				};
+			};
+		};
+	};
+    class SEC_ASPI_ArmorCore: MAPO_SPI_Armor
+	{
+        scope=2;
+        scopeArsenal=2;
+		displayName="[EAGLE] Semi-Powered Infiltration Harness (Alpha Coy.)";
+		MJOLNIR_isArmor = 1;
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in second
+		hiddenSelectionsTextures[]=
+		{
+			"S-IVArmory\data\SPI\Alpha_SPI_Armour_CO.paa"
+		};
+        hiddenSelectionsMaterials[]=
+        {
+            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
+        };
+        class ItemInfo: VestItem
+		{
+			containerClass="Supply250";
+			mass=20;
+			uniformModel="MA_Armor_ORION\data\Vests\SPI\SPI_Spartan.p3d";
+			hiddenSelections[]=
+			{
+				"camo"
+			};
+			hiddenSelectionsTextures[]=
+		    {
+			"S-IVArmory\data\SPI\Alpha_SPI_Armour_CO.paa"
+		    };
+            hiddenSelectionsMaterials[]=
+            {
+            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
+            };
+            passThrough = 0.1;
+			modelSides[] = { 6 };
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName="HitNeck";
+					armor=30;
+					passThrough=0.5;
+				};
+				class Legs
+				{
+					hitpointName="HitLegs";
+					armor=30;
+					passThrough=0.5;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=35;
+					passThrough=0.1;
+				};
+				class Hands
+				{
+					hitpointName="HitHands";
+					armor=30;
+					passThrough=0.1;
+				};
+				class Chest
+				{
+					hitpointName="HitChest";
+					armor=45;
+					passThrough=0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName="HitDiaphragm";
+					armor=40;
+					passThrough=0.1;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=40;
+					passThrough=0.1;
+				};
+				class Pelvis
+				{
+					hitpointName="HitPelvis";
+					armor=40;
+					passThrough=0.1;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					passThrough=0.1;
+				};
+			};
+		};
+	};
+    class SEC_BSPI_ArmorCore: MAPO_SPI_Armor
+	{
+        scope=2;
+        scopeArsenal=2;
+		displayName="[EAGLE] Semi-Powered Infiltration Harness (Beta Coy.)";
+		MJOLNIR_isArmor = 1;
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in second
+		hiddenSelectionsTextures[]=
+		{
+			"S-IVArmory\data\SPI\Beta_SPI_Armour_CO.paa"
+		};
+        hiddenSelectionsMaterials[]=
+        {
+            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
+        };
+        class ItemInfo: VestItem
+		{
+			containerClass="Supply250";
+			mass=20;
+			uniformModel="MA_Armor_ORION\data\Vests\SPI\SPI_Spartan.p3d";
+			hiddenSelections[]=
+			{
+				"camo"
+			};
+			hiddenSelectionsTextures[]=
+		    {
+			"S-IVArmory\data\SPI\Beta_SPI_Armour_CO.paa"
+		    };
+            hiddenSelectionsMaterials[]=
+            {
+            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
+            };
+            passThrough = 0.1;
+			modelSides[] = { 6 };
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName="HitNeck";
+					armor=30;
+					passThrough=0.5;
+				};
+				class Legs
+				{
+					hitpointName="HitLegs";
+					armor=30;
+					passThrough=0.5;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=35;
+					passThrough=0.1;
+				};
+				class Hands
+				{
+					hitpointName="HitHands";
+					armor=30;
+					passThrough=0.1;
+				};
+				class Chest
+				{
+					hitpointName="HitChest";
+					armor=45;
+					passThrough=0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName="HitDiaphragm";
+					armor=40;
+					passThrough=0.1;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=40;
+					passThrough=0.1;
+				};
+				class Pelvis
+				{
+					hitpointName="HitPelvis";
+					armor=40;
+					passThrough=0.1;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					passThrough=0.1;
+				};
+			};
+		};
+	};
+    class SEC_GSPI_ArmorCore: MAPO_SPI_Armor
+	{
+        scope=2;
+        scopeArsenal=2;
+		displayName="[EAGLE] Semi-Powered Infiltration Harness (Gamma Coy.)";
+		MJOLNIR_isArmor = 1;
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in second
+		hiddenSelectionsTextures[]=
+		{
+			"S-IVArmory\data\SPI\Gamma_SPI_Armour_CO.paa"
+		};
+        hiddenSelectionsMaterials[]=
+        {
+            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
+        };
+        class ItemInfo: VestItem
+		{
+			containerClass="Supply250";
+			mass=20;
+			uniformModel="MA_Armor_ORION\data\Vests\SPI\SPI_Spartan.p3d";
+			hiddenSelections[]=
+			{
+				"camo"
+			};
+			hiddenSelectionsTextures[]=
+		    {
+			"S-IVArmory\data\SPI\Gamma_SPI_Armour_CO.paa"
+		    };
+            hiddenSelectionsMaterials[]=
+            {
+            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
+            };
+            passThrough = 0.1;
+			modelSides[] = { 6 };
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName="HitNeck";
+					armor=30;
+					passThrough=0.5;
+				};
+				class Legs
+				{
+					hitpointName="HitLegs";
+					armor=30;
+					passThrough=0.5;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=35;
+					passThrough=0.1;
+				};
+				class Hands
+				{
+					hitpointName="HitHands";
+					armor=30;
+					passThrough=0.1;
+				};
+				class Chest
+				{
+					hitpointName="HitChest";
+					armor=45;
+					passThrough=0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName="HitDiaphragm";
+					armor=40;
+					passThrough=0.1;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=40;
+					passThrough=0.1;
+				};
+				class Pelvis
+				{
+					hitpointName="HitPelvis";
+					armor=40;
+					passThrough=0.1;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					passThrough=0.1;
+				};
+			};
+		};
 	};
 	class SEC_MIRAGEII_Helmet: MA_SPI_Helmet
 	{
@@ -2316,7 +2677,7 @@ class CfgPatches
             "S-IVArmory\data\SPI\SPI_Mordred_Visor.rvmat"
         };
 	};
-	class SEC_SPI_Helmet: MA_SPI_Helmet
+	class SEC_SPI_Helmet: MAPO_SPI_Helmet
 	{
         scope=2;
         scopeArsenal=2;
@@ -2329,13 +2690,13 @@ class CfgPatches
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"MA_Armor\data\Helmets\SPI\Helmets\Green_SPI_Helmet_CO.paa",
-			"MA_Armor\data\Helmets\SPI\Visors\Base_SPI_Visor_CO.paa"
+			"S-IVArmory\data\SPI\SPI_Helmet_CO.paa",
+			"S-IVArmory\data\SPI\SPI_Visor_CO.paa"
 		};
         hiddenSelectionsMaterials[]=
         {
-            "S-IVArmory\data\SPI\SPI_Mordred_Helmet.rvmat",
-            "S-IVArmory\data\SPI\SPI_Mordred_Visor.rvmat"
+            "S-IVArmory\data\SPI\SPI_Helmet.rvmat",
+            "S-IVArmory\data\SPI\SPI_Visor.rvmat"
         };
 	};
 	class SEC_MKVB_ODST_Helmet: MA_Mjolnir_ODST_Helmet
@@ -3649,7 +4010,7 @@ class SEC_MKVB_HRTBRK_Helmet: SEC_MKVB_PILOT_Helmet
 		{
 			"camo1",    
 			"camo2",
-            "attach_nvg"
+            "camo_nvg"
 		};
 		hiddenSelectionsTextures[] =
 		{
@@ -7038,12 +7399,12 @@ class SEC_Bartlett_MKIV_Shoulders : SEC_MKVB_MKIV_Shoulders
         "hayabusa_right",
         "jfo_left",
         "jfo_right",
-        "mkiv_left",
-        //"mkiv_right",
+        //"mkiv_left",
+        "mkiv_right",
         "mkv_left",
         "mkv_right",
-        //"odst_left",
-        "odst_right",
+        "odst_left",
+        //"odst_right",
         "operator_left",
         "operator_right",
         "recon_left",

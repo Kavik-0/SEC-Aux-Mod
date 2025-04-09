@@ -20,24 +20,28 @@ class Stage1 {
 		pos[] = { 0, 0, 0 };
 	};
 };
-class Stage2 {
-	texture = "#(argb,8,8,3)color(0.5,0.5,0.5,1,dt)";
+class Stage2
+{
+	texture = "#(argb,8,8,3)color(0.5,0.5,0.3,0.2,DT)"; // Further modifies the diffuse texture layer, again needs to be fine tuned per visor color
 	uvSource = "tex";
-	class uvTransform {
-		aside[] = { 1, 1, 0 };
-		up[] = { 0, 1, 0 };
-		dir[] = { 0, 0, 0 };
-		pos[] = { 0, 0, 0 };
+	class uvTransform
+	{
+		aside[] = {1,0,0};
+		up[] = {0,1,0};
+		dir[] = {0,0,1};
+		pos[] = {0,0,0};
 	};
 };
-class Stage3 {
-	texture = "#(argb,8,8,3)color(0,0,0,0,mc)";
+class Stage3
+{
+	texture = "#(argb,8,8,3)color(0,0,0,0,MC)"; // This is unused but can be useful for generating a flat color texture over whatever your texture is. Go light with the alpha here, it's very strong
 	uvSource = "tex";
-	class uvTransform {
-		aside[] = { 1, 0, 0 };
-		up[] = { 0, 1, 0 };
-		dir[] = { 0, 0, 0 };
-		pos[] = { 0, 0, 0 };
+	class uvTransform
+	{
+		aside[] = {1,0,0};
+		up[] = {0,1,0};
+		dir[] = {0,0,1};
+		pos[] = {0,0,0};
 	};
 };
 class Stage4 {
@@ -60,25 +64,29 @@ class Stage5 {
 		pos[] = { 0, 0, 0 };
 	};
 };
-class Stage6 {
-	texture = "#(ai,64,64,1)fresnel(0.4,0.2)";
-	uvSource = "tex";
-	class uvTransform {
-		aside[] = { 1, 0, 0 };
-		up[] = { 0, 1, 0 };
-		dir[] = { 0, 0, 1 };
-		pos[] = { 0, 0, 0 };
+class Stage6
+{
+	texture="#(ai,64,64,1)fresnel(2.0,5.0)";  // Stronger light angle dependency, makes the material mimic the light values of different metals. This one is close to palladium
+    uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
 	};
 };
-class Stage7 {
-	texture = "a3\data_f\env_land_ca.paa";
-	useWorldEnvMap = "true";
-	uvSource = "tex";
-	class uvTransform {
-		aside[] = { 1, 0, 0 };
-		up[] = { 0, 1, 0 };
-		dir[] = { 0, 0, 1 };
-		pos[] = { 0, 0, 0 };
+class Stage7
+{
+	texture="a3\data_f\env_land_co.paa";
+	useWorldEnvMap="true";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
 	};
 };
 class StageTI {
