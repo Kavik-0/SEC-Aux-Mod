@@ -20,8 +20,7 @@ class CfgPatches
 			"SEC_D77_TC_Pelican",
 			"SEC_AmmoPod_Arsenal",
 			"SEC_Pegasus_Guardian",
-			"SEC_Pegasus_Prototype",
-			"SEC_F29Nandao"
+			"SEC_Pegasus_Prototype"
 		};
 		requiredAddons[]=
 		{
@@ -33,7 +32,6 @@ class CfgPatches
 			"DMNS_Air_F_VTOL_01",
 			"Splits_Vehicles_Air_Pelican",
 			"TCF_DMNS_Vehicles_Nightingale",
-			"FIR_F23A_F",
 			"OPTRE_Vehicles_Sabre"
 		};
 	};
@@ -95,41 +93,6 @@ class CfgVehicles
 	class OPTRE_UNSC_hornet;
 	class OPTRE_UNSC_hornet_CAS;
 	class OPTRE_UNSC_hornet_CAP;
-	class FIR_F23A;
-	class SEC_F29Nandao: FIR_F23A
-	{
-		armor=150;
-		author="Watershed Division";
-		faction="SEC_Faction_Main";
-		editorCategory="SEC_Categ_Main";
-		editorsubcategory="SEC_Categ_Vic_Fixed";
-		scope=2;
-		scopeCurator=2;
-		scopeArsenal=2;
-		displayName="[SEC/FIRAWS]F-29 Nandao";
-		fir_f23_custom_skin=1;
-		ades_aircraft="FIR_F23A_ADES_Skin";
-		fir_f23_custom_name="F-29 Strike Fighter/Interceptor 'Nandao'";
-		fir_f23_custom_code="SEC_F29Nandao";
-		editorPreview="FIR_F23A\ui\preview\pic_my.jpg";
-		hiddenselectionstextures[] = {"SEC_Vehicles\data\nandoa\body_co.paa"};
-		weapons[] = {"FIR_MasterArm","SEC_AA_Gauss_Cannon","FIR_CMLauncher","Laserdesignator_mounted"};
-		magazines[] = {"SEC_AA_Gauss_Mag","FIR_240rnd_CMFlare_Chaff_Magazine","Laserbatteries"};
-	};
-	class SEC_UNSC_F29Nandao: SEC_F29Nandao
-	{
-		author="Watershed Division";
-		faction="SEC_Faction_Main";
-		editorCategory="SEC_Categ_Main";
-		editorsubcategory="SEC_Categ_Vic_Fixed";
-		scope=2;
-		scopeCurator=2;
-		scopeArsenal=2;
-		fir_f23_custom_name="F-29 UNSC Strike Fighter/Interceptor 'Nandao'";
-		fir_f23_custom_code="SEC_F29_UNSC_Nandao";
-		hiddenselectionstextures[] = {"SEC_Vehicles\data\nandoa\body_UNSC_co.paa"};
-		displayName="[SEC/FIRAWS]F-29 UNSC Nandao";
-	};
 	class SEC_Nightingale : TCF_UNSC_Nightingale
 	{
 		scope=2;

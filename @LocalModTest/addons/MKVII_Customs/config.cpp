@@ -1761,7 +1761,7 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"MKVII_Customs\data\MKVII\MKVII_Mk7Techsuit_Bartlett_CO.paa",
+			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
 			"MKVII_Customs\data\MKVII\MKVII_mk7core_Jake_CO.paa"
 		};
 	};

@@ -517,7 +517,7 @@ class ACE_Medical_Treatment_Actions
 	{
 		displayName="Give Blood IV (2500ml)";
 		displayNameProgress="Transfusing Blood...";
-		treatmentTime=7;
+		treatmentTime=8;
 		items[]=
 		{
 			"SEC_BloodIV"
