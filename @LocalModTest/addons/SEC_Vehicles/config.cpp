@@ -82,6 +82,7 @@ class CfgVehicles
 	class LandVehicle;
 	class OPTRE_Pelican_unarmed_green;
 	class OPTRE_Pelican_armed_green;
+	class OPTRE_Pelican_armed_SOCOM
 	class VES_D77HTCI_A;
 	class VES_UH144;
 	class OPTRE_UNSC_falcon_armed_s;
