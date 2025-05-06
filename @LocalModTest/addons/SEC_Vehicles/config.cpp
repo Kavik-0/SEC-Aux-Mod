@@ -75,6 +75,8 @@ class CfgVehicles
 	class CargoGunner_1;
 	class Turrets;
 	class MainTurret;
+	class CopilotTurret;
+	class CargoTurret;
 	class ViewOptics;
 	class Components;
 	class OPTRE_M12_LRV;
