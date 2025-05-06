@@ -84,7 +84,7 @@ class CfgVehicles
 	class LandVehicle;
 	class OPTRE_Pelican_unarmed_green;
 	class OPTRE_Pelican_armed_green;
-	class OPTRE_Pelican_armed_SOCOM
+	class OPTRE_Pelican_armed_SOCOM;
 	class VES_D77HTCI_A;
 	class VES_UH144;
 	class OPTRE_UNSC_falcon_armed_s;
@@ -124,6 +124,140 @@ class CfgVehicles
 		{
 			"SEC_Vehicles\data\SOCOM_Pelican\Armed_SOCOM_CO.paa",
 		};
+		class Turrets: Turrets
+		{
+			class CopilotTurret: CopilotTurret
+			{
+				gunnerAction="pilot_Heli_Light_02";
+				gunnerInAction="pilot_Heli_Light_02";
+				precisegetinout=1;
+				gunnerGetInAction="pilot_Heli_Light_02_Enter";
+				gunnerGetOutAction="pilot_Heli_Light_02_Exit";
+				memoryPointsGetInGunner="Pos_Gunner";
+				memoryPointsGetInGunnerDir="Pos_Gunner_dir";
+				canEject=1;
+				body="mainTurret";
+				gun="mainGun";
+				gunAxis="Osa Hlavne";
+				gunBeg="Usti hlavne";
+				gunEnd="konec hlavne";
+				animationSourceBody="mainTurret";
+				animationSourceGun="mainGun";
+				gunnerLeftHandAnimName="";
+				gunnerRightHandAnimName="";
+				maxHorizontalRotSpeed=5;
+				maxVerticalRotSpeed=5;
+				proxyindex=1;
+				isCopilot=1;
+				gunnerName="Gunner";
+				primaryGunner=1;
+				visionMode[]=
+				{
+					"Normal",
+					"NVG",
+					"Ti"
+				};
+				weapons[]=
+				{
+					"CMFlareLauncher",
+					"Laserdesignator_mounted"
+				};
+				magazines[]=
+				{
+					"168Rnd_CMFlare_Chaff_Magazine",
+					"Laserbatteries"
+				};
+				minElev=-90;
+				maxElev=30;
+				initElev=0;
+				minTurn=-180;
+				maxTurn=180;
+				initTurn=0;
+				stabilizedInAxes=3;
+				startEngine=0;
+				class Viewoptics
+				{
+					minAngleX=-80;
+					maxAngleX=80;
+					initAngleX=0;
+					minAngleY=-80;
+					maxAngleY=15;
+					initAngleY=0;
+					initFov=0.75;
+					minFov=0.25;
+					maxFov=0.75;
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+				};
+				class OpticsIn
+				{
+					class Wide
+					{
+						initAngleX=0;
+						minAngleX=-30;
+						maxAngleX=30;
+						initAngleY=0;
+						minAngleY=-100;
+						maxAngleY=100;
+						initFov=0.46599999;
+						minFov=0.46599999;
+						maxFov=0.46599999;
+						directionStabilized=1;
+						opticsDisplayName="W";
+						visionMode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+						thermalMode[]={0,1};
+						gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
+					};
+					class Medium: Wide
+					{
+						initFov=0.093000002;
+						minFov=0.093000002;
+						maxFov=0.093000002;
+						opticsDisplayName="M";
+						gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_medium_F";
+					};
+					class Narrow: Wide
+					{
+						initFov=0.028999999;
+						minFov=0.028999999;
+						maxFov=0.028999999;
+						opticsDisplayName="N";
+						gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_narrow_F";
+					};
+				};
+				class OpticsOut
+				{
+					class Monocular
+					{
+						initAngleX=0;
+						minAngleX=-30;
+						maxAngleX=30;
+						initAngleY=0;
+						minAngleY=-100;
+						maxAngleY=100;
+						minFov=0.25;
+						maxFov=1.25;
+						initFov=0.75;
+						visionMode[]=
+						{
+							"Normal",
+							"NVG"
+						};
+						gunnerOpticsModel="";
+						gunnerOpticsEffect[]={};
+					};
+				};
+			};
+		};				
 		class UserActions
 		{
 			class FullAirbrakeEngageFast
@@ -1308,8 +1442,8 @@ class CfgVehicles
 		OPTRE_maxVelocity=167;
 		OPTRE_velocityMult=1;
 		hiddenSelectionsTextures[] = { "SEC_Vehicles\data\pelican\sec_pelican_body_co.paa", "SEC_Vehicles\data\pelican\SEC_Pelican_wings_and_gear_CO.paa", "SEC_Vehicles\data\pelican\SEC_Pelican_weaponry_CO.paa" };
-	};
-	
+		#include "19th_Turret_Stabilization.hpp"
+	};	
 	class OPTRE_Ammo_SupplyPod_Empty;
 	class SEC_AmmoPod_Arsenal: OPTRE_Ammo_SupplyPod_Empty
 	{
@@ -1470,6 +1604,70 @@ class Mode_Burst;
 class Mode_FullAuto;
 class cfgWeapons
 {
+  class MGun;
+  class OPTRE_M638;
+  	//Pelican 40mm
+  class OPTRE_CHAINGUN40: OPTRE_M638 {
+  	ballisticsComputer = 4+8;
+    displayName = "$STR_OPTRE_Weapons_Vehicle_M340_40mm_Autocannon";
+    descriptionShort = "40mm Autocannon";
+    displayNameShort = "40mm";
+    magazines[] = {
+      "OPTRE_1200Rnd_40mm_HE"
+    };
+    cursor = "EmptyCursor";
+    cursorAim = "OPTRE_M638";
+    modes[] = {
+      "FullAuto",
+      "close",
+      "short",
+      "medium"
+    };
+    class FullAuto: MGun {
+      reloadTime = 0.18;
+      dispersion = 0.001;
+      minRange = 2;
+      minRangeProbab = 0.3;
+      midRange = 300;
+      midRangeProbab = 0.7;
+      maxRange = 800;
+      maxRangeProbab = 0.05;
+    };
+    class close: FullAuto {
+      burst = 10;
+      aiRateOfFire = 0.25;
+      aiRateOfFireDistance = 50;
+      minRange = 10;
+      minRangeProbab = 0.05;
+      midRange = 20;
+      midRangeProbab = 0.7;
+      maxRange = 50;
+      maxRangeProbab = 0.04;
+      showToPlayer = 0;
+    };
+    class short: close {
+      burst = 8;
+      aiRateOfFire = 0.5;
+      aiRateOfFireDistance = 300;
+      minRange = 50;
+      minRangeProbab = 0.05;
+      midRange = 150;
+      midRangeProbab = 0.7;
+      maxRange = 300;
+      maxRangeProbab = 0.04;
+    };
+    class medium: close {
+      burst = 7;
+      aiRateOfFire = 0.75;
+      aiRateOfFireDistance = 600;
+      minRange = 200;
+      minRangeProbab = 0.05;
+      midRange = 300;
+      midRangeProbab = 0.7;
+      maxRange = 500;
+      maxRangeProbab = 0.1;
+    };
+  };
 	class OPTRE_missiles_C2GMLS;
 	class OPTRE_STMedusa_AAMissile: OPTRE_missiles_C2GMLS
 	{
