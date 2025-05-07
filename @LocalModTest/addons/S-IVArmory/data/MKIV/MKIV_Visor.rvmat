@@ -6,8 +6,8 @@ ambient[] = { 1, 1, 1, 1 };
 diffuse[] = { 1, 1, 1, 1 };
 forcedDiffuse[] = { 0, 0, 0, 1 };
 emmisive[] = { 0, 0, 0, 1 };
-specular[]={0.85000002,0.40000001,0.15000001,1};
-specularPower=1000;
+specular[] = { 0.11, 0.08, 0.04, 1 };
+specularPower = 117;
 PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1 {
@@ -21,7 +21,7 @@ class Stage1 {
 	};
 };
 class Stage2 {
-	texture = "#(argb,8,8,3)color(0.5,0.5,0.5,1,dt)";
+	texture = "#(argb,8,8,3)color(0.5,0.5,0.3,0.2,DT)";
 	uvSource = "tex";
 	class uvTransform {
 		aside[] = { 1, 1, 0 };
@@ -61,7 +61,7 @@ class Stage5 {
 	};
 };
 class Stage6 {
-	texture = "#(ai,64,64,1)fresnel(0.3,3)";
+	texture = "#(ai,64,64,1)fresnel(2.0,5.0)";
 	uvSource = "tex";
 	class uvTransform {
 		aside[] = { 1, 0, 0 };
