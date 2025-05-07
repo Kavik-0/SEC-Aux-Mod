@@ -4099,8 +4099,8 @@ class SEC_MKVB_HRTBRK_Helmet: SEC_MKVB_PILOT_Helmet
 		{
 			"S-IVArmory\data\MKIV\MKIV_Upper_Justin_CO.paa",
 			"S-IVArmory\data\MKIV\MKIV_Lower_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders_Levi_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders_Levi_CO.paa"
+			"S-IVArmory\data\MKIV\FoR_MKIV_Shoulders_Silver_co.paa",
+			"S-IVArmory\data\MKIV\FoR_MKIV_Shoulders_Silver_co.paa"
 		};
 	};
 	class SCARLET_Saber_MKIV_Armor : SCARLET_SPARTAN_MKIV_Armor
@@ -11330,72 +11330,13 @@ class SEC_Saint_MKIVG2_SHOULDERS : Mjolnir_MKIV_Shoulders
     tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel";
     tf_hasLRradio=1;
     };
-    class SEC_Cain_MKVB_SHOULDERS : SCARLET_SPARTAN_MKIV_SHOULDERS
+    class SILVER_Justin_MKIV_SHOULDERS : SCARLET_SPARTAN_MKIV_SHOULDERS
     {
         scope = 2;
         scopeArsenal = 2;
 		maximumLoad = 500;
         mass = 70;
-        displayName = "[EAGLE] MJOLNIR Mark V Shoulders (Cain)";
-        hiddenSelections[]=
-        {
-        "camo1",
-        "camo2",
-        "camo3",
-        "camo4",
-        "camo5",
-        "camo6",
-        "camo7",
-        "camo8",
-        "camo9",
-        "camo10",
-        "camo11",
-        "camo12",
-        "camo13",
-        "camo14",
-        "camo15",
-        "camo16",
-        "camo17",
-        "camo18",
-        "camo19",
-        "camo20",
-        "camo21",
-        "camo22",
-        "camo23",
-        "camo24",
-        "camo25",
-        "camo26",
-        "camo27",
-        "camo28",
-        "commando_left",
-        "commando_right",
-        "cqc_left",
-        "cqc_right",
-        "eva_left",
-        "eva_right",
-        "gren_left",
-        "gren_right",
-        "gungnir_left",
-        "gungnir_right",
-        "hayabusa_left",
-        "hayabusa_right",
-        "jfo_left",
-        "jfo_right",
-        "mkiv_left",
-        "mkiv_right",
-        //"mkv_left",
-        //"mkv_right",
-        "odst_left",
-        "odst_right",
-        "operator_left",
-        "operator_right",
-        "recon_left",
-        "recon_right",
-        "security_left",
-        "security_right",
-        "scout_left",
-        "scout_right"
-        };
+        displayName = "[EAGLE] MJOLNIR Mark IV Shoulders (Justin)";
         hiddenSelectionsTextures[] =
         {
             "MA_Armor\data\Vests\MKVB\Shoulders\Commando\Olive_Commando_Shoulders_CO.paa",
@@ -11412,8 +11353,8 @@ class SEC_Saint_MKIVG2_SHOULDERS : Mjolnir_MKIV_Shoulders
             "MA_Armor\data\Vests\MKVB\Shoulders\Hayabusa\Olive_Hayabusa_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\JFO\Olive_JFO_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\JFO\Olive_JFO_Shoulders_CO.paa",
-            "S-IVArmory\data\MKIV\FoR_MKIV_Shoulders_Silver_co.paa",
-            "S-IVArmory\data\MKIV\FoR_MKIV_Shoulders_Silver_co.paa",
+            "S-IVArmory\data\MKIV\MKIV_Shoulders_Justin_CO.paa",
+            "S-IVArmory\data\MKIV\MKIV_Shoulders_Justin_CO.paa",
             "S-IVArmory\data\CAIN\MKVB_Cain_MKVShoulders_CO.paa",
             "S-IVArmory\data\CAIN\MKVB_Cain_MKVShoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\ODST\Olive_ODST_Shoulders_CO.paa",
@@ -11444,8 +11385,8 @@ class SEC_Saint_MKIVG2_SHOULDERS : Mjolnir_MKIV_Shoulders
             "",
             "S-IVArmory\data\MKIV\MKIV_Shoulders.rvmat",
             "S-IVArmory\data\MKIV\MKIV_Shoulders.rvmat",
-            "S-IVArmory\data\MKIV\MKVB_Cain_MKVShoulders.rvmat",
-            "S-IVArmory\data\MKIV\MKVB_Cain_MKVShoulders.rvmat",
+            "",
+            "",
             "",
             "",
             "",
