@@ -96,7 +96,106 @@ class CfgVehicles
 	class OPTRE_UNSC_hornet;
 	class OPTRE_UNSC_hornet_CAS;
 	class OPTRE_UNSC_hornet_CAP;
+	class OPTRE_gladius_01;
 
+	class SEC_Gladius: OPTRE_gladius_01
+	{
+		displayName="[SEC] Gladius";
+		editorCategory="SEC_Categ_Main";
+		faction="SEC_Faction_Main";
+		editorsubcategory="SEC_Categ_Vic_Fixed";
+		class Components: Components
+		{
+			class TransportPylonsComponent
+			{
+				uiPicture="\A3\Air_F_EPC\Plane_CAS_01\Data\UI\Plane_CAS_01_3DEN_CA.paa";
+				class Pylons
+				{
+					class Pylons1
+					{
+						hardpoints[]=
+						{
+							"B_MISSILE_PYLON",
+							"B_BOMB_PYLON"
+						};
+						attachment="PylonRack_1Rnd_Missile_AA_04_F";
+						priority=5;
+						maxweight=300;
+						UIposition[]={0.34999999,0};
+					};
+					class Pylons2: Pylons1
+					{
+						priority=4;
+						attachment="PylonRack_7Rnd_Rocket_04_HE_F";
+						maxweight=500;
+						UIposition[]={0.345,0.050000001};
+					};
+					class Pylons3: Pylons1
+					{
+						priority=3;
+						attachment="PylonRack_3Rnd_Missile_AGM_02_F";
+						maxweight=1050;
+						UIposition[]={0.34,0.1};
+					};
+					class Pylons4: Pylons1
+					{
+						priority=2;
+						attachment="PylonMissile_1Rnd_Bomb_04_F";
+						maxweight=1200;
+						UIposition[]={0.33000001,0.2};
+						hardpoints[]=
+						{
+							"B_MISSILE_PYLON",
+							"B_BOMB_PYLON",
+							"CARPET_BOMB_PYLON"
+						};
+					};
+					class Pylons5: Pylons1
+					{
+						priority=1;
+						attachment="PylonMissile_1Rnd_Bomb_04_F";
+						maxweight=1200;
+						UIposition[]={0.33000001,0.25};
+						hardpoints[]=
+						{
+							"B_MISSILE_PYLON",
+							"B_BOMB_PYLON",
+							"CARPET_BOMB_PYLON"
+
+						};
+					};
+					class Pylons6: Pylons5
+					{
+						priority=6;
+						UIposition[]={0.33000001,0.30000001};
+						mirroredMissilePos=5;
+					};
+					class Pylons7: Pylons4
+					{
+						priority=7;
+						UIposition[]={0.33000001,0.34999999};
+						mirroredMissilePos=4;
+					};
+					class Pylons8: Pylons3
+					{
+						UIposition[]={0.34,0.44999999};
+						mirroredMissilePos=3;
+					};
+					class Pylons9: Pylons2
+					{
+						attachment="PylonRack_7Rnd_Rocket_04_AP_F";
+						UIposition[]={0.345,0.5};
+						mirroredMissilePos=2;
+					};
+					class Pylons10: Pylons1
+					{
+						UIposition[]={0.34999999,0.55000001};
+						mirroredMissilePos=1;
+					};
+				};
+			};
+		};
+	};	
 	class SEC_Armed_SOCOM: OPTRE_Pelican_armed_SOCOM
 	{
 		scope=2;
@@ -1564,6 +1663,19 @@ class CfgAmmo
 };
 class CfgMagazines
 {
+	class PylonMissile_Bomb_GBU12_x1;
+	class SEC_CarpetBomb_x30: PylonMissile_Bomb_GBU12_x1
+	{
+		count=30;
+		displayName= "GBU SDB x30";
+		displayNameShort= "Bombs";
+		hardpoints[]=
+		{
+		 	"CARPET_BOMB_PYLON"
+		};
+		pylonWeapon= "SEC_CarpetBomb_Launcher";
+		mirrorMissilesIndexes[] = { 7, 6, 1, 2 };
+	};
 	class OPTRE_STMedusa_6Rnd_AA_Missile;
 	class OPTRE_STMedusa_14Rnd_AA_Missile: OPTRE_STMedusa_6Rnd_AA_Missile
 	{
@@ -1604,10 +1716,20 @@ class Mode_Burst;
 class Mode_FullAuto;
 class cfgWeapons
 {
-  class MGun;
-  class OPTRE_M638;
+	class weapon_SDBLauncher;
+	class SEC_CarpetBomb_Launcher: weapon_SDBLauncher
+	{
+		magazines[]=
+		{
+			"SEC_CarpetBomb_x30"
+		};
+		autoFire=1;
+		reloadTime=0.167;
+	};
+	class MGun;
+	class OPTRE_M638;
   	//Pelican 40mm
-  class OPTRE_CHAINGUN40: OPTRE_M638 {
+	class OPTRE_CHAINGUN40: OPTRE_M638 {
   	ballisticsComputer = 4+8;
     displayName = "$STR_OPTRE_Weapons_Vehicle_M340_40mm_Autocannon";
     descriptionShort = "40mm Autocannon";
