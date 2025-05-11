@@ -20,7 +20,9 @@ class CfgPatches
 			"SEC_D77_TC_Pelican",
 			"SEC_AmmoPod_Arsenal",
 			"SEC_Pegasus_Guardian",
-			"SEC_Pegasus_Prototype"
+			"SEC_Pegasus_Prototype",
+			"SEC_Gladius",
+			"SEC_Armed_SOCOM"
 		};
 		requiredAddons[]=
 		{
