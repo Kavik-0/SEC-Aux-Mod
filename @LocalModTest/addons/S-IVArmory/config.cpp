@@ -1396,10 +1396,14 @@ class CfgPatches
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Prototype Mark VI Helmet (Kennedy)";
+		displayName="[EAGLE] MJOLNIR Mark IV/PROTO Helmet (Levi)";
 		hiddenSelectionsTextures[]=
 		{
-			"S-IVArmory\data\MKVI\Mark_VI_Kennedy_Helmet_CO.paa"
+			"S-IVArmory\data\MKVI\MKVI_Helmet_097_CO.paa"
+		};
+        hiddenSelectionsMaterials[]=
+		{
+			"S-IVArmory\data\MKVI\MKVI_Helmet.rvmat"
 		};
 	};
 	class SEC_MKVI_Helmet_Grif: OPTRE_FC_MJOLNIR_MKVI_Helmet_Human
