@@ -1665,6 +1665,18 @@ class CfgAmmo
 };
 class CfgMagazines
 {
+	class 5000Rnd_762x51_Belt;
+	class SEC_5000Rnd_762x51_Belt: 5000Rnd_762x51_Belt
+	{
+		hardpoints[]=
+		{
+		 	"OPAEX_Hardpoint_AV14",
+		 	"OPAEX_Hardpoint_UH144",
+		 	"OPAEX_Hardpoint_AV22"
+		};
+		pylonWeapon= "SEC_M134_minigun";
+	};
+
 	class PylonMissile_Bomb_GBU12_x1;
 	class SEC_CarpetBomb_x30: PylonMissile_Bomb_GBU12_x1
 	{
@@ -1718,6 +1730,14 @@ class Mode_Burst;
 class Mode_FullAuto;
 class cfgWeapons
 {
+	class M134_minigun;
+	class SEC_M134_minigun: M134_minigun
+	{
+		magazines[]=
+		{
+			"SEC_5000Rnd_762x51_Belt"
+		};
+	};
 	class weapon_SDBLauncher;
 	class SEC_CarpetBomb_Launcher: weapon_SDBLauncher
 	{
