@@ -15,7 +15,8 @@ class CfgPatches
 			"OPTRE_Weapons",
 			"MA_Armor",
 			"rubicon_gen3",
-			"OPTRE_MJOLNIR_Units"
+			"OPTRE_MJOLNIR_Units",
+            "WSD_MisriahAdditions"
 		};
 		units[]=
 		{
@@ -88,6 +89,7 @@ class CfgPatches
 	class ItemCore;
 	class U_BasicBody;
     class OPTRE_UNSC_Operator_Helmet;
+    class WSD_MKVIG3_HelmetSkeleton;
 	class UniformItem: InventoryItem_Base_F
 	{
 		type=801;
@@ -2004,6 +2006,19 @@ class CfgPatches
             "S-IVArmory\data\SPI\SPI_Mordred.rvmat"
         };
 	};
+    class WSD_MKIVG3_Silver : WSD_MKVIG3_HelmetSkeleton
+    {
+    scope=2;
+    scopeArsenal=2;
+    author="Watershed Division";
+    displayName="[EAGLE] MJOLNIR Gen3 Mark VI Helmet (Silver)";
+    hiddenSelectionsTextures[]=
+    {
+            "S-IVArmory\data\MKVI\MKVIHelmet_Silver_CO.paa",
+            "Spartan_Stuff\data\MKVI\MKVILights_CO.paa",
+            "Spartan_Stuff\data\MKVI\MKVIVisor_CO.paa"
+    };
+    };
     class MAPO_SPI_Helmet;
     class MAPO_SPI_Armor;
     class SEC_SPI_Xeno_ArmorCore: MAPO_SPI_Armor
@@ -3604,22 +3619,6 @@ class SEC_MKVB_HRTBRK_Helmet: SEC_MKVB_PILOT_Helmet
 			"S-IVArmory\data\MKIV\MKIV_Visor.rvmat"
 		};
 	};
-	class SEC_Callahan_MKIV_Helmet: MA_Mjolnir_MKIV_Helmet
-	{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Gen 2 Mark IV Helmet (Callahan)";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
-		hiddenSelectionsTextures[] =
-		{
-			"S-IVArmory\data\MKIV\MKIV_Helmet_Callahan_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Visor_Callahan_CO.paa"
-		};
-	};
 	class SEC_Human_MKIV_Armor : MA_MKIV_Armor
 	{
 		scope=2;
@@ -3690,23 +3689,6 @@ class SEC_MKVB_HRTBRK_Helmet: SEC_MKVB_PILOT_Helmet
 			"S-IVArmory\data\MKIV\MKIV_Lower_Hesh.rvmat",
 			"S-IVArmory\data\MKIV\MKIV_Shoulders_Hesh.rvmat",
 			"S-IVArmory\data\MKIV\MKIV_Shoulders_Hesh.rvmat"
-		};
-	};
-	class SEC_Callahan_MKIV_Armor : SEC_Human_MKIV_Armor
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName = "[EAGLE] MJOLNIR Gen 2 Mark IV Armor (Callahan)";
-		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
-        MJOLNIR_shieldStrength = 100;            //Shield energy capacity
-        MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
-        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelectionsTextures[] =
-		{
-			"S-IVArmory\data\MKIV\MKIV_Upper_Callahan_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Lower_Callahan_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders_Callahan_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders_Callahan_CO.paa"
 		};
 	};
     class SEC_Ward_MKIV_Armor : SEC_Human_MKIV_Armor
