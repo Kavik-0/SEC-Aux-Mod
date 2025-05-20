@@ -30,6 +30,7 @@ class CfgPatches
 			"A3_Air_F_Beta",
 			"OPTRE_Core",
 			"OPTRE_Weapons_MG",
+			"OPTRE_Weapons_Ammo",
 			"V_FZ_Air_Vehicles",
 			"DMNS_Air_F_VTOL_01",
 			"Splits_Vehicles_Air_Pelican",
@@ -1640,6 +1641,151 @@ class CfgVehicles
 };		
 class CfgAmmo
 {
+
+	class B_40mm_GPR;
+	class OPTRE_B_50mm_HE: B_40mm_GPR {
+    //Used by: AV-22 Sparrowhawk (Big Rotary Guns) //Bison IFV
+    model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_red.p3d";
+    hit = 120;
+    indirectHit = 35;
+    indirectHitRange = 4;
+    caliber = 6;
+    explosive = 0.65;
+    tracerScale = 1.4;
+    tracerStartTime = 0.005;
+    tracerEndTime = 10;
+    allowAgainstInfantry = 1;
+    airLock = 1;
+    aiAmmoUsageFlags = "64 + 128 + 256 + 512";
+  };
+  	  class OPTRE_B_70mm_HE: OPTRE_B_50mm_HE {
+    //Used by: M370 Autocannon (G77H-TCI Pelican (Newer Models))
+    hit = 175;
+    indirectHit = 50;
+    indirectHitRange = 5;
+    caliber = 5;
+    explosive = 0.8;
+    tracerScale = 1.5;
+    typicalSpeed = 960;
+    thrust = 210;
+    suppressionRadiusHit = 24;
+    suppressionRadiusBulletClose = 12;
+    cost = 20;
+    artilleryCharge = 1;
+    artilleryDispersion = 1;
+    submunitionAmmo = "";
+    model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_red.p3d";
+    warheadName = "HE";
+    weaponType = "cannon";
+    cartridge = "FxCartridge_556";
+    explosionType = "explosive";
+    explosionSoundEffect = "DefaultExplosion";
+    explosionEffects = "ExploAmmoExplosion";
+    effectsSmoke = "SmokeShellWhite";
+    effectsMissile = "ExplosionEffects";
+    effectsMissileInit = "";
+    effectsFire = "CannonFire";
+    effectFly = "AmmoClassic";
+    effectFlare = "FlareShell";
+    craterWaterEffects = "ImpactEffectsWater";
+    craterShape = "";
+    craterEffects = "ExploAmmoCrater";
+    aiAmmoUsageFlags = "64 + 128 + 256 + 512";
+    airLock = 1;
+    allowAgainstInfantry = 1;
+    audibleFire = 200;
+    multiSoundHit[] = {
+      "soundHit1",
+      0.25,
+      "soundHit2",
+      0.25,
+      "soundHit3",
+      0.25,
+      "soundHit4",
+      0.25
+    };
+    SoundSetExplosion[] = {
+      "Shell30mm40mm_Exp_SoundSet",
+      "Shell30mm40mm_Tail_SoundSet",
+      "Explosion_Debris_SoundSet"
+    };
+    soundHit[] = {
+      "",
+      1,
+      1
+    };
+    soundHit1[] = {
+      "A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_01",
+      1.77828,
+      1,
+      1600
+    };
+    soundHit2[] = {
+      "A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_02",
+      1.77828,
+      1,
+      1600
+    };
+    soundHit3[] = {
+      "A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_03",
+      1.77828,
+      1,
+      1600
+    };
+    soundHit4[] = {
+      "A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_04",
+      1.77828,
+      1,
+      1600
+    };
+  };
+	class B_30mm_MP;
+	class OPTRE_B_30mm_HE: B_30mm_MP {
+    //Used by: AV-22 Sparrowhawk (4 cannons)
+    hit = 95;
+    airLock = 1;
+    indirectHit = 20;
+    indirectHitRange = 2.5;
+    caliber = 5;
+    explosive = 0.7;
+    tracerScale = 1.3;
+    tracerStartTime = 0.005;
+    tracerEndTime = 10;
+    model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+    aiAmmoUsageFlags = "64 + 128 + 256 + 512";
+    allowAgainstInfantry = 1;
+  };
+	class B_20mm;
+	class OPTRE_B_20mm_HE: B_20mm 
+	{
+    //Used by: UH-144 Falcon (M638 Autocannon)
+    hit = 70;
+    indirectHit = 10;
+    caliber = 5;
+    explosive = 0.5;
+    tracerScale = 1.25;
+    tracerStartTime = 0.005;
+    tracerEndTime = 10;
+    model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+    allowAgainstInfantry = 1;
+    airLock = 1;
+    aiAmmoUsageFlags = "64 + 128 + 256 + 512";
+  };
+	class B_35mm_AA_Tracer_Red;
+	class OPTRE_B_20mm_HEIAP: B_35mm_AA_Tracer_Red {
+		// Used by: Hornet
+		aiAmmoUsageFlags= "64 + 128 + 256 + 512";
+		airLock=1;
+		allowAgainstInfantry=1;
+		caliber=5;
+		explosive=0.75;
+		hit=75;
+		indirectHit=14;
+		indirectHitRange=1.75;
+		tracerEndTime=10;
+		tracerScale=1.25;
+		tracerStartTime=0.005;
+	};
 	class OPTRE_STMedusa_Missile;
 	class SEC_SuperMedusa_Missile: OPTRE_STMedusa_Missile
 	{
