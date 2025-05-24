@@ -22,7 +22,8 @@ class CfgPatches
 			"SEC_Pegasus_Guardian",
 			"SEC_Pegasus_Prototype",
 			"SEC_Gladius",
-			"SEC_Armed_SOCOM"
+			"SEC_Armed_SOCOM",
+			"SEC_Wildebeest"
 		};
 		requiredAddons[]=
 		{
@@ -101,7 +102,18 @@ class CfgVehicles
 	class OPTRE_UNSC_hornet_CAS;
 	class OPTRE_UNSC_hornet_CAP;
 	class OPTRE_gladius_01;
+	class OPTRE_M125_APC;
 
+	class SEC_Wildebeest: OPTRE_M125_APC
+	{
+		scope=2;
+		scopeArsenal=2;
+		editorCategory="SEC_Categ_Main";
+		scopeCurator=2;
+		faction="SEC_Faction_Main";
+		editorsubcategory="SEC_Categ_Vic_Motorized";
+		displayName="(Do Not Use) Wildebeest";
+	};
 	class SEC_Gladius: OPTRE_gladius_01
 	{
 		displayName="[SEC] Gladius";
