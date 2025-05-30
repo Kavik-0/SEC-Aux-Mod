@@ -112,11 +112,11 @@ class CfgVehicles
 		scopeCurator=2;
 		faction="SEC_Faction_Main";
 		editorsubcategory="SEC_Categ_Vic_Motorized";
-		displayName="(Do Not Use) Wildebeest";
+		displayName="M125A APC 'Wildebeest'";
 	};
 	class SEC_Gladius: OPTRE_gladius_01
 	{
-		displayName="[SEC] Gladius";
+		displayName="[SEC] GA-TL3 Gladius";
 		editorCategory="SEC_Categ_Main";
 		faction="SEC_Faction_Main";
 		editorsubcategory="SEC_Categ_Vic_Fixed";
