@@ -1,30 +1,28 @@
-class StageTI
-{
-	texture="#(argb,8,8,3)color(0,0,0,0)";
-};
-ambient[]={1,1,1,1};
-diffuse[]={1,1,1,1};
-forcedDiffuse[]={0,0,0,0};
-emmisive[]={0,0,0,1};
-specular[] = {0.04,0.04,0.04,1};
-specularPower=150;
-PixelShaderID="Super";
-VertexShaderID="Super";
-class Stage1
-{
-	texture = "MA_Armor\data\Helmets\EVA\EVA_Visor_NOHQ.paa";
+/*
+	Generated on https://jdtools.dev/
+	Made by John Doe
+*/
+ambient[] = { 1, 1, 1, 1 };
+diffuse[] = { 1, 1, 1, 1 };
+forcedDiffuse[] = { 0, 0, 0, 1 };
+emmisive[] = { 0, 0, 0, 1 };
+specular[]={0.85000002,0.40000001,0.15000001,1};
+specularPower=1000;
+PixelShaderID = "Super";
+VertexShaderID = "Super";
+class Stage1 {
+	texture = "S-IVArmory\data\NOBLE\Emile_EVA_Visor_NOHQ.paa";
 	uvSource = "tex";
-	class uvTransform
-	{
-		aside[] = {1,0,0};
-		up[] = {0,1,0};
-		dir[] = {0,0,0};
-		pos[] = {0,0,0};
+	class uvTransform {
+		aside[] = { 1, 0, 0 };
+		up[] = { 0, 1, 0 };
+		dir[] = { 0, 0, 0 };
+		pos[] = { 0, 0, 0 };
 	};
 };
 class Stage2
 {
-	texture = "#(argb,8,8,3)color(0.5,0.5,0.5,0.5,DT)";
+	texture = "#(argb,8,8,3)color(0.5,0.5,0.3,0.2,DT)"; // Further modifies the diffuse texture layer, again needs to be fine tuned per visor color
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -36,7 +34,7 @@ class Stage2
 };
 class Stage3
 {
-	texture = "#(argb,8,8,3)color(0,0,0,0,MC)";
+	texture = "#(argb,8,8,3)color(0,0,0,0,MC)"; // This is unused but can be useful for generating a flat color texture over whatever your texture is. Go light with the alpha here, it's very strong
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -46,34 +44,30 @@ class Stage3
 		pos[] = {0,0,0};
 	};
 };
-class Stage4
-{
-	texture = "MA_Armor\data\Helmets\EVA\EVA_Visor_AS.paa";
+class Stage4 {
+	texture = "S-IVArmory\data\NOBLE\Emile_EVA_Visor_AS.paa";
 	uvSource = "tex";
-	class uvTransform
-	{
-		aside[] = {1,0,0};
-		up[] = {0,1,0};
-		dir[] = {0,0,1};
-		pos[] = {0,0,0};
+	class uvTransform {
+		aside[] = { 1, 0, 0 };
+		up[] = { 0, 1, 0 };
+		dir[] = { 0, 0, 1 };
+		pos[] = { 0, 0, 1 };
 	};
 };
-class Stage5
-{
-	texture = "MA_Armor\data\Helmets\EVA\EVA_Visor_SMDI.paa";
+class Stage5 {
+	texture = "S-IVArmory\data\NOBLE\Emile_EVA_Visor_SMDI.paa";
 	uvSource = "tex";
-	class uvTransform
-	{
-		aside[] = {1,0,0};
-		up[] = {0,1,0};
-		dir[] = {0,0,0};
-		pos[] = {0,0,0};
+	class uvTransform {
+		aside[] = { 1, 0, 0 };
+		up[] = { 0, 1, 0 };
+		dir[] = { 0, 0, 0 };
+		pos[] = { 0, 0, 0 };
 	};
 };
 class Stage6
 {
-	texture="#(ai,64,64,1)fresnel(7.1,2.8)";
-	uvSource="tex";
+	texture="#(ai,64,64,1)fresnel(2.0,5.0)";  // Stronger light angle dependency, makes the material mimic the light values of different metals. This one is close to palladium
+    uvSource="tex";
 	class uvTransform
 	{
 		aside[]={1,0,0};
@@ -94,4 +88,7 @@ class Stage7
 		dir[]={0,0,0};
 		pos[]={0,0,0};
 	};
+};
+class StageTI {
+	texture = "a3\data_f\default_vehicle_ti_ca.paa";
 };

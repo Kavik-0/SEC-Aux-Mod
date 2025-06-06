@@ -2,12 +2,12 @@
 	Generated on https://jdtools.dev/
 	Made by John Doe
 */
-Ambient[] = {1,1,1,0.3}; // This is huge, this value defines how intense your texture should be when not being directly lit. So when the visor is in shadow, the texture is darkened to compensate. Prevents glow-in-the-dark visor reflections and helps it look good indoors
-Diffuse[] = {1,1,1,1}; // The color and intensity of your texture when under direct lighting. I would leave this as-is
-forcedDiffuse[] = {0,0,0,0};
-emmisive[] = {0,0,0,1}; 
-specular[] = {0.9, 0.7, 0.3, 0.1}; // The color of the light being reflected from your object. This needs to be fine tuned for EVERY visor unless they are the exact same shade  
-specularPower = 117; // This defines how 'sharp' the reflections on your object are. 1000 is a mirror, 1 is a stone, etc
+ambient[] = { 1, 1, 1, 1 };
+diffuse[] = { 1, 1, 1, 1 };
+forcedDiffuse[] = { 0, 0, 0, 1 };
+emmisive[] = { 0, 0, 0, 1 };
+specular[]={0.85000002,0.40000001,0.15000001,1};
+specularPower=1000;
 PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1 {
@@ -20,24 +20,28 @@ class Stage1 {
 		pos[] = { 0, 0, 0 };
 	};
 };
-class Stage2 {
-	texture = "#(argb,8,8,3)color(0.5,0.5,0.3,0.2,DT)";
+class Stage2
+{
+	texture = "#(argb,8,8,3)color(0.5,0.5,0.3,0.2,DT)"; // Further modifies the diffuse texture layer, again needs to be fine tuned per visor color
 	uvSource = "tex";
-	class uvTransform {
-		aside[] = { 1, 1, 0 };
-		up[] = { 0, 1, 0 };
-		dir[] = { 0, 0, 0 };
-		pos[] = { 0, 0, 0 };
+	class uvTransform
+	{
+		aside[] = {1,0,0};
+		up[] = {0,1,0};
+		dir[] = {0,0,1};
+		pos[] = {0,0,0};
 	};
 };
-class Stage3 {
-	texture = "#(argb,8,8,3)color(0,0,0,0,MC)";
+class Stage3
+{
+	texture = "#(argb,8,8,3)color(0,0,0,0,MC)"; // This is unused but can be useful for generating a flat color texture over whatever your texture is. Go light with the alpha here, it's very strong
 	uvSource = "tex";
-	class uvTransform {
-		aside[] = { 1, 0, 0 };
-		up[] = { 0, 1, 0 };
-		dir[] = { 0, 0, 0 };
-		pos[] = { 0, 0, 0 };
+	class uvTransform
+	{
+		aside[] = {1,0,0};
+		up[] = {0,1,0};
+		dir[] = {0,0,1};
+		pos[] = {0,0,0};
 	};
 };
 class Stage4 {
@@ -60,25 +64,29 @@ class Stage5 {
 		pos[] = { 0, 0, 0 };
 	};
 };
-class Stage6 {
-	texture="#(ai,64,64,1)fresnel(2.0,5.0)";
-	uvSource = "tex";
-	class uvTransform {
-		aside[] = { 1, 0, 0 };
-		up[] = { 0, 1, 0 };
-		dir[] = { 0, 0, 1 };
-		pos[] = { 0, 0, 0 };
+class Stage6
+{
+	texture="#(ai,64,64,1)fresnel(2.0,5.0)";  // Stronger light angle dependency, makes the material mimic the light values of different metals. This one is close to palladium
+    uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
 	};
 };
-class Stage7 {
-	texture = "a3\data_f\env_land_ca.paa";
-	useWorldEnvMap = "true";
-	uvSource = "tex";
-	class uvTransform {
-		aside[] = { 1, 0, 0 };
-		up[] = { 0, 1, 0 };
-		dir[] = { 0, 0, 1 };
-		pos[] = { 0, 0, 0 };
+class Stage7
+{
+	texture="a3\data_f\env_land_co.paa";
+	useWorldEnvMap="true";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
 	};
 };
 class StageTI {

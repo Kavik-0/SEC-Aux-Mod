@@ -152,74 +152,6 @@ class CfgWeapons
 			};
 		};
 	};
-	class SEC_Gen3_MKVIIAgathius_White: SEC_Gen3_MKVIIAgathius_Grey
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] Mark VII Agathius Shoulderplates (White)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_agath_cgrey.paa";
-		model="rubicon_gen3_attachments\gen3Agathius.p3d";
-		descriptionShort="Supplemental Plastoid shoulder armor.";
-		hiddenSelections[]=
-		{
-			"Camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\MarkVII_Agathius_White_CO.paa"
-		};
-	};
-	class SEC_Gen3_MKVIIAgathius_501st: SEC_Gen3_MKVIIAgathius_Grey
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] Mark VII Agathius Shoulderplates (Blue Patterned)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_agath_cgrey.paa";
-		model="rubicon_gen3_attachments\gen3Agathius.p3d";
-		descriptionShort="Supplemental Plastoid shoulder armor.";
-		hiddenSelections[]=
-		{
-			"Camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\MarkVII_Agathius_501st_CO.paa"
-		};
-	};
-	class SEC_Gen3_MKVIIAgathius_212th: SEC_Gen3_MKVIIAgathius_Grey
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] Mark VII Agathius Shoulderplates (Orange Patterned)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_agath_cgrey.paa";
-		model="rubicon_gen3_attachments\gen3Agathius.p3d";
-		descriptionShort="Supplemental Plastoid shoulder armor.";
-		hiddenSelections[]=
-		{
-			"Camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\MarkVII_Agathius_212th_CO.paa"
-		};
-	};
-	class SEC_Gen3_MKVIIAgathius_104th: SEC_Gen3_MKVIIAgathius_Grey
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] Mark VII Agathius Shoulderplates (Gray Patterned)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_agath_cgrey.paa";
-		model="rubicon_gen3_attachments\gen3Agathius.p3d";
-		descriptionShort="Supplemental Plastoid shoulder armor.";
-		hiddenSelections[]=
-		{
-			"Camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\MarkVII_Agathius_104th_CO.paa"
-		};
-	};
 	class SEC_Gen3_MKVIIAgathius_Colt: SEC_Gen3_MKVIINoShoulder
 	{
 		scope=2;
@@ -353,24 +285,6 @@ class CfgWeapons
 			"\rubicon_gen3_attachments\data\gen3_agathius_cbrick_co.paa"
 		};
 	};
-	class SEC_Gen3_MKVIIAgathius_Callahan: SEC_Gen3_MKVIIAgathius_Grey
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] Mark VII Agathius Shoulderplates (Callahan)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_agath_cbrick.paa";
-		model="rubicon_gen3_attachments\gen3Agathius.p3d";
-		descriptionShort="Supplemental deltoid/shoulder armor.";
-		hiddenSelections[]=
-		{
-			"Camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\MKVII_AgathiusShoulders_Callahan_CO.paa"
-		};
-	};
-
 	class SEC_Gen3_MKVIIAgathius_Jake: SEC_Gen3_MKVIIAgathius_Grey
 	{
 		scope=2;
@@ -468,39 +382,6 @@ class CfgWeapons
 			"rubicon_gen3_attachments\data\gen3_vitus_cgrey_co.paa"
 		};
 	};
-	class SAD_Gen3_MkVIIVitus_Derecha: SEC_Gen3_MkVIIVitus_Recruit
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[S.A.D] Mark VII Vitus Shoulderplates (Away)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_vitus_cgrey.paa";
-		model="rubicon_gen3_attachments\gen3Vitus.p3d";
-		descriptionShort="Supplemental deltoid/shoulder armor.";
-		hiddenSelections[]=
-		{
-			"Camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\GUEST\Derecha_vitus_CO.paa"
-		};
-		class ItemInfo: ItemInfo
-		{
-			uniformModel="rubicon_gen3_attachments\gen3Vitus.p3d";
-			hiddenSelections[]=
-			{
-				"Camo"
-			};
-			hiddenSelectionsTextures[]=
-			{
-				"MKVII_Customs\data\GUEST\Derecha_vitus_CO.paa"
-			};
-			hiddenSelectionsMaterials[]=
-			{
-				"MKVII_Customs\data\GUEST\Derecha_vitus.rvmat"
-			};
-		};
-	};
 	class SEC_Gen3_MkVIIVitus_Red: SEC_Gen3_MkVIIVitus_Recruit
 	{
 		scope=2;
@@ -550,18 +431,6 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"rubicon_gen3_attachments\data\gen3_vitus_cforest_co.paa"
-		};
-	};
-	class SEC_RECON_Raine_Helmet: SEC_MKVB_RECON_Helmet
-	{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Recon Helmet (Raine)";
-		MJOLNIR_helmetOutline="S-IVArmory\data\RECON\ReconHelmetOutline.paa";
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\RECON\MKVI_Raine_ReconHelmet_CO.paa",
-			"MKVII_Customs\data\RECON\MKVI_Raine_ReconVisor_CO.paa"
 		};
 	};
 	class SEC_Gen3_MKVIIhelmet_Recruit: Rubicon_Gen3_MKVIIhelmet_CGrey
@@ -667,134 +536,6 @@ class CfgWeapons
 			"MKVII_Customs\data\MKVII\sec_mk7visor_co.paa"
 		};
 	};
-	class SEC_Gen3_MKVIIHelmet_SSG: SEC_Gen3_MKVIIhelmet_Recruit
-	{
-		scope=2;
-		displayName="[EAGLE] Mark VII Helmet (SSG)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cblue.paa";
-		hiddenSelections[]=
-		{
-			"camo",
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\gen3_mk7helmet_SSG_CO.paa",
-			"MKVII_Customs\data\MKVII\gen3_mk7visor_SSG_CO.paa"
-		};
-	};
-	class SEC_Gen3_MKVIIHelmet_Medic: SEC_Gen3_MKVIIhelmet_Recruit
-	{
-		scope=2;
-		displayName="[EAGLE] Mark VII Helmet (Medic)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cblue.paa";
-		hiddenSelections[]=
-		{
-			"camo",
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\gen3_mk7helmet_FieldMedic_CO.paa",
-			"MKVII_Customs\data\MKVII\gen3_mk7visor_FieldMedic_CO.paa"
-		};
-	};
-	class SEC_Gen3_MKVIIHelmet_Ward: SEC_Gen3_MKVIIhelmet_Recruit
-	{
-		scope=2;
-		displayName="[EAGLE] Mark VII Helmet (Ward)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cblue.paa";
-		hiddenSelections[]=
-		{
-			"camo",
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\gen3_mk7helmet_Ward_CO.paa",
-			"MKVII_Customs\data\MKVII\gen3_mk7visor_Ward_CO.paa"
-		};
-	};
-	class SEC_Gen3_MKVIIHelmet_White: SEC_Gen3_MKVIIhelmet_Recruit
-	{
-		scope=2;
-		displayName="[EAGLE] Mark VII Helmet (White)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cgrey.paa";
-		hiddenSelections[]=
-		{
-			"camo",
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\MarkVII_Helmet_White_CO.paa",
-			"MKVII_Customs\data\MKVII\MKVII_KeystoneVisor_ARC_CO.paa"
-		};
-	};
-	class SEC_Gen3_MKVIIHelmet_501st: SEC_Gen3_MKVIIhelmet_Recruit
-	{
-		scope=2;
-		displayName="[EAGLE] Mark VII Helmet (Blue Patterned)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cgrey.paa";
-		hiddenSelections[]=
-		{
-			"camo",
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\MarkVII_Helmet_501st_CO.paa",
-			"MKVII_Customs\data\MKVII\MKVII_KeystoneVisor_ARC_CO.paa"
-		};
-	};
-	class SEC_Gen3_MKVIIHelmet_212th: SEC_Gen3_MKVIIhelmet_Recruit
-	{
-		scope=2;
-		displayName="[EAGLE] Mark VII Helmet (Orange Patterned)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cgrey.paa";
-		hiddenSelections[]=
-		{
-			"camo",
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\MarkVII_Helmet_212th_CO.paa",
-			"MKVII_Customs\data\MKVII\MKVII_KeystoneVisor_ARC_CO.paa"
-		};
-	};
-	class SEC_Gen3_MKVIIHelmet_104th: SEC_Gen3_MKVIIhelmet_Recruit
-	{
-		scope=2;
-		displayName="[EAGLE] Mark VII Helmet (Gray Patterned)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cgrey.paa";
-		hiddenSelections[]=
-		{
-			"camo",
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\MarkVII_Helmet_104th_CO.paa",
-			"MKVII_Customs\data\MKVII\MKVII_KeystoneVisor_ARC_CO.paa"
-		};
-	};
-	class SEC_Gen3_MKVIIHelmet_Callahan: SEC_Gen3_MKVIIhelmet_Recruit
-	{
-		scope=2;
-		displayName="[EAGLE] Mark VII Helmet (Callahan)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cgrey.paa";
-		hiddenSelections[]=
-		{
-			"camo",
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\MKVII_KeystoneHelmet_Callahan_CO.paa",
-			"MKVII_Customs\data\MKVII\MKVII_KeystoneVisor_Callahan_CO.paa"
-		};
-	};
 	class SEC_Gen3_MKVIIHelmet_CBrick: SEC_Gen3_MKVIIhelmet_Recruit
 	{
 		scope=2;
@@ -825,60 +566,6 @@ class CfgWeapons
 		{
 			"rubicon_gen3_helmets\data\gen3_mk7helmet_cforest_co.paa",
 			"MKVII_Customs\data\MKVII\sec_mk7visor_co.paa"
-		};
-	};
-	class SAD_Gen3_MKVIIhelmet_Derecha: SEC_Gen3_MKVIIhelmet_Recruit
-	{
-		scope=2;
-		displayName="[S.A.D] Mark VII Helmet (Away)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cgrey.paa";
-		MJOLNIR_helmetOutline="\S-IVArmory\data\MKVII\KeystoneHelmetOutline.paa";
-		model="\rubicon_gen3_helmets\gen3mk7helmet.p3d";
-		MJOLNIR_isHelmet=1;
-		hiddenSelections[]=
-		{
-			"camo",
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\GUEST\Derecha_helmet_CO.paa",
-			"MKVII_Customs\data\GUEST\Derecha_visor_CO.paa"
-		};
-		class ItemInfo: HeadgearItem
-		{
-			mass=10;
-			uniformModel="\rubicon_gen3_helmets\gen3mk7helmet.p3d";
-			allowedSlots[]=
-			{
-				"BACKPACK_SLOT",
-				"HEADGEAR_SLOT"
-			};
-			modelSides[]={6};
-			hiddenSelections[]=
-			{
-				"camo",
-				"camo1"
-			};
-			hiddenSelectionsTextures[]=
-			{
-			"MKVII_Customs\data\GUEST\Derecha_helmet_CO.paa",
-			"MKVII_Customs\data\GUEST\Derecha_visor_CO.paa"
-			};
-			hiddenSelectionsMaterials[]=
-			{
-			"MKVII_Customs\data\GUEST\Derecha_helmet.rvmat",
-			"MKVII_Customs\data\GUEST\Derecha_visor.rvmat"
-			};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointName="HitHead";
-					armor=25;
-					passThrough=0.5;
-				};
-			};
 		};
 	};
 	class SEC_Gen3_MKVIIHelmet_Colt: SEC_Gen3_MKVIIhelmet_Recruit
@@ -1179,97 +866,6 @@ class CfgWeapons
 			mass = 40;
 		};
     };
-	class SEC_Gen3_MKVIICoreSSG : SEC_Gen3_MKVIICoreGrey
-	{
-		scope = 2;
-		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (SSG)";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		class ItemInfo : UniformItem
-		{
-			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-			uniformClass = B_SEC_SpartanIV_SSG; // Needs to be matching Character in cfgVehicles
-			containerClass = Supply40;
-			mass = 40;
-		};
-    };
-	class SEC_Gen3_MKVIICoreMedic : SEC_Gen3_MKVIICoreGrey
-	{
-		scope = 2;
-		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Medic)";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		class ItemInfo : UniformItem
-		{
-			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-			uniformClass = B_SEC_SpartanIV_Medic; // Needs to be matching Character in cfgVehicles
-			containerClass = Supply40;
-			mass = 40;
-		};
-    };
-	class SEC_Gen3_MKVIICoreWhite : SEC_Gen3_MKVIICoreGrey
-	{
-		scope = 2;
-		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (White)";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		class ItemInfo : UniformItem
-		{
-			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-			uniformClass = B_SEC_SpartanIV_White; // Needs to be matching Character in cfgVehicles
-			containerClass = Supply40;
-			mass = 40;
-		};
-    };
-	class SEC_Gen3_MKVIICore501st : SEC_Gen3_MKVIICoreGrey
-	{
-		scope = 2;
-		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Blue Patterned)";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		class ItemInfo : UniformItem
-		{
-			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-			uniformClass = B_SEC_SpartanIV_501st; // Needs to be matching Character in cfgVehicles
-			containerClass = Supply40;
-			mass = 40;
-		};
-    };
-	class SEC_Gen3_MKVIICore212th : SEC_Gen3_MKVIICoreGrey
-	{
-		scope = 2;
-		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Orange Patterned)";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		class ItemInfo : UniformItem
-		{
-			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-			uniformClass = B_SEC_SpartanIV_212th; // Needs to be matching Character in cfgVehicles
-			containerClass = Supply40;
-			mass = 40;
-		};
-    };
-	class SEC_Gen3_MKVIICore104th : SEC_Gen3_MKVIICoreGrey
-	{
-		scope = 2;
-		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Gray Patterned)";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		class ItemInfo : UniformItem
-		{
-			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-			uniformClass = B_SEC_SpartanIV_104th; // Needs to be matching Character in cfgVehicles
-			containerClass = Supply40;
-			mass = 40;
-		};
-    };
-	class SEC_Gen3_MKVIICoreCallahan : SEC_Gen3_MKVIICoreGrey
-	{
-		scope = 2;
-		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Callahan)";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		class ItemInfo : UniformItem
-		{
-			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-			uniformClass = B_SEC_SpartanIV_Callahan; // Needs to be matching Character in cfgVehicles
-			containerClass = Supply40;
-			mass = 40;
-		};
-    };
 	class SEC_Gen3_MKVIICoreJake : SEC_Gen3_MKVIICoreGrey
 	{
 		scope = 2;
@@ -1309,19 +905,6 @@ class CfgWeapons
 			mass = 40;
 		};
     };
-	class SAD_Gen3_MKVIICoreDerecha : SEC_Gen3_MKVIICoreGrey
-	{
-		scope = 2;
-		displayName = "[S.A.D] MJOLNIR Gen3 MKVII Armor Core (Away)";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		class ItemInfo : UniformItem
-		{
-			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-			uniformClass = B_SAD_SpartanIV_Derecha; // Needs to be matching Character in cfgVehicles
-			containerClass = Supply40;
-			mass = 40;
-		};
-    };
 	class SEC_Gen3_MKVIICoreRecruit : SEC_Gen3_MKVIICoreGrey
 	{
 		scope = 2;
@@ -1331,19 +914,6 @@ class CfgWeapons
 		{
 			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
 			uniformClass = B_SEC_SpartanIV_Recruit; // Needs to be matching Character in cfgVehicles
-			containerClass = Supply40;
-			mass = 40;
-		};
-    };
-	class SEC_Gen3_MKVIICoreWard : SEC_Gen3_MKVIICoreGrey
-	{
-		scope = 2;
-		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Ward)";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		class ItemInfo : UniformItem
-		{
-			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-			uniformClass = B_SEC_SpartanIV_Ward; // Needs to be matching Character in cfgVehicles
 			containerClass = Supply40;
 			mass = 40;
 		};
@@ -1604,147 +1174,6 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 			"\rubicon_gen3_spartaniv\data\gen3_mk7core_cbrick_co.paa"
 		};
 	};
-	class B_SEC_SpartanIV_SSG : B_SEC_SpartanIV_Base
-	{
-		author = "Reiken";
-		scope = 1;
-		scopeCurator = 1;
-		scopeArsenal = 1;
-		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cbrick.paa";
-		uniformClass = "SEC_Gen3_MKVIICoreSSG"; // Needs to be matching item in cfgWeapons
-		hiddenSelections[]=
-		{
-			"Camo",
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\gen3_techsuit_SSG_CO.paa",
-			"MKVII_Customs\data\MKVII\gen3_mk7core_SSG_CO.paa"
-		};
-	};
-	class B_SEC_SpartanIV_Medic : B_SEC_SpartanIV_Base
-	{
-		author = "Reiken";
-		scope = 1;
-		scopeCurator = 1;
-		scopeArsenal = 1;
-		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cbrick.paa";
-		uniformClass = "SEC_Gen3_MKVIICoreMedic"; // Needs to be matching item in cfgWeapons
-		hiddenSelections[]=
-		{
-			"Camo",
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
-			"MKVII_Customs\data\MKVII\gen3_mk7core_FieldMedic_CO.paa"
-		};
-	};
-	class B_SEC_SpartanIV_White : B_SEC_SpartanIV_Base
-	{
-		author = "Reiken";
-		scope = 1;
-		scopeCurator = 1;
-		scopeArsenal = 1;
-		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cbrick.paa";
-		uniformClass = "SEC_Gen3_MKVIICoreWhite"; // Needs to be matching item in cfgWeapons
-		hiddenSelections[]=
-		{
-			"Camo",
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
-			"MKVII_Customs\data\MKVII\MarkVII_ArmorCore_White_CO.paa"
-		};
-	};
-	class B_SEC_SpartanIV_501st : B_SEC_SpartanIV_Base
-	{
-		author = "Reiken";
-		scope = 1;
-		scopeCurator = 1;
-		scopeArsenal = 1;
-		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cbrick.paa";
-		uniformClass = "SEC_Gen3_MKVIICore501st"; // Needs to be matching item in cfgWeapons
-		hiddenSelections[]=
-		{
-			"Camo",
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
-			"MKVII_Customs\data\MKVII\MarkVII_ArmorCore_501st_CO.paa"
-		};
-	};
-	class B_SEC_SpartanIV_212th : B_SEC_SpartanIV_Base
-	{
-		author = "Reiken";
-		scope = 1;
-		scopeCurator = 1;
-		scopeArsenal = 1;
-		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cbrick.paa";
-		uniformClass = "SEC_Gen3_MKVIICore212th"; // Needs to be matching item in cfgWeapons
-		hiddenSelections[]=
-		{
-			"Camo",
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
-			"MKVII_Customs\data\MKVII\MarkVII_ArmorCore_212th_CO.paa"
-		};
-	};
-	class B_SEC_SpartanIV_104th : B_SEC_SpartanIV_Base
-	{
-		author = "Reiken";
-		scope = 1;
-		scopeCurator = 1;
-		scopeArsenal = 1;
-		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cbrick.paa";
-		uniformClass = "SEC_Gen3_MKVIICore104th"; // Needs to be matching item in cfgWeapons
-		hiddenSelections[]=
-		{
-			"Camo",
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
-			"MKVII_Customs\data\MKVII\MarkVII_ArmorCore_104th_CO.paa"
-		};
-	};
-	class B_SEC_SpartanIV_Callahan : B_SEC_SpartanIV_Base
-	{
-		author = "Reiken";
-		scope = 1;
-		scopeCurator = 1;
-		scopeArsenal = 1;
-		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cbrick.paa";
-		uniformClass = "SEC_Gen3_MKVIICoreCallahan"; // Needs to be matching item in cfgWeapons
-		hiddenSelections[]=
-		{
-			"Camo",
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
-			"MKVII_Customs\data\MKVII\MKVII_ArmorCore_Callahan_CO.paa"
-		};
-	};
-
 	class B_SEC_SpartanIV_Jake : B_SEC_SpartanIV_Base
 	{
 		author = "Reiken";
@@ -1805,31 +1234,6 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 			"\rubicon_gen3_spartaniv\data\gen3_mk7core_cforest_co.paa"
 		};
 	};
-	class B_SAD_SpartanIV_Derecha : B_SEC_SpartanIV_Base
-	{
-		author = "Reiken";
-		scope = 1;
-		scopeCurator = 1;
-		scopeArsenal = 1;
-		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cforest.paa";
-		uniformClass = "SAD_Gen3_MKVIICoreDerecha"; // Needs to be matching item in cfgWeapons
-		hiddenSelections[]=
-		{
-			"Camo",
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\GUEST\Derecha_techsuit_CO.paa",
-			"MKVII_Customs\data\GUEST\Derecha_Armor_CO.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"MKVII_Customs\data\GUEST\Derecha_techsuit.rvmat",
-			"MKVII_Customs\data\GUEST\Derecha_Armor.rvmat"
-		};
-	};
 	class B_SEC_SpartanIV_Recruit : B_SEC_SpartanIV_Base
 	{
 		author = "Raine";
@@ -1848,26 +1252,6 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		{
 			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
 			"MKVII_Customs\data\MKVII\MKVII_Recruit_CO.paa"
-		};
-	};
-	class B_SEC_SpartanIV_Ward : B_SEC_SpartanIV_Base
-	{
-		author = "Stitch";
-		scope = 1;
-		scopeCurator = 1;
-		scopeArsenal = 1;
-		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cgrey.paa";
-		uniformClass = "SEC_Gen3_MKVIICoreWard"; // Needs to be matching item in cfgWeapons
-		hiddenSelections[]=
-		{
-			"Camo",
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
-			"MKVII_Customs\data\MKVII\gen3_mk7core_Ward_CO.paa"
 		};
 	};
 	class B_SEC_SpartanIV_Colt : B_Rubicon_SpartanII_Base
