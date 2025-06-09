@@ -9,9 +9,7 @@ class CfgPatches
 			"SEC_UH144Falcon",
 			"SEC_UH144AFalcon",
 			"SEC_UH144SFalcon",
-			"SEC_AV14_Rockets",
 			"SEC_AV14_AGM",
-			"SEC_AV14_AIM",
 			"SEC_AV22_Sparrowhawk",
 			"SEC_AV22A_Sparrowhawk",
 			"SEC_AV22B_Sparrowhawk",
@@ -23,7 +21,8 @@ class CfgPatches
 			"SEC_Pegasus_Prototype",
 			"SEC_Gladius",
 			"SEC_Armed_SOCOM",
-			"SEC_Wildebeest"
+			"SEC_Wildebeest",
+			"SEC_INS_Scythe_Infantry"
 		};
 		requiredAddons[]=
 		{
@@ -71,6 +70,10 @@ class CfgEditorSubcategories
 	{
 		displayName="Motorized";
 	};
+	class SEC_Categ_Vic_Turrets
+	{
+		displayName="Turrets";
+	};
 };
 class CfgVehicles
 {
@@ -91,19 +94,134 @@ class CfgVehicles
 	class OPTRE_Pelican_armed_green;
 	class OPTRE_Pelican_armed_SOCOM;
 	class VES_D77HTCI_A;
-	class VES_UH144;
-	class OPTRE_UNSC_falcon_armed_s;
-	class VES_UH144S_A: OPTRE_UNSC_falcon_armed_s
-	{
-	};
-	class VES_UH144S;
 	class TCF_UNSC_Nightingale;
 	class OPTRE_UNSC_hornet;
 	class OPTRE_UNSC_hornet_CAS;
 	class OPTRE_UNSC_hornet_CAP;
 	class OPTRE_gladius_01;
 	class OPTRE_M125_APC;
+	class OPTRE_Scythe_INS;
+	class VES_AV14_AGM;
 
+	class SEC_INS_Scythe_Infantry: OPTRE_Scythe_INS
+	{
+		scope=2;
+		scopeArsenal=2;
+		editorCategory="SEC_Categ_Main";
+		scopeCurator=2;
+		side=0
+		faction="SEC_Faction_Main";
+		editorsubcategory="SEC_Categ_Vic_Turrets";
+		displayName="Scythe (7.62 Inaccurate)";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				selectionFireAnim="zasleh";
+				body="MainTurret";
+				gun="MainGun";
+				animationsourcebody="MainTurret";
+				animationSourceGun="MainGun";
+				gunAxis="Osa Hlavne";
+				gunBeg="konec hlavne";
+				gunEnd="usti hlavne";
+				minelev=-25;
+				maxelev=85;
+				minturn=-360;
+				maxturn=360;
+				initElev=0;
+				initTurn=0;
+				turretAxis="OsaVeze";
+				maxHorizontalRotSpeed=2.7;
+				maxVerticalRotSpeed=2.7;
+				turretInfoType="RscWeaponZeroing";
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_best",
+					1.4125376,
+					1,
+					40
+				};
+				hasGunner=1;
+				gunnerName="$STR_A3_Phalanx_operator_displayName";
+				primary=1;
+				primaryGunner=1;
+				startEngine=0;
+				enableManualFire=0;
+				optics=1;
+				gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_AAA_01_w_F";
+				class OpticsIn
+				{
+					class Wide
+					{
+						opticsDisplayName="W";
+						initAngleX=0;
+						minAngleX=-30;
+						maxAngleX=30;
+						initAngleY=0;
+						minAngleY=-100;
+						maxAngleY=100;
+						initFov=0.46599999;
+						minFov=0.46599999;
+						maxFov=0.46599999;
+						visionMode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+						thermalMode[]={0,1};
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_AAA_01_w_F";
+					};
+					class Medium: Wide
+					{
+						opticsDisplayName="M";
+						initFov=0.093000002;
+						minFov=0.093000002;
+						maxFov=0.093000002;
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_AAA_01_m_F";
+					};
+					class Narrow: Wide
+					{
+						opticsDisplayName="N";
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_AAA_01_n_F";
+						initFov=0.028999999;
+						minFov=0.028999999;
+						maxFov=0.028999999;
+					};
+				};
+				forceHideGunner=1;
+				gunnerforceoptics=1;
+				gunnerOutForceOptics=1;
+				viewgunnerinExternal=0;
+				outGunnerMayFire=1;
+				inGunnerMayFire=1;
+				castGunnerShadow=0;
+				memoryPointGunnerOptics="GunnerView";
+				weapons[]=
+				{
+					"SEC_M134_minigun_AI"
+				};
+				magazines[]=
+				{
+					"5000Rnd_762x51_Belt",
+					"5000Rnd_762x51_Belt",
+					"5000Rnd_762x51_Belt",
+					"5000Rnd_762x51_Belt",
+					"5000Rnd_762x51_Belt",
+					"5000Rnd_762x51_Belt",
+					"5000Rnd_762x51_Belt",
+					"5000Rnd_762x51_Belt",
+					"5000Rnd_762x51_Belt",
+					"5000Rnd_762x51_Belt",
+				};
+				enableGPS=1;
+				reportRemoteTargets=1;
+				reportOwnPosition=1;
+				lockDetectionSystem=0;
+			};
+		};
+	};
 	class SEC_Wildebeest: OPTRE_M125_APC
 	{
 		scope=2;
@@ -112,7 +230,7 @@ class CfgVehicles
 		scopeCurator=2;
 		faction="SEC_Faction_Main";
 		editorsubcategory="SEC_Categ_Vic_Motorized";
-		displayName="M125A APC 'Wildebeest'";
+		displayName="(Do Not Use) Wildebeest";
 	};
 	class SEC_Gladius: OPTRE_gladius_01
 	{
@@ -773,6 +891,199 @@ class CfgVehicles
 			"SEC_Vehicles\data\pelican\SEC_OldPelican_Exterior_CO.paa",
 			""
 		};
+		class UserActions
+		{
+			class FullAirbrakeEngageFast
+			{
+				animPeriod=5;
+				condition="(player == driver this) AND (alive this) AND ((speed this) > 50)";
+				displayName="<t color='#FE2E2E'>Engage Airbrakes";
+				displayNameDefault="<t color='#FE2E2E'>Engage Airbrakes";
+				onlyForPlayer=0;
+				position="cargo_door_handle";
+				priority=10;
+				radius=100000;
+				showWindow=0;
+				statement="0 = this spawn V_FZ_fnc_FullAirbrakeEngageFast; 0 = this spawn V_FZ_fnc_ThrusterDeAnimate";
+				textToolTip="<t color='#FE2E2E'>Engage Airbrakes";
+				userActionID=57;
+			};
+			class HalfAirbrakeEngageFast
+			{
+				animPeriod=5;
+				condition="(player == driver this) AND (alive this) AND ((speed this) > 450)";
+				displayName="<t color='#F28D00'>Engage Airbrakes (Half)";
+				displayNameDefault="<t color='#F28D00'>Engage Airbrakes (Half)";
+				onlyForPlayer=0;
+				position="cargo_door_handle";
+				priority=10;
+				radius=100000;
+				showWindow=0;
+				statement="0 = this spawn V_FZ_fnc_HalfAirbrakeEngageFast; 0 = this spawn V_FZ_fnc_ThrusterDeAnimate";
+				textToolTip="<t color='#F28D00'>Engage Airbrakes (Half)";
+				userActionID=58;
+			};
+			class Thruster400Engage
+			{
+				animPeriod=5;
+				condition="(!(this getvariable [""OPTRE_Thruster_EngagedStatus"",false])) AND (!(this getvariable [""OPTRE_Afterburners_EngagedStatus"",false])) AND (player == driver this) AND (alive this) AND (isEngineOn this) AND  ((getPosATL this) select 2) > 1";
+				displayName="<t color='#04B45F'>Engage Forward Thrusters";
+				displayNameDefault="<t color='#04B45F'>Engage Forward Thrusters";
+				onlyForPlayer=0;
+				position="cargo_door_handle";
+				priority=10;
+				radius=100000;
+				showWindow=0;
+				statement="0 = this spawn V_FZ_fnc_Thruster400Engage; 0 = this spawn V_FZ_fnc_ThrusterAnimate";
+				textToolTip="<t color='#04B45F'>Engage Forward Thrusters";
+				userActionID=52;
+			};
+			class Thruster400Disengage
+			{
+				animPeriod=5;
+				condition="(this getvariable [""OPTRE_Thruster_EngagedStatus"",false]) AND (player == driver this) AND (alive this)";
+				displayName="<t color='#FCE205'>Disengage Forward Thrusters";
+				displayNameDefault="<t color='#FCE205'>Disengage Forward Thrusters";
+				onlyForPlayer=0;
+				position="cargo_door_handle";
+				priority=10;
+				radius=100000;
+				showWindow=0;
+				statement="0 = this spawn V_FZ_fnc_Thruster400Disengage; 0 = this spawn V_FZ_fnc_ThrusterDeAnimate";
+				textToolTip="<t color='#FCE205'>Disengage Forward Thrusters";
+				userActionID=53;
+			};
+			class Afterburners900Engage
+			{
+				animPeriod=5;
+				condition="(this getvariable [""OPTRE_Thruster_EngagedStatus"",false]) AND (!(this getvariable [""OPTRE_Afterburners_EngagedStatus"",false])) AND (player == driver this) AND (alive this) AND (isEngineOn this)";
+				displayName="<t color='#04B45F'>Engage Afterburners";
+				displayNameDefault="<t color='#04B45F'>Engage Afterburners";
+				onlyForPlayer=0;
+				position="cargo_door_handle";
+				priority=10;
+				radius=100000;
+				showWindow=0;
+				statement="0 = this spawn V_FZ_fnc_Afterburners900Engage";
+				textToolTip="<t color='#04B45F'>Engage Afterburners";
+				userActionID=54;
+			};
+			class Afterburners900Disengage
+			{
+				animPeriod=5;
+				condition="(this getvariable [""OPTRE_Afterburners_EngagedStatus"",false]) AND (player == driver this) AND (alive this)";
+				displayName="<t color='#FCE205'>Disengage Afterburners";
+				displayNameDefault="<t color='#FCE205'>Disengage Afterburners";
+				onlyForPlayer=0;
+				position="cargo_door_handle";
+				priority=10;
+				radius=100000;
+				showWindow=0;
+				statement="0 = this spawn V_FZ_fnc_Afterburners900Disengage; 0 = this spawn V_FZ_fnc_ThrusterAnimate";
+				textToolTip="<t color='#FCE205'>Disengage Afterburners";
+				userActionID=55;
+			};
+			class PelLift_LoadPodMenu
+			{
+				userActionID=9;
+				displayName="Load Supply Pods";
+				displayNameDefault="Load Supply Pods";
+				textToolTip="Load Supply Pods";
+				position="cargo_door_handle";
+				showWindow=0;
+				radius=15;
+				priority=2;
+				onlyForPlayer=0;
+				condition="!(player in [gunner this, driver this]) AND (player == driver vehicle player) AND ((vehicle player) isKindOf ""OPTRE_cart_base"")";
+				statement="OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject = this; createDialog ""OPTRE_PelicanLoadSupplyPods_Menu""; OPTRE_PelicanLoadSupplyPods_Menu_cam = ""camera"" CamCreate getPosATL OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject;  OPTRE_PelicanLoadSupplyPods_Menu_cam CamSetTarget OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject; OPTRE_PelicanLoadSupplyPods_Menu_cam CameraEffect [""Internal"",""Back""]; OPTRE_PelicanLoadSupplyPods_Menu_cam camSetRelPos [4,-12,-2.4]; OPTRE_PelicanLoadSupplyPods_Menu_cam CamCommit 0; showCinemaBorder false; if (sunOrMoon == 0) then {camUseNVG true;};";
+			};
+			class PelLift_OpenDetachPodMenu
+			{
+				userActionID=8;
+				displayName="Detach Individual Supply Pod Menu";
+				displayNameDefault="Detach Individual Supply Pod Menu";
+				textToolTip="Detach Individual Supply Pod Menu";
+				position="cargo_door_handle";
+				showWindow=0;
+				radius=5;
+				priority=3;
+				onlyForPlayer=0;
+				condition="(player in [gunner this, driver this]) AND (({_x isKindOf ""OPTRE_Ammo_SupplyPod_Empty""} count (this getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]])) > 0)";
+				statement="0 = this spawn OPTRE_fnc_PelicanLoadSupplyPodMenuDetachMenu;";
+			};
+			class PelLift_LoadVehicle
+			{
+				condition="!(player in [gunner this, driver this]) AND (player == driver vehicle player) AND (str (this getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"") AND (vehicle player != player)";
+				displayName="<t color='#FFBF00'>Maglock Cargo";
+				displayNameDefault="<t color='#FFBF00'>Maglock Cargo";
+				onlyForPlayer=0;
+				position="cargo_door_handle";
+				priority=2;
+				radius=15;
+				showWindow=0;
+				statement="0 = [this,vehicle player] spawn V_FZ_fnc_PelicanLoadValidate;";
+				textToolTip="<t color='#FFBF00'>Maglock Cargo";
+				userActionID=6;
+			};
+			class PelLift_LoadDevice
+			{
+				condition="!(player in [gunner this, driver this]) AND (player == driver vehicle player) AND (str (this getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"") AND (vehicle player != player) AND ((vehicle player) isKindOf ""VES_HDV134_Fujikawa"") AND (vehicle player getvariable [""VES_DeviceAvailable"",true])";
+				displayName="<t color='#FFBF05'>Maglock Shaw-Fujikawa Device";
+				displayNameDefault="<t color='#FFBF05'>Maglock Shaw-Fujikawa Device";
+				onlyForPlayer=0;
+				position="cargo_door_handle";
+				priority=2;
+				radius=4;
+				showWindow=0;
+				statement="0 = [this,vehicle player] spawn V_FZ_fnc_SlipspaceRuptureDetected;";
+				textToolTip="<t color='#FFBF05'>Maglock Shaw-Fujikawa Device";
+				userActionID=6;
+			};
+			class PelLift_UnLoadVehicle
+			{
+				condition="(player in [gunner this, driver this]) AND ((count (vehicle player getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]])) > 0)";
+				displayName="<t color='#DF3A01'>Release Maglock";
+				displayNameDefault="<t color='#DF3A01'>Release Maglock";
+				onlyForPlayer=0;
+				position="cargo_door_handle";
+				priority=3;
+				radius=5;
+				showWindow=0;
+				statement="0 = [this] spawn V_FZ_fnc_PelicanUnLoadValidate;";
+				textToolTip="<t color='#DF3A01'>Release Maglock";
+				userActionID=7;
+			};
+			class RampClose
+			{
+				animPeriod=5;
+				condition="((this animationPhase ""cargoDoor_1"" > 0.5) AND (!(this getvariable [""VES_PelicanMG_Status"",false])) AND (this animationPhase ""cargoDoor_2"" > 0.5) AND (alive this))";
+				displayName="Close Ramp";
+				displayNameDefault="Close Ramp";
+				onlyForPlayer=0;
+				position="cargo_door_handle";
+				priority=4;
+				radius=4;
+				showWindow=0;
+				statement="this animate [""cargoDoor_1"",0]; this animate [""cargoDoor_2"",0]";
+				textToolTip="Close Ramp";
+				userActionID=51;
+			};
+			class RampOpen
+			{
+				animPeriod=5;
+				condition="((this animationPhase ""cargoDoor_1"" < 0.5) AND (!(this getvariable [""VES_PelicanMG_Status"",false])) AND (this animationPhase ""cargoDoor_2"" < 0.5) AND (alive this))";
+				displayName="Open Ramp";
+				displayNameDefault="Open Ramp";
+				onlyForPlayer=0;
+				position="cargo_door_handle";
+				priority=4;
+				radius=4;
+				showWindow=0;
+				statement="this animate [""cargoDoor_1"",1]; this animate [""cargoDoor_2"",1]";
+				textToolTip="Open Ramp";
+				userActionID=50;
+			};
+		};
 	};
 	class OPTRE_UNSC_falcon;
 	class SEC_UH144Falcon : OPTRE_UNSC_falcon
@@ -905,9 +1216,12 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"SEC_Vehicles\data\falcon\SEC_Falcon_Main_CO.paa",
-			"SEC_Vehicles\data\falcon\SEC_Falcon_Attachments_CO.paa",
-			"SEC_Vehicles\data\falcon\SEC_Falcon_Interior_CO.paa"
+			"SEC_Vehicles\data\falcon\SEC_Falcon_Main_co.paa",
+			"SEC_Vehicles\data\falcon\SEC_Falcon_Attachments_co.paa",
+			"\optre_vehicles_air\falcon\data\falcon_interior_co.paa",
+			"\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+			"\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+			"SEC_Vehicles\data\falcon\SEC_Falcon_Decal_ca.paa"
 		};
 		textureList[]=
 		{
@@ -985,12 +1299,14 @@ class CfgVehicles
 	class OPTRE_UNSC_falcon_armed;
 	class SEC_UH144AFalcon: OPTRE_UNSC_falcon_armed
 	{
+		armor=100
 		scope=2;
 		scopeCurator=2;
 		displayName="[SEC]UH-144A Falcon";
 		editorCategory="SEC_Categ_Main";
 		faction="SEC_Faction_Main";
 		editorsubcategory="SEC_Categ_Vic_Rotary";
+		magazines[] = {"OPTRE_2000Rnd_20mm_HE","OPTRE_2000Rnd_20mm_HE","168Rnd_CMFlare_Chaff_Magazine","168Rnd_CMFlare_Chaff_Magazine","Laserbatteries"};
 		tf_hasLRradio=1;
 		tf_isolatedAmount=0.40000001;
 		tf_range=12000;
@@ -1113,9 +1429,12 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"SEC_Vehicles\data\falcon\SEC_Falcon_Main_CO.paa",
-			"SEC_Vehicles\data\falcon\SEC_Falcon_Attachments_CO.paa",
-			"SEC_Vehicles\data\falcon\SEC_Falcon_Interior_CO.paa"
+			"SEC_Vehicles\data\falcon\SEC_Falcon_Main_co.paa",
+			"SEC_Vehicles\data\falcon\SEC_Falcon_Attachments_co.paa",
+			"\optre_vehicles_air\falcon\data\falcon_interior_co.paa",
+			"\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+			"\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+			"SEC_Vehicles\data\falcon\SEC_Falcon_Decal_ca.paa"
 		};
 		textureList[]=
 		{
@@ -1321,9 +1640,12 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"SEC_Vehicles\data\falcon\SEC_Falcon_Main_CO.paa",
-			"SEC_Vehicles\data\falcon\SEC_Falcon_Attachments_CO.paa",
-			"SEC_Vehicles\data\falcon\SEC_Falcon_Interior_CO.paa"
+			"SEC_Vehicles\data\falcon\SEC_Falcon_Main_co.paa",
+			"SEC_Vehicles\data\falcon\SEC_Falcon_Attachments_co.paa",
+			"\optre_vehicles_air\falcon\data\falcon_interior_co.paa",
+			"\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+			"\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+			"SEC_Vehicles\data\falcon\SEC_Falcon_Decal_ca.paa"
 		};
 		textureList[]=
 		{
@@ -1398,58 +1720,27 @@ class CfgVehicles
 		};
 		class EventHandlers;
 	};
-	class VES_AV14_Rockets: OPTRE_UNSC_hornet
-	{
-	};
-	class VES_AV14_AGM;
-	class VES_AV14_AIM;
-	class SEC_AV14_Rockets: VES_AV14_Rockets
-	{
-		scope=2;
-		scopeCurator=2;
-		displayName="[SEC/FTZ][BUGGED]AV-14 Rocket Hornet";
-		editorCategory="SEC_Categ_Main";
-		faction="SEC_Faction_Main";
-		editorsubcategory="SEC_Categ_Vic_Rotary";
-		tf_hasLRradio=1;
-		tf_isolatedAmount=0.40000001;
-		tf_range=12000;
-		OPTRE_canThrust = 1;
-		OPTRE_minVelocity=1.4;
-		OPTRE_maxVelocity=112;
-		OPTRE_velocityMult=1;
-	};
 	class SEC_AV14_AGM : VES_AV14_AGM
 	{
+		armor=150
 		scope=2;
 		scopeCurator=2;
-		displayName="[SEC/FTZ]AV-14 AGM Hornet";
+		displayName="[SEC/FTZ]AV-14 Hornet";
 		editorCategory="SEC_Categ_Main";
 		faction="SEC_Faction_Main";
 		editorsubcategory="SEC_Categ_Vic_Rotary";
+		magazines[]={"OPTRE_2000Rnd_20mm_HEIAP","168Rnd_CMFlare_Chaff_Magazine","168Rnd_CMFlare_Chaff_Magazine","Laserbatteries","OPTRE_12Rnd_C2GMLS_missiles","OPTRE_12Rnd_C2GMLS_missiles"};
 		tf_hasLRradio=1;
 		tf_isolatedAmount=0.40000001;
 		tf_range=12000;
 		OPTRE_canThrust = 1;
-		OPTRE_minVelocity=1.4;
+		OPTRE_minVelocity=2.2;
 		OPTRE_maxVelocity=112;
-		OPTRE_velocityMult=1;
-	};
-	class SEC_AV14_AIM : VES_AV14_AIM
-	{
-		scope=2;
-		scopeCurator=2;
-		displayName="[SEC/FTZ]AV-14 AIM Hornet";
-		editorCategory="SEC_Categ_Main";
-		faction="SEC_Faction_Main";
-		editorsubcategory="SEC_Categ_Vic_Rotary";
-		tf_hasLRradio=1;
-		tf_isolatedAmount=0.40000001;
-		tf_range=12000;
-		OPTRE_canThrust = 1;
-		OPTRE_minVelocity=1.4;
-		OPTRE_maxVelocity=112;
-		OPTRE_velocityMult=1;
+		OPTRE_velocityMult=2;
+		hiddenSelectionsTextures[]=
+		{
+			"SEC_Vehicles\data\Hornet\SEC_V_FZ_HORNET_URB_CO.paa"
+		};
 	};
 	class OPTRE_AV22_Sparrowhawk_Base;
 	class VES_AV22_Sparrowhawk_Base;
