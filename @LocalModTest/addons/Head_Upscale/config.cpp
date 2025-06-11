@@ -9,7 +9,7 @@ class CfgWeapons
 	{
 		author = "Rebel / Facel, Upscaled by Reiken";
 		scope = 2;
-		displayName = "[EAGLE] J.F.Rey Eyewear (Cain Gear)";
+		displayName = "J.F.Rey Eyewear (Cain Gear)";
 		model = "\Head_Upscale\mgsr_eyepatch.p3d";
 		picture = "\Head_Upscale\data\gear_mgsr_eyepatch_x_ca";
 
@@ -25,6 +25,10 @@ class CfgWeapons
 class CfgHeads
 {
     class Default_A3;
+	class Spartan: Default_A3
+	{
+		model = "OPTRE_MJOLNIR_Units\head.p3d";
+	};
 	class umgsr_naked_head: Default_A3
     {
         model = "\Head_Upscale\mgsr_naked_head.p3d";
@@ -74,6 +78,16 @@ class CfgFaces
 			
 			textureHL2="Head_Upscale\data\female_01\F_HL_co.paa";
 			materialHL2="Head_Upscale\data\female_01\F_HL_white.rvmat";
+		};
+		class SPRT_LivonianHead_10: Spartan_WhiteHead_01
+		{
+			author = "Article 2 Studios";
+			displayName = "Mark-116";
+			head="Spartan";
+			material = "a3\Characters_F_Enoch\Heads\data\m_livonianHead_10.rvmat";
+			materialWounded1 = "a3\Characters_F_Enoch\Heads\data\m_livonianHead_10_injury.rvmat";
+			materialWounded2 = "a3\Characters_F_Enoch\Heads\data\m_livonianHead_10_injury.rvmat";
+			texture = "a3\Characters_F_Enoch\Heads\data\m_livonianHead_10_co.paa";
 		};
     };
 };

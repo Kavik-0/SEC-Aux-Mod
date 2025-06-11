@@ -436,10 +436,8 @@ class CfgWeapons
 	class SEC_Gen3_MKVIIhelmet_Recruit: Rubicon_Gen3_MKVIIhelmet_CGrey
 	{
 		scope=2;
-		displayName="[EAGLE] Mark VII Helmet (Grey)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cgrey.paa";
+		displayName="[EAGLE] Mark VII Helmet";
 		MJOLNIR_helmetOutline="\S-IVArmory\data\MKVII\KeystoneHelmetOutline.paa";
-		model="\rubicon_gen3_helmets\gen3mk7helmet.p3d";
 		MJOLNIR_isHelmet=1;
 		hiddenSelections[]=
 		{
@@ -448,46 +446,37 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"rubicon_gen3_helmets\data\gen3_mk7helmet_cgrey_co.paa",
-			"MKVII_Customs\data\MKVII\sec_mk7visor_co.paa"
+			"MKVII_Customs\data\MKVII\gen3_mk7helmet_CO.paa",
+			"MKVII_Customs\data\MKVII\gen3_mk7visor_co.paa"
 		};
-		class ItemInfo: HeadgearItem
+		hiddenSelectionsMaterials[]=
 		{
-			mass=10;
-			uniformModel="\rubicon_gen3_helmets\gen3mk7helmet.p3d";
-			allowedSlots[]=
-			{
-				"BACKPACK_SLOT",
-				"HEADGEAR_SLOT"
-			};
-			modelSides[]={6};
-			hiddenSelections[]=
-			{
-				"camo",
-				"camo1"
-			};
-			hiddenSelectionsTextures[]=
-			{
-			"rubicon_gen3_helmets\data\gen3_mk7helmet_cgrey_co.paa",
-			"MKVII_Customs\data\MKVII\sec_mk7visor_co.paa"
-			};
-			hiddenSelectionsMaterials[]=
-			{
-			"rubicon_gen3_helmets\data\gen3_mk7helmet.rvmat",
-			"MKVII_Customs\data\MKVII\sec_mk7visor_co.rvmat"
-			};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointName="HitHead";
-					armor=25;
-					passThrough=0.5;
-				};
-			};
+			"MKVII_Customs\data\MKVII\gen3_mk7helmet.rvmat",
+			"MKVII_Customs\data\MKVII\gen3_mk7visor.rvmat"
 		};
 	};
-	class SEC_Gen3_MKVIICeloxhelmet_Jake: Rubicon_Gen3_MKVIICeloxhelmet_CBlue
+	class SEC_Gen3_MKVIICeloxHelmet: Rubicon_Gen3_MKVIICeloxhelmet_CBlue
+	{
+		scope=2;
+		displayName="[EAGLE] CELOX-Class Helmet";
+		picture="\rubicon_gen3_helmets\data\ui\icon_U_celoxhelm_cgrey.paa";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\CELOX\gen3_celoxhelmet_CO.paa",
+			"MKVII_Customs\data\CELOX\gen3_celoxvisor_CO.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"MKVII_Customs\data\CELOX\gen3_celoxhelmet.rvmat",
+			"MKVII_Customs\data\CELOX\gen3_celoxvisor.rvmat"
+		};
+	};
+	class SEC_Gen3_MKVIICeloxhelmet_Jake: SEC_Gen3_MKVIICeloxHelmet
 	{
 		scope=2;
 		displayName="[EAGLE] CELOX-Class Helmet (Jake)";
@@ -503,7 +492,7 @@ class CfgWeapons
 			"MKVII_Customs\data\CELOX\MKVII_celoxvisor_Jake_CO.paa"
 		};
 	};
-	class SEC_Gen3_MKVIICeloxhelmet_Keegan: Rubicon_Gen3_MKVIICeloxhelmet_CBlue
+	class SEC_Gen3_MKVIICeloxhelmet_Keegan: SEC_Gen3_MKVIICeloxHelmet
 	{
 		scope=2;
 		scopeArsenal=2;
@@ -739,9 +728,8 @@ class CfgWeapons
 	class SEC_Gen3_CavHelmet_Recruit: Rubicon_Gen3_MKVIICAVhelmet_CGrey
 	{
 		scope=2;
-		author = "Raine";
-		displayName="[EAGLE] CAVALLINO-Class Helmet (Recruit)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_cavahelm_cgrey.paa";
+		author = "Reiken";
+		displayName="[EAGLE] CAVALLINO-Class Helmet";
 		MJOLNIR_helmetOutline="\S-IVArmory\data\CAVALLINO\CavallinoHelmetOutline.paa";
 		hiddenSelections[]=
 		{
@@ -750,43 +738,13 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"MKVII_Customs\data\CAVALLINO\MKVII_Recruit_CavHelmet_CO.paa",
-			"MKVII_Customs\data\CAVALLINO\MKVII_RecruitCavVisor_CO.paa"
+			"MKVII_Customs\data\CAVALLINO\gen3_cavhelmet_CO.paa",
+			"MKVII_Customs\data\CAVALLINO\gen3_cavvisor_CO.paa"
 		};
-		class ItemInfo: HeadgearItem
+		hiddenSelectionsMaterials[]=
 		{
-			mass=10;
-			uniformModel="\rubicon_gen3_helmets\gen3cavhelmet.p3d";
-			allowedSlots[]=
-			{
-				"BACKPACK_SLOT",
-				"HEADGEAR_SLOT"
-			};
-			modelSides[]={6};
-			hiddenSelections[]=
-			{
-				"camo",
-				"camo1"
-			};
-			hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\CAVALLINO\MKVII_Recruit_CavHelmet_CO.paa",
-			"MKVII_Customs\data\CAVALLINO\MKVII_RecruitCavVisor_CO.paa"
-		};
-			hiddenSelectionsmaterials[]=
-			{
-			"rubicon_gen3_helmets\data\gen3_cavhelmet.rvmat",
-			"MKVII_Customs\data\CAVALLINO\sec_cavvisor.rvmat"
-			};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointName="HitHead";
-					armor=25;
-					passThrough=0.5;
-				};
-			};
+			"MKVII_Customs\data\CAVALLINO\gen3_cavhelmet.rvmat",
+			"MKVII_Customs\data\CAVALLINO\gen3_cavvisor.rvmat"
 		};
 	};
 	class SEC_Gen3_CavHelmet_Blue: SEC_Gen3_CavHelmet_Recruit
@@ -1006,11 +964,6 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 			"Camo",
 			"Camo1"
 		}; 
-		hiddenSelectionsTextures[]=
-		{
-			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
-			"\rubicon_gen3_spartaniv\data\gen3_mk7core_cgrey_co.paa"
-		};
 		class HitPoints
 		{
 			class HitFace
