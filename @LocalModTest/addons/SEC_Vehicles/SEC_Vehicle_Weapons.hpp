@@ -176,6 +176,26 @@ class CfgAmmo
 };
 class CfgMagazines
 {
+	class OPTRE_1Rnd_C2GMLS_missiles;
+	class OPTRE_8Rnd_C2GMLS_missiles: OPTRE_1Rnd_C2GMLS_missiles
+	{
+		hardpoints[]=
+		{
+			"OPAEX_Hardpoint_UH144"
+		};
+	};
+	class OPTRE_12Rnd_C2GMLS_missiles: OPTRE_1Rnd_C2GMLS_missiles
+	{
+		hardpoints[]= 
+		{
+			"OPAEX_Hardpoint_D77-TC",
+			"OPTRE_Hardpoint_D77_Guided",
+			"OPTRE_Hardpoint_SabrePilot",
+			"OPTRE_Hardpoint_SabreCopilot",
+			"OPAEX_Hardpoint_AV14",
+			"OPAEX_Hardpoint_AV22"
+		};
+	};
 	class OPTRE_Jackknife_missile;
 	class OPTRE_6Rnd_Jackknife_missile: OPTRE_Jackknife_missile
 	{
@@ -190,7 +210,7 @@ class CfgMagazines
 		displayName = "4x AGM-502 'Jack Knife' SALH-ATGM";
 		count = 4;
 		
-		hardpoints[]  = {"OPTRE_Hardpoint_F99","OPAEX_Hardpoint_AV22","OPAEX_Hardpoint_D77-TC","OPTRE_Hardpoint_D77_Guided"};
+		hardpoints[]  = {"OPTRE_Hardpoint_F99","OPAEX_Hardpoint_AV14","OPAEX_Hardpoint_AV22","OPAEX_Hardpoint_D77-TC","OPTRE_Hardpoint_D77_Guided"};
 
 	};
 	class OPTRE_3Rnd_Jackknife_missile: OPTRE_Jackknife_missile
@@ -198,7 +218,7 @@ class CfgMagazines
 		displayName = "3x AGM-502 'Jack Knife' SALH-ATGM";
 		count = 3;
 		
-		hardpoints[]  = {"OPTRE_Hardpoint_SabrePilot","OPTRE_Hardpoint_SabreCopilot","OPAEX_Hardpoint_AV14"};		
+		hardpoints[]  = {"OPTRE_Hardpoint_SabrePilot","OPTRE_Hardpoint_SabreCopilot","OPAEX_Hardpoint_UH144"};		
 	};
 	class PylonRack_Bomb_SDB_x4;
 	class SEC_Gunship_Glidebomb_x4: PylonRack_Bomb_SDB_x4
@@ -388,7 +408,176 @@ class cfgWeapons
 			"SEC_5000Rnd_762x51_Belt"
 		};
 	};
-	
+	class SEC_M134_minigun_AI: M134_minigun ////////////////////////////////////////////////
+	{
+		scope=1;
+		displayName="$STR_A3_M134_minigun0";
+		cursor="EmptyCursor";
+		cursorAim="mg";
+		magazines[]=
+		{
+			"5000Rnd_762x51_Belt",
+			"5000Rnd_762x51_Yellow_Belt"
+		};
+		magazineReloadTime=3;
+		canLock=0;
+		modes[]=
+		{
+			"HighROF",
+			"LowROF",
+			"close",
+			"short",
+			"medium",
+			"far"
+		};
+		weight=40;
+		type=65536;
+		aiDispersionCoefY=0.5;
+		aiDispersionCoefX=0.5;
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				effectName="MachineGunCloud";
+				positionName="konec hlavne";
+				directionName="Usti hlavne";
+			};
+		};
+		class LowROF: Mode_FullAuto
+		{
+			displayName="$STR_A3_M134_minigun0";
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"A3\Sounds_F\arsenal\weapons_vehicles\gatling_762mm\762mm_01_burst",
+					3.9810717,
+					1,
+					1300,
+					{2,36879}
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			soundContinuous=1;
+			flash="gunfire";
+			flashSize=0.1;
+			recoil="Empty";
+			ffMagnitude=0.5;
+			ffFrequency=11;
+			ffCount=6;
+			reloadTime=0.033333302;
+			dispersion=0.01058000023  //0.0092000002;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=10;
+			minRange=0;
+			minRangeProbab=0.0099999998;
+			midRange=1;
+			midRangeProbab=0.0099999998;
+			maxRange=2;
+			maxRangeProbab=0.0099999998;
+			showToPlayer=0;
+			multiplier=1;
+		};
+		class HighROF: LowROF
+		{
+			displayName="$STR_A3_M134_minigun0";
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"A3\Sounds_F\arsenal\weapons_vehicles\gatling_762mm\762mm_01_burst",
+					2.5118864,
+					1,
+					1500,
+					{2,36879}
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			showToPlayer=1;
+			multiplier=3;
+		};
+		class close: HighROF
+		{
+			soundBurst=0;
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=100;
+			burstRangeMax=-1;
+			aiRateOfFire=0.5;
+			aiRateOfFireDispersion=1;
+			aiRateOfFireDistance=50;
+			minRange=0;
+			minRangeProbab=0.69999999;
+			midRange=100;
+			midRangeProbab=0.75;
+			maxRange=300;
+			maxRangeProbab=0.2;
+		};
+		class short: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=100;
+			burstRangeMax=-1;
+			aiRateOfFire=1;
+			aiRateOfFireDispersion=2;
+			aiRateOfFireDistance=150;
+			minRange=100;
+			minRangeProbab=0.75;
+			midRange=300;
+			midRangeProbab=0.75;
+			maxRange=600;
+			maxRangeProbab=0.2;
+		};
+		class medium: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=100;
+			burstRangeMax=-1;
+			aiRateOfFire=1;
+			aiRateOfFireDispersion=2;
+			aiRateOfFireDistance=300;
+			minRange=300;
+			minRangeProbab=0.75;
+			midRange=600;
+			midRangeProbab=0.64999998;
+			maxRange=800;
+			maxRangeProbab=0.1;
+		};
+		class far: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=100;
+			burstRangeMax=-1;
+			aiRateOfFire=2;
+			aiRateOfFireDispersion=4;
+			aiRateOfFireDistance=800;
+			minRange=800;
+			minRangeProbab=0.64999998;
+			midRange=1000;
+			midRangeProbab=0.30000001;
+			maxRange=1500;
+			maxRangeProbab=0.050000001;
+		};
+	};
 	class SEC_CarpetBomb_Launcher: weapon_SDBLauncher
 	{
 		magazines[]=
