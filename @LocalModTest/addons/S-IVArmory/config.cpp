@@ -2692,7 +2692,7 @@ class SEC_MKVB_Kara_Helmet: SEC_MKVB_GUNGNIR_Helmet
 	MJOLNIR_helmetOutline="S-IVArmory\data\GUNGNIR\GungnirHelmetOutline.paa";
     hiddenSelectionsTextures[]=
     {
-        "S-IVArmory\data\GUNGNIR\MKVB_GungnirHelm_Kara_CO.paa"
+        "S-IVArmory\data\GUNGNIR\GUNGNIR_Helmet_Kara_CO.paa"
     };
 };
 	class SEC_MKVB_JFO_Helmet: MA_Mjolnir_JFO_Helmet
