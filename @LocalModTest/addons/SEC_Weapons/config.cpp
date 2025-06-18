@@ -5,7 +5,7 @@ class CfgPatches
         units[] = {};
         weapons[] = {"OPTRE_M45_Flashlight"};
         requiredVersion = 0.1;
-        requiredAddons[] = {"A3_Weapons_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "A3_CargoPoses_F", "A3_Anims_F", "19_UNSC_Weapons", "OPTRE_Weapons", "OPTRE_Weapons_Pistol", "Misriah_Armory_Weapons", "OPTRE_Core", "NSWep_Weapons", "Casey_Halo_melee", "OPTRE_FC_Weapons"};
+        requiredAddons[] = {"A3_Weapons_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "A3_CargoPoses_F", "A3_Anims_F", "19_UNSC_Weapons", "OPTRE_Weapons", "OPTRE_Weapons_MG", "OPTRE_Weapons_Pistol", "Misriah_Armory_Weapons", "OPTRE_Core", "NSWep_Weapons", "Casey_Halo_melee", "OPTRE_FC_Weapons"};
         author = "Reiken";
     };
 };
@@ -128,6 +128,9 @@ class CfgWeapons
 	class OPTRE_M6C_Laser;
 	class NSWep_MA5K;
 	class ItemInfo;
+	class OPTRE_M247A1;
+	class OPTRE_M247A1_Stripped;
+	class OPTRE_M250;
 
 	class OPTRE_M6C_Flashlight: OPTRE_M6C_Laser
 	{
@@ -410,12 +413,17 @@ class CfgWeapons
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\SniperRifles\srs99c.paa";
 		reloadAction = "WBK_SRS99C_Reload";
 	};
-	class SEC_M739_SAW: MA_H4_SAW
+	class OPTRE_M739_SAW_Black_F;
+	class OPTRE_M739_SAW_Foregrip_Black_F;
+	class SEC_M739_SAW: OPTRE_M739_SAW_Black_F
 	{
 		displayName="[EAGLE] M739 SAW";
-		pictureMjolnirHud = "SEC_Weapons\data\weaponIcons\M739_LMG.paa";
 		baseWeapon="SEC_M739_SAW";
-		picture="SEC_Weapons\data\weaponIcons\m739saw_icon.paa";
+	};
+	class SEC_M739_SAWFG: OPTRE_M739_SAW_Foregrip_Black_F
+	{
+		displayName="[EAGLE] M739 SAW (Foregrip)";
+		baseWeapon="SEC_M739_SAWFG";
 	};
 	class SEC_BR75: OPTRE_BR55HB
 	{
@@ -545,6 +553,21 @@ class CfgWeapons
 		pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\Pistols\m6b_icon.paa";
 		baseWeapon="SEC_M6C_Gen2"
 	};
+	class SEC_M247A1: OPTRE_M247A1
+	{
+		baseWeapon="SEC_M247A1";
+		displayName="[EAGLE] M247A1 Medium Machinegun";
+	};
+	class SEC_M247A1_Stripped: OPTRE_M247A1_Stripped
+	{
+		baseWeapon="SEC_M247A1_Stripped";
+		displayName="[EAGLE] M247E3 Medium Machinegun";
+	};
+	class SEC_M250: OPTRE_M250
+	{
+		baseWeapon="SEC_M250";
+		displayName="[EAGLE] M250 Heavy Machinegun";
+	};
 	class SEC_M7_Gen1: OPTRE_M7
 	{
 		displayName="[EAGLE] M7/Caseless Submachine Gun (Gen1)";
@@ -605,7 +628,7 @@ class CfgWeapons
 		{
 			"\SEC_Weapons\data\GunTextures\CTGCY_M73_Body_CTGCY.paa"
 		};
-	};
+	}; 
 	class SEC_M247: OPTRE_M247
 	{
 		displayName="[EAGLE] M247 General Purpose Machine Gun";
@@ -618,33 +641,6 @@ class CfgWeapons
 			"\SEC_Weapons\data\GunTextures\CTGCY_M247_Stock_CTGCY.paa",
 			"\SEC_Weapons\data\GunTextures\CTGCY_M247_Barrel1.paa",
 			"\SEC_Weapons\data\GunTextures\CTGCY_M247_Barrel2.paa"
-		};
-	};
-	class SEC_M247H: OPTRE_M247H_Etilka
-	{
-		displayName="[EAGLE] M247H Heavy Machine Gun"
-		baseWeapon="SEC_M247H";
-		class WeaponSlotsInfo
-		{
-			mass=84;
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleitems[]=
-				{
-				};
-			};
-			class CowsSlot: CowsSlot
-			{
-				compatibleitems[]=
-				{
-				};
-			};
-			class PointerSlot: PointerSlot
-			{
-				compatibleitems[]=
-				{
-				};
-			};
 		};
 	};
 	class SEC_M45: OPTRE_M45
@@ -1232,13 +1228,14 @@ class CfgMagazines
 		count = 1;
 		mass = 80;
 	};
-	class SEC_600Rnd_127x99_M247H_Etilka_FMJ: OPTRE_200Rnd_127x99_M247H_Etilka_Ball
+	class OPTRE_50Rnd_127x99_M250_Box;
+	class SEC_300Rnd_127x99_M250_Box: OPTRE_50Rnd_127x99_M250_Box
 	{
-		displayname = "600Rnd M247H Box (FMJ)";
+		displayname = "300Rnd M250 Box (FMJ/T)";
 		mass = 100;
-		count = 600;
-		displayNameShort = "12.7x99 FMJ";
-		lastRoundsTracer = 600;
+		count = 300;
+		displayNameShort = "12.7x51 FMJ";
+		lastRoundsTracer = 300;
 	};
 	class SEC_36Rnd_762x51_Mag: OPTRE_32Rnd_762x51_Mag
 	{
@@ -1265,14 +1262,6 @@ class CfgMagazines
 };
 class cfgMagazineWells
 {
-	class OPTRE_Magwell_M247H_Etilka
-	{
-		OPTRE_127x99_200Rnd[]=
-		{
-			"OPTRE_200Rnd_127x99_M247H_Etilka_Ball",
-			"SEC_600Rnd_127x99_M247H_Etilka_FMJ"
-		};
-	};
 	class 19_UNSC_M90_Magwell 
 	{
 		UNSC_8ga_12rnd[] = 
@@ -1289,6 +1278,14 @@ class cfgMagazineWells
 			"SEC_36Rnd_762x51_Mag",
 			"SEC_36Rnd_762x51_Mag_Tracer",
 			"SEC_36Rnd_762x51_Mag_Tracer_Yellow"
+		};
+	};
+	class OPTRE_Magwell_M250_LMG
+	{
+		OPTRE_127x99_60Rnd[]=
+		{
+			"OPTRE_50Rnd_127x99_M250_Box",
+			"SEC_300Rnd_127x99_M250_Box"
 		};
 	};
 };

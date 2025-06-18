@@ -615,6 +615,24 @@ class CfgPatches
 			"S-IVArmory\data\MKVB\Gambit_MKV_Lower_CO.paa"
 		};
 	};
+    class SEC_MKVB_Kara_ArmorCore: SEC_MKVB_JumpJet_ArmorCore
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] MJOLNIR Mark V.[B] (Collin) Armor Core";
+		hiddenSelections[]=
+		{
+            "camo1",
+			"camo2",
+		//	"mkvb_upper",
+		//	"mkvb_lower"
+		};
+        hiddenSelectionsTextures[]=
+		{
+            "S-IVArmory\data\MKVB\MKV_Upper_Kara_CO.paa",
+			"S-IVArmory\data\MKVB\MKV_Lower_Kara_CO.paa"
+		};
+	};
 	class SEC_MKVB_Ashburn_ArmorCore: SEC_MKVB_ArmorCore
 	{
 		scope=2;
@@ -2666,7 +2684,17 @@ class SEC_MKVB_Horne_Helmet: SEC_MKVB_GUNGNIR_Helmet
         "S-IVArmory\data\GUNGNIR\MKVB_Horne_GungnirHelm_CO.paa"
     };
 };
-	
+class SEC_MKVB_Kara_Helmet: SEC_MKVB_GUNGNIR_Helmet
+{
+    scope=2;
+    scopeArsenal=2;
+    displayName="[EAGLE] MJOLNIR Mark V.[GNG] Helmet (Collin)";
+	MJOLNIR_helmetOutline="S-IVArmory\data\GUNGNIR\GungnirHelmetOutline.paa";
+    hiddenSelectionsTextures[]=
+    {
+        "S-IVArmory\data\GUNGNIR\GUNGNIR_Helmet_Kara_CO.paa"
+    };
+};
 	class SEC_MKVB_JFO_Helmet: MA_Mjolnir_JFO_Helmet
 {
     scope=2;
