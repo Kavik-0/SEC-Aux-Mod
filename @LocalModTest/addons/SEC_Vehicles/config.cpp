@@ -173,7 +173,7 @@ class CfgVehicles
 	class OPTRE_Scythe_INS;
 
 #include "SEC_Vehicles_Ground.hpp"
-#include "SEC_Vehicles_Air.hpp"
+#include "Aircraft_HPPs\SEC_Vehicles_Air.hpp"
 
 	class SEC_INS_Scythe_Infantry: OPTRE_Scythe_INS
 	{

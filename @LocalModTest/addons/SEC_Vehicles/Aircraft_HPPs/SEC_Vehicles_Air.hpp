@@ -29,35 +29,198 @@
 
 	class SEC_B_Heli_Light_01_F: B_Heli_Light_01_F
 	{
-		armor=60;
+		armor=80;
 		displayName="[SEC] TV-06 Stork (Transport)";
 		faction="SEC_Faction_Main";
 		editorCategory="SEC_Categ_Main";
 		editorsubcategory="SEC_Categ_Vic_Rotary";
+		OPTRE_canThrust = 1;
+		OPTRE_minVelocity=1.4;
+		OPTRE_maxVelocity=112;
+		OPTRE_velocityMult=1;
+		weapons[]=
+		{
+			"CMFlareLauncher",
+			"Laserdesignator_pilotCamera"
+		};
+		magazines[]=
+		{
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"Laserbatteries"
+		};
+		class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName="WFOV";
+					initAngleX=0;
+					minAngleX=0;
+					maxAngleX=0;
+					initAngleY=0;
+					minAngleY=0;
+					maxAngleY=0;
+					initFov="(30 / 120)";
+					minFov="(30 / 120)";
+					maxFov="(30 / 120)";
+					directionStabilized=1;
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					thermalMode[]={0,1};
+					gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Generic_wide_F.p3d";
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName="MFOV";
+					initFov="(6 / 120)";
+					minFov="(6 / 120)";
+					maxFov="(6 / 120)";
+					gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Generic_medium_F.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName="NFOV";
+					initFov="(2 / 120)";
+					minFov="(2 / 120)";
+					maxFov="(2 / 120)";
+					gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Generic_narrow_F.p3d";
+				};
+			};
+			minTurn=-180;
+			maxTurn=180;
+			initTurn=0;
+			minElev=-90;
+			maxElev=90;
+			initElev=5;
+			maxXRotSpeed=1;
+			maxYRotSpeed=1;
+			maxMouseXRotSpeed=0.5;
+			maxMouseYRotSpeed=0.5;
+			pilotOpticsShowCursor=1;
+			controllable=1;
+		};
+		#include "Shoebill_HMD.hpp"
+
 	};
 	class SEC_B_Heli_Light_01_dynamicLoadout_F: B_Heli_Light_01_dynamicLoadout_F
 	{
-		armor=60;
+		armor=80;
 		displayName="[SEC] AV-05 Shoebill (Assault)";
 		faction="SEC_Faction_Main";
 		editorCategory="SEC_Categ_Main";
 		editorsubcategory="SEC_Categ_Vic_Rotary";
+		OPTRE_canThrust = 1;
+		OPTRE_minVelocity=1.4;
+		OPTRE_maxVelocity=112;
+		OPTRE_velocityMult=1;
+		weapons[]=
+		{
+			"M134_minigun",
+			"CMFlareLauncher",
+			"Laserdesignator_pilotCamera"
+		};
+		magazines[]=
+		{
+			"5000Rnd_762x51_Belt",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"Laserbatteries"
+		};
+		class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName="WFOV";
+					initAngleX=0;
+					minAngleX=0;
+					maxAngleX=0;
+					initAngleY=0;
+					minAngleY=0;
+					maxAngleY=0;
+					initFov="(30 / 120)";
+					minFov="(30 / 120)";
+					maxFov="(30 / 120)";
+					directionStabilized=1;
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					thermalMode[]={0,1};
+					gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Generic_wide_F.p3d";
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName="MFOV";
+					initFov="(6 / 120)";
+					minFov="(6 / 120)";
+					maxFov="(6 / 120)";
+					gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Generic_medium_F.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName="NFOV";
+					initFov="(2 / 120)";
+					minFov="(2 / 120)";
+					maxFov="(2 / 120)";
+					gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Generic_narrow_F.p3d";
+				};
+			};
+			minTurn=-180;
+			maxTurn=180;
+			initTurn=0;
+			minElev=-90;
+			maxElev=90;
+			initElev=5;
+			maxXRotSpeed=1;
+			maxYRotSpeed=1;
+			maxMouseXRotSpeed=0.5;
+			maxMouseYRotSpeed=0.5;
+			pilotOpticsShowCursor=1;
+			controllable=1;
+		};
+		#include "Shoebill_HMD.hpp"
 	};
-	class SEC_B_CTRG_Heli_Transport_01_tropic_F: B_CTRG_Heli_Transport_01_tropic_F
+	class SEC_B_CTRG_Heli_Transport_01_tropic_F: B_CTRG_Heli_Transport_01_tropic_F 
 	{
 		armor=100;
 		displayName="[SEC] UH-054 Crow";
 		faction="SEC_Faction_Main";
 		editorCategory="SEC_Categ_Main";
 		editorsubcategory="SEC_Categ_Vic_Rotary";
+		OPTRE_canThrust = 1;
+		OPTRE_minVelocity=1.4;
+		OPTRE_maxVelocity=112;
+		OPTRE_velocityMult=1;
 	};
-	class SEC_B_Heli_Attack_01_Dynamicloadout_F: B_Heli_Attack_01_Dynamicloadout_F
+	class SEC_B_Heli_Attack_01_Dynamicloadout_F: B_Heli_Attack_01_Dynamicloadout_F // Add laser to Pilot Cam.
 	{
 		armor=100;
 		displayName="[SEC] RAH-94 Raven";
 		faction="SEC_Faction_Main";
 		editorCategory="SEC_Categ_Main";
 		editorsubcategory="SEC_Categ_Vic_Rotary";
+		OPTRE_canThrust = 1;
+		OPTRE_minVelocity=1.4;
+		OPTRE_maxVelocity=112;
+		OPTRE_velocityMult=1;
+		weapons[]=
+		{
+			"CMFlareLauncher",
+			"Laserdesignator_pilotCamera"
+		};
+		magazines[]=
+		{
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"Laserbatteries"
+		};
 	};
 
 ////// Vanilla VTOLs //////
@@ -69,7 +232,7 @@
 		editorCategory="SEC_Categ_Main";
 		editorsubcategory="SEC_Categ_Vic_Vtol";
 	};
-	class SEC_OPTRE_VTOLI_01: OPTRE_VTOLI_01
+	class SEC_OPTRE_VTOLI_01: OPTRE_VTOLI_01 // Make turret better.
 	{
 		armor=350;
 		displayName="[SEC] AVD-99IT Wyvern";
@@ -1776,7 +1939,6 @@
 			"V_FZ_Air_Vehicles\data\Sparrowhawk\V_SPARROW_GLASS_CA.paa"
 		};
 	};
-
 
 ////// Sabre //////
 

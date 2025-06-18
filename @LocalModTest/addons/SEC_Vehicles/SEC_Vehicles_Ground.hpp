@@ -266,11 +266,17 @@
 	};
 	class SEC_OPTRE_M313_UNSC: OPTRE_M313_UNSC
 	{
-		displayName="[SEC] M313 HRV Elephant";
+		displayName="[SEC] M313 HRV Elephant (Enhanced Engine)";
 		faction="SEC_Faction_Main";
 		editorCategory="SEC_Categ_Main";
 		editorsubcategory="SEC_Categ_Vic_Logistics";
-		hiddenSelections[]=
+		enginePower= "10000 * 0.9854";
+		peakTorque= 10000;
+		maxOmega= "3000 * 0.4652";
+		clutchStrength= 180;
+		accelAidForceCoef = 10.0;
+		accelAidForceSpd = 20.0;
+		hiddenSelectionsTextures[]=
 		{
 			"OPTRE_Vehicles_Tracked\Elephant\Data\camo\green\consoles_co.paa",
 			"OPTRE_Vehicles_Tracked\Elephant\Data\camo\green\exterior_details_co.paa",
