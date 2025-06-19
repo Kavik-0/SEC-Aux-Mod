@@ -285,23 +285,6 @@ class CfgWeapons
 			"\rubicon_gen3_attachments\data\gen3_agathius_cbrick_co.paa"
 		};
 	};
-	class SEC_Gen3_MKVIIAgathius_Jake: SEC_Gen3_MKVIIAgathius_Grey
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] Mark VII Agathius Shoulderplates (Jake)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_agath_cbrick.paa";
-		model="rubicon_gen3_attachments\gen3Agathius.p3d";
-		descriptionShort="Supplemental deltoid/shoulder armor.";
-		hiddenSelections[]=
-		{
-			"Camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\MKVII\MKVII_agathius_Jake_CO.paa"
-		};
-	};
 	class SEC_Gen3_MKVIIAgathius_Blue: SEC_Gen3_MKVIIAgathius_Grey
 	{
 		scope=2;
@@ -474,22 +457,6 @@ class CfgWeapons
 		{
 			"MKVII_Customs\data\CELOX\gen3_celoxhelmet.rvmat",
 			"MKVII_Customs\data\CELOX\gen3_celoxvisor.rvmat"
-		};
-	};
-	class SEC_Gen3_MKVIICeloxhelmet_Jake: SEC_Gen3_MKVIICeloxHelmet
-	{
-		scope=2;
-		displayName="[EAGLE] CELOX-Class Helmet (Jake)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_celoxhelm_cgrey.paa";
-		hiddenSelections[]=
-		{
-			"camo",
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"MKVII_Customs\data\CELOX\MKVII_celoxhelmet_Jake_CO.paa",
-			"MKVII_Customs\data\CELOX\MKVII_celoxvisor_Jake_CO.paa"
 		};
 	};
 	class SEC_Gen3_MKVIICeloxhelmet_Keegan: SEC_Gen3_MKVIICeloxHelmet
@@ -729,8 +696,29 @@ class CfgWeapons
 	{
 		scope=2;
 		author = "Reiken";
-		displayName="[EAGLE] CAVALLINO-Class Helmet";
+		displayName="[EAGLE] CAVALLINO-Class Helmet (Recruit)";
 		MJOLNIR_helmetOutline="\S-IVArmory\data\CAVALLINO\CavallinoHelmetOutline.paa";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\CAVALLINO\MKVII_Recruit_CavHelmet_CO.paa",
+			"MKVII_Customs\data\CAVALLINO\MKVII_RecruitCavVisor_CO.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"MKVII_Customs\data\CAVALLINO\gen3_cavhelmet.rvmat",
+			"MKVII_Customs\data\CAVALLINO\gen3_cavvisor.rvmat"
+		};
+	};
+	class SEC_Gen3_CavHelmet_Green: SEC_Gen3_CavHelmet_Recruit
+	{
+		scope=2;
+		displayName="[EAGLE] CAVALLINO-Class Helmet";
+		picture="\rubicon_gen3_helmets\data\ui\icon_U_cavahelm_cblue.paa";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -740,11 +728,6 @@ class CfgWeapons
 		{
 			"MKVII_Customs\data\CAVALLINO\gen3_cavhelmet_CO.paa",
 			"MKVII_Customs\data\CAVALLINO\gen3_cavvisor_CO.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"MKVII_Customs\data\CAVALLINO\gen3_cavhelmet.rvmat",
-			"MKVII_Customs\data\CAVALLINO\gen3_cavvisor.rvmat"
 		};
 	};
 	class SEC_Gen3_CavHelmet_Blue: SEC_Gen3_CavHelmet_Recruit
@@ -820,19 +803,6 @@ class CfgWeapons
 		{
 			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
 			uniformClass = B_SEC_SpartanIV_Red; // Needs to be matching Character in cfgVehicles
-			containerClass = Supply40;
-			mass = 40;
-		};
-    };
-	class SEC_Gen3_MKVIICoreJake : SEC_Gen3_MKVIICoreGrey
-	{
-		scope = 2;
-		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Jake)";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		class ItemInfo : UniformItem
-		{
-			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-			uniformClass = B_SEC_SpartanIV_Jake; // Needs to be matching Character in cfgVehicles
 			containerClass = Supply40;
 			mass = 40;
 		};
@@ -1125,26 +1095,6 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		{
 			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
 			"\rubicon_gen3_spartaniv\data\gen3_mk7core_cbrick_co.paa"
-		};
-	};
-	class B_SEC_SpartanIV_Jake : B_SEC_SpartanIV_Base
-	{
-		author = "Reiken";
-		scope = 1;
-		scopeCurator = 1;
-		scopeArsenal = 1;
-		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cbrick.paa";
-		uniformClass = "SEC_Gen3_MKVIICoreJake"; // Needs to be matching item in cfgWeapons
-		hiddenSelections[]=
-		{
-			"Camo",
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
-			"MKVII_Customs\data\MKVII\MKVII_mk7core_Jake_CO.paa"
 		};
 	};
 	class B_SEC_SpartanIV_Blue : B_SEC_SpartanIV_Base
