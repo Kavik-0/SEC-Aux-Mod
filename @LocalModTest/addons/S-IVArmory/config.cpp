@@ -561,11 +561,11 @@ class CfgPatches
 			"S-IVArmory\data\MKVB\Guardian_MKV_Lower_CO.paa"
 		};
 	};
-	class SEC_MKVB_Jax_ArmorCore: SEC_MKVB_ArmorCore
+    class SEC_MKVB_Rookie_ArmorCore: SEC_MKVB_ArmorCore
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Mark V.[B] (Jax) Armor Core";
+		displayName="[EAGLE] MJOLNIR Mark V.[B] (Rookie) Armor Core";
 		hiddenSelections[]=
 		{
             "camo1",
@@ -575,28 +575,10 @@ class CfgPatches
 		};
         hiddenSelectionsTextures[]=
 		{
-            "S-IVArmory\data\MKV\MKV_Upper_Jax_CO.paa",
-			"S-IVArmory\data\MKV\MKV_Lower_Jax_CO.paa"
+            "S-IVArmory\data\MKV\Rook_MKV_Upper_CO.paa",
+			"S-IVArmory\data\MKV\Rook_MKV_Lower_CO.paa"
 		};
-	};
-	class SEC_MKVB_Greyman_ArmorCore: SEC_MKVB_ArmorCore
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Mark V.[B] (Greyman) Armor Core";
-		hiddenSelections[]=
-		{
-            "camo1",
-			"camo2",
-		//	"mkvb_upper",
-		//	"mkvb_lower"
-		};
-        hiddenSelectionsTextures[]=
-		{
-            "S-IVArmory\data\MKVB\MKVB_Upper_Greyman_CO.paa",
-			"S-IVArmory\data\MKVB\MKVB_Lower_Greyman_CO.paa"
-		};
-	};
+	};  
 	class SEC_MKVB_Gambit_ArmorCore: SEC_MKVB_JumpJet_ArmorCore
 	{
 		scope=2;
@@ -2743,6 +2725,17 @@ class SEC_MKVB_Jakes_Helmet: SEC_MKVB_GUNGNIR_Helmet
         "S-IVArmory\data\GUNGNIR\GUNGNIR_Helmet_Jakes_CO.paa"
     };
 };
+class SEC_MKVB_Rookie_Helmet: SEC_MKVB_GUNGNIR_Helmet
+{
+    scope=2;
+    scopeArsenal=2;
+    displayName="[EAGLE] MJOLNIR Mark V.[GNG] Helmet (Rookie)";
+	MJOLNIR_helmetOutline="S-IVArmory\data\GUNGNIR\GungnirHelmetOutline.paa";
+    hiddenSelectionsTextures[]=
+    {
+        "S-IVArmory\data\GUNGNIR\Rook_GUNGNIR_Helmet_CO.paa"
+    };
+};
 class SEC_MKVB_Kara_Helmet: SEC_MKVB_GUNGNIR_Helmet
 {
     scope=2;
@@ -2976,18 +2969,6 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
 			"S-IVArmory\data\MKVB\MKVB_Visor.rvmat"
 		};
 	};
-	class SEC_MKVB_Greyman_Helmet: SEC_MKVB_Helmet
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Mark V.[B] Helmet (Greyman)";
-		MJOLNIR_helmetOutline="S-IVArmory\data\MKVB\MKVBHelmetOutline.paa";
-		hiddenSelectionsTextures[]=
-		{
-			"S-IVArmory\data\MKVB\MKVB_Helmet_Greyman_CO.paa",
-			"S-IVArmory\data\MKVB\MKVB_Visor_Greyman_CO.paa"
-		};
-	};
     class SEC_MKVB_Skipper_Helmet: SEC_MKVB_Helmet
 	{
 		scope=2;
@@ -3158,48 +3139,6 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
 			"S-IVArmory\data\MKIV\MKIV_Visor_Gwain.rvmat"
 		};
     };
-    class SEC_Saint_MKIV_Helmet: MA_Mjolnir_MKIV_Helmet
-	{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Gen 2 Mark IV Helmet (Saint)";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
-		hiddenSelectionsTextures[] =
-		{
-			"S-IVArmory\data\SAINT\MKIVG2_Helmet_Saint_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Visor_CO.paa"
-		};
-		hiddenSelectionsMaterials[] =
-		{
-			"S-IVArmory\data\MKIV\MKIV_Helmet.rvmat",
-			"S-IVArmory\data\MKIV\MKIV_Visor.rvmat"
-		};
-	};
-    class SEC_Ward_MKIV_Helmet: MA_Mjolnir_MKIV_Helmet
-	{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Gen 2 Mark IV Helmet (Ward)";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
-		hiddenSelectionsTextures[] =
-		{
-			"S-IVArmory\data\SAINT\MKIVG2_Helmet_Ward_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Visor_CO.paa"
-		};
-		hiddenSelectionsMaterials[] =
-		{
-			"S-IVArmory\data\MKIV\MKIV_Helmet.rvmat",
-			"S-IVArmory\data\MKIV\MKIV_Visor.rvmat"
-		};
-	};
 	class SEC_Human_MKIV_Armor : MA_MKIV_Armor
 	{
 		scope=2;
@@ -3246,91 +3185,6 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
 			"S-IVArmory\data\MKIV\MKIV_Lower_Hesh.rvmat",
 			"S-IVArmory\data\MKIV\MKIV_Shoulders_Hesh.rvmat",
 			"S-IVArmory\data\MKIV\MKIV_Shoulders_Hesh.rvmat"
-		};
-	};
-    class SEC_Ward_MKIV_Armor : SEC_Human_MKIV_Armor
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName = "[EAGLE] MJOLNIR Gen 2 Mark IV Armor (Ward)";
-		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
-        MJOLNIR_shieldStrength = 100;            //Shield energy capacity
-        MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
-        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelectionsTextures[] =
-		{
-			"S-IVArmory\data\SAINT\MKIVG2_Upper_Ward_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Lower_CO.paa",
-			"",
-			""
-		};
-	};
-    class SEC_West_MKIV_Armor : SEC_Human_MKIV_Armor
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName = "[EAGLE] MJOLNIR Gen 2 Mark IV Armor (Western)";
-		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
-        MJOLNIR_shieldStrength = 100;            //Shield energy capacity
-        MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
-        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelectionsTextures[] =
-		{
-			"S-IVArmory\data\SAINT\MKIVG2_Upper_West_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Lower_CO.paa",
-			"",
-			""
-		};
-	};
-    class SEC_Star_MKIV_Armor : SEC_Human_MKIV_Armor
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName = "[EAGLE] MJOLNIR Gen 2 Mark IV Armor (Starky)";
-		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
-        MJOLNIR_shieldStrength = 100;            //Shield energy capacity
-        MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
-        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelectionsTextures[] =
-		{
-			"S-IVArmory\data\SAINT\MKIVG2_Upper_Star_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Lower_CO.paa",
-			"",
-			""
-		};
-	};
-    class SEC_Mimo_MKIV_Armor : SEC_Human_MKIV_Armor
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName = "[EAGLE] MJOLNIR Gen 2 Mark IV Armor (Mimosa)";
-		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
-        MJOLNIR_shieldStrength = 100;            //Shield energy capacity
-        MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
-        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelectionsTextures[] =
-		{
-			"S-IVArmory\data\SAINT\MKIVG2_Upper_Mimo_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Lower_CO.paa",
-			"",
-			""
-		};
-	};
-    class SEC_Kira_MKIV_Armor : SEC_Human_MKIV_Armor
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName = "[EAGLE] MJOLNIR Gen 2 Mark IV Armor (Kira)";
-		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
-        MJOLNIR_shieldStrength = 100;            //Shield energy capacity
-        MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
-        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelectionsTextures[] =
-		{
-			"S-IVArmory\data\SAINT\MKIVG2_Upper_Kira_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Lower_CO.paa",
-			"",
-			""
 		};
 	};
     class SEC_Vikt_MKIV_Armor : MAPO_MKIV_Armor
@@ -5214,6 +5068,104 @@ class SEC_MKVB_Amare_Shoulders : SEC_MKVB_Shoulders
         "",
         "S-IVArmory\data\SECURITY\Amare_Security_Shoulders_CO.paa",
         "S-IVArmory\data\SECURITY\Amare_Security_Shoulders_CO.paa",
+        "",
+        ""
+    };
+};
+class SEC_MKVB_Rookie_Shoulders : SEC_MKVB_Shoulders
+    {
+        scope=2;
+		scopeArsenal=2;
+        displayName = "[EAGLE] MJOLNIR Custom Shoulders (Rookie)";
+		maximumLoad = 400;
+        mass = 50;
+        hiddenSelections[]=
+    {
+        "camo1",
+        "camo2",
+        "camo3",
+        "camo4",
+        "camo5",
+        "camo6",
+        "camo7",
+        "camo8",
+        "camo9",
+        "camo10",
+        "camo11",
+        "camo12",
+        "camo13",
+        "camo14",
+        "camo15",
+        "camo16",
+        "camo17",
+        "camo18",
+        "camo19",
+        "camo20",
+        "camo21",
+        "camo22",
+        "camo23",
+        "camo24",
+        "camo25",
+        "camo26",
+        "camo27",
+        "camo28",
+        "commando_left",
+        "commando_right",
+        "cqc_left",
+        "cqc_right",
+        "eva_left",
+        "eva_right",
+        "gren_left",
+        "gren_right",
+        "gungnir_left",
+        "gungnir_right",
+        "hayabusa_left",
+        "hayabusa_right",
+        "jfo_left",
+        "jfo_right",
+        "mkiv_left",
+        "mkiv_right",
+        "mkv_left",
+        "mkv_right",
+        //"odst_left",
+        //"odst_right",
+        "operator_left",
+        "operator_right",
+        "recon_left",
+        "recon_right",
+        "security_left",
+       "security_right",
+      "scout_left",
+      "scout_right"
+    };
+    hiddenSelectionsTextures[]=
+    {
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+		"",
+        "",
+        "",
+        "S-IVArmory\data\ODST\Rook_ODST_Shoulders_CO.paa",
+        "S-IVArmory\data\ODST\Rook_ODST_Shoulders_CO.paa", 
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
         "",
         ""
     };
@@ -7846,74 +7798,6 @@ class SEC_MKVB_Avak_Shoulders: Mjolnir_MKV_Shoulders_Spartan
         
     };
 };
-class SEC_Saint_MKIVG2_SHOULDERS : Mjolnir_MKIV_Shoulders
-    {
-        scope=2;
-		scopeArsenal=2;
-        displayName = "[EAGLE] MJOLNIR Gen 2 Mark IV Shoulders (Saint)";
-        maximumLoad = 450;
-        mass = 50;
-        hiddenSelectionsTextures[] =
-        {
-            "MA_Armor\data\Vests\MKVB\Shoulders\Commando\Olive_Commando_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Commando\Olive_Commando_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\CQC\Olive_CQC_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\CQC\Olive_CQC_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\EVA\Olive_EVA_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\EVA\Olive_EVA_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Grenadier\Olive_Grenadier_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Grenadier\Olive_Grenadier_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Gungnir\Olive_GUNGNIR_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Gungnir\Olive_GUNGNIR_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Hayabusa\Olive_Hayabusa_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Hayabusa\Olive_Hayabusa_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\JFO\Olive_JFO_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\JFO\Olive_JFO_Shoulders_CO.paa",
-            "S-IVArmory\data\SAINT\MKIVG2_Shoulders_Saint_CO.paa",
-            "S-IVArmory\data\SAINT\MKIVG2_Shoulders_Saint_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\MKV\Olive_MKV_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\MKV\Olive_MKV_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\ODST\Olive_ODST_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\ODST\Olive_ODST_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Operator\Olive_Operator_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Operator\Olive_Operator_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Recon\Olive_Recon_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Recon\Olive_Recon_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Security\Olive_Security_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Security\Olive_Security_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Scout\Olive_Scout_Shoulders_CO.paa"
-        };
-        hiddenSelectionsMaterials[] =
-        {
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "S-IVArmory\data\MKIV\MKIV_Shoulders.rvmat",
-            "S-IVArmory\data\MKIV\MKIV_Shoulders.rvmat",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        };
-    };
 	class SCARLET_HUMAN_MKIV_SHOULDERS : Mjolnir_MKIV_Shoulders
     {
         scope=2;

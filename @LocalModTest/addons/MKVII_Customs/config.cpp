@@ -127,7 +127,7 @@ class CfgWeapons
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[EAGLE] Mark VII Agathius Shoulderplates (Grey)";
+		displayName="[EAGLE] Mark VII Agathius Shoulderplates";
 		picture="\rubicon_gen3_attachments\data\ui\icon_V_agath_cgrey.paa";
 		model="rubicon_gen3_attachments\gen3Agathius.p3d";
 		descriptionShort="Supplemental deltoid/shoulder armor.";
@@ -137,7 +137,11 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\rubicon_gen3_attachments\data\gen3_agathius_cgrey_co.paa"
+			"MKVII_Customs\data\MKVII\gen3_agathius_CO.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_agathius.rvmat"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -147,19 +151,57 @@ class CfgWeapons
 				"Camo"
 			};
 			hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_agathius_CO.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_agathius.rvmat"
+		};
+		};
+	};
+	class SEC_Gen3_MKVIIAgathius_SKELETON: SEC_Gen3_MKVIINoShoulder
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE/SPRT] Mark VII Agathius Shoulderplates";
+		picture="\rubicon_gen3_attachments\data\ui\icon_V_agath_cgrey.paa";
+		model="rubicon_gen3_attachments\gen3Agathius.p3d";
+		descriptionShort="Supplemental deltoid/shoulder armor.";
+		hiddenSelections[]=
+		{
+			"Camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_agathius_CO.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_agathius.rvmat"
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="rubicon_gen3_spartanii\gen3S2Agathius.p3d";
+			hiddenSelections[]=
 			{
-				"\rubicon_gen3_attachments\data\gen3_agathius_cgrey_co.paa"
+				"Camo"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"MKVII_Customs\data\MKVII\gen3_agathius_CO.paa"
+			};
+			hiddenSelectionsMaterials[]=
+			{
+			"MKVII_Customs\data\MKVII\gen3_agathius.rvmat"
 			};
 		};
 	};
-	class SEC_Gen3_MKVIIAgathius_Colt: SEC_Gen3_MKVIINoShoulder
+	class SEC_Gen3_MKVIIAgathius_Colt: SEC_Gen3_MKVIIAgathius_SKELETON
 	{
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] Mark VII Agathius Shoulderplates (Colt)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_agath_cgrey.paa";
-		model="rubicon_gen3_attachments\gen3Agathius.p3d";
-		descriptionShort="Supplemental deltoid/shoulder armor.";
 		hiddenSelections[]=
 		{
 			"Camo"
@@ -168,27 +210,12 @@ class CfgWeapons
 		{
 			"MKVII_Customs\data\MKVII\MKVII_Colt_Agathius_CO.paa"
 		};
-		class ItemInfo: ItemInfo
-		{
-			uniformModel="rubicon_gen3_spartanii\gen3S2Agathius.p3d";
-			hiddenSelections[]=
-			{
-				"Camo"
-			};
-			hiddenSelectionsTextures[]=
-			{
-				"MKVII_Customs\data\MKVII\MKVII_Colt_Agathius_CO.paa"
-			};
-		};
 	};
-	class SEC_Gen3_MKVIIAgathius_Hammer: SEC_Gen3_MKVIINoShoulder
+	class SEC_Gen3_MKVIIAgathius_Hammer: SEC_Gen3_MKVIIAgathius_SKELETON
 	{
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] Mark VII Agathius Shoulderplates (Hammer)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_agath_cgrey.paa";
-		model="rubicon_gen3_attachments\gen3Agathius.p3d";
-		descriptionShort="Supplemental deltoid/shoulder armor.";
 		hiddenSelections[]=
 		{
 			"Camo"
@@ -197,27 +224,12 @@ class CfgWeapons
 		{
 			"MKVII_Customs\data\MKVII\MKVII_Hammer_Agathius_CO.paa"
 		};
-		class ItemInfo: ItemInfo
-		{
-			uniformModel="rubicon_gen3_spartanii\gen3S2Agathius.p3d";
-			hiddenSelections[]=
-			{
-				"Camo"
-			};
-			hiddenSelectionsTextures[]=
-			{
-				"MKVII_Customs\data\MKVII\MKVII_Hammer_Agathius_CO.paa"
-			};
-		};
 	};
-	class SEC_Gen3_MKVIIAgathius_Blitz: SEC_Gen3_MKVIINoShoulder
+	class SEC_Gen3_MKVIIAgathius_Blitz: SEC_Gen3_MKVIIAgathius_SKELETON
 	{
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] Mark VII Agathius Shoulderplates (Blitz)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_agath_cgrey.paa";
-		model="rubicon_gen3_attachments\gen3Agathius.p3d";
-		descriptionShort="Supplemental deltoid/shoulder armor.";
 		hiddenSelections[]=
 		{
 			"Camo"
@@ -226,27 +238,12 @@ class CfgWeapons
 		{
 			"MKVII_Customs\data\MKVII\MKVII_Blitz_Agathius_CO.paa"
 		};
-		class ItemInfo: ItemInfo
-		{
-			uniformModel="rubicon_gen3_spartanii\gen3S2Agathius.p3d";
-			hiddenSelections[]=
-			{
-				"Camo"
-			};
-			hiddenSelectionsTextures[]=
-			{
-				"MKVII_Customs\data\MKVII\MKVII_Blitz_Agathius_CO.paa"
-			};
-		};
 	};
-	class SEC_Gen3_MKVIIAgathius_Havoc: SEC_Gen3_MKVIINoShoulder
+	class SEC_Gen3_MKVIIAgathius_Havoc: SEC_Gen3_MKVIIAgathius_SKELETON
 	{
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] Mark VII Agathius Shoulderplates (Havoc)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_agath_cgrey.paa";
-		model="rubicon_gen3_attachments\gen3Agathius.p3d";
-		descriptionShort="Supplemental deltoid/shoulder armor.";
 		hiddenSelections[]=
 		{
 			"Camo"
@@ -254,18 +251,6 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"MKVII_Customs\data\MKVII\MKVII_Havoc_Agathius_CO.paa"
-		};
-		class ItemInfo: ItemInfo
-		{
-			uniformModel="rubicon_gen3_spartanii\gen3S2Agathius.p3d";
-			hiddenSelections[]=
-			{
-				"Camo"
-			};
-			hiddenSelectionsTextures[]=
-			{
-				"MKVII_Customs\data\MKVII\MKVII_Havoc_Agathius_CO.paa"
-			};
 		};
 	};
 	class SEC_Gen3_MKVIIAgathius_Red: SEC_Gen3_MKVIIAgathius_Grey
@@ -319,11 +304,11 @@ class CfgWeapons
 			"\rubicon_gen3_attachments\data\gen3_agathius_cforest_co.paa"
 		};
 	};
-	class SEC_Gen3_MkVIIVitus_Recruit: SEC_Gen3_MKVIINoShoulder
+	class SEC_Gen3_MkVIIVitus: SEC_Gen3_MKVIINoShoulder
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[EAGLE] Mark VII Vitus Shoulderplates (Recruit)";
+		displayName="[EAGLE] Mark VII Vitus Shoulderplates";
 		picture="\rubicon_gen3_attachments\data\ui\icon_V_vitus_cgrey.paa";
 		model="rubicon_gen3_attachments\gen3Vitus.p3d";
 		descriptionShort="Supplemental deltoid/shoulder armor.";
@@ -333,7 +318,11 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"MKVII_Customs\data\MKVII\MKVII_Recruit_Vitus_CO.paa"
+			"MKVII_Customs\data\MKVII\gen3_vitus_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_vitus.rvmat"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -346,16 +335,31 @@ class CfgWeapons
 			{
 				"MKVII_Customs\data\MKVII\MKVII_Recruit_Vitus_CO.paa"
 			};
+			hiddenSelectionsMaterials[]=
+			{
+			"MKVII_Customs\data\MKVII\gen3_vitus.rvmat"
+			};
 		};
 	};
-	class SEC_Gen3_MkVIIVitus_Grey: SEC_Gen3_MkVIIVitus_Recruit
+	class SEC_Gen3_MkVIIVitus_Recruit: SEC_Gen3_MkVIIVitus
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] Mark VII Vitus Shoulderplates (Recruit)";
+		hiddenSelections[]=
+		{
+			"Camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\MKVII\MKVII_Recruit_Vitus_CO.paa"
+		};
+	};
+	class SEC_Gen3_MkVIIVitus_Grey: SEC_Gen3_MkVIIVitus
 	{
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] Mark VII Vitus Shoulderplates (Grey)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_vitus_cgrey.paa";
-		model="rubicon_gen3_attachments\gen3Vitus.p3d";
-		descriptionShort="Supplemental deltoid/shoulder armor.";
 		hiddenSelections[]=
 		{
 			"Camo"
@@ -365,14 +369,11 @@ class CfgWeapons
 			"rubicon_gen3_attachments\data\gen3_vitus_cgrey_co.paa"
 		};
 	};
-	class SEC_Gen3_MkVIIVitus_Red: SEC_Gen3_MkVIIVitus_Recruit
+	class SEC_Gen3_MkVIIVitus_Red: SEC_Gen3_MkVIIVitus
 	{
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] Mark VII Vitus Shoulderplates (Red)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_vitus_cbrick.paa";
-		model="rubicon_gen3_attachments\gen3Vitus.p3d";
-		descriptionShort="Supplemental deltoid/shoulder armor.";
 		hiddenSelections[]=
 		{
 			"Camo"
@@ -382,14 +383,11 @@ class CfgWeapons
 			"rubicon_gen3_attachments\data\gen3_vitus_cbrick_co.paa"
 		};
 	};
-	class SEC_Gen3_MkVIIVitus_Blue: SEC_Gen3_MkVIIVitus_Recruit
+	class SEC_Gen3_MkVIIVitus_Blue: SEC_Gen3_MkVIIVitus
 	{
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] Mark VII Vitus Shoulderplates (Blue)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_vitus_cblue.paa";
-		model="rubicon_gen3_attachments\gen3Vitus.p3d";
-		descriptionShort="Supplemental deltoid/shoulder armor.";
 		hiddenSelections[]=
 		{
 			"Camo"
@@ -399,14 +397,11 @@ class CfgWeapons
 			"rubicon_gen3_attachments\data\gen3_vitus_cblue_co.paa"
 		};
 	};
-	class SEC_Gen3_MkVIIVitus_Green: SEC_Gen3_MkVIIVitus_Recruit
+	class SEC_Gen3_MkVIIVitus_Green: SEC_Gen3_MkVIIVitus
 	{
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] Mark VII Vitus Shoulderplates (Green)";
-		picture="\rubicon_gen3_attachments\data\ui\icon_V_vitus_cforest.paa";
-		model="rubicon_gen3_attachments\gen3Vitus.p3d";
-		descriptionShort="Supplemental deltoid/shoulder armor.";
 		hiddenSelections[]=
 		{
 			"Camo"
@@ -524,12 +519,57 @@ class CfgWeapons
 			"MKVII_Customs\data\MKVII\sec_mk7visor_co.paa"
 		};
 	};
-	class SEC_Gen3_MKVIIHelmet_Colt: SEC_Gen3_MKVIIhelmet_Recruit
+	class SEC_Gen3_MKVIIHelmet_SKELETON: SEC_Gen3_MKVIIhelmet_Recruit
+	{
+		scope=2;
+		displayName="[EAGLE/SPRT] Mark VII Helmet";
+		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cgrey.paa";
+		model="\rubicon_gen3_spartanii\gen3S2mk7helmet.p3d";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_mk7helmet_CO.paa",
+			"MKVII_Customs\data\MKVII\gen3_mk7visor_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_mk7helmet.rvmat",
+			"MKVII_Customs\data\MKVII\gen3_mk7visor.rvmat"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			mass=10;
+			uniformModel="\rubicon_gen3_spartanii\gen3S2mk7helmet.p3d";
+			allowedSlots[]=
+			{
+				"BACKPACK_SLOT",
+				"HEADGEAR_SLOT"
+			};
+			modelSides[]={6};
+			hiddenSelections[]=
+			{
+				"camo",
+				"camo1"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName="HitHead";
+					armor=25;
+					passThrough=0.5;
+				};
+			};
+		};
+	};
+	class SEC_Gen3_MKVIIHelmet_Colt: SEC_Gen3_MKVIIHelmet_SKELETON
 	{
 		scope=2;
 		displayName="[EAGLE] Mark VII Helmet (Colt)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cgrey.paa";
-		model="\rubicon_gen3_spartanii\gen3S2mk7helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -540,38 +580,11 @@ class CfgWeapons
 			"MKVII_Customs\data\MKVII\MKVII_KeystoneHelmet_Colt_CO.paa",
 			"MKVII_Customs\data\MKVII\MKVII_KeystoneVisor_ARC_CO.paa"
 		};
-		class ItemInfo: HeadgearItem
-		{
-			mass=10;
-			uniformModel="\rubicon_gen3_spartanii\gen3S2mk7helmet.p3d";
-			allowedSlots[]=
-			{
-				"BACKPACK_SLOT",
-				"HEADGEAR_SLOT"
-			};
-			modelSides[]={6};
-			hiddenSelections[]=
-			{
-				"camo",
-				"camo1"
-			};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointName="HitHead";
-					armor=25;
-					passThrough=0.5;
-				};
-			};
-		};
 	};
-	class SEC_Gen3_MKVIIHelmet_Hammer: SEC_Gen3_MKVIIhelmet_Recruit
+	class SEC_Gen3_MKVIIHelmet_Hammer: SEC_Gen3_MKVIIHelmet_SKELETON
 	{
 		scope=2;
 		displayName="[EAGLE] Mark VII Helmet (Hammer)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cgrey.paa";
-		model="\rubicon_gen3_spartanii\gen3S2mk7helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -582,38 +595,11 @@ class CfgWeapons
 			"MKVII_Customs\data\MKVII\MKVII_Hammer_KeystoneHelm_CO.paa",
 			"MKVII_Customs\data\MKVII\MKVII_KeystoneVisor_ARC_CO.paa"
 		};
-		class ItemInfo: HeadgearItem
-		{
-			mass=10;
-			uniformModel="\rubicon_gen3_spartanii\gen3S2mk7helmet.p3d";
-			allowedSlots[]=
-			{
-				"BACKPACK_SLOT",
-				"HEADGEAR_SLOT"
-			};
-			modelSides[]={6};
-			hiddenSelections[]=
-			{
-				"camo",
-				"camo1"
-			};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointName="HitHead";
-					armor=25;
-					passThrough=0.5;
-				};
-			};
-		};
 	};
-	class SEC_Gen3_MKVIIHelmet_Blitz: SEC_Gen3_MKVIIhelmet_Recruit
+	class SEC_Gen3_MKVIIHelmet_Blitz: SEC_Gen3_MKVIIHelmet_SKELETON
 	{
 		scope=2;
 		displayName="[EAGLE] Mark VII Helmet (Blitz)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cgrey.paa";
-		model="\rubicon_gen3_spartanii\gen3S2mk7helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -624,38 +610,11 @@ class CfgWeapons
 			"MKVII_Customs\data\MKVII\MKVII_KeystoneHelmet_Blitz_CO.paa",
 			"MKVII_Customs\data\MKVII\MKVII_KeystoneVisor_ARC_CO.paa"
 		};
-		class ItemInfo: HeadgearItem
-		{
-			mass=10;
-			uniformModel="\rubicon_gen3_spartanii\gen3S2mk7helmet.p3d";
-			allowedSlots[]=
-			{
-				"BACKPACK_SLOT",
-				"HEADGEAR_SLOT"
-			};
-			modelSides[]={6};
-			hiddenSelections[]=
-			{
-				"camo",
-				"camo1"
-			};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointName="HitHead";
-					armor=25;
-					passThrough=0.5;
-				};
-			};
-		};
 	};
-	class SEC_Gen3_MKVIIHelmet_Havoc: SEC_Gen3_MKVIIhelmet_Recruit
+	class SEC_Gen3_MKVIIHelmet_Havoc: SEC_Gen3_MKVIIHelmet_SKELETON
 	{
 		scope=2;
 		displayName="[EAGLE] Mark VII Helmet (Havoc)";
-		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cgrey.paa";
-		model="\rubicon_gen3_spartanii\gen3S2mk7helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -665,31 +624,6 @@ class CfgWeapons
 		{
 			"MKVII_Customs\data\MKVII\MKVII_KeystoneHelmet_Havoc_CO.paa",
 			"MKVII_Customs\data\MKVII\MKVII_KeystoneVisor_ARC_CO.paa"
-		};
-		class ItemInfo: HeadgearItem
-		{
-			mass=10;
-			uniformModel="\rubicon_gen3_spartanii\gen3S2mk7helmet.p3d";
-			allowedSlots[]=
-			{
-				"BACKPACK_SLOT",
-				"HEADGEAR_SLOT"
-			};
-			modelSides[]={6};
-			hiddenSelections[]=
-			{
-				"camo",
-				"camo1"
-			};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointName="HitHead";
-					armor=25;
-					passThrough=0.5;
-				};
-			};
 		};
 	};
 	class SEC_Gen3_CavHelmet_Recruit: Rubicon_Gen3_MKVIICAVhelmet_CGrey
@@ -847,7 +781,20 @@ class CfgWeapons
 		};
     };
 	class Rubicon_SpartanII_CadetBlue;
-	class SEC_Gen3_MKVIICoreColt : Rubicon_SpartanII_CadetBlue
+	class SEC_Gen3_MKVIICoreSKELETON : Rubicon_SpartanII_CadetBlue
+	{
+		scope = 2;
+		displayName = "[EAGLE/SPRT] MJOLNIR Gen3 MKVII Armor Core";
+		model="\rubicon_gen3_spartaniv\gen3MarkVIIcoreGround.p3d";
+		class ItemInfo : UniformItem
+		{
+			uniformModel="\rubicon_gen3_spartanii\gen3MarkVIIS2core.p3d";
+			uniformClass = B_SEC_SpartanIV_Colt; // Needs to be matching Character in cfgVehicles
+			containerClass = Supply40;
+			mass = 40;
+		};
+    };
+	class SEC_Gen3_MKVIICoreColt : SEC_Gen3_MKVIICoreSKELETON
 	{
 		scope = 2;
 		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Colt)";
@@ -860,7 +807,7 @@ class CfgWeapons
 			mass = 40;
 		};
     };
-	class SEC_Gen3_MKVIICoreHammer : SEC_Gen3_MKVIICoreColt
+	class SEC_Gen3_MKVIICoreHammer : SEC_Gen3_MKVIICoreSKELETON
 	{
 		scope = 2;
 		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Hammer)";
@@ -873,7 +820,7 @@ class CfgWeapons
 			mass = 40;
 		};
     };
-	class SEC_Gen3_MKVIICoreBlitz : SEC_Gen3_MKVIICoreColt
+	class SEC_Gen3_MKVIICoreBlitz : SEC_Gen3_MKVIICoreSKELETON
 	{
 		scope = 2;
 		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Blitz)";
@@ -886,7 +833,7 @@ class CfgWeapons
 			mass = 40;
 		};
     };
-	class SEC_Gen3_MKVIICoreHavoc : SEC_Gen3_MKVIICoreColt
+	class SEC_Gen3_MKVIICoreHavoc : SEC_Gen3_MKVIICoreSKELETON
 	{
 		scope = 2;
 		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Havoc)";
@@ -934,6 +881,16 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 			"Camo",
 			"Camo1"
 		}; 
+		hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_techsuit_CO.paa",
+			"MKVII_Customs\data\MKVII\gen3_mk7core_CO.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_techsuit.rvmat",
+			"MKVII_Customs\data\MKVII\gen3_mk7core.rvmat"
+		};
 		class HitPoints
 		{
 			class HitFace
