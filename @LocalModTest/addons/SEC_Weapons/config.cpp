@@ -557,11 +557,15 @@ class CfgWeapons
 	{
 		baseWeapon="SEC_M247A1";
 		displayName="[EAGLE] M247A1 Medium Machinegun";
+		magazines[] 			= {"SEC_200Rnd_338SP_M247A1_Box"};
+		magazineWell[] = {"SEC_Magwell_M247A1_LMG"};
 	};
 	class SEC_M247A1_Stripped: OPTRE_M247A1_Stripped
 	{
 		baseWeapon="SEC_M247A1_Stripped";
 		displayName="[EAGLE] M247E3 Medium Machinegun";
+		magazines[] 			= {"SEC_200Rnd_338SP_M247A1_Box"};
+		magazineWell[] = {"SEC_Magwell_M247A1_LMG"};
 	};
 	class SEC_M250: OPTRE_M250
 	{
@@ -1116,6 +1120,7 @@ class CfgWeapons
 class CfgAmmo
 {
 	class OPTRE_FC_16x65mm_Slug;
+	class OPTRE_B_762x51_Ball;
 	class SEC_16x65mm_Slug: OPTRE_FC_16x65mm_Slug
 	{
 		hit 							= 225;
@@ -1148,6 +1153,30 @@ class CfgAmmo
 		explosionEffects = "BombExplosion";
 		FIR_AWS_Crater = 1;
 	};
+	class OPTRE_B_338_SP: OPTRE_B_762x51_Ball {
+    caliber = 2;
+    hit = 22;
+    typicalSpeed = 1023;
+    cartridge = "FxCartridge_338_Ball";
+    model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
+  };
+
+  class OPTRE_B_338_VLD: OPTRE_B_338_SP {
+    airFriction = -0.00036;
+    caliber = 3;
+    coefGravity = 0.7;
+    hit = 20;
+    sideAirFriction = 0.5;
+    typicalSpeed = 1000;
+    model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+  };
+
+  class OPTRE_B_338_AP: OPTRE_B_338_SP {
+    caliber = 3.5;
+    hit = 18;
+    typicalSpeed = 1040;
+    model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+  };
 };
 class CfgMagazines
 {
@@ -1159,6 +1188,8 @@ class CfgMagazines
 	class OPTRE_32Rnd_762x51_Mag;
 	class OPTRE_32Rnd_762x51_Mag_Tracer;
 	class OPTRE_32Rnd_762x51_Mag_Tracer_Yellow;
+	class OPTRE_200Rnd_762x51_M118_M247A1_Box;
+	class OPTRE_400Rnd_762x51_M118_M247A1_Box;
 
 	class  SEC_Railgun_Smoke_Red: OPTRE_1Rnd_SmokeRed_Grenade_shell
 	{
@@ -1237,6 +1268,48 @@ class CfgMagazines
 		displayNameShort = "12.7x51 FMJ";
 		lastRoundsTracer = 300;
 	};
+	class SEC_200Rnd_338SP_M247A1_Box: OPTRE_200Rnd_762x51_M118_M247A1_Box
+	{
+		displayName="SP .338LM 200Rnd Box Tracer (Yellow)";
+		descriptionShort="Caliber: SP .338LM Tracer - Yellow<br />Tracers Every 4<br />Rounds: 200<br />Used in: M247A1";
+		displaynameshort="SP Tracer";
+		ammo="OPTRE_B_338_SP";
+	};
+	class SEC_400Rnd_338SP_M247A1_Box: SEC_200Rnd_338SP_M247A1_Box
+	{
+		displayName="SP .338LM 400Rnd Box Tracer (Yellow)";
+		descriptionShort="Caliber: SP .338LM Tracer - Yellow<br />Tracers Every 4<br />Rounds: 400<br />Used in: M247A1";
+		displaynameshort="SP Tracer";
+		ammo="OPTRE_B_338_SP";
+	};
+	class SEC_200Rnd_338VLD_M247A1_Box: OPTRE_200Rnd_762x51_M118_M247A1_Box
+	{
+		displayName="VLD .338LM 200Rnd Box Tracer (Yellow)";
+		descriptionShort="Caliber: VLD .338LM Tracer - Yellow<br />Tracers Every 4<br />Rounds: 200<br />Used in: M247A1";
+		displaynameshort="VLD Tracer";
+		ammo="OPTRE_B_338_VLD";
+	};
+	class SEC_400Rnd_338VLD_M247A1_Box: SEC_200Rnd_338VLD_M247A1_Box
+	{
+		displayName="VLD .338LM 400Rnd Box Tracer (Yellow)";
+		descriptionShort="Caliber: VLD .338LM Tracer - Yellow<br />Tracers Every 4<br />Rounds: 400<br />Used in: M247A1";
+		displaynameshort="VLD Tracer";
+		ammo="OPTRE_B_338_VLD";
+	};
+	class SEC_200Rnd_338AP_M247A1_Box: OPTRE_200Rnd_762x51_M118_M247A1_Box
+	{
+		displayName="AP .338LM 200Rnd Box Tracer (Yellow)";
+		descriptionShort="Caliber: AP .338LM Tracer - Yellow<br />Tracers Every 4<br />Rounds: 200<br />Used in: M247A1";
+		displaynameshort="AP Tracer";
+		ammo="OPTRE_B_338_AP";
+	};
+	class SEC_400Rnd_338AP_M247A1_Box: SEC_200Rnd_338AP_M247A1_Box
+	{
+		displayName="AP .338LM 400Rnd Box Tracer (Yellow)";
+		descriptionShort="Caliber: AP .338LM Tracer - Yellow<br />Tracers Every 4<br />Rounds: 400<br />Used in: M247A1";
+		displaynameshort="AP Tracer";
+		ammo="OPTRE_B_338_AP";
+	};
 	class SEC_36Rnd_762x51_Mag: OPTRE_32Rnd_762x51_Mag
 	{
 		displayname							= "36Rnd 7.62x51mm Magazine";
@@ -1278,6 +1351,21 @@ class cfgMagazineWells
 			"SEC_36Rnd_762x51_Mag",
 			"SEC_36Rnd_762x51_Mag_Tracer",
 			"SEC_36Rnd_762x51_Mag_Tracer_Yellow"
+		};
+	};
+	class SEC_Magwell_M247A1_LMG
+	{
+		SEC_338LM_200Rnd[]=
+		{
+			"SEC_200Rnd_338SP_M247A1_Box",
+			"SEC_200Rnd_338VLD_M247A1_Box",
+			"SEC_200Rnd_338AP_M247A1_Box"
+		};
+		SEC_338LM_400Rnd[]=
+		{
+			"SEC_400Rnd_338SP_M247A1_Box",
+			"SEC_400Rnd_338VLD_M247A1_Box",
+			"SEC_400Rnd_338AP_M247A1_Box"
 		};
 	};
 	class OPTRE_Magwell_M250_LMG
