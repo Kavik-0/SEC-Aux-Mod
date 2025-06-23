@@ -789,7 +789,7 @@ class CfgWeapons
 		class ItemInfo : UniformItem
 		{
 			uniformModel="\rubicon_gen3_spartanii\gen3MarkVIIS2core.p3d";
-			uniformClass = B_SEC_SpartanIV_Colt; // Needs to be matching Character in cfgVehicles
+			uniformClass = B_SEC_SpartanIV_Skel; // Needs to be matching Character in cfgVehicles
 			containerClass = Supply40;
 			mass = 40;
 		};
@@ -1112,6 +1112,31 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		{
 			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
 			"MKVII_Customs\data\MKVII\MKVII_Recruit_CO.paa"
+		};
+	};
+	class B_SEC_SpartanIV_Skel : B_Rubicon_SpartanII_Base
+	{
+		author = "Reiken";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		model="\rubicon_gen3_spartanii\gen3MarkVIIS2core.p3d";
+		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cgrey.paa";
+		uniformClass = "SEC_Gen3_MKVIICoreSKELETON"; // Needs to be matching item in cfgWeapons
+		hiddenSelections[]=
+		{
+			"Camo",
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_techsuit_CO.paa",
+			"MKVII_Customs\data\MKVII\gen3_mk7core_CO.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_techsuit.rvmat",
+			"MKVII_Customs\data\MKVII\gen3_mk7core.rvmat"
 		};
 	};
 	class B_SEC_SpartanIV_Colt : B_Rubicon_SpartanII_Base
