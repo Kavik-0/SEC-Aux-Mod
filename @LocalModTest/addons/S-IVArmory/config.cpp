@@ -1019,6 +1019,21 @@ class CfgPatches
 		scopeArsenal =2;
 		hiddenSelectionsTextures[] = {"S-IVArmory\data\ROGUE\Gambit_Rogue_Helmet_CO.paa"};
 	};
+    class SEC_MKVI_ArmorCoreSkel: OPTRE_FC_MJOLNIR_Mark_VI_Armor
+    {
+        scope 															= 2;
+        scopeArsenal 													= 2;
+        displayName = "[EAGLE/SPRT] MJOLNIR Mark VI Armor Core";
+		hiddenSelectionsTextures[] = {"S-IVArmory\data\MKVI\Mark_VI_Armor_CO.paa"};
+        hiddenSelectionsMaterials[] = {"S-IVArmory\data\MKVI\Mark_VI_Armor.rvmat"};
+        MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+		MJOLNIR_shieldStrength = 85;            //Shield energy capacity
+		MJOLNIR_shieldChargeValue = 1.2;           //How much shield energy gets regenerated
+		MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
+		class XtdGearInfo
+		{ 
+		};
+    };
 	class SEC_MKVI_ArmorCore: OPTRE_FC_MJOLNIR_Mark_VI_Armor_Human
     {
         scope 															= 2;
@@ -1043,22 +1058,6 @@ class CfgPatches
         MJOLNIR_shieldStrength = 70;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
         MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelections[]=
-		{
-			"camo",
-			"attach_Seva1",
-			"attach_Seva2",
-			"attach_Seod1",
-			"attach_Seod2",
-			"attach_Sscout1",
-			"attach_Sscout2",
-			"attach_Ssecurity1",
-			"attach_Ssecurity2",
-			"attach_Ceva",
-			"attach_Ceod",
-			"attach_Cscout",
-			"attach_Csecurity"
-		};
 		hiddenSelectionsTextures[] = {"S-IVArmory\data\MKVI\MKVI_Horne_CO.paa"};
     };
 	class SEC_MKVI_ArmorCore_Recruit: SEC_MKVI_ArmorCore
@@ -1070,22 +1069,6 @@ class CfgPatches
         MJOLNIR_shieldStrength = 100;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
         MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelections[]=
-		{
-			"camo",
-			"attach_Seva1",
-			"attach_Seva2",
-			"attach_Seod1",
-			"attach_Seod2",
-			"attach_Sscout1",
-			"attach_Sscout2",
-			"attach_Ssecurity1",
-			"attach_Ssecurity2",
-			"attach_Ceva",
-			"attach_Ceod",
-			"attach_Cscout",
-			"attach_Csecurity"
-		};
 		hiddenSelectionsTextures[] = {"S-IVArmory\data\MKVI\MKVI_Recruit_CO.paa"};
     };
 	class SEC_MKVI_ArmorCore_Lichen: SEC_MKVI_ArmorCore
@@ -1097,24 +1080,23 @@ class CfgPatches
         MJOLNIR_shieldStrength = 70;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
         MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelections[]=
-		{
-			"camo",
-			"attach_Seva1",
-			"attach_Seva2",
-			"attach_Seod1",
-			"attach_Seod2",
-			"attach_Sscout1",
-			"attach_Sscout2",
-			"attach_Ssecurity1",
-			"attach_Ssecurity2",
-			"attach_Ceva",
-			"attach_Ceod",
-			"attach_Cscout",
-			"attach_Csecurity"
-		};
 		hiddenSelectionsTextures[] = {"S-IVArmory\data\MKVI\MKVI_Lichen_CO.paa"};
     };
+    class SEC_MKVI_HelmetSkel: OPTRE_FC_MJOLNIR_Mark_VI_Helmet
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE/SPRT] MJOLNIR Mark VI Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"S-IVArmory\data\MKVI\Mark_VI_Helmet_CO.paa",
+		};
+        hiddenSelectionsMaterials[]=
+		{
+			"S-IVArmory\data\MKVI\Mark_VI_Helmet.rvmat",
+            "S-IVArmory\data\MKVI\Mark_VI_Visor.rvmat"
+		};
+	};
 	class SEC_MKVI_Helmet: OPTRE_FC_MJOLNIR_MKVI_Helmet_Human
 	{
 		scope=2;
