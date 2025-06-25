@@ -871,6 +871,7 @@ class CfgPatches
 	class OPTRE_FC_MJOLNIR_MKV_Helmet;
     class SEC_MKVCore_Helmet_SPARTAN: OPTRE_FC_MJOLNIR_MKV_Helmet
 	{
+        subItems[]={""};
 		displayName="[EAGLE/SPRT] MJOLNIR Mark V Gen1 Helmet";
 		hiddenSelectionsTextures[]=
 		{
@@ -1001,118 +1002,37 @@ class CfgPatches
 	};
 	class OPTRE_FC_MJOLNIR_Mark_VI_Rogue_Helmet;
 	class OPTRE_FC_MJOLNIR_Mark_VI_Rogue_Helmet_Human;
-	class SEC_MKVI_RogueHelmet_Gambit: OPTRE_FC_MJOLNIR_Mark_VI_Rogue_Helmet_Human
+    class SEC_MKVI_RogueHelmet: OPTRE_FC_MJOLNIR_Mark_VI_Rogue_Helmet_Human
 	{
-		displayName = "[EAGLE] MJOLNIR Mark VI/RG Helmet (Gambit)";
+		displayName = "[EAGLE] MJOLNIR Mark VI.[RG] Helmet";
 		scope =2;
 		scopeArsenal =2;
 		class XtdGearInfo
 		{ }; 
-		hiddenSelectionsTextures[] = {"S-IVArmory\data\ROGUE\Gambit_Rogue_Helmet_CO.paa"};
-		class ItemInfo: ItemInfo
-			{
-				hiddenSelectionsTextures[] = {"S-IVArmory\data\ROGUE\Gambit_Rogue_Helmet_CO.paa"};
-			};
+		hiddenSelectionsTextures[] = {"S-IVArmory\data\ROGUE\Mark_VI_Rogue_CO.paa"};
+        hiddenSelectionsMaterials[] = {"S-IVArmory\data\ROGUE\Mark_VI_Rogue.rvmat", "S-IVArmory\data\ROGUE\Mark_VI_RVisor.rvmat"};
 	};
-	class SEC_MKVI_Armor_Grif: OPTRE_FC_MJOLNIR_Mark_VI_Armor_Human
+	class SEC_MKVI_RogueHelmet_Gambit: SEC_MKVI_RogueHelmet
+	{
+		displayName = "[EAGLE] MJOLNIR Mark VI.[RG] Helmet (Gambit)";
+		scope =2;
+		scopeArsenal =2;
+		hiddenSelectionsTextures[] = {"S-IVArmory\data\ROGUE\Gambit_Rogue_Helmet_CO.paa"};
+	};
+	class SEC_MKVI_ArmorCore: OPTRE_FC_MJOLNIR_Mark_VI_Armor_Human
     {
         scope 															= 2;
         scopeArsenal 													= 2;
-        displayName = "[EAGLE] MJOLNIR Mark VI Armor Core (Grif)";
-		hiddenSelectionsTextures[] = {"S-IVArmory\data\MKVI\Mark_VI_Grif_Armor_CO.paa"};
-		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        displayName = "[EAGLE] MJOLNIR Mark VI Armor Core";
+		hiddenSelectionsTextures[] = {"S-IVArmory\data\MKVI\Mark_VI_Armor_CO.paa"};
+        hiddenSelectionsMaterials[] = {"S-IVArmory\data\MKVI\Mark_VI_Armor.rvmat"};
+        MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
 		MJOLNIR_shieldStrength = 85;            //Shield energy capacity
 		MJOLNIR_shieldChargeValue = 1.2;           //How much shield energy gets regenerated
 		MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
 		class XtdGearInfo
 		{ 
 		};
-        class ItemInfo: VestItem
-		{
-			uniformModel="\OPTRE_FC_Units\Spartan\Human\Mark_VI_Armor.p3d";
-			containerClass="Supply250";
-			hiddenSelections[]=
-			{
-			"camo",
-			"attach_Seva1",
-			"attach_Seva2",
-			"attach_Seod1",
-			"attach_Seod2",
-			"attach_Sscout1",
-			"attach_Sscout2",
-			"attach_Ssecurity1",
-			"attach_Ssecurity2",
-			"attach_Ceva",
-			"attach_Ceod",
-			"attach_Cscout",
-			"attach_Csecurity"
-			};
-			hiddenSelectionsTextures[]=
-			{};
-			class HitpointsProtectionInfo
-			{
-				class Neck
-				{
-					hitpointName="HitNeck";
-					armor=15;
-					passThrough=0.5;
-				};
-				class Legs
-				{
-					hitpointName="HitLegs";
-					armor=15;
-					passThrough=0.5;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=10;
-					passThrough=0.1;
-				};
-				class Hands
-				{
-					hitpointName="HitHands";
-					armor=15;
-					passThrough=0.1;
-				};
-				class Chest
-				{
-					hitpointName="HitChest";
-					armor=25;
-					passThrough=0.1;
-				};
-				class Diaphragm
-				{
-					hitpointName="HitDiaphragm";
-					armor=20;
-					passThrough=0.1;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=20;
-					passThrough=0.1;
-				};
-				class Pelvis
-				{
-					hitpointName="HitPelvis";
-					armor=20;
-					passThrough=0.1;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					passThrough=0.1;
-				};
-			};
-		};
-    };
-	class SEC_MKVI_ArmorCore: SEC_MKVI_Armor_Grif
-    {
-        scope 															= 2;
-        scopeArsenal 													= 2;
-        displayName = "[EAGLE] MJOLNIR Mark VI Armor Core";
-		hiddenSelectionsTextures[] = {"S-IVArmory\data\MKVI\Mjolnir_Mark_VI_Armour_Steel_co.paa"};
     };
 	class SEC_MKVI_ArmorCore_Horne: SEC_MKVI_ArmorCore
     {
@@ -1202,7 +1122,12 @@ class CfgPatches
 		displayName="[EAGLE] MJOLNIR Mark VI Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"S-IVArmory\data\MKVI\Mjolnir_Mark_VI_Helmet_Steel_co.paa"
+			"S-IVArmory\data\MKVI\Mark_VI_Helmet_CO.paa",
+		};
+        hiddenSelectionsMaterials[]=
+		{
+			"S-IVArmory\data\MKVI\Mark_VI_Helmet.rvmat",
+            "S-IVArmory\data\MKVI\Mark_VI_Visor.rvmat"
 		};
 	};
 	class SEC_MKVI_Helmet_Justin: OPTRE_FC_MJOLNIR_Mark_VI_Helmet
@@ -1215,7 +1140,7 @@ class CfgPatches
 			"S-IVArmory\data\MKVI\Justin_MKVI_Helmet_co.paa"
 		};
 	};
-	class SEC_MKVI_Helmet_Grif: OPTRE_FC_MJOLNIR_MKVI_Helmet_Human
+	class SEC_MKVI_Helmet_Grif: SEC_MKVI_Helmet
 	{
 		scope=2;
 		scopeArsenal=2;

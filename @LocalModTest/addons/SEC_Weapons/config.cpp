@@ -1377,3 +1377,109 @@ class cfgMagazineWells
 		};
 	};
 };
+class CfgSoundSets
+{
+	class Mk200_Shot_SoundSet;
+	class OPTRE_M739_SAW_Shot_SoundSet: Mk200_Shot_SoundSet
+	{
+		soundShaders[]=
+		{
+			"SEC_M739_SAW_Closure_SoundShader",
+			"SEC_M739_SAW_closeShot_SoundShader",
+			"SEC_M739_SAW_midShot_SoundShader",
+			"SEC_M739_SAW_distShot_SoundShader"
+		};
+	};
+};
+	class CfgSoundShaders
+{
+	class Mk200_Closure_SoundShader;
+	class SEC_M739_SAW_Closure_SoundShader: Mk200_Closure_SoundShader
+	{
+		samples[]=
+		{
+			
+			{
+				"SEC_Weapons\data\sounds\H5_DMR_1.ogg",
+				1
+			},
+			
+			{
+				"SEC_Weapons\data\sounds\H5_DMR_2.ogg",
+				1
+			},
+			
+			{
+				"SEC_Weapons\data\sounds\H5_DMR_3.ogg",
+				1
+			}
+		};
+		volume=0.029999999;
+	};
+	class Mk200_closeShot_SoundShader;
+	class SEC_M739_SAW_closeShot_SoundShader: Mk200_closeShot_SoundShader
+	{
+		samples[]=
+		{
+			
+			{
+				"SEC_Weapons\data\sounds\H5_DMR_1.ogg",
+				1
+			},
+			
+			{
+				"SEC_Weapons\data\sounds\H5_DMR_2.ogg",
+				1
+			},
+			
+			{
+				"SEC_Weapons\data\sounds\H5_DMR_3.ogg",
+				1
+			}
+		};
+	};
+	class Mk200_midShot_SoundShader;
+	class SEC_M739_SAW_midShot_SoundShader: Mk200_midShot_SoundShader
+	{
+		samples[]=
+		{
+			
+			{
+				"SEC_Weapons\data\sounds\H5_DMR_Med_1.wav",
+				1
+			},
+			
+			{
+				"SEC_Weapons\data\sounds\H5_DMR_Med_2.wav",
+				1
+			},
+			
+			{
+				"SEC_Weapons\data\sounds\H5_DMR_Med_3.wav",
+				1
+			}
+		};
+	};
+	class Mk200_distShot_SoundShader;
+	class SEC_M739_SAW_distShot_SoundShader: Mk200_distShot_SoundShader
+	{
+		samples[]=
+		{
+			
+			{
+				"SEC_Weapons\data\sounds\H5_DMR_Very_Far_1.wav",
+				1
+			},
+			
+			{
+				"SEC_Weapons\data\sounds\H5_DMR_Very_Far_2.wav",
+				1
+			},
+			
+			{
+				"SEC_Weapons\data\sounds\H5_DMR_Very_Far_3.wav",
+				1
+			}
+		};
+	};
+};
