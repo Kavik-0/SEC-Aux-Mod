@@ -32,6 +32,7 @@
 	class OPTRE_M808BM_UNSC_Driverless;
 	class OPTRE_M808S_Driverless;
 	class OPTRE_M850_UNSC_Driverless;
+	class DMNS_M808B_F;
 
 	class VES_M808B2_MBT;
 	class OPTRE_M808B2_Driverless;
@@ -2024,6 +2025,13 @@
 	class SEC_OPTRE_M850_UNSC: OPTRE_M850_UNSC
 	{
 		displayName="[SEC] M850 Grizzly";
+		faction="SEC_Faction_Main";
+		editorCategory="SEC_Categ_Main";
+		editorsubcategory="SEC_Categ_Vic_Armored";
+	};
+	class SEC_DMNS_M808B_F: DMNS_M808B_F
+	{
+		displayName="[SEC] M808B Scorpion (19th)";
 		faction="SEC_Faction_Main";
 		editorCategory="SEC_Categ_Main";
 		editorsubcategory="SEC_Categ_Vic_Armored";

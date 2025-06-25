@@ -70,7 +70,10 @@ class CfgPatches
 			"SEC_B_Heli_Light_01_dynamicLoadout_F", 
 			"SEC_B_Heli_Attack_01_Dynamicloadout_F", 
 			"SEC_B_Heli_Light_01_F", 
-			"SEC_B_CTRG_Heli_Transport_01_tropic_F"
+			"SEC_B_CTRG_Heli_Transport_01_tropic_F",
+			"SEC_B_Heli_Transport_01_pylons_F",
+			"SEC_B_Heli_Attack_01_pylons_dynamicLoadout_F",
+			"SEC_DMNS_M808B_F"
 		};
 		requiredAddons[]=
 		{
@@ -85,9 +88,10 @@ class CfgPatches
 			"TCF_DMNS_Vehicles_Nightingale",
 			"OPTRE_Vehicles_Sabre",
 			"OPTRE_Weapons_Vehicle",
+			"FSN_Freestyle_Nuke"
 		};
 	};
-	author="";
+	author="Kavik";
 };
 class cfgEditorCategories
 {
@@ -172,8 +176,8 @@ class CfgVehicles
 	class LandVehicle;
 	class OPTRE_Scythe_INS;
 
-#include "SEC_Vehicles_Ground.hpp"
-#include "Aircraft_HPPs\SEC_Vehicles_Air.hpp"
+	#include "SEC_Vehicles_Ground.hpp"
+	#include "Aircraft_HPPs\SEC_Vehicles_Air.hpp"
 
 	class SEC_INS_Scythe_Infantry: OPTRE_Scythe_INS
 	{
