@@ -2031,7 +2031,7 @@
 	};
 	class SEC_DMNS_M808B_F: DMNS_M808B_F
 	{
-		displayName="[SEC] M808B Scorpion (19th)";
+		displayName="[SEC] M808D Scorpion";
 		faction="SEC_Faction_Main";
 		editorCategory="SEC_Categ_Main";
 		editorsubcategory="SEC_Categ_Vic_Armored";

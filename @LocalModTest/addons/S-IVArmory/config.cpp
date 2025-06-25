@@ -1468,20 +1468,6 @@ class CfgPatches
 			"S-IVArmory\data\MKVB\MKVB_Myer_Lower_CO.paa"
 		};
 	};
-	class SEC_MIRAGEII_ArmorCore: MA_SPI_Armor
-	{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] Mirage Type II Armor Core";
-		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
-        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
-        MJOLNIR_shieldChargeValue = 1.50;           //How much shield energy gets regenerated
-        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelectionsTextures[]=
-		{
-			"S-IVArmory\data\SPI\Black_SPI_Armour_CO.paa"
-		};
-	};
 	class SEC_MIRAGEII_CarmineCore: MA_SPI_Armor
 	{
         scope=2;
@@ -1533,24 +1519,6 @@ class CfgPatches
             "S-IVArmory\data\CQB\CQB_Visor.rvmat"
         };
     };
-    class SEC_Viktoriya_SPICore: SEC_MIRAGEII_ArmorCore
-	{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] Semi-Powered Infiltration Harness (Viktoriya)";
-		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
-        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
-        MJOLNIR_shieldChargeValue = 1.5;           //How much shield energy gets regenerated
-        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelectionsTextures[]=
-		{
-			"S-IVArmory\data\SPI\SPI_Viktoriya_CO.paa"
-		};
-        hiddenSelectionsMaterials[]=
-        {
-            "S-IVArmory\data\SPI\SPI_Mordred.rvmat"
-        };
-	};
     class WSD_MKIVG3_Silver : WSD_MKVIG3_HelmetSkeleton
     {
     scope=2;
@@ -2000,23 +1968,6 @@ class CfgPatches
 			};
 		};
 	};
-	class SEC_MIRAGEII_Helmet: MA_SPI_Helmet
-	{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] Mirage Type II Helmet";
-		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"S-IVArmory\data\SPI\Black_SPI_Helmet_CO.paa",
-			"S-IVArmory\data\SPI\Gold_SPI_Visor_CO.paa"
-		};
-	};
 	class SEC_MIRAGEII_Carmine_Helmet: MA_SPI_Helmet
 	{
         scope=2;
@@ -2037,28 +1988,6 @@ class CfgPatches
         {
             "S-IVArmory\data\SPI\SPI_Helmet.rvmat",
             "S-IVArmory\data\SPI\SPI_Visor.rvmat"
-        };
-	};
-    class SEC_Viktoriya_SPI_Helmet: SEC_MIRAGEII_Helmet
-	{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] Semi-Powered Infiltration Helmet (Viktoriya)";
-		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"S-IVArmory\data\SPI\SPI_Viktoriya_Helmet_CO.paa",
-			"S-IVArmory\data\SPI\SPI_Viktoriya_Visor_CO.paa"
-		};
-        hiddenSelectionsMaterials[]=
-        {
-            "S-IVArmory\data\SPI\SPI_Mordred_Helmet.rvmat",
-            "S-IVArmory\data\SPI\SPI_Mordred_Visor.rvmat"
         };
 	};
     class SEC_SPIHUM_Helmet: MA_SPI_Helmet
