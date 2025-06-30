@@ -1470,10 +1470,6 @@
 		tf_hasLRradio=1;
 		tf_isolatedAmount=0.40000001;
 		tf_range=12000;
-		driverAction="Plane_Fighter_03_pilot";
-		driverInAction="Plane_Fighter_03_pilot";
-		gunnerAction = "Plane_Fighter_03_pilot";
-		gunnerInAction = "Plane_Fighter_03_pilot";
 		OPTRE_canThrust = 1;
 		OPTRE_minVelocity=1.4;
 		OPTRE_maxVelocity=167;

@@ -2011,7 +2011,7 @@ class CfgPatches
 		hiddenSelectionsTextures[]=
 		{
 			"S-IVArmory\data\SPI\SPI_Helmet_Carmine_CO.paa",
-			"S-IVArmory\data\SPI\SPI_Visor_CO.paa"
+			"S-IVArmory\data\SPI\SPI_Visor_Carmine_CO.paa"
 		};
         hiddenSelectionsMaterials[]=
         {
