@@ -163,8 +163,24 @@ class CfgEditorSubcategories
 		displayName="Special";
 	};
 };
+class ViewPilot;
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class SensorTemplateDataLink;
+
 class CfgVehicles
 {
+	class Plane;
+	class Plane_Base_F : Plane
+	{
+		class Components;
+	};
 	class CargoGunner_1;
 	class Turrets;
 	class MainTurret;
@@ -175,6 +191,7 @@ class CfgVehicles
 	class Wheels;
 	class LandVehicle;
 	class OPTRE_Scythe_INS;
+	class ViewPilot;
 
 	#include "SEC_Vehicles_Ground.hpp"
 	#include "Aircraft_HPPs\SEC_Vehicles_Air.hpp"
