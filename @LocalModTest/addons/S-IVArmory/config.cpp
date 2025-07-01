@@ -2947,8 +2947,8 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
 		MJOLNIR_helmetOutline="S-IVArmory\data\MKVB\MKVBHelmetOutline.paa";
 		hiddenSelectionsTextures[]=
 		{
-			"S-IVArmory\data\NOBLE\Six_MKVB_Helmet.paa",
-			"S-IVArmory\data\NOBLE\Six_MKVB_Visor.paa"
+			"S-IVArmory\data\NOBLE\Six_MKVB_Helmet_CO.paa",
+			"S-IVArmory\data\NOBLE\Six_MKVB_Visor_CO.paa"
 		};
 	};
 	class SEC_MKVB_Steel_Helmet: SEC_MKVB_Helmet
