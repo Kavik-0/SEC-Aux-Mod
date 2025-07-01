@@ -27,17 +27,6 @@
 	class TCF_UNSC_Nightingale;
 	class VES_AV14_AGM;
 
-	class ViewPilot;
-	class SensorTemplatePassiveRadar;
-	class SensorTemplateAntiRadiation;
-	class SensorTemplateActiveRadar;
-	class SensorTemplateIR;
-	class SensorTemplateVisual;
-	class SensorTemplateMan;
-	class SensorTemplateLaser;
-	class SensorTemplateNV;
-	class SensorTemplateDataLink;
-
 ////// Vanilla Helicopters //////
 
 	class SEC_B_Heli_Light_01_F: B_Heli_Light_01_F
@@ -596,6 +585,14 @@
 		editorCategory="SEC_Categ_Main";
 		faction="SEC_Faction_Main";
 		editorsubcategory="SEC_Categ_Vic_Fixed";
+		magazines[]=
+		{
+			"1000Rnd_Gatling_30mm_Plane_CAS_01_F",
+			"1000Rnd_Gatling_30mm_Plane_CAS_01_F",
+			"1000Rnd_Gatling_30mm_Plane_CAS_01_F",
+			"Laserbatteries",
+			"120Rnd_CMFlare_Chaff_Magazine"
+		};
 		class Components: Components
 		{
 			class TransportPylonsComponent
@@ -1462,7 +1459,7 @@
 	{
 		scope=2;
 		scopeCurator=2;
-		armor=350;
+		armor=450;
 		displayName="[SEC]D77-TC Pelican";
 		editorCategory="SEC_Categ_Main";
 		faction="SEC_Faction_Main";
@@ -1472,7 +1469,7 @@
 		tf_range=12000;
 		OPTRE_canThrust = 1;
 		OPTRE_minVelocity=1.4;
-		OPTRE_maxVelocity=167;
+		OPTRE_maxVelocity=120;
 		OPTRE_velocityMult=1;
 		#include "19th_Turret_Stabilization.hpp"
 		hiddenSelectionsTextures[] =
@@ -2447,6 +2444,7 @@
 		OPTRE_minVelocity=1.4;
 		OPTRE_maxVelocity=167;
 		OPTRE_velocityMult=1;
+		memoryPointDriverOptics="machinegun_end";
 		hiddenSelectionsTextures[]=
 		{
 			"SEC_Vehicles\data\Sparrowhawk\SEC_V_SPARROW_URB_B1_CO.paa",
@@ -2462,6 +2460,62 @@
 			"V_FZ_Air_Vehicles\data\Sparrowhawk\V_SPARROW_LIGHTS_CO.paa",
 			"V_FZ_Air_Vehicles\data\Sparrowhawk\V_SPARROW_GLASS_CA.paa",
 			"V_FZ_Air_Vehicles\data\Sparrowhawk\V_SPARROW_GLASS_CA.paa"
+		};
+		class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName="WFOV";
+					initAngleX=0;
+					minAngleX=0;
+					maxAngleX=0;
+					initAngleY=0;
+					minAngleY=0;
+					maxAngleY=0;
+					initFov="(30 / 120)";
+					minFov="(30 / 120)";
+					maxFov="(30 / 120)";
+					directionStabilized=1;
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					thermalMode[]={0,1};
+					gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Generic_wide_F.p3d";
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName="MFOV";
+					initFov="(6 / 120)";
+					minFov="(6 / 120)";
+					maxFov="(6 / 120)";
+					gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Generic_medium_F.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName="NFOV";
+					initFov="(2 / 120)";
+					minFov="(2 / 120)";
+					maxFov="(2 / 120)";
+					gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Generic_narrow_F.p3d";
+				};
+			};
+			minTurn=-180;
+			maxTurn=180;
+			initTurn=0;
+			minElev=-90;
+			maxElev=90;
+			initElev=5;
+			maxXRotSpeed=1;
+			maxYRotSpeed=1;
+			maxMouseXRotSpeed=0.5;
+			maxMouseYRotSpeed=0.5;
+			pilotOpticsShowCursor=1;
+			controllable=1;
 		};
 	};
 	class SEC_AV22A_Sparrowhawk : VES_AV22A_Sparrowhawk // Scope=0 for now.
