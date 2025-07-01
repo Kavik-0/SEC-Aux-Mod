@@ -2,12 +2,12 @@
 	Generated on https://jdtools.dev/
 	Made by John Doe
 */
-ambient[] = { 1, 1, 1, 1 };
-diffuse[] = { 1, 1, 1, 1 };
-forcedDiffuse[] = { 0, 0, 0, 1 };
-emmisive[] = { 0, 0, 0, 1 };
+Ambient[] = {1,1,1,0.3}; // This is huge, this value defines how intense your texture should be when not being directly lit. So when the visor is in shadow, the texture is darkened to compensate. Prevents glow-in-the-dark visor reflections and helps it look good indoors
+Diffuse[] = {1,1,1,1}; // The color and intensity of your texture when under direct lighting. I would leave this as-is
+forcedDiffuse[] = {0,0,0,0};
+emmisive[] = {0,0,0,1}; 
 specular[] = { 0.1, 0.1, 0.1, 1 };
-specularPower = 2;
+specularPower = 117;
 PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1 {
