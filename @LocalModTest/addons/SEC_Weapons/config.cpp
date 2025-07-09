@@ -1281,6 +1281,7 @@ class CfgMagazines
 		displayName="SP .338LM 400Rnd Box Tracer (Yellow)";
 		descriptionShort="Caliber: SP .338LM Tracer - Yellow<br />Tracers Every 4<br />Rounds: 400<br />Used in: M247A1";
 		displaynameshort="SP Tracer";
+		count = 400;
 		ammo="OPTRE_B_338_SP";
 	};
 	class SEC_200Rnd_338VLD_M247A1_Box: OPTRE_200Rnd_762x51_M118_M247A1_Box
@@ -1295,6 +1296,7 @@ class CfgMagazines
 		displayName="VLD .338LM 400Rnd Box Tracer (Yellow)";
 		descriptionShort="Caliber: VLD .338LM Tracer - Yellow<br />Tracers Every 4<br />Rounds: 400<br />Used in: M247A1";
 		displaynameshort="VLD Tracer";
+		count = 400;
 		ammo="OPTRE_B_338_VLD";
 	};
 	class SEC_200Rnd_338AP_M247A1_Box: OPTRE_200Rnd_762x51_M118_M247A1_Box
@@ -1309,6 +1311,7 @@ class CfgMagazines
 		displayName="AP .338LM 400Rnd Box Tracer (Yellow)";
 		descriptionShort="Caliber: AP .338LM Tracer - Yellow<br />Tracers Every 4<br />Rounds: 400<br />Used in: M247A1";
 		displaynameshort="AP Tracer";
+		count = 400;
 		ammo="OPTRE_B_338_AP";
 	};
 	class SEC_36Rnd_762x51_Mag: OPTRE_32Rnd_762x51_Mag

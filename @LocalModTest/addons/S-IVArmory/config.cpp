@@ -1488,6 +1488,11 @@ class CfgPatches
             "S-IVArmory\data\NOBLE\Jorge_MKV_Upper_CO.paa",
 			"S-IVArmory\data\NOBLE\Jorge_MKV_Lower_CO.paa"
 		};
+        hiddenSelectionsMaterials[]=
+		{
+            "S-IVArmory\data\MKVB\MKV_Upper.rvmat",
+			"S-IVArmory\data\MKVB\MKV_Lower.rvmat"
+		};
 	};
 	class SEC_MKVB_Engel_ArmorCore: MAPO_MKVB_Armor
 	{
@@ -1509,6 +1514,38 @@ class CfgPatches
 		{
             "S-IVArmory\data\MKVB\MKV_Upper_Engel_CO.paa",
 			"S-IVArmory\data\MKVB\MKV_Lower_Engel_CO.paa"
+		};
+        hiddenSelectionsMaterials[]=
+		{
+            "S-IVArmory\data\MKVB\MKV_Upper.rvmat",
+			"S-IVArmory\data\MKVB\MKV_Lower.rvmat"
+		};
+	};
+    class SEC_MKVB_Justin_ArmorCore: MAPO_MKVB_Armor
+	{
+		scope=2;
+		scopeArsenal=2;
+		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        MJOLNIR_shieldStrength = 100;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
+		displayName="[EAGLE] MJOLNIR Mark V.[B] (Justin) Armor Core";
+		hiddenSelections[]=
+		{
+            "camo1",
+			"camo2",
+		//	"mkvb_upper",
+		//	"mkvb_lower"
+		};
+        hiddenSelectionsTextures[]=
+		{
+            "S-IVArmory\data\MKVB\MKV_Upper_Justin_CO.paa",
+			"S-IVArmory\data\MKVB\MKV_Lower_Justin_CO.paa"
+		};
+        hiddenSelectionsMaterials[]=
+		{
+            "S-IVArmory\data\MKVB\MKV_Upper.rvmat",
+			"S-IVArmory\data\MKVB\MKV_Lower.rvmat"
 		};
 	};
 	class SEC_MKVB_Army_ArmorCore: SEC_MKVB_ArmorCore
@@ -2185,23 +2222,6 @@ class CfgPatches
 			"S-IVArmory\data\ODST\ODST_Visor_Chicken_CO.paa"
 		};
 	};
-    class SEC_MKVB_Vikt_Helmet: MAPO_Mjolnir_ODST_Helmet
-	{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Mark V.[ODST] Helmet (Viktoriya)";
-		MJOLNIR_helmetOutline="S-IVArmory\data\ODST\ODSTHelmetOutline.paa";
-		hiddenSelectionsTextures[]=
-		{
-			"S-IVArmory\data\ODST\MKVB_Bittencourt_ODSTHelm_CO.paa",
-			"S-IVArmory\data\ODST\MKVB_Bittencourt_ODSTVisor_CO.paa"
-		};
-        hiddenSelectionsMaterials[]=
-        {
-            "S-IVArmory\data\ODST\ODST_Helmet.rvmat",
-            "S-IVArmory\data\ODST\MKVB_Bittencourt_ODSTVisor.rvmat"
-        };
-	};
 	class SEC_MKVB_Marsh_Helmet: SEC_MKVB_ODST_Helmet
 	{
         scope=2;
@@ -2405,10 +2425,22 @@ class SEC_Guest34th_Helmet: SEC_MKVB_MKV_Helmet
 			"S-IVArmory\data\COMMANDO\Commando_Visor_Angel_CO.paa"
 		};
         hiddenSelectionsMaterials[]=
-    {
+        {
         "S-IVArmory\data\COMMANDO\Commando_Helmet.rvmat",
         "S-IVArmory\data\COMMANDO\Commando_Visor.rvmat"
-    };
+        };
+	};
+    class SEC_MKVB_Justin_Helmet: SEC_MKVB_Engel_Helmet
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] MJOLNIR Mark V.[K] Helmet (Justin)";
+		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
+		hiddenSelectionsTextures[]=	
+		{
+			"S-IVArmory\data\COMMANDO\Commando_Helmet_Justin_CO.paa",
+			"S-IVArmory\data\COMMANDO\Commando_Visor_CO.paa"
+		};
 	};
 	class SEC_MKVB_Emile_Helmet: SEC_MKVB_EVA_Helmet
 	{
@@ -3157,30 +3189,6 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
 			"S-IVArmory\data\MKIV\MKIV_Shoulders_Hesh.rvmat"
 		};
 	};
-    class SEC_Vikt_MKIV_Armor : MAPO_MKIV_Armor
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName = "[EAGLE] MJOLNIR Gen 2 Mark IV Armor (Viktoriya)";
-		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
-        MJOLNIR_shieldStrength = 100;            //Shield energy capacity
-        MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
-        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelectionsTextures[] =
-		{
-			"S-IVArmory\data\MKIV\MKIV_Viktoriya_Upper_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Lower_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders_CO.paa"
-		};
-		hiddenSelectionsMaterials[] =
-		{
-			"S-IVArmory\data\MKIV\MKIV_Upper.rvmat",
-			"S-IVArmory\data\MKIV\MKIV_Lower.rvmat",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders.rvmat",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders.rvmat"
-		};
-	};
 	class SEC_Keller_MKIV_Armor : MAPO_MKIV_Armor
 	{
 		scope=2;
@@ -3542,6 +3550,76 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
             "S-IVArmory\data\MKIV\MKIV_Shoulders.rvmat",
             "S-IVArmory\data\MKV\MKV_Shoulders.rvmat",
             "S-IVArmory\data\MKV\MKV_Shoulders.rvmat",
+            "S-IVArmory\data\ODST\ODST_Shoulders.rvmat",
+            "S-IVArmory\data\ODST\ODST_Shoulders.rvmat",
+            "S-IVArmory\data\OPERATOR\Operator_Shoulders.rvmat",
+            "S-IVArmory\data\OPERATOR\Operator_Shoulders.rvmat",
+            "S-IVArmory\data\RECON\Recon_Shoulders.rvmat",
+            "S-IVArmory\data\RECON\Recon_Shoulders.rvmat",
+            "S-IVArmory\data\SECURITY\Security_Shoulders.rvmat",
+            "S-IVArmory\data\SECURITY\Security_Shoulders.rvmat",
+            "S-IVArmory\data\SCOUT\Scout_Shoulders.rvmat",
+            "S-IVArmory\data\SCOUT\Scout_Shoulders.rvmat"
+        };
+    };
+    class SEC_MKVB_Justin_Shoulders : Mjolnir_MKV_Shoulders_Spartan
+    {
+        scope=2;
+		scopeArsenal=2;
+        displayName = "[EAGLE] MJOLNIR Custom Shoulders (Justin-048)";
+		maximumLoad = 400;
+        mass = 50;
+        hiddenSelectionsTextures[] =
+        {
+            "S-IVArmory\data\COMMANDO\Commando_Shoulders_CO.paa",
+            "S-IVArmory\data\COMMANDO\Commando_Shoulders_CO.paa",
+            "S-IVArmory\data\CQC\CQC_Shoulders_CO.paa",
+            "S-IVArmory\data\CQC\CQC_Shoulders_CO.paa",
+            "S-IVArmory\data\EVA\EVA_Shoulders_CO.paa",
+            "S-IVArmory\data\EVA\EVA_Shoulders_CO.paa",
+            "S-IVArmory\data\GRENADIER\GRENADIER_Shoulders_CO.paa",
+            "S-IVArmory\data\GRENADIER\GRENADIER_Shoulders_CO.paa",
+            "S-IVArmory\data\GUNGNIR\GUNGNIR_Shoulders_CO.paa",
+            "S-IVArmory\data\GUNGNIR\GUNGNIR_Shoulders_CO.paa",
+            "",
+            "",
+            "S-IVArmory\data\JFO\JFO_Shoulders_CO.paa",
+            "S-IVArmory\data\JFO\JFO_Shoulders_CO.paa",
+            "S-IVArmory\data\MKIV\MKIV_Shoulders_co.paa",
+            "S-IVArmory\data\MKIV\MKIV_Shoulders_co.paa",
+            "S-IVArmory\data\MKV\MKV_Shoulders_Justin_CO.paa",
+            "S-IVArmory\data\MKV\MKV_Shoulders_Justin_CO.paa",
+            "S-IVArmory\data\ODST\ODST_Shoulders_CO.paa",
+            "S-IVArmory\data\ODST\ODST_Shoulders_CO.paa",
+            "S-IVArmory\data\OPERATOR\Operator_Shoulders_CO.paa",
+            "S-IVArmory\data\OPERATOR\Operator_Shoulders_CO.paa",
+            "S-IVArmory\data\RECON\Recon_Shoulders_CO.paa",
+            "S-IVArmory\data\RECON\Recon_Shoulders_CO.paa",
+            "S-IVArmory\data\SECURITY\Security_Shoulders_CO.paa",
+            "S-IVArmory\data\SECURITY\Security_Shoulders_CO.paa",
+            "S-IVArmory\data\SCOUT\Scout_Shoulders_CO.paa",
+            "S-IVArmory\data\SCOUT\Scout_Shoulders_CO.paa"
+        };
+        	hiddenSelectionsMaterials[] =
+        {
+            "S-IVArmory\data\COMMANDO\Commando_Shoulders.rvmat",
+            "S-IVArmory\data\COMMANDO\Commando_Shoulders.rvmat",
+            "S-IVArmory\data\CQC\CQC_Shoulders.rvmat",
+            "S-IVArmory\data\CQC\CQC_Shoulders.rvmat",
+            "S-IVArmory\data\EVA\EVA_Shoulders.rvmat",
+            "S-IVArmory\data\EVA\EVA_Shoulders.rvmat",
+            "S-IVArmory\data\GRENADIER\GRENADIER_Shoulders.rvmat",
+            "S-IVArmory\data\GRENADIER\GRENADIER_Shoulders.rvmat",
+            "S-IVArmory\data\GUNGNIR\GUNGNIR_Shoulders.rvmat",
+            "S-IVArmory\data\GUNGNIR\GUNGNIR_Shoulders.rvmat",
+            "",
+            "",
+            "S-IVArmory\data\JFO\JFO_Shoulders.rvmat",
+            "S-IVArmory\data\JFO\JFO_Shoulders.rvmat",
+            "S-IVArmory\data\MKIV\MKIV_Shoulders.rvmat",
+            "S-IVArmory\data\MKIV\MKIV_Shoulders.rvmat",
+            "S-IVArmory\data\MKV\MKV_Shoulders_Justin.rvmat",
+            "S-IVArmory\data\MKV\MKV_Shoulders_Justin.rvmat",
             "S-IVArmory\data\ODST\ODST_Shoulders.rvmat",
             "S-IVArmory\data\ODST\ODST_Shoulders.rvmat",
             "S-IVArmory\data\OPERATOR\Operator_Shoulders.rvmat",
