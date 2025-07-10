@@ -102,7 +102,7 @@ class CfgWeapons
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] Mark VII Gen 3 Energy Shielding";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cblue.paa";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
 		model="";
 		descriptionShort="The latest generation of powered assault armor.";
 		MJOLNIR_isArmor=1;
@@ -874,7 +874,7 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		scopeCurator = 1;
 		scopeArsenal = 1;
 		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cgrey.paa";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
 		uniformClass = "SEC_Gen3_MKVIICoreGrey"; // Needs to be matching item in cfgWeapons
 		hiddenSelections[]=
 		{
@@ -1041,7 +1041,7 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		scopeCurator = 1;
 		scopeArsenal = 1;
 		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cbrick.paa";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
 		uniformClass = "SEC_Gen3_MKVIICoreRed"; // Needs to be matching item in cfgWeapons
 		hiddenSelections[]=
 		{
@@ -1061,7 +1061,7 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		scopeCurator = 1;
 		scopeArsenal = 1;
 		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cblue.paa";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
 		uniformClass = "SEC_Gen3_MKVIICoreBlue"; // Needs to be matching item in cfgWeapons
 		hiddenSelections[]=
 		{
@@ -1081,7 +1081,7 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		scopeCurator = 1;
 		scopeArsenal = 1;
 		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cforest.paa";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
 		uniformClass = "SEC_Gen3_MKVIICoreGreen"; // Needs to be matching item in cfgWeapons
 		hiddenSelections[]=
 		{
@@ -1101,7 +1101,7 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		scopeCurator = 1;
 		scopeArsenal = 1;
 		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cgrey.paa";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
 		uniformClass = "SEC_Gen3_MKVIICoreRecruit"; // Needs to be matching item in cfgWeapons
 		hiddenSelections[]=
 		{
@@ -1121,7 +1121,7 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		scopeCurator = 1;
 		scopeArsenal = 1;
 		model="\rubicon_gen3_spartanii\gen3MarkVIIS2core.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cgrey.paa";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
 		uniformClass = "SEC_Gen3_MKVIICoreSKELETON"; // Needs to be matching item in cfgWeapons
 		hiddenSelections[]=
 		{
@@ -1146,7 +1146,7 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		scopeCurator = 1;
 		scopeArsenal = 1;
 		model="\rubicon_gen3_spartanii\gen3MarkVIIS2core.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cgrey.paa";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
 		uniformClass = "SEC_Gen3_MKVIICoreColt"; // Needs to be matching item in cfgWeapons
 		hiddenSelections[]=
 		{
@@ -1166,7 +1166,7 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		scopeCurator = 1;
 		scopeArsenal = 1;
 		model="\rubicon_gen3_spartanii\gen3MarkVIIS2core.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cgrey.paa";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
 		uniformClass = "SEC_Gen3_MKVIICoreHammer"; // Needs to be matching item in cfgWeapons
 		hiddenSelections[]=
 		{
@@ -1186,7 +1186,7 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		scopeCurator = 1;
 		scopeArsenal = 1;
 		model="\rubicon_gen3_spartanii\gen3MarkVIIS2core.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cgrey.paa";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
 		uniformClass = "SEC_Gen3_MKVIICoreBlitz"; // Needs to be matching item in cfgWeapons
 		hiddenSelections[]=
 		{
@@ -1206,7 +1206,7 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		scopeCurator = 1;
 		scopeArsenal = 1;
 		model="\rubicon_gen3_spartanii\gen3MarkVIIS2core.p3d";
-		picture="\rubicon_gen3_spartaniv\data\ui\icon_U_mk7core_cgrey.paa";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
 		uniformClass = "SEC_Gen3_MKVIICoreHavoc"; // Needs to be matching item in cfgWeapons
 		hiddenSelections[]=
 		{

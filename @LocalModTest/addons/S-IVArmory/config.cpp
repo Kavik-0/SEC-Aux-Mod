@@ -113,6 +113,7 @@ class CfgPatches
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] MJOLNIR Mark V.[B] Armor Core";
+        picture="S-IVArmory\data\ICONS\MKVBCoreIcon_SA.paa";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 70;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
@@ -220,7 +221,7 @@ class CfgPatches
     class SEC_MKVB_JumpJet_ArmorCore: SEC_MKVB_ArmorCore
 	{
 		model="MA_Armor\data\Vests\MKVB\MKVB_Armor.p3d";
-		picture="";
+		picture="S-IVArmory\data\ICONS\MKVBCoreIcon_SA.paa";
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] MJOLNIR Mark V.[B] (Bullfrog) Armor Core";
@@ -329,6 +330,7 @@ class CfgPatches
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE/SPRT] MJOLNIR Mark V.[B] Armor Core";
+        picture="S-IVArmory\data\ICONS\MKVBCoreIcon_SA.paa";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 70;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
@@ -696,6 +698,7 @@ class CfgPatches
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] MJOLNIR Mark V.[B] (Mimic) Armor Core";
+        picture="S-IVArmory\data\ICONS\MKVBCoreIcon_SA.paa";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 100;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 1.0;           //How much shield energy gets regenerated
@@ -771,6 +774,7 @@ class CfgPatches
 	class SEC_MKV_Armor_Muffin: OPTRE_FC_MJOLNIR_MKV_Armor_Human
 	{
 		displayName="[EAGLE] MJOLNIR Mark V Armor Core (Muffin)";
+        picture="S-IVArmory\data\ICONS\MKVCoreIcon_SA.paa";
 		scope = 2;
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 100;            //Shield energy capacity
@@ -821,6 +825,7 @@ class CfgPatches
     class SEC_MKV_Armor_Spartan: OPTRE_FC_MJOLNIR_MKV_Armor
 	{
 		displayName="[EAGLE/SPRT] MJOLNIR Mark V Armor Core";
+        picture="S-IVArmory\data\ICONS\MKVCoreIcon_SA.paa";
 		scope = 2;
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 100;            //Shield energy capacity
@@ -888,6 +893,7 @@ class CfgPatches
 	{
 
 		displayName="[EAGLE] MJOLNIR Mark VI Armor Core (Justin)";
+        picture="S-IVArmory\data\ICONS\MKVICoreIcon_SA.paa";
 		model="OPTRE_FC_Units\Spartan\Mark_VI_Armor";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
 		MJOLNIR_shieldStrength = 85;            //Shield energy capacity
@@ -1033,6 +1039,7 @@ class CfgPatches
         displayName = "[EAGLE/SPRT] MJOLNIR Mark VI Armor Core";
 		hiddenSelectionsTextures[] = {"S-IVArmory\data\MKVI\Mark_VI_Armor_CO.paa"};
         hiddenSelectionsMaterials[] = {"S-IVArmory\data\MKVI\Mark_VI_Armor.rvmat"};
+        picture="S-IVArmory\data\ICONS\MKVICoreIcon_SA.paa";
         MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
 		MJOLNIR_shieldStrength = 85;            //Shield energy capacity
 		MJOLNIR_shieldChargeValue = 1.2;           //How much shield energy gets regenerated
@@ -1048,6 +1055,7 @@ class CfgPatches
         displayName = "[EAGLE] MJOLNIR Mark VI Armor Core";
 		hiddenSelectionsTextures[] = {"S-IVArmory\data\MKVI\Mark_VI_Armor_CO.paa"};
         hiddenSelectionsMaterials[] = {"S-IVArmory\data\MKVI\Mark_VI_Armor.rvmat"};
+        picture="S-IVArmory\data\ICONS\MKVICoreIcon_SA.paa";
         MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
 		MJOLNIR_shieldStrength = 85;            //Shield energy capacity
 		MJOLNIR_shieldChargeValue = 1.2;           //How much shield energy gets regenerated
@@ -1342,6 +1350,7 @@ class CfgPatches
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] MJOLNIR Mark V.[B] (Spawn) Armor Core";
+        picture="S-IVArmory\data\ICONS\MKVBCoreIcon_SA.paa";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 100;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 1.0;           //How much shield energy gets regenerated
@@ -1472,6 +1481,7 @@ class CfgPatches
 		scope=2;
 		scopeArsenal=2;
 		displayName="[EAGLE] MJOLNIR Mark IV[B] (NOBLE Justice) Armor Core";
+        picture="S-IVArmory\data\ICONS\MKVBCoreIcon_SA.paa";
         MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 200;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
@@ -1503,6 +1513,7 @@ class CfgPatches
         MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
         MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
 		displayName="[EAGLE] MJOLNIR Mark V.[B] (Angel) Armor Core";
+        picture="S-IVArmory\data\ICONS\MKVBCoreIcon_SA.paa";
 		hiddenSelections[]=
 		{
             "camo1",
@@ -1530,6 +1541,7 @@ class CfgPatches
         MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
         MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
 		displayName="[EAGLE] MJOLNIR Mark V.[B] (Justin) Armor Core";
+        picture="S-IVArmory\data\ICONS\MKVBCoreIcon_SA.paa";
 		hiddenSelections[]=
 		{
             "camo1",
@@ -1593,6 +1605,7 @@ class CfgPatches
         scope=2;
         scopeArsenal=2;
 		displayName="[EAGLE] Semi-Powered Infiltration Harness (Frogger)";
+        picture="S-IVArmory\data\ICONS\SPICoreIcon_SA.paa";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 1.50;           //How much shield energy gets regenerated
@@ -1660,6 +1673,7 @@ class CfgPatches
         scope=2;
         scopeArsenal=2;
 		displayName="[EAGLE] Mirage Type II Armor Core (Xeno)";
+        picture="S-IVArmory\data\ICONS\SPICoreIcon_SA.paa";
 		MJOLNIR_isArmor = 1;
         MJOLNIR_shieldStrength = 70;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 1.1;           //How much shield energy gets regenerated
@@ -1678,6 +1692,7 @@ class CfgPatches
         scope=2;
         scopeArsenal=2;
 		displayName="[EAGLE] Mirage Type II Helmet (Xeno)";
+        picture="S-IVArmory\data\ICONS\SPIHelmetIcon_SA.paa";
 		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
 		hiddenSelections[]=
 		{
@@ -1704,6 +1719,7 @@ class CfgPatches
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
         MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in second
+        picture="S-IVArmory\data\ICONS\SPICoreIcon_SA.paa";
 		hiddenSelectionsTextures[]=
 		{
 			"S-IVArmory\data\SPI\SPI_Armour_CO.paa"
@@ -1736,6 +1752,7 @@ class CfgPatches
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
         MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in second
+        picture="S-IVArmory\data\ICONS\SPICoreIcon_SA.paa";
 		hiddenSelectionsTextures[]=
 		{
 			"S-IVArmory\data\SPI\SPI_Armour_CO.paa"
@@ -1830,6 +1847,7 @@ class CfgPatches
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
         MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in second
+        picture="S-IVArmory\data\ICONS\SPICoreIcon_SA.paa";
 		hiddenSelectionsTextures[]=
 		{
 			"S-IVArmory\data\SPI\Alpha_SPI_Armour_CO.paa"
@@ -1924,6 +1942,7 @@ class CfgPatches
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
         MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in second
+        picture="S-IVArmory\data\ICONS\SPICoreIcon_SA.paa";
 		hiddenSelectionsTextures[]=
 		{
 			"S-IVArmory\data\SPI\Beta_SPI_Armour_CO.paa"
@@ -2018,6 +2037,7 @@ class CfgPatches
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
         MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in second
+        picture="S-IVArmory\data\ICONS\SPICoreIcon_SA.paa";
 		hiddenSelectionsTextures[]=
 		{
 			"S-IVArmory\data\SPI\Gamma_SPI_Armour_CO.paa"
@@ -2109,6 +2129,7 @@ class CfgPatches
         scopeArsenal=2;
 		displayName="[EAGLE] Semi-Powered Infiltration Helmet (Frogger)";
 		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
+        picture="S-IVArmory\data\ICONS\SPIHelmetIcon_SA.paa";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -2131,6 +2152,7 @@ class CfgPatches
         scopeArsenal=2;
 		displayName="[EAGLE] Semi-Powered Infiltration Helmet (Human)";
 		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
+        picture="S-IVArmory\data\ICONS\SPIHelmetIcon_SA.paa";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -2153,6 +2175,7 @@ class CfgPatches
         scopeArsenal=2;
 		displayName="[EAGLE] Semi-Powered Infiltration Helmet";
 		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
+        picture="S-IVArmory\data\ICONS\SPIHelmetIcon_SA.paa";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3146,6 +3169,7 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
 		scope=2;
 		scopeArsenal=2;
 		displayName = "[EAGLE] MJOLNIR Gen 2 Mark IV Armor";
+        picture="S-IVArmory\data\ICONS\MKIVCoreIcon_SA.paa";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 100;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
@@ -3194,6 +3218,7 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
 		scope=2;
 		scopeArsenal=2;
 		displayName = "[EAGLE] MJOLNIR Gen 2 Mark IV Armor (Keller)";
+        picture="S-IVArmory\data\ICONS\MKIVCoreIcon_SA.paa";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 100;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
@@ -3218,6 +3243,7 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
 		scope=2;
 		scopeArsenal=2;
 		displayName = "[EAGLE] MJOLNIR Gen 2 Mark IV Armor (Gwain)";
+        picture="S-IVArmory\data\ICONS\MKIVCoreIcon_SA.paa";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 100;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
@@ -3323,6 +3349,7 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
 	class SCARLET_SPARTAN_MKIV_Armor : MAPO_MKIV_Armor
 	{
 		displayName = "[EAGLE] MJOLNIR Mark IV Armor Core";
+        picture="S-IVArmory\data\ICONS\MKIVCoreIcon_SA.paa";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 200;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
