@@ -81,7 +81,8 @@ class CfgAmmo
 		audibleFire=5;
 		caliber=5;
 		hit=150;
-		sideAirFriction=0.05;
+		sideAirFriction=0.02;
+		airFriction=0; //-0.000546 default
 	};
 	class ammo_Missile_HARM;
 	class SEC_ammo_Missile_HARM: ammo_Missile_HARM
@@ -329,7 +330,7 @@ class CfgMagazines
 		displayNameShort="14.5×114mm APFSDS";
 		pylonWeapon="SEC_OPTRE_M370_Stealth";
 		tracersEvery=1;
-		initSpeed=3000;
+		initSpeed=5000;
 		muzzleImpulseFactor[]={0.1,0.3};
 		hardpoints[]=
 		{
@@ -561,6 +562,7 @@ class cfgWeapons
 		displayName="M314 Experimental Precision Cannon";
 		displayNameShort="M314 14.5×114mm";
 		ballisticsComputer=8;
+		initSpeed=5000;
 		magazines[]=
 		{
 			"SEC_Pelican_Sniper"

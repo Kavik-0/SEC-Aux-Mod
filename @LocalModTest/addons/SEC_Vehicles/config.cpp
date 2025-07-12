@@ -173,6 +173,14 @@ class SensorTemplateMan;
 class SensorTemplateLaser;
 class SensorTemplateNV;
 class SensorTemplateDataLink;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
 
 class CfgVehicles
 {
