@@ -429,6 +429,24 @@ class CfgPatches
 			"S-IVArmory\data\MKVB\MKV_Lower_Marsh_CO.paa"
 		};
 	};
+    class SEC_MKVB_Flint_ArmorCore: SEC_MKVB_JumpJet_ArmorCore
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] MJOLNIR Mark V.[B] (Flint) Armor Core";
+		hiddenSelections[]=
+		{
+            "camo1",
+			"camo2",
+		//	"mkvb_upper",
+		//	"mkvb_lower"
+		};
+        hiddenSelectionsTextures[]=
+		{
+            "S-IVArmory\data\MKVB\MKV_Upper_Flint_CO.paa",
+			"S-IVArmory\data\MKVB\MKV_Lower_Flint_CO.paa"
+		};
+	};
     class SEC_MKVB_Minuano_ArmorCore: SEC_MKVB_ArmorCore
 	{
 		scope=2;
@@ -2580,6 +2598,18 @@ class SEC_Man_GRENADIER_Helmet: SEC_MKVB_GRENADIER_Helmet
 		{
 			"S-IVArmory\data\GRENADIER\Grenadier_Helmet_Man_CO.paa",
 			"S-IVArmory\data\GRENADIER\Grenadier_Visor_Man_CO.paa"
+		};
+};
+class SEC_Flint_GRENADIER_Helmet: SEC_MKVB_GRENADIER_Helmet
+{
+        scope=2;
+        scopeArsenal=2;
+		displayName="[EAGLE] MJOLNIR Mark V.[G] Helmet (Flint)";
+		MJOLNIR_helmetOutline="S-IVArmory\data\GRENADIER\GrenadierHelmetOutline.paa";
+		hiddenSelectionsTextures[]=
+		{
+			"S-IVArmory\data\GRENADIER\Grenadier_Helmet_Flint_CO.paa",
+			"S-IVArmory\data\GRENADIER\Grenadier_Visor_CO.paa"
 		};
 };
 class MAPO_Grenadier_Helmet;
