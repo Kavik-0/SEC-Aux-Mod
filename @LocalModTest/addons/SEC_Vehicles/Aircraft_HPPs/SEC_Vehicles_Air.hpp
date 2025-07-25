@@ -2598,10 +2598,6 @@
 		tf_hasLRradio=1;
 		tf_isolatedAmount=0.40000001;
 		tf_range=12000;
-		OPTRE_canThrust = 1;
-		OPTRE_minVelocity=1.4;
-		OPTRE_maxVelocity=167;
-		OPTRE_velocityMult=1;
 		memoryPointDriverOptics="machinegun_end";
 		hiddenSelectionsTextures[]=
 		{
@@ -2688,10 +2684,6 @@
 		tf_hasLRradio=1;
 		tf_isolatedAmount=0.40000001;
 		tf_range=12000;
-		OPTRE_canThrust = 1;
-		OPTRE_minVelocity=1.4;
-		OPTRE_maxVelocity=167;
-		OPTRE_velocityMult=1;
 		memoryPointDriverOptics="machinegun_end";
 		hiddenSelectionsTextures[]=
 		{
@@ -2777,10 +2769,6 @@
 		tf_hasLRradio=1;
 		tf_isolatedAmount=0.40000001;
 		tf_range=12000;
-		OPTRE_canThrust = 1;
-		OPTRE_minVelocity=1.4;
-		OPTRE_maxVelocity=167;
-		OPTRE_velocityMult=1;
 		hiddenSelectionsTextures[]=
 		{
 			"SEC_Vehicles\data\Sparrowhawk\SEC_V_SPARROW_URB_B1_CO.paa",
@@ -2809,10 +2797,6 @@
 		tf_hasLRradio=1;
 		tf_isolatedAmount=0.40000001;
 		tf_range=12000;
-		OPTRE_canThrust = 1;
-		OPTRE_minVelocity=1.4;
-		OPTRE_maxVelocity=167;
-		OPTRE_velocityMult=1;
 		hiddenSelectionsTextures[]=
 		{
 			"SEC_Vehicles\data\Sparrowhawk\SEC_V_SPARROW_URB_B1_CO.paa",
@@ -2830,7 +2814,6 @@
 			"V_FZ_Air_Vehicles\data\Sparrowhawk\V_SPARROW_GLASS_CA.paa"
 		};
 	};
-
 ////// Sabre //////
 
 	class SEC_Pegasus_Guardian: OPTRE_YSS_1000_A_VTOL_Single

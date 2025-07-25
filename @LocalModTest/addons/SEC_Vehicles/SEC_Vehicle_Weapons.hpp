@@ -2,6 +2,13 @@ class CfgAmmo
 {
 	class Components;
 	class SensorTemplateLaser;
+	class B_762x51_Minigun_Tracer_Red_splash;
+	class SEC_B_762x51_Minigun_Tracer_Red: B_762x51_Minigun_Tracer_Red_splash
+	{
+		hit = 20;
+		indirectHit = 0;
+		indirectHitRange = 0;
+	};
 	class OPTRE_M_ANVIL_1_Rocket;
 	class SEC_Stiletto_Ammo: OPTRE_M_ANVIL_1_Rocket
 	{
@@ -101,7 +108,7 @@ class CfgAmmo
     	//Used by: AV-22 Sparrowhawk (Big Rotary Guns) //Bison IFV
 	    model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_red.p3d";
 	    hit = 120;
-	    indirectHit = 35;
+	    indirectHit = 75;
 	    indirectHitRange = 4;
 	    caliber = 6;
 	    explosive = 0.65;
@@ -116,7 +123,7 @@ class CfgAmmo
   	{
 	    //Used by: M370 Autocannon (G77H-TCI Pelican (Newer Models))
 	    hit = 175;
-	    indirectHit = 50;
+	    indirectHit = 100;
 	    indirectHitRange = 5;
 	    caliber = 5;
 	    explosive = 0.8;
@@ -200,8 +207,8 @@ class CfgAmmo
 	    //Used by: AV-22 Sparrowhawk (4 cannons)
 	    hit = 95;
 	    airLock = 1;
-	    indirectHit = 20;
-	    indirectHitRange = 2.5;
+	    indirectHit = 75;
+	    indirectHitRange = 3;
 	    caliber = 5;
 	    explosive = 0.7;
 	    tracerScale = 1.3;
@@ -215,10 +222,11 @@ class CfgAmmo
 	class OPTRE_B_20mm_HE: B_20mm 
 	{
     	//Used by: UH-144 Falcon (M638 Autocannon)
-	    hit = 70;
-	    indirectHit = 10;
+	    hit = 75;
+	    indirectHit = 75;
+	    indirectHitRange=3;
 	    caliber = 5;
-	    explosive = 0.5;
+	    explosive = 0.2;
 	    tracerScale = 1.25;
 	    tracerStartTime = 0.005;
 	    tracerEndTime = 10;
@@ -237,8 +245,8 @@ class CfgAmmo
 		caliber=5;
 		explosive=0.75;
 		hit=75;
-		indirectHit=14;
-		indirectHitRange=1.75;
+		indirectHit=75;
+		indirectHitRange=3;
 		tracerEndTime=10;
 		tracerScale=1.25;
 		tracerStartTime=0.005;
@@ -408,6 +416,7 @@ class CfgMagazines
 	};
 	class SEC_5000Rnd_762x51_Belt: 5000Rnd_762x51_Belt
 	{
+		ammo = "SEC_B_762x51_Minigun_Tracer_Red";
 		hardpoints[]=
 		{
 		 	"OPAEX_Hardpoint_AV14",
@@ -415,6 +424,7 @@ class CfgMagazines
 		 	"OPAEX_Hardpoint_AV22",
 		};
 		pylonWeapon= "SEC_M134_minigun";
+		tracersEvery = 2;
 	};
 	class SEC_5000Rnd_762x51_Belt_Model: 5000Rnd_762x51_Belt
 	{
