@@ -103,7 +103,7 @@ class cfgVehicles
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[SEC] Training SOLA";
+		displayName="[EAGLE] Training SOLA";
 		author="Gray";
 		isColeoptera=1;
 		longJumpCost=0;
@@ -125,7 +125,7 @@ class cfgVehicles
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[SEC] S-12 SOLA (Static)";
+		displayName="[EAGLE] S-12 SOLA (Static)";
 		author="Gray";
 		isColeoptera=1;
 		longJumpCost=75;
@@ -147,7 +147,7 @@ class cfgVehicles
 	{
 		scope=0;
 		scopeArsenal=2;
-		displayName="[SEC] S-12 SOLA (A)";
+		displayName="[EAGLE] S-12 SOLA (A)";
 		author="Gray";
 		isColeoptera=1;
 		longJumpCost=75;
@@ -171,7 +171,7 @@ class cfgVehicles
 	{
 		scope=1;
 		scopeArsenal=1;
-		displayName="[SEC] S-12 SOLA (A)";
+		displayName="[EAGLE] S-12 SOLA (A)";
 		author="Gray";
 		model="\OPTRE_weapons\backpacks\jetpack_on.p3d";
 		isColeoptera=1;
@@ -196,7 +196,7 @@ class cfgVehicles
 	{
 		scope=0;
 		scopeArsenal=2;
-		displayName="[SEC] S-12 SOLA (Spartan A)";
+		displayName="[EAGLE] S-12 SOLA (Spartan A)";
 		author="Gray";
 		isColeoptera=1;
 		longJumpCost=75;
@@ -219,7 +219,7 @@ class cfgVehicles
 	{
 		scope=1;
 		scopeArsenal=1;
-		displayName="[SEC] S-12 SOLA (Spartan A)";
+		displayName="[EAGLE] S-12 SOLA (Spartan A)";
 		author="Gray";
 		model="\OPTRE_weapons\backpacks\jetpack_on_Spartan.p3d";
 		isColeoptera=1;

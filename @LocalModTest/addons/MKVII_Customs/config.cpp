@@ -780,6 +780,19 @@ class CfgWeapons
 			mass = 40;
 		};
     };
+	class SEC_Gen3_MKVIICoreShark : SEC_Gen3_MKVIICoreGrey
+	{
+		scope = 2;
+		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Shark)";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		class ItemInfo : UniformItem
+		{
+			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
+			uniformClass = B_SEC_SpartanIV_Shark; // Needs to be matching Character in cfgVehicles
+			containerClass = Supply40;
+			mass = 40;
+		};
+    };
 	class Rubicon_SpartanII_CadetBlue;
 	class SEC_Gen3_MKVIICoreSKELETON : Rubicon_SpartanII_CadetBlue
 	{
@@ -1112,6 +1125,26 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		{
 			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
 			"MKVII_Customs\data\MKVII\MKVII_Recruit_CO.paa"
+		};
+	};
+	class B_SEC_SpartanIV_Shark : B_SEC_SpartanIV_Base
+	{
+		author = "Gambit";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
+		uniformClass = "SEC_Gen3_MKVIICoreShark"; // Needs to be matching item in cfgWeapons
+		hiddenSelections[]=
+		{
+			"Camo",
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
+			"MKVII_Customs\data\MKVII\Shark_gen3_mk7core_CO.paa"
 		};
 	};
 	class B_SEC_SpartanIV_Skel : B_Rubicon_SpartanII_Base
