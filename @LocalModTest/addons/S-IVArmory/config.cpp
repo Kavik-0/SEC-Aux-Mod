@@ -109,6 +109,27 @@ class CfgPatches
 			mass=0;
 		};
 	};
+    class OPTRE_FC_Elite_Armor_Minor;
+    class SoS_Elite_Armor_Minor: OPTRE_FC_Elite_Armor_Minor
+	{
+		scope=2;
+		author="Article 2 Studios";
+		displayName="[SoS] Od'wagra-pattern Combat Harness";
+		hiddenSelectionsTextures[]=
+		{
+			"S-IVArmory\data\SoS\SoS_Body_Armor_CO.paa",
+			"S-IVArmory\data\SoS\SoS_Legs_And_Arms_CO.paa",
+		};
+	};
+    class OPTRE_FC_Elite_Helmet_Minor;
+    class SoS_Elite_Helmet_Minor: OPTRE_FC_Elite_Helmet_Minor
+	{
+		dlc = "OPTREFC";
+		scope   										= 2;
+		author											= "Article 2 Studios";
+		displayName    									= "[SoS] Od'wagra-pattern Combat Helmet";
+		hiddenSelectionsTextures[]   					= {"S-IVArmory\data\SoS\SoS_Helmet_CO.paa"};
+    };
 	class SEC_MKVB_ArmorCore: MA_MKVB_Armor
 	{
 		scope=2;
@@ -394,6 +415,24 @@ class CfgPatches
 			"S-IVArmory\data\MKVB\MKV_Lower_Man_CO.paa"
 		};
 	};
+    class SEC_MKVB_Hawkins_ArmorCore: SEC_MKVB_ArmorCore
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] MJOLNIR Mark V.[B] (Hawkins) Armor Core";
+		hiddenSelections[]=
+		{
+            "camo1",
+			"camo2",
+		//	"mkvb_upper",
+		//	"mkvb_lower"
+		};
+        hiddenSelectionsTextures[]=
+		{
+            "S-IVArmory\data\MKVB\Hawkins_MKV_Upper_CO.paa",
+			"S-IVArmory\data\MKVB\Hawkins_MKV_Lower_CO.paa"
+		};
+	};
     class SEC_MKVB_DG_ArmorCore: SEC_MKVB_ArmorCore
 	{
 		scope=2;
@@ -413,24 +452,6 @@ class CfgPatches
 		{
             "S-IVArmory\data\MKVB\DG_MKV_Upper_CO.paa",
 			"S-IVArmory\data\MKVB\DG_MKV_Lower_CO.paa"
-		};
-	};
-    class SEC_MKVB_Palmer_ArmorCore: SEC_MKVB_ArmorCore
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Mark V.[B] (Palmer) Armor Core";
-		hiddenSelections[]=
-		{
-            "camo1",
-			"camo2",
-		//	"mkvb_upper",
-		//	"mkvb_lower"
-		};
-        hiddenSelectionsTextures[]=
-		{
-            "S-IVArmory\data\MKV\MKV_Upper_Palmer_CO.paa",
-			"S-IVArmory\data\MKV\MKV_Lower_Palmer_CO.paa"
 		};
 	};
     class SEC_MKVB_Marsh_ArmorCore: SEC_MKVB_JumpJet_ArmorCore
@@ -513,24 +534,7 @@ class CfgPatches
 			"S-IVArmory\data\MKV\Codex_MKV_Lower_CO.paa"
 		};
 	};
-	class SEC_MKVB_Grif_ArmorCore: SEC_MKVB_ArmorCore
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Mark V.[B] (Grif) Armor Core";
-		hiddenSelections[]=
-		{
-            "camo1",
-			"camo2",
-		//	"mkvb_upper",
-		//	"mkvb_lower"
-		};
-        hiddenSelectionsTextures[]=
-		{
-            "S-IVArmory\data\MKV\MKV_Upper_Grif_CO.paa",
-			"S-IVArmory\data\MKV\MKV_Lower_Grif_CO.paa"
-		};
-	};
+	
     class SEC_MKVB_Amare_ArmorCore: SEC_MKVB_ArmorCore
 	{
 		scope=2;
@@ -733,24 +737,7 @@ class CfgPatches
 			"S-IVArmory\data\MKVB\MKV_Lower_Ashburn_CO.paa"
 		};
 	};
-	class SEC_MKVB_Callahan_ArmorCore: SEC_MKVB_ArmorCore
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Mark V.[B] (Callahan) Armor Core";
-		hiddenSelections[]=
-		{
-            "camo1",
-			"camo2",
-		//	"mkvb_upper",
-		//	"mkvb_lower"
-		};
-        hiddenSelectionsTextures[]=
-		{
-            "S-IVArmory\data\MKVB\MKV_Upper_Callahan_CO.paa",
-			"S-IVArmory\data\MKVB\MKV_Lower_Callahan_CO.paa"
-		};
-	};
+
 	class SEC_MKVB_Joker_ArmorCore: MAPO_MKVB_Armor
 	{
 		scope=2;
@@ -1186,16 +1173,7 @@ class CfgPatches
 			"S-IVArmory\data\MKVI\Justin_MKVI_Helmet_co.paa"
 		};
 	};
-	class SEC_MKVI_Helmet_Grif: SEC_MKVI_Helmet
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Mark VI Helmet (Grif)";
-		hiddenSelectionsTextures[]=
-		{
-			"S-IVArmory\data\MKVI\Mark_VI_Grif_Helmet_CO.paa"
-		};
-	};
+	
 	class SEC_MKVI_Helmet_Recruit: SEC_MKVI_Helmet
 	{
 		scope=2;
@@ -2437,42 +2415,6 @@ class SEC_MKVB_Rusty_Helmet: SEC_MKVB_MKV_Helmet
         "S-IVArmory\data\MKV\MKV_Visor_Rusty_CO.paa"
     };
 };
-class SEC_MKVB_Palmer_Helmet: SEC_MKVB_MKV_Helmet
-{
-    scope=2;
-    scopeArsenal=2;
-    displayName="[EAGLE] MJOLNIR Mark V Helmet (Palmer)";
-	MJOLNIR_helmetOutline="S-IVArmory\data\MKV\MKVHelmetOutline_CA.paa";
-    hiddenSelectionsTextures[]=
-    {
-        "S-IVArmory\data\MKV\MKV_Helmet_Palmer_CO.paa",
-        "S-IVArmory\data\MKV\MKV_Visor_Palmer_CO.paa"
-    };
-};
-class SEC_MKVB_Grif_Helmet: SEC_MKVB_MKV_Helmet
-{
-    scope=2;
-    scopeArsenal=2;
-    displayName="[EAGLE] MJOLNIR Mark V Helmet (Grif)";
-	MJOLNIR_helmetOutline="S-IVArmory\data\MKV\MKVHelmetOutline_CA.paa";
-    hiddenSelectionsTextures[]=
-    {
-        "S-IVArmory\data\MKV\MKV_Helmet_Grif_CO.paa",
-        "S-IVArmory\data\MKV\MKV_Visor_Grif_CO.paa"
-    };
-};
-class SEC_MKVB_Callahan_Helmet: MA_Mjolnir_Commando_Helmet
-{
-    scope=2;
-    scopeArsenal=2;
-    displayName="[EAGLE] MJOLNIR Mark V.[K] Helmet (Callahan)";
-	MJOLNIR_helmetOutline="S-IVArmory\data\MKV\MKVHelmetOutline_CA.paa";
-    hiddenSelectionsTextures[]=
-    {
-        "S-IVArmory\data\COMMANDO\Commando_Helmet_Callahan_CO.paa",
-        "S-IVArmory\data\COMMANDO\Gold_Commando_Visor_CO.paa"
-    };
-};
 class SEC_Guest34th_Helmet: SEC_MKVB_MKV_Helmet
 {
     scope=2;
@@ -2865,6 +2807,17 @@ class SEC_MKVB_Shark_Helmet: SEC_MKVB_GUNGNIR_Helmet
     hiddenSelectionsTextures[]=
     {
         "S-IVArmory\data\GUNGNIR\Shark_GUNGNIR_Helmet_CO.paa"
+    };
+};
+class SEC_MKVB_Hawkins_Helmet: SEC_MKVB_GUNGNIR_Helmet
+{
+    scope=2;
+    scopeArsenal=2;
+    displayName="[EAGLE] MJOLNIR Mark V.[GNG] Helmet (Hawkins)";
+	MJOLNIR_helmetOutline="S-IVArmory\data\GUNGNIR\GungnirHelmetOutline.paa";
+    hiddenSelectionsTextures[]=
+    {
+        "S-IVArmory\data\GUNGNIR\Hawkins_GUNGNIR_Helmet_CO.paa"
     };
 };
 	class SEC_MKVB_JFO_Helmet: MA_Mjolnir_JFO_Helmet
@@ -4096,14 +4049,14 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
         "eva_right",
         "gren_left",
         "gren_right",
-        "gungnir_left",
-        "gungnir_right",
+        //"gungnir_left",
+        //"gungnir_right",
         "hayabusa_left",
         "hayabusa_right",
         "jfo_left",
         "jfo_right",
-        //"mkiv_left",
-        //"mkiv_right",
+        "mkiv_left",
+        "mkiv_right",
         "mkv_left",
         "mkv_right",
        "odst_left",
@@ -4127,8 +4080,8 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
             "MA_Armor\data\Vests\MKVB\Shoulders\EVA\Olive_EVA_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\Grenadier\Olive_Grenadier_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\Grenadier\Olive_Grenadier_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Gungnir\Olive_GUNGNIR_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Gungnir\Olive_GUNGNIR_Shoulders_CO.paa",
+            "MA_Armor\data\Vests\MKVB\Shoulders\Gungnir\Hawkins_GUNGNIR_Shoulders_CO.paa",
+            "MA_Armor\data\Vests\MKVB\Shoulders\Gungnir\Hawkins_GUNGNIR_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\Hayabusa\Olive_Hayabusa_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\Hayabusa\Olive_Hayabusa_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\JFO\Olive_JFO_Shoulders_CO.paa",
@@ -4137,103 +4090,6 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
             "S-IVArmory\data\MKIV\MKIV_Shoulders_Hawkins_CO.paa",
             "",
             "",
-            "MA_Armor\data\Vests\MKVB\Shoulders\ODST\Olive_ODST_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\ODST\Olive_ODST_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Operator\Olive_Operator_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Operator\Olive_Operator_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Recon\Olive_Recon_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Recon\Olive_Recon_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Security\Olive_Security_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Security\Olive_Security_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Scout\Olive_Scout_Shoulders_CO.paa"
-        };
-    };
-    class SEC_MKVB_Shoulders_Grif : SEC_MKVB_Shoulders
-    {
-        scope=2;
-		scopeArsenal=2;
-        displayName = "[EAGLE] MJOLNIR Custom Shoulders (Grif)";
-		maximumLoad = 400;
-        mass = 50;
-		hiddenSelections[]=
-    {
-        "camo1",
-        "camo2",
-        "camo3",
-        "camo4",
-        "camo5",
-        "camo6",
-        "camo7",
-        "camo8",
-        "camo9",
-        "camo10",
-        "camo11",
-        "camo12",
-        "camo13",
-        "camo14",
-        "camo15",
-        "camo16",
-        "camo17",
-        "camo18",
-        "camo19",
-        "camo20",
-        "camo21",
-        "camo22",
-        "camo23",
-        "camo24",
-        "camo25",
-        "camo26",
-        "camo27",
-        "camo28",
-        "commando_left",
-        "commando_right",
-        "cqc_left",
-        "cqc_right",
-        "eva_left",
-        "eva_right",
-        "gren_left",
-        "gren_right",
-        "gungnir_left",
-        "gungnir_right",
-        "hayabusa_left",
-        "hayabusa_right",
-        "jfo_left",
-        "jfo_right",
-        "mkiv_left",
-        "mkiv_right",
-        //"mkv_left",
-        //"mkv_right",
-       "odst_left",
-        "odst_right",
-        "operator_left",
-        "operator_right",
-        "recon_left",
-        "recon_right",
-        "security_left",
-        "security_right",
-      "scout_left",
-      "scout_right"
-    };
-        hiddenSelectionsTextures[] =
-        {
-            "MA_Armor\data\Vests\MKVB\Shoulders\Commando\Olive_Commando_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Commando\Olive_Commando_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\CQC\Olive_CQC_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\CQC\Olive_CQC_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\EVA\Olive_EVA_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\EVA\Olive_EVA_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Grenadier\Olive_Grenadier_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Grenadier\Olive_Grenadier_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Gungnir\Olive_GUNGNIR_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Gungnir\Olive_GUNGNIR_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Hayabusa\Olive_Hayabusa_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Hayabusa\Olive_Hayabusa_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\JFO\Olive_JFO_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\JFO\Olive_JFO_Shoulders_CO.paa",
-            "S-IVArmory\data\MKIV\MKIV_Shoulders_co.paa",
-            "S-IVArmory\data\MKIV\MKIV_Shoulders_co.paa",
-            "S-IVArmory\data\MKV\MKV_Shoulders_Grif_CO.paa",
-            "S-IVArmory\data\MKV\MKV_Shoulders_Grif_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\ODST\Olive_ODST_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\ODST\Olive_ODST_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\Operator\Olive_Operator_Shoulders_CO.paa",
@@ -4714,105 +4570,6 @@ class SEC_MKVB_Rose_Shoulders : SEC_MKVB_Shoulders
         "MA_Armor\data\Vests\MKVB\Shoulders\Security\Olive_Security_Shoulders_CO.paa",
         "S-IVArmory\data\MKVB\Olive_Scout_Shoulders_CO.paa",
         "S-IVArmory\data\MKVB\Olive_Scout_Shoulders_CO.paa"
-        
-    };
-};
-class SEC_MKVB_Callahan_Shoulders : SEC_MKVB_Shoulders
-    {
-        scope=2;
-		scopeArsenal=2;
-        displayName = "[EAGLE] MJOLNIR Custom Shoulders (Callahan)";
-		maximumLoad = 400;
-        mass = 50;
-        hiddenSelections[]=
-    {
-        "camo1",
-        "camo2",
-        "camo3",
-        "camo4",
-        "camo5",
-        "camo6",
-        "camo7",
-        "camo8",
-        "camo9",
-        "camo10",
-        "camo11",
-        "camo12",
-        "camo13",
-        "camo14",
-        "camo15",
-        "camo16",
-        "camo17",
-        "camo18",
-        "camo19",
-        "camo20",
-        "camo21",
-        "camo22",
-        "camo23",
-        "camo24",
-        "camo25",
-        "camo26",
-        "camo27",
-        "camo28",
-        //"commando_left",
-        "commando_right",
-        "cqc_left",
-        "cqc_right",
-        "eva_left",
-        "eva_right",
-        "gren_left",
-        "gren_right",
-        "gungnir_left",
-        "gungnir_right",
-        "hayabusa_left",
-        "hayabusa_right",
-        "jfo_left",
-        "jfo_right",
-        "mkiv_left",
-        "mkiv_right",
-        "mkv_left",
-        "mkv_right",
-       "odst_left",
-        "odst_right",
-        "operator_left",
-        "operator_right",
-        "recon_left",
-        "recon_right",
-        "security_left",
-        //"security_right",
-      "scout_left",
-      "scout_right"
-    };
-    hiddenSelectionsTextures[]=
-    {
-        "S-IVArmory\data\COMMANDO\Commando_Shoulders_Callahan_CO.paa",
-        "S-IVArmory\data\COMMANDO\Commando_Shoulders_Callahan_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\CQC\Olive_CQC_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\CQC\Olive_CQC_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\EVA\Olive_EVA_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\EVA\Olive_EVA_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\Grenadier\Olive_Grenadier_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\Grenadier\Olive_Grenadier_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\Gungnir\Olive_GUNGNIR_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\Gungnir\Olive_GUNGNIR_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\Hayabusa\Olive_Hayabusa_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\Hayabusa\Olive_Hayabusa_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\JFO\Olive_JFO_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\JFO\Olive_JFO_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKIV\Color_Variants\Green_MKIV_Shoulders_CO.paa",
-		"MA_Armor\data\Vests\MKIV\Color_Variants\Green_MKIV_Shoulders_CO.paa",
-        "S-IVArmory\data\MKV\Gray_MKV_Shoulders_CO.paa",
-        "S-IVArmory\data\MKV\Gray_MKV_Shoulders_CO.paa",
-        "S-IVArmory\data\MKVB\Olive_ODST_Shoulders_CO.paa",
-        "S-IVArmory\data\MKVB\Olive_ODST_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\Operator\Olive_Operator_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\Operator\Olive_Operator_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\Recon\Olive_Recon_Shoulders_CO.paa",
-        "MA_Armor\data\Vests\MKVB\Shoulders\Recon\Olive_Recon_Shoulders_CO.paa",
-        "S-IVArmory\data\SECURITY\Security_Shoulders_Callahan_CO.paa",
-        "S-IVArmory\data\SECURITY\Security_Shoulders_Callahan_CO.paa",
-        "S-IVArmory\data\SCOUT\Scout_Shoulders_Stone_CO.paa",
-        "S-IVArmory\data\SCOUT\Scout_Shoulders_Stone_CO.paa"
         
     };
 };
@@ -6315,105 +6072,7 @@ class SEC_MKVB_EVA_Shoulders : SEC_MKVB_Shoulders
       "scout_right"
     };
 };
-class SEC_MKVB_Palmer_Shoulders : SEC_MKVB_Shoulders
-    {
-        scope=2;
-		scopeArsenal=2;
-        displayName = "[EAGLE] MJOLNIR Custom Shoulders (Palmer)";
-		maximumLoad = 400;
-        mass = 50;
-        hiddenSelections[]=
-    {
-        "camo1",
-        "camo2",
-        "camo3",
-        "camo4",
-        "camo5",
-        "camo6",
-        "camo7",
-        "camo8",
-        "camo9",
-        "camo10",
-        "camo11",
-        "camo12",
-        "camo13",
-        "camo14",
-        "camo15",
-        "camo16",
-        "camo17",
-        "camo18",
-        "camo19",
-        "camo20",
-        "camo21",
-        "camo22",
-        "camo23",
-        "camo24",
-        "camo25",
-        "camo26",
-        "camo27",
-        "camo28",
-        "commando_left",
-        "commando_right",
-        "cqc_left",
-        "cqc_right",
-        //"eva_left",
-        //"eva_right",
-        "gren_left",
-        "gren_right",
-        "gungnir_left",
-        "gungnir_right",
-        "hayabusa_left",
-        "hayabusa_right",
-        "jfo_left",
-        "jfo_right",
-        "mkiv_left",
-        "mkiv_right",
-        "mkv_left",
-        "mkv_right",
-        "odst_left",
-        "odst_right",
-        "operator_left",
-        "operator_right",
-        "recon_left",
-        "recon_right",
-        "security_left",
-       "security_right",
-      "scout_left",
-      "scout_right"
-    };
-    hiddenSelectionsTextures[]=
-    {
-        "S-IVArmory\data\COMMANDO\Gray_Commando_Shoulders_CO.paa",
-        "S-IVArmory\data\COMMANDO\Gray_Commando_Shoulders_CO.paa",
-        "S-IVArmory\data\CQC\Gray_CQC_Shoulders_CO.paa",
-        "S-IVArmory\data\CQC\Gray_CQC_Shoulders_CO.paa",
-        "S-IVArmory\data\EVA\EVA_Shoulders_Palmer_CO.paa",
-        "S-IVArmory\data\EVA\EVA_Shoulders_Palmer_CO.paa",
-        "S-IVArmory\data\GRENADIER\Gray_GRENADIER_Shoulders_CO.paa",
-        "S-IVArmory\data\GRENADIER\Gray_GRENADIER_Shoulders_CO.paa",
-        "S-IVArmory\data\GUNGNIR\Gray_GUNGNIR_Shoulders_CO.paa",
-        "S-IVArmory\data\GUNGNIR\Gray_GUNGNIR_Shoulders_CO.paa",
-        "S-IVArmory\data\HAYABUSA\Gray_Hayabusa_Shoulders_CO.paa",
-        "S-IVArmory\data\HAYABUSA\Gray_Hayabusa_Shoulders_CO.paa",
-        "S-IVArmory\data\JFO\Gray_JFO_Shoulders_CO.paa",
-        "S-IVArmory\data\JFO\Gray_JFO_Shoulders_CO.paa",
-        "S-IVArmory\data\MKIV\MKIV_Shoulders_CO.paa",
-		"S-IVArmory\data\MKIV\MKIV_Shoulders_CO.paa",
-        "S-IVArmory\data\MKV\Gray_MKV_Shoulders_CO.paa",
-        "S-IVArmory\data\MKV\Gray_MKV_Shoulders_CO.paa",
-        "S-IVArmory\data\ODST\Gray_ODST_Shoulders_CO.paa",
-        "S-IVArmory\data\ODST\Gray_ODST_Shoulders_CO.paa", 
-        "S-IVArmory\data\OPERATOR\Gray_Operator_Shoulders_CO.paa",
-        "S-IVArmory\data\OPERATOR\Gray_Operator_Shoulders_CO.paa",
-        "S-IVArmory\data\RECON\Gray_Recon_Shoulders_CO.paa",
-        "S-IVArmory\data\RECON\Gray_Recon_Shoulders_CO.paa",
-        "S-IVArmory\data\SECURITY\Gray_Security_Shoulders_CO.paa",
-        "S-IVArmory\data\SECURITY\Gray_Security_Shoulders_CO.paa",
-        "S-IVArmory\data\SCOUT\Gray_Scout_Shoulders_CO.paa",
-        "S-IVArmory\data\SCOUT\Gray_Scout_Shoulders_CO.paa"
-        
-    };
-};
+
 class SEC_MKVB_CQC_Shoulders : SEC_MKVB_Shoulders
     {
         scope=2;
@@ -9441,40 +9100,6 @@ class EAGLE_6STB_ODSTCHEST: MA_MKVB_Armor_Attachements
         "S-IVArmory\data\SCOUT\Scout_Vest.rvmat"
     };
 };
-class EAGLE_CALLAHAN_ODSTCHEST: MA_MKVB_Armor_Attachements
-{
-    scope=2;
-    scopeArsenal=2;
-    displayName="[EAGLE] Up-Armor/ODST (Callahan)";
-    model="MA_Armor\data\Vests\MKVB\Attachments\MKVB_Attachments.p3d";
-    identitytypes[]={};
-    hiddenSelections[]=
-    {
-        "Camo1", // (Grenadier Chest)
-        "Camo2", // (Grenadier Collar)
-        "Camo3", // (ODST Chest)
-        "Camo4", // (Scout Vest)
-		"Grenadier_Collar",
-        "Grenadier_Chest",
-        // "Odst_Chest",
-        "Scout_Chest",
-		"Ordnance_Pack"
-    };
-    hiddenSelectionsTextures[]=
-    {
-        "S-IVArmory\data\GRENADIER\Black_Grenadier_Rig_CO.paa",    
-        "S-IVArmory\data\GRENADIER\Black_Grenadier_Collar_CO.paa",
-        "S-IVArmory\data\ODST\Callahan_ODST_Chestplate_co.paa",
-        "S-IVArmory\data\SCOUT\Black_Scout_Vest_CO.paa"
-    };
-    hiddenSelectionsMaterials[]=
-    {
-        "S-IVArmory\data\GRENADIER\grenadier_rig.rvmat",    
-        "S-IVArmory\data\GRENADIER\grenadier_collar.rvmat",
-        "S-IVArmory\data\ODST\ODST_Vest.rvmat",    
-        "S-IVArmory\data\SCOUT\Scout_Vest.rvmat"
-    };
-};
 class EAGLE_ASHBURN_ODSTCHEST: MA_MKVB_Armor_Attachements
 {
     scope=2;
@@ -9697,40 +9322,6 @@ class EAGLE_ATTACHMENT_CHIP_SCOUTCHEST: EAGLE_ATTACHMENT_SCOUTCHEST
         "",
         "",
         "S-IVArmory\data\SCOUT\Scout_Vest_Chip_CO.paa"
-    };
-};
-class EAGLE_GRIF_SCOUTCHEST: MA_MKVB_Armor_Attachements
-{
-    scope=2;
-    scopeArsenal=2;
-    displayName="[EAGLE] Tactical/Patrol (Grif)";
-    model="MA_Armor\data\Vests\MKVB\Attachments\MKVB_Attachments.p3d";
-    identitytypes[]={};
-    hiddenSelections[]=
-    {
-        "Camo1", // (Grenadier Chest)
-        "Camo2", // (Grenadier Collar)
-        "Camo3", // (ODST Chest)
-        "Camo4", // (Scout Vest)
-		"Grenadier_Collar",
-        "Grenadier_Chest",
-        "Odst_Chest",
-        // "Scout_Chest",
-		"Ordnance_Pack"
-    };
-    hiddenSelectionsTextures[]=
-    {
-        "S-IVArmory\data\GRENADIER\Black_Grenadier_Rig_CO.paa",    
-        "S-IVArmory\data\GRENADIER\Black_Grenadier_Collar_CO.paa",
-        "S-IVArmory\data\ODST\MKVB_Bittencourt_ODSTChest_CO.paa",
-        "S-IVArmory\data\SCOUT\Scout_Vest_Grif_CO.paa"
-    };
-    hiddenSelectionsMaterials[]=
-    {
-        "S-IVArmory\data\GRENADIER\grenadier_rig.rvmat",    
-        "S-IVArmory\data\GRENADIER\grenadier_collar.rvmat",
-        "S-IVArmory\data\ODST\ODST_Vest.rvmat",    
-        "S-IVArmory\data\SCOUT\Scout_Vest.rvmat"
     };
 };
 class EAGLE_Marsh_SCOUTCHEST: MA_MKVB_Armor_Attachements
