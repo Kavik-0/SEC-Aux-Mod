@@ -115,6 +115,10 @@ class CfgPatches
 		scope=2;
 		author="Article 2 Studios";
 		displayName="[SoS] Od'wagra-pattern Combat Harness";
+        MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        MJOLNIR_shieldStrength = 100;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 1.0;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
 		hiddenSelectionsTextures[]=
 		{
 			"S-IVArmory\data\SoS\SoS_Body_Armor_CO.paa",
@@ -4080,8 +4084,8 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
             "MA_Armor\data\Vests\MKVB\Shoulders\EVA\Olive_EVA_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\Grenadier\Olive_Grenadier_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\Grenadier\Olive_Grenadier_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Gungnir\Hawkins_GUNGNIR_Shoulders_CO.paa",
-            "MA_Armor\data\Vests\MKVB\Shoulders\Gungnir\Hawkins_GUNGNIR_Shoulders_CO.paa",
+            "S-IVArmory\data\GUNGNIR\Hawkins_GUNGNIR_Shoulders_CO.paa",
+            "S-IVArmory\data\GUNGNIR\Hawkins_GUNGNIR_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\Hayabusa\Olive_Hayabusa_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\Hayabusa\Olive_Hayabusa_Shoulders_CO.paa",
             "MA_Armor\data\Vests\MKVB\Shoulders\JFO\Olive_JFO_Shoulders_CO.paa",
