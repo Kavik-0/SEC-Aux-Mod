@@ -1624,8 +1624,8 @@ class CfgPatches
         MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
         MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
         hiddenSelectionsTextures[]={
-            "Spartan_Stuff\data\SPI\SPI_Upper_Frogger_CO.paa",
-            "Spartan_Stuff\data\SPI\SPI_Lower_Frogger_CO.paa"
+            "S-IVArmory\data\SPI\SPI_Upper_Frogger_CO.paa",
+            "S-IVArmory\data\SPI\SPI_Lower_Frogger_CO.paa"
         };
     };
     class SEC_SPIMK2ALPH_Core: WSD_SPI_SPRTCoreBase
