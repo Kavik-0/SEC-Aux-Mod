@@ -1119,24 +1119,6 @@ class CfgPatches
 			"S-IVArmory\data\MKVI\MKVI_MKVIHelm_Recruit_CO.paa"
 		};
 	};
-	class SEC_MKVB_ArmorCore_Steel: SEC_MKVB_ArmorCore
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Mark V.[B] (Steel) Armor Core";
-		hiddenSelections[]=
-		{
-            "camo1",
-			"camo2",
-		//	"mkvb_upper",
-		//	"mkvb_lower"
-		};
-        hiddenSelectionsTextures[]=
-		{
-            "S-IVArmory\data\MKVB\Steel_MKV_Upper_CO.paa",
-			"S-IVArmory\data\MKVB\Steel_MKV_Lower_CO.paa"
-		};
-	};
 		class SEC_MKVB_ArmorCore_Slade: SEC_MKVB_ArmorCore
 	{
 		scope=2;
@@ -2743,18 +2725,6 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
 		{
 			"S-IVArmory\data\NOBLE\Six_MKVB_Helmet_CO.paa",
 			"S-IVArmory\data\NOBLE\Six_MKVB_Visor_CO.paa"
-		};
-	};
-	class SEC_MKVB_Steel_Helmet: SEC_MKVB_Helmet
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[EAGLE] MJOLNIR Mark V.[B] (Steel) Helmet";
-		MJOLNIR_helmetOutline="S-IVArmory\data\MKVB\MKVBHelmetOutline.paa";
-		hiddenSelectionsTextures[]=
-		{
-			"S-IVArmory\data\MKVB\Steel_MKVB_Helmet_CO.paa",
-			"S-IVArmory\data\MKVB\Gold_MKVB_Visor_CO.paa"
 		};
 	};
 	class SEC_MKVB_EOD_GEN2_Helmet: MA_Mjolnir_H3_EOD_Helmet
