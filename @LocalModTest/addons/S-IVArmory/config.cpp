@@ -765,24 +765,6 @@ class CfgPatches
 			"S-IVArmory\data\MKVB\MKV_Lower_joker_co.paa"
 		};
 	};
-	class SEC_Guest34th_ArmorCore: SEC_MKVB_ArmorCore
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName="[34PRC] MJOLNIR Mark V.[B] (Away) Armor Core";
-		hiddenSelections[]=
-		{
-            "camo1",
-			"camo2",
-		//	"mkvb_upper",
-		//	"mkvb_lower"
-		};
-        hiddenSelectionsTextures[]=
-		{
-            "S-IVArmory\data\GUEST\34_MKVB_Upper_CO.paa",
-			"S-IVArmory\data\GUEST\34_MKVB_Lower_CO.paa"
-		};
-	};
 	class SEC_Guest22nd_ArmorCore: SEC_MKVB_ArmorCore
 	{
 		scope=2;
@@ -820,57 +802,6 @@ class CfgPatches
 		};
 	};
 	class OPTRE_FC_MJOLNIR_MKV_Armor;
-	class SEC_MKV_Armor_Warbeck: OPTRE_FC_MJOLNIR_MKV_Armor_Human
-	{
-		displayName="[EAGLE] MJOLNIR Mark V Armor Core (Warbeck)";
-        picture="S-IVArmory\data\ICONS\MKVCoreIcon_SA.paa";
-		scope = 2;
-		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
-        MJOLNIR_shieldStrength = 100;            //Shield energy capacity
-        MJOLNIR_shieldChargeValue = 0.7;           //How much shield energy gets regenerated
-        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelections[]=
-		{
-			"camo1",
-			//	"A_Belt",
-			"AP_AR",
-			"AP_BR",
-		//	"AP_Frag",
-			"AP_GL",
-			"AP_Knife",
-			"AP_Knife1",
-		//	"AP_Pouches",
-			"AP_SMG",
-		//	"AP_Smoke",
-			"AP_Sniper"
-		};
-		hiddenSelectionsTextures[]={"S-IVArmory\data\MKV\Warbeck_MKVG2_CO.paa"};
-        hiddenSelectionsMaterials[]={"S-IVArmory\data\MKV\MKVG2.rvmat"};
-    };
-	class SEC_MKV_ArmorCore: SEC_MKV_Armor_Warbeck
-	{
-		displayName="[EAGLE] MJOLNIR Mark V Armor Core";
-		scope = 2;
-		hiddenSelections[]=
-		{
-			"camo1", // Armor Texture
-
-		//	"A_Belt",
-			"AP_AR",
-			"AP_BR",
-		//	"AP_Frag",
-			"AP_GL",
-			"AP_Knife",
-			"AP_Knife1",
-		//	"AP_Pouches",
-			"AP_SMG",
-		//	"AP_Smoke",
-			"AP_Sniper"
-		};
-		hiddenSelectionsTextures[]=
-		{"S-IVArmory\data\MKV\MKVG2_CO.paa"};
-        hiddenSelectionsMaterials[]={"S-IVArmory\data\MKV\MKVG2.rvmat"};
-	};
     class SEC_MKV_Armor_Spartan: OPTRE_FC_MJOLNIR_MKV_Armor
 	{
 		displayName="[EAGLE/SPRT] MJOLNIR Mark V Armor Core";
@@ -1631,26 +1562,6 @@ class CfgPatches
 			"S-IVArmory\data\MKVB\MKV_Lower_Morco_CO.paa"
 		};
 	};
-	class SEC_MIRAGEII_CarmineCore: MA_SPI_Armor
-	{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] Semi-Powered Infiltration Harness (Frogger)";
-        picture="S-IVArmory\data\ICONS\SPICoreIcon_SA.paa";
-		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
-        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
-        MJOLNIR_shieldChargeValue = 1.50;           //How much shield energy gets regenerated
-        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelectionsTextures[]=
-		{
-			"S-IVArmory\data\SPI\SPI_Armour_Carmine_CO.paa"
-		};
-        hiddenSelectionsMaterials[]=
-        {
-            "S-IVArmory\data\SPI\SPI_Armour_Carmine.rvmat"
-        };
-	};
-    
     class SEC_MKV_Security_Helmet: OPTRE_UNSC_Security_Helmet
     {
         scope=2;
@@ -1665,17 +1576,6 @@ class CfgPatches
         {
             "S-IVArmory\data\SECURITY\Security_Helmet.rvmat",
             "S-IVArmory\data\SECURITY\Security_Visor.rvmat"
-        };
-    };
-    class SEC_MKV_Security_Warbeck_Helmet: SEC_MKV_Security_Helmet
-    {
-        scope=2;
-        scopeArsenal=2;
-        displayName="[EAGLE] MJOLNIR Mark V.[M] Helmet (Warbeck)"
-        hiddenSelectionsTextures[]=
-        {
-            "S-IVArmory\data\SECURITY\Warbeck_Security_Helmet_CO.paa",
-            "S-IVArmory\data\SECURITY\Security_Visor_CO.paa"
         };
     };
     class OPTRE_UNSC_CQB_Helmet;
@@ -1710,53 +1610,103 @@ class CfgPatches
     };
     class MAPO_SPI_Helmet;
     class MAPO_SPI_Armor;
-    class SEC_SPI_Xeno_ArmorCore: MAPO_SPI_Armor
+    class WSD_SPI_CoreBase;
+    class WSD_SPI_HelmetBase;
+    class WSD_SPI_SPRTCoreBase;
+    class WSD_SPI_SPRTHelmetBase;
+    class SEC_SPIMK2Hum_Core: WSD_SPI_CoreBase
 	{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] Mirage Type II Armor Core (Xeno)";
-        picture="S-IVArmory\data\ICONS\SPICoreIcon_SA.paa";
-		MJOLNIR_isArmor = 1;
-        MJOLNIR_shieldStrength = 70;            //Shield energy capacity
-        MJOLNIR_shieldChargeValue = 1.1;           //How much shield energy gets regenerated
-        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in second
-		hiddenSelectionsTextures[]=
-		{
-			"S-IVArmory\data\SPI\SPI_Armour_Xeno_CO.paa"
-		};
-        hiddenSelectionsMaterials[]=
-        {
-            "S-IVArmory\data\SPI\SPI_Armour_Xeno.rvmat"
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] Semi-powered Infiltration Mk.II Harness (Human)";
+		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
+        hiddenSelectionsTextures[]={
+            "Spartan_Stuff\data\SPI\SPI_Upper_CO.paa",
+            "Spartan_Stuff\data\SPI\SPI_Lower_CO.paa"
         };
-	};
-    class SEC_SPI_Xeno_Helmet: MAPO_SPI_Helmet
+        hiddenSelectionsMaterials[]={
+            "Spartan_Stuff\data\SPI\SPI_Upper.rvmat",
+            "Spartan_Stuff\data\SPI\SPI_Lower.rvmat"
+        };
+    };
+    class SEC_SPIMK2Hum_Frogger_Core: SEC_SPIMK2Hum_Core
 	{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] Mirage Type II Helmet (Xeno)";
-        picture="S-IVArmory\data\ICONS\SPIHelmetIcon_SA.paa";
-		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"S-IVArmory\data\SPI\SPI_Helmet_Xeno_CO.paa",
-			"S-IVArmory\data\SPI\SPI_Visor_Xeno_CO.paa"
-		};
-        hiddenSelectionsMaterials[]=
-        {
-            "S-IVArmory\data\SPI\SPI_Helmet_Xeno.rvmat",
-            "S-IVArmory\data\SPI\SPI_Visor_Xeno.rvmat"
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] Semi-powered Infiltration Mk.II Harness (Frogger-B316)";
+		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
+        hiddenSelectionsTextures[]={
+            "Spartan_Stuff\data\SPI\SPI_Upper_Frogger_CO.paa",
+            "Spartan_Stuff\data\SPI\SPI_Lower_Frogger_CO.paa"
         };
-	};
+    };
+    class SEC_SPIMK2ALPH_Core: WSD_SPI_SPRTCoreBase
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] Semi-powered Infiltration Mk.II Harness (Alpha Coy.)";
+		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
+        hiddenSelectionsTextures[]={
+            "S-IVArmory\data\SPI\SPI_Upper_Alpha_CO.paa",
+            "Spartan_Stuff\data\SPI\SPI_Lower_CO.paa"
+        };
+    };
+    class SEC_SPIMK2BETA_Core: SEC_SPIMK2ALPH_Core
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] Semi-powered Infiltration Mk.II Harness (Beta Coy.)";
+		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
+        hiddenSelectionsTextures[]={
+            "S-IVArmory\data\SPI\SPI_Upper_Beta_CO.paa",
+            "Spartan_Stuff\data\SPI\SPI_Lower_CO.paa"
+        };
+    };
+    class SEC_SPIMK2GAMMA_Core: SEC_SPIMK2ALPH_Core
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] Semi-powered Infiltration Mk.II Harness (Gamma Coy.)";
+		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
+        hiddenSelectionsTextures[]={
+            "S-IVArmory\data\SPI\SPI_Upper_Gamma_CO.paa",
+            "Spartan_Stuff\data\SPI\SPI_Lower_CO.paa"
+        };
+    };
+    class SEC_SPIMK2DELTA_Core: SEC_SPIMK2ALPH_Core
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] Semi-powered Infiltration Mk.II Harness (Delta Coy.)";
+		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
+        hiddenSelectionsTextures[]={
+            "S-IVArmory\data\SPI\SPI_Upper_Delta_CO.paa",
+            "Spartan_Stuff\data\SPI\SPI_Lower_CO.paa"
+        };
+    };
     class SEC_SPIHUM_ArmorCore: MA_SPI_Armor
 	{
         scope=2;
         scopeArsenal=2;
-		displayName="[EAGLE] Semi-Powered Infiltration Harness (Human)";
+		displayName="[EAGLE] Semi-Powered Infiltration Mk.I Harness (Human)";
 		MJOLNIR_isArmor = 1;
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
@@ -1775,7 +1725,7 @@ class CfgPatches
 	{
         scope=2;
         scopeArsenal=2;
-		displayName="[EAGLE] Semi-Powered Infiltration Harness (Marsh)";
+		displayName="[EAGLE] Semi-Powered Infiltration Mk.I Harness (Marsh)";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 1.50;           //How much shield energy gets regenerated
@@ -1789,7 +1739,7 @@ class CfgPatches
 	{
         scope=2;
         scopeArsenal=2;
-		displayName="[EAGLE] Semi-Powered Infiltration Harness";
+		displayName="[EAGLE] Semi-Powered Infiltration Mk.I Harness";
 		MJOLNIR_isArmor = 1;
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
@@ -1880,11 +1830,11 @@ class CfgPatches
 			};
 		};
 	};
-    class SEC_ASPI_ArmorCore: MAPO_SPI_Armor
+    class SEC_ASPI_ArmorCore: SEC_SPI_ArmorCore
 	{
         scope=2;
         scopeArsenal=2;
-		displayName="[EAGLE] Semi-Powered Infiltration Harness (Alpha Coy.)";
+		displayName="[EAGLE] Semi-Powered Infiltration Mk.I Harness (Alpha Coy.)";
 		MJOLNIR_isArmor = 1;
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
@@ -1894,92 +1844,12 @@ class CfgPatches
 		{
 			"S-IVArmory\data\SPI\Alpha_SPI_Armour_CO.paa"
 		};
-        hiddenSelectionsMaterials[]=
-        {
-            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
-        };
-        class ItemInfo: VestItem
-		{
-			containerClass="Supply250";
-			mass=20;
-			uniformModel="MA_Armor_ORION\data\Vests\SPI\SPI_Spartan.p3d";
-			hiddenSelections[]=
-			{
-				"camo"
-			};
-			hiddenSelectionsTextures[]=
-		    {
-			"S-IVArmory\data\SPI\Alpha_SPI_Armour_CO.paa"
-		    };
-            hiddenSelectionsMaterials[]=
-            {
-            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
-            };
-            passThrough = 0.1;
-			modelSides[] = { 6 };
-			class HitpointsProtectionInfo
-			{
-				class Neck
-				{
-					hitpointName="HitNeck";
-					armor=30;
-					passThrough=0.5;
-				};
-				class Legs
-				{
-					hitpointName="HitLegs";
-					armor=30;
-					passThrough=0.5;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=35;
-					passThrough=0.1;
-				};
-				class Hands
-				{
-					hitpointName="HitHands";
-					armor=30;
-					passThrough=0.1;
-				};
-				class Chest
-				{
-					hitpointName="HitChest";
-					armor=45;
-					passThrough=0.1;
-				};
-				class Diaphragm
-				{
-					hitpointName="HitDiaphragm";
-					armor=40;
-					passThrough=0.1;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=40;
-					passThrough=0.1;
-				};
-				class Pelvis
-				{
-					hitpointName="HitPelvis";
-					armor=40;
-					passThrough=0.1;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					passThrough=0.1;
-				};
-			};
-		};
 	};
-    class SEC_BSPI_ArmorCore: MAPO_SPI_Armor
+    class SEC_BSPI_ArmorCore: SEC_SPI_ArmorCore
 	{
         scope=2;
         scopeArsenal=2;
-		displayName="[EAGLE] Semi-Powered Infiltration Harness (Beta Coy.)";
+		displayName="[EAGLE] Semi-Powered Infiltration Mk.I Harness (Beta Coy.)";
 		MJOLNIR_isArmor = 1;
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
@@ -1989,92 +1859,12 @@ class CfgPatches
 		{
 			"S-IVArmory\data\SPI\Beta_SPI_Armour_CO.paa"
 		};
-        hiddenSelectionsMaterials[]=
-        {
-            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
-        };
-        class ItemInfo: VestItem
-		{
-			containerClass="Supply250";
-			mass=20;
-			uniformModel="MA_Armor_ORION\data\Vests\SPI\SPI_Spartan.p3d";
-			hiddenSelections[]=
-			{
-				"camo"
-			};
-			hiddenSelectionsTextures[]=
-		    {
-			"S-IVArmory\data\SPI\Beta_SPI_Armour_CO.paa"
-		    };
-            hiddenSelectionsMaterials[]=
-            {
-            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
-            };
-            passThrough = 0.1;
-			modelSides[] = { 6 };
-			class HitpointsProtectionInfo
-			{
-				class Neck
-				{
-					hitpointName="HitNeck";
-					armor=30;
-					passThrough=0.5;
-				};
-				class Legs
-				{
-					hitpointName="HitLegs";
-					armor=30;
-					passThrough=0.5;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=35;
-					passThrough=0.1;
-				};
-				class Hands
-				{
-					hitpointName="HitHands";
-					armor=30;
-					passThrough=0.1;
-				};
-				class Chest
-				{
-					hitpointName="HitChest";
-					armor=45;
-					passThrough=0.1;
-				};
-				class Diaphragm
-				{
-					hitpointName="HitDiaphragm";
-					armor=40;
-					passThrough=0.1;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=40;
-					passThrough=0.1;
-				};
-				class Pelvis
-				{
-					hitpointName="HitPelvis";
-					armor=40;
-					passThrough=0.1;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					passThrough=0.1;
-				};
-			};
-		};
 	};
-    class SEC_GSPI_ArmorCore: MAPO_SPI_Armor
+    class SEC_GSPI_ArmorCore: SEC_SPI_ArmorCore
 	{
         scope=2;
         scopeArsenal=2;
-		displayName="[EAGLE] Semi-Powered Infiltration Harness (Gamma Coy.)";
+		displayName="[EAGLE] Semi-Powered Infiltration Mk.I Harness (Gamma Coy.)";
 		MJOLNIR_isArmor = 1;
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 0.5;           //How much shield energy gets regenerated
@@ -2084,115 +1874,12 @@ class CfgPatches
 		{
 			"S-IVArmory\data\SPI\Gamma_SPI_Armour_CO.paa"
 		};
-        hiddenSelectionsMaterials[]=
-        {
-            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
-        };
-        class ItemInfo: VestItem
-		{
-			containerClass="Supply250";
-			mass=20;
-			uniformModel="MA_Armor_ORION\data\Vests\SPI\SPI_Spartan.p3d";
-			hiddenSelections[]=
-			{
-				"camo"
-			};
-			hiddenSelectionsTextures[]=
-		    {
-			"S-IVArmory\data\SPI\Gamma_SPI_Armour_CO.paa"
-		    };
-            hiddenSelectionsMaterials[]=
-            {
-            "S-IVArmory\data\SPI\SPI_Armour.rvmat"
-            };
-            passThrough = 0.1;
-			modelSides[] = { 6 };
-			class HitpointsProtectionInfo
-			{
-				class Neck
-				{
-					hitpointName="HitNeck";
-					armor=30;
-					passThrough=0.5;
-				};
-				class Legs
-				{
-					hitpointName="HitLegs";
-					armor=30;
-					passThrough=0.5;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=35;
-					passThrough=0.1;
-				};
-				class Hands
-				{
-					hitpointName="HitHands";
-					armor=30;
-					passThrough=0.1;
-				};
-				class Chest
-				{
-					hitpointName="HitChest";
-					armor=45;
-					passThrough=0.1;
-				};
-				class Diaphragm
-				{
-					hitpointName="HitDiaphragm";
-					armor=40;
-					passThrough=0.1;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=40;
-					passThrough=0.1;
-				};
-				class Pelvis
-				{
-					hitpointName="HitPelvis";
-					armor=40;
-					passThrough=0.1;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					passThrough=0.1;
-				};
-			};
-		};
-	};
-	class SEC_MIRAGEII_Carmine_Helmet: MA_SPI_Helmet
-	{
-        scope=2;
-        scopeArsenal=2;
-		displayName="[EAGLE] Semi-Powered Infiltration Helmet (Frogger)";
-		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
-        picture="S-IVArmory\data\ICONS\SPIHelmetIcon_SA.paa";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"S-IVArmory\data\SPI\SPI_Helmet_Carmine_CO.paa",
-			"S-IVArmory\data\SPI\SPI_Visor_Carmine_CO.paa"
-		};
-        hiddenSelectionsMaterials[]=
-        {
-            "S-IVArmory\data\SPI\SPI_Helmet_Carmine.rvmat",
-            "S-IVArmory\data\SPI\SPI_Visor.rvmat"
-        };
 	};
     class SEC_SPIHUM_Helmet: MA_SPI_Helmet
 	{
         scope=2;
         scopeArsenal=2;
-		displayName="[EAGLE] Semi-Powered Infiltration Helmet (Human)";
+		displayName="[EAGLE] Semi-Powered Infiltration Mk.I Helmet (Human)";
 		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
         picture="S-IVArmory\data\ICONS\SPIHelmetIcon_SA.paa";
 		hiddenSelections[]=
@@ -2215,7 +1902,7 @@ class CfgPatches
 	{
         scope=2;
         scopeArsenal=2;
-		displayName="[EAGLE] Semi-Powered Infiltration Helmet";
+		displayName="[EAGLE] Semi-Powered Infiltration Mk.I Helmet";
 		MJOLNIR_helmetOutline="S-IVArmory\data\EVA\EVAHelmetOutline.paa";
         picture="S-IVArmory\data\ICONS\SPIHelmetIcon_SA.paa";
 		hiddenSelections[]=
@@ -2417,18 +2104,6 @@ class SEC_MKVB_Rusty_Helmet: SEC_MKVB_MKV_Helmet
     {
         "S-IVArmory\data\MKV\MKV_Helmet_Rusty_CO.paa",
         "S-IVArmory\data\MKV\MKV_Visor_Rusty_CO.paa"
-    };
-};
-class SEC_Guest34th_Helmet: SEC_MKVB_MKV_Helmet
-{
-    scope=2;
-    scopeArsenal=2;
-    displayName="[34PRC] MJOLNIR Mark V Helmet (Away)";
-	MJOLNIR_helmetOutline="S-IVArmory\data\MKV\MKVHelmetOutline_CA.paa";
-    hiddenSelectionsTextures[]=
-    {
-        "S-IVArmory\data\GUEST\34_MKV_Helmet.paa",
-        "S-IVArmory\data\GUEST\34_MKV_Helmet_Visor_Gold.paa"
     };
 };
 
@@ -3251,30 +2926,6 @@ class SEC_MKVB_Kavik_Helmet: SEC_MKVB_Pilot_Helmet
 			"S-IVArmory\data\MKIV\MKIV_Lower.rvmat",
 			"S-IVArmory\data\MKIV\MKIV_Shoulders.rvmat",
 			"S-IVArmory\data\MKIV\MKIV_Shoulders.rvmat"
-		};
-	};
-	class SEC_Hesh_MKIV_Armor : SEC_Human_MKIV_Armor
-	{
-		scope=2;
-		scopeArsenal=2;
-		displayName = "[EAGLE] MJOLNIR Gen 2 Mark IV Armor (Hesh)";
-		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
-        MJOLNIR_shieldStrength = 70;            //Shield energy capacity
-        MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
-        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
-		hiddenSelectionsTextures[] =
-		{
-			"S-IVArmory\data\MKIV\MKIV_Upper_Hesh_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Lower_Hesh_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders_Hesh_CO.paa",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders_Hesh_CO.paa"
-		};
-		hiddenSelectionsMaterials[] =
-		{
-			"S-IVArmory\data\MKIV\MKIV_Upper_Hesh.rvmat",
-			"S-IVArmory\data\MKIV\MKIV_Lower_Hesh.rvmat",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders_Hesh.rvmat",
-			"S-IVArmory\data\MKIV\MKIV_Shoulders_Hesh.rvmat"
 		};
 	};
 	class SEC_Keller_MKIV_Armor : MAPO_MKIV_Armor
@@ -5864,45 +5515,6 @@ class SEC_MKVB_GNGNR_Shoulders : SEC_MKVB_Shoulders
       "scout_right"
     };
 };
-class SEC_MKVB_Warbeck_Shoulders : SEC_MKVB_GNGNR_Shoulders
-    {
-        scope=2;
-		scopeArsenal=2;
-        displayName = "[EAGLE] MJOLNIR Custom Shoulders (Warbeck)";
-		maximumLoad = 400;
-        mass = 50;
-        hiddenSelectionsTextures[]=
-    {
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "S-IVArmory\data\GUNGNIR\Warbeck_GUNGNIR_Shoulders_CO.paa",
-        "S-IVArmory\data\GUNGNIR\Warbeck_GUNGNIR_Shoulders_CO.paa",
-        "",
-        "",
-        "",
-        "",
-        "",
-		"",
-        "",
-        "",
-        "",
-        "", 
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-    };
-};
 class SEC_MKVB_Lawnson_Shoulders : SEC_MKVB_GNGNR_Shoulders
     {
         scope=2;
@@ -6282,7 +5894,7 @@ class SEC_Bartlett_MKIV_Shoulders : SEC_MKVB_MKIV_Shoulders
     {
         scope=2;
 		scopeArsenal=2;
-        displayName = "[EAGLE] MJOLNIR Custom Shoulders (Bartlett)";
+        displayName = "[EAGLE] MJOLNIR Custom Shoulders (Blaze)";
 		maximumLoad = 400;
         mass = 50;
         hiddenSelections[]=
@@ -6332,9 +5944,9 @@ class SEC_Bartlett_MKIV_Shoulders : SEC_MKVB_MKIV_Shoulders
         //"mkiv_left",
         "mkiv_right",
         "mkv_left",
-        "mkv_right",
+        //"mkv_right",
         "odst_left",
-        //"odst_right",
+        "odst_right",
         "operator_left",
         "operator_right",
         "recon_left",
@@ -6362,8 +5974,8 @@ class SEC_Bartlett_MKIV_Shoulders : SEC_MKVB_MKIV_Shoulders
         "S-IVArmory\data\JFO\Gray_JFO_Shoulders_CO.paa",
         "S-IVArmory\data\MKIV\MKIV_Shoulders_HRTBRK1_CO.paa",
 		"S-IVArmory\data\MKIV\MKIV_Shoulders_HRTBRK1_CO.paa",
-        "S-IVArmory\data\MKV\Gray_MKV_Shoulders_CO.paa",
-        "S-IVArmory\data\MKV\Gray_MKV_Shoulders_CO.paa",
+        "S-IVArmory\data\MKV\MKV_Shoulders_Blaze_CO.paa",
+        "S-IVArmory\data\MKV\MKV_Shoulders_Blaze_CO.paa",
         "S-IVArmory\data\ODST\ODST_Shoulders_Heartbreak_CO.paa",
         "S-IVArmory\data\ODST\ODST_Shoulders_Heartbreak_CO.paa", 
         "S-IVArmory\data\OPERATOR\Gray_Operator_Shoulders_CO.paa",

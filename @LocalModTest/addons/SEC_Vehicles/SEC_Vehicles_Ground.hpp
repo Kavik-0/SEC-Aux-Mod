@@ -7,12 +7,6 @@
 	class VES_M12A1_LRV;
 	class VES_M12R_AA;
 	class VES_M12G1_LRV;
-	class TCF_Silverback_Armoured_LRV;
-	class TCF_Silverback_Armoured_TOW;
-	class TCF_Silverback_Armoured_FAV;
-	class TCF_Silverback_LRV;
-	class TCF_Silverback_TOW;
-	class TCF_Silverback_FAV;
 	class VES_HDV134_TT;
 	class VES_HDV134_TT_C;
 	
@@ -2129,54 +2123,6 @@
 	class SEC_VES_M12G1_LRV: VES_M12G1_LRV
 	{
 		displayName="[SEC] M12G1 LRV Warthog (Gauss)";
-		faction="SEC_Faction_Main";
-		editorCategory="SEC_Categ_Main";
-		editorsubcategory="SEC_Categ_Vic_Motorized";
-	};
-	class SEC_TCF_Silverback_Armoured_LRV: TCF_Silverback_Armoured_LRV
-	{
-		armor=200;
-		displayName="[SEC] SB14 LRV Silverback (Armored MG)";
-		faction="SEC_Faction_Main";
-		editorCategory="SEC_Categ_Main";
-		editorsubcategory="SEC_Categ_Vic_Motorized";
-	};
-	class SEC_TCF_Silverback_Armoured_TOW: TCF_Silverback_Armoured_TOW
-	{
-		armor=200;
-		displayName="[SEC] SB14 LRV Silverback (Armored TOW)";
-		faction="SEC_Faction_Main";
-		editorCategory="SEC_Categ_Main";
-		editorsubcategory="SEC_Categ_Vic_Motorized";
-	};
-	class SEC_TCF_Silverback_Armoured_FAV: TCF_Silverback_Armoured_FAV
-	{
-		armor=200;
-		displayName="[SEC] SB14 LRV Silverback (Armored)";
-		faction="SEC_Faction_Main";
-		editorCategory="SEC_Categ_Main";
-		editorsubcategory="SEC_Categ_Vic_Motorized";
-	};
-	class SEC_TCF_Silverback_LRV: TCF_Silverback_LRV
-	{
-		armor=200;
-		displayName="[SEC] SB14 LRV Silverback (MG)";
-		faction="SEC_Faction_Main";
-		editorCategory="SEC_Categ_Main";
-		editorsubcategory="SEC_Categ_Vic_Motorized";
-	};
-	class SEC_TCF_Silverback_TOW: TCF_Silverback_TOW
-	{
-		armor=200;
-		displayName="[SEC] SB14 LRV Silverback (TOW)";
-		faction="SEC_Faction_Main";
-		editorCategory="SEC_Categ_Main";
-		editorsubcategory="SEC_Categ_Vic_Motorized";
-	};
-	class SEC_TCF_Silverback_FAV: TCF_Silverback_FAV
-	{
-		armor=200;
-		displayName="[SEC] SB14 LRV Silverback";
 		faction="SEC_Faction_Main";
 		editorCategory="SEC_Categ_Main";
 		editorsubcategory="SEC_Categ_Vic_Motorized";

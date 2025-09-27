@@ -4,7 +4,6 @@ class CfgPatches
 	{
 		units[]=
 		{
-			"SEC_Nightingale",
 			"SEC_OLDTRE_Pelican",
 			"SEC_UH144Falcon",
 			"SEC_UH144AFalcon",
@@ -54,12 +53,6 @@ class CfgPatches
 			"SEC_VES_M12G1_LRV", 
 			"SEC_VES_M12R_AA", 
 			"SEC_VES_M813_TT", 
-			"SEC_TCF_Silverback_Armoured_LRV", 
-			"SEC_TCF_Silverback_Armoured_TOW", 
-			"SEC_TCF_Silverback_LRV", 
-			"SEC_TCF_Silverback_TOW", 
-			"SEC_TCF_Silverback_FAV", 
-			"SEC_TCF_Silverback_Armoured_FAV",
 			"SEC_VES_HDV134_Fujikawa", 
 			"SEC_optre_catfish_aa_f", 
 			"SEC_optre_catfish_atgm_f", 
@@ -85,7 +78,6 @@ class CfgPatches
 			"V_FZ_Air_Vehicles",
 			"DMNS_Air_F_VTOL_01",
 			"Splits_Vehicles_Air_Pelican",
-			"TCF_DMNS_Vehicles_Nightingale",
 			"OPTRE_Vehicles_Sabre",
 			"OPTRE_Weapons_Vehicle",
 			"FSN_Freestyle_Nuke"

@@ -270,6 +270,23 @@ class CfgWeapons
 			"\rubicon_gen3_attachments\data\gen3_agathius_cbrick_co.paa"
 		};
 	};
+	class SEC_Gen3_MKVIIAgathius_ANVIL: SEC_Gen3_MKVIIAgathius_Grey
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] Mark VII Agathius Shoulderplates (ANVIL)";
+		picture="\rubicon_gen3_attachments\data\ui\icon_V_agath_cbrick.paa";
+		model="rubicon_gen3_attachments\gen3Agathius.p3d";
+		descriptionShort="Supplemental deltoid/shoulder armor.";
+		hiddenSelections[]=
+		{
+			"Camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\MKVII\Anvil_gen3_agathius_CO.paa"
+		};
+	};
 	class SEC_Gen3_MKVIIAgathius_Blue: SEC_Gen3_MKVIIAgathius_Grey
 	{
 		scope=2;
@@ -485,6 +502,27 @@ class CfgWeapons
 		{
 			"rubicon_gen3_helmets\data\gen3_mk7helmet_cblue_co.paa",
 			"MKVII_Customs\data\MKVII\sec_mk7visor_co.paa"
+		};
+	};
+	class SEC_Gen3_MKVIIHelmet_ANVIL: SEC_Gen3_MKVIIhelmet_Recruit
+	{
+		scope=2;
+		displayName="[EAGLE] Mark VII Helmet (ANVIL)";
+		picture="\rubicon_gen3_helmets\data\ui\icon_U_mk7helm_cblue.paa";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\MKVII\Anvil_gen3_mk7helmet_CO.paa",
+			"MKVII_Customs\data\MKVII\Anvil_gen3_mk7visor_CO.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_mk7helmet.rvmat",
+			"MKVII_Customs\data\MKVII\gen3_anvilvisor.rvmat"
 		};
 	};
 	class SEC_Gen3_MKVIIHelmet_CBrick: SEC_Gen3_MKVIIhelmet_Recruit
@@ -737,6 +775,19 @@ class CfgWeapons
 		{
 			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
 			uniformClass = B_SEC_SpartanIV_Red; // Needs to be matching Character in cfgVehicles
+			containerClass = Supply40;
+			mass = 40;
+		};
+    };
+	class SEC_Gen3_MKVIICoreANVIL : SEC_Gen3_MKVIICoreGrey
+	{
+		scope = 2;
+		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (ANVIL)";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		class ItemInfo : UniformItem
+		{
+			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
+			uniformClass = B_SEC_SpartanIV_ANVIL; // Needs to be matching Character in cfgVehicles
 			containerClass = Supply40;
 			mass = 40;
 		};
@@ -1065,6 +1116,26 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		{
 			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
 			"\rubicon_gen3_spartaniv\data\gen3_mk7core_cbrick_co.paa"
+		};
+	};
+	class B_SEC_SpartanIV_ANVIL : B_SEC_SpartanIV_Base
+	{
+		author = "Reiken";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
+		uniformClass = "SEC_Gen3_MKVIICoreANVIL"; // Needs to be matching item in cfgWeapons
+		hiddenSelections[]=
+		{
+			"Camo",
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\MKVII\gen3_techsuit_CO.paa",
+			"MKVII_Customs\data\MKVII\Anvil_gen3_mk7core_CO.paa"
 		};
 	};
 	class B_SEC_SpartanIV_Blue : B_SEC_SpartanIV_Base
