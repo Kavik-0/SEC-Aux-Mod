@@ -858,6 +858,19 @@ class CfgWeapons
 			mass = 40;
 		};
     };
+	class SEC_Gen3_MKVIICoreMuffin : SEC_Gen3_MKVIICoreSKELETON
+	{
+		scope = 2;
+		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Muffin)";
+		model="\rubicon_gen3_spartaniv\gen3MarkVIIcoreGround.p3d";
+		class ItemInfo : UniformItem
+		{
+			uniformModel="\rubicon_gen3_spartanii\gen3MarkVIIS2core.p3d";
+			uniformClass = B_SEC_SpartanIV_Muffin; // Needs to be matching Character in cfgVehicles
+			containerClass = Supply40;
+			mass = 40;
+		};
+    };
 	class SEC_Gen3_MKVIICoreColt : SEC_Gen3_MKVIICoreSKELETON
 	{
 		scope = 2;
@@ -1241,6 +1254,26 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		{
 			"MKVII_Customs\data\MKVII\gen3_techsuit.rvmat",
 			"MKVII_Customs\data\MKVII\gen3_mk7core.rvmat"
+		};
+	};
+	class B_SEC_SpartanIV_Muffin : B_Rubicon_SpartanII_Base
+	{
+		author = "Reiken";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		model="\rubicon_gen3_spartanii\gen3MarkVIIS2core.p3d";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
+		uniformClass = "SEC_Gen3_MKVIICoreMuffin"; // Needs to be matching item in cfgWeapons
+		hiddenSelections[]=
+		{
+			"Camo",
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
+			"MKVII_Customs\data\MKVII\gen3_mk7core_Muffin_CO.paa"
 		};
 	};
 	class B_SEC_SpartanIV_Colt : B_Rubicon_SpartanII_Base
