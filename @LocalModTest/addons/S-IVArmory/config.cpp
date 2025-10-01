@@ -1716,7 +1716,7 @@ class CfgPatches
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[EAGLE] SPI Mk.II Harness (Alpha Coy.)";
+		displayName="[EAGLE/SPRT] SPI Mk.II Harness (Alpha Coy.)";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
@@ -1730,7 +1730,7 @@ class CfgPatches
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[EAGLE] SPI Mk.II Harness (Beta Coy.)";
+		displayName="[EAGLE/SPRT] SPI Mk.II Harness (Beta Coy.)";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
@@ -1744,7 +1744,7 @@ class CfgPatches
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayName="[EAGLE] SPI Mk.II Harness (Gamma Coy.)";
+		displayName="[EAGLE/SPRT] SPI Mk.II Harness (Gamma Coy.)";
 		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
         MJOLNIR_shieldStrength = 50;            //Shield energy capacity
         MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
@@ -1755,6 +1755,62 @@ class CfgPatches
         };
     };
     class SEC_SPIMK2DELTA_Core: SEC_SPIMK2ALPH_Core
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE/SPRT] SPI Mk.II Harness (Delta Coy.)";
+		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
+        hiddenSelectionsTextures[]={
+            "S-IVArmory\data\SPI\SPI_Upper_Delta_CO.paa",
+            "Spartan_Stuff\data\SPI\SPI_Lower_CO.paa"
+        };
+    };
+    class SEC_SPIMK2Hum_ALPHA_Core: SEC_SPIMK2Hum_Core
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] SPI Mk.II Harness (Alpha Coy.)";
+		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
+        hiddenSelectionsTextures[]={
+            "S-IVArmory\data\SPI\SPI_Upper_Alpha_CO.paa",
+            "Spartan_Stuff\data\SPI\SPI_Lower_CO.paa"
+        };
+    };
+    class SEC_SPIMK2Hum_BETA_Core: SEC_SPIMK2Hum_Core
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] SPI Mk.II Harness (Beta Coy.)";
+		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
+        hiddenSelectionsTextures[]={
+            "S-IVArmory\data\SPI\SPI_Upper_Beta_CO.paa",
+            "Spartan_Stuff\data\SPI\SPI_Lower_CO.paa"
+        };
+    };
+    class SEC_SPIMK2Hum_GAMMA_Core: SEC_SPIMK2Hum_Core
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] SPI Mk.II Harness (Gamma Coy.)";
+		MJOLNIR_isArmor = 1;                //Add this to a vest to make it use the system
+        MJOLNIR_shieldStrength = 50;            //Shield energy capacity
+        MJOLNIR_shieldChargeValue = 1.3;           //How much shield energy gets regenerated
+        MJOLNIR_shieldChargeDelay = 0.10;         //Recharge delay in seconds
+        hiddenSelectionsTextures[]={
+            "S-IVArmory\data\SPI\SPI_Upper_Gamma_CO.paa",
+            "Spartan_Stuff\data\SPI\SPI_Lower_CO.paa"
+        };
+    };
+    class SEC_SPIMK2Hum_DELTA_Core: SEC_SPIMK2Hum_Core
 	{
 		scope=2;
 		scopeArsenal=2;
