@@ -3096,7 +3096,8 @@
 							"DAR",
 							"DAGR",
 							"C2_12x",
-							"OPTRE_AT_Missiles"
+							"Scorpion_8x",
+							"Jackknife_3x"
 						};
 						attachment="OPTRE_3Rnd_Jackknife_missile";
 						UIposition[]={0.55000001,0.40000001};
