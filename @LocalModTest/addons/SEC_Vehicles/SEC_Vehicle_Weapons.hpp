@@ -5,7 +5,7 @@ class CfgAmmo
 	class B_762x51_Minigun_Tracer_Red_splash;
 	class SEC_B_762x51_Minigun_Tracer_Red: B_762x51_Minigun_Tracer_Red_splash
 	{
-		hit = 20;
+		hit = 25;
 		indirectHit = 0;
 		indirectHitRange = 0;
 	};
@@ -282,6 +282,7 @@ class CfgAmmo
 };
 class CfgMagazines
 {
+	class OPTRE_8Rnd_Scorpion_missiles;
 	class 32Rnd_155mm_Mo_shells;
 	class PylonMissile_1Rnd_Mk82_F;
 	class OPTRE_M1024_2000Rnd_30mm;
@@ -380,7 +381,17 @@ class CfgMagazines
 			"OPTRE_Hardpoint_SabreCopilot",
 			"OPAEX_Hardpoint_AV14",
 			"OPAEX_Hardpoint_AV22",
+			"C2_12x"
 		};
+	};
+	class SEC_OPTRE_8Rnd_Scorpion_missiles: OPTRE_8Rnd_Scorpion_missiles
+	{
+
+		displayName 						= "8x AGM-90B 'Scorpion' Guided AT Missile";
+		displayNameShort 					= "8x Guided AT";
+		count 								= 8;
+		
+		hardpoints[]  = {"OPTRE_AT_Missiles"};
 	};
 	class OPTRE_6Rnd_Jackknife_missile: OPTRE_Jackknife_missile
 	{
@@ -403,7 +414,7 @@ class CfgMagazines
 		displayName = "3x AGM-502 'Jack Knife' SALH-ATGM";
 		count = 3;
 		
-		hardpoints[]  = {"OPTRE_Hardpoint_SabrePilot","OPTRE_Hardpoint_SabreCopilot","OPAEX_Hardpoint_UH144"};		
+		hardpoints[]  = {"OPTRE_Hardpoint_SabrePilot","OPTRE_Hardpoint_SabreCopilot","OPAEX_Hardpoint_UH144","OPTRE_AT_Missiles"};		
 	};
 	class SEC_Gunship_Glidebomb_x4: PylonRack_Bomb_SDB_x4
 	{
@@ -422,6 +433,7 @@ class CfgMagazines
 		 	"OPAEX_Hardpoint_AV14",
 		 	"OPAEX_Hardpoint_UH144",
 		 	"OPAEX_Hardpoint_AV22",
+		 	"M134Invis"
 		};
 		pylonWeapon= "SEC_M134_minigun";
 		tracersEvery = 2;

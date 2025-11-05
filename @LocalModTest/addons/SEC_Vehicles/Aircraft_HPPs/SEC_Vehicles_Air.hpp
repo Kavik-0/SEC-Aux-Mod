@@ -26,6 +26,9 @@
 	class VES_AV22B_Sparrowhawk;
 	class VES_AV14_AGM;
 
+	class TKE_Ext_Dragonfly_A;
+	class TKE_Ext_GUSA;
+
 ////// Vanilla Helicopters //////
 
 	class SEC_B_Heli_Light_01_F: B_Heli_Light_01_F
@@ -721,6 +724,17 @@
 			"Normal",
 			"NVG",
 			"Ti"
+		};
+		weapons[]=
+		{
+			"Laserdesignator_pilotCamera",
+			"CMFlareLauncher",
+			"OPTRE_missiles_Anvil1"
+		};
+		magazines[]=
+		{
+			"Laserbatteries",
+			"168Rnd_CMFlare_Chaff_Magazine"
 		};
 				hiddenSelectionsTextures[]=
 		{
@@ -1738,7 +1752,6 @@
 		editorCategory="SEC_Categ_Main";
 		faction="SEC_Faction_Main";
 		editorsubcategory="SEC_Categ_Vic_Rotary";
-		magazines[]={"OPTRE_2000Rnd_20mm_HEIAP","168Rnd_CMFlare_Chaff_Magazine","168Rnd_CMFlare_Chaff_Magazine","Laserbatteries","OPTRE_12Rnd_C2GMLS_missiles","OPTRE_12Rnd_C2GMLS_missiles"};
 		tf_hasLRradio=1;
 		tf_isolatedAmount=0.40000001;
 		tf_range=12000;
@@ -1749,6 +1762,60 @@
 		hiddenSelectionsTextures[]=
 		{
 			"SEC_Vehicles\data\Hornet\SEC_V_FZ_HORNET_URB_CO.paa"
+		};
+		weapon[]=
+		{
+			"OPTRE_GUA23A",
+			"CMFlareLauncher",
+			"Laserdesignator_pilotCamera",
+			"OPTRE_missiles_C2GMLS",
+		};
+		magazines[]=
+		{
+			"OPTRE_2000Rnd_20mm_HEIAP",
+			"168Rnd_CMFlare_Chaff_Magazine",
+			"168Rnd_CMFlare_Chaff_Magazine",
+			"Laserbatteries",
+			"OPTRE_12Rnd_C2GMLS_missiles",
+			"OPTRE_12Rnd_C2GMLS_missiles",
+		};
+		class Components: Components
+		{
+			class TransportPylonsComponent
+			{
+				UIPicture="\OPTRE_Vehicles_Air\Hornet\HornetPylonPic.paa";
+				class pylons
+				{
+					class pylons1
+					{
+						maxweight=560;
+						hardpoints[]=
+						{
+							"OPAEX_Hardpoint_AV14"
+						};
+						attachment="OPTRE_16Rnd_Anvil1_missiles";
+						bay=-1;
+						priority=2;
+						UIposition[]={0.15000001,0.2};
+						turret[]={};
+					};
+					class pylons2: pylons1
+					{
+						attachment="OPTRE_12Rnd_C2GMLS_missiles";
+						mirroredMissilePos=1;
+						UIposition[]={0.34999999,0.2};
+					};
+					class pylons3: pylons1
+					{
+						hardpoints[]=
+						{
+							"M134Invis"
+						};
+						attachment="SEC_5000Rnd_762x51_Belt";
+						UIposition[]={0.15000001,0.3};
+					};
+				};
+			};
 		};
 	};
 
@@ -2403,7 +2470,24 @@
 		tf_hasLRradio=1;
 		tf_isolatedAmount=0.40000001;
 		tf_range=12000;
+		OPTRE_canThrust = 1;
+		OPTRE_minVelocity=1.4;
+		OPTRE_maxVelocity=167;
+		OPTRE_velocityMult=1;
 		memoryPointDriverOptics="machinegun_end";
+		weapons[]=
+		{
+			"Laserdesignator_pilotCamera",
+			"OPTRE_GUA23AW",
+			"CMFlareLauncher"
+		};
+		magazines[]=
+		{
+			"Laserbatteries",
+			"OPTRE_2000Rnd_30mm_HE",
+			"OPTRE_2000Rnd_30mm_HE",
+			"168Rnd_CMFlare_Chaff_Magazine"
+		};
 		hiddenSelectionsTextures[]=
 		{
 			"SEC_Vehicles\data\Sparrowhawk\SEC_V_SPARROW_URB_B1_CO.paa",
@@ -2489,7 +2573,24 @@
 		tf_hasLRradio=1;
 		tf_isolatedAmount=0.40000001;
 		tf_range=12000;
+		OPTRE_canThrust = 1;
+		OPTRE_minVelocity=1.4;
+		OPTRE_maxVelocity=167;
+		OPTRE_velocityMult=1;
 		memoryPointDriverOptics="machinegun_end";
+		weapons[]=
+		{
+			"Laserdesignator_pilotCamera",
+			"OPTRE_MISRIAH_Cannon",
+			"CMFlareLauncher"
+		};
+		magazines[]=
+		{
+			"Laserbatteries",
+			"OPTRE_2500Rnd_50mm_HE2",
+			"OPTRE_2500Rnd_50mm_APFSDS",
+			"168Rnd_CMFlare_Chaff_Magazine"
+		};
 		hiddenSelectionsTextures[]=
 		{
 			"SEC_Vehicles\data\Sparrowhawk\SEC_V_SPARROW_URB_B1_CO.paa",
@@ -2574,6 +2675,10 @@
 		tf_hasLRradio=1;
 		tf_isolatedAmount=0.40000001;
 		tf_range=12000;
+		OPTRE_canThrust = 1;
+		OPTRE_minVelocity=1.4;
+		OPTRE_maxVelocity=167;
+		OPTRE_velocityMult=1;
 		hiddenSelectionsTextures[]=
 		{
 			"SEC_Vehicles\data\Sparrowhawk\SEC_V_SPARROW_URB_B1_CO.paa",
@@ -2602,6 +2707,10 @@
 		tf_hasLRradio=1;
 		tf_isolatedAmount=0.40000001;
 		tf_range=12000;
+		OPTRE_canThrust = 1;
+		OPTRE_minVelocity=1.4;
+		OPTRE_maxVelocity=167;
+		OPTRE_velocityMult=1;
 		hiddenSelectionsTextures[]=
 		{
 			"SEC_Vehicles\data\Sparrowhawk\SEC_V_SPARROW_URB_B1_CO.paa",
@@ -2619,6 +2728,7 @@
 			"V_FZ_Air_Vehicles\data\Sparrowhawk\V_SPARROW_GLASS_CA.paa"
 		};
 	};
+
 ////// Sabre //////
 
 	class SEC_Pegasus_Guardian: OPTRE_YSS_1000_A_VTOL_Single
@@ -2835,4 +2945,168 @@
 			"OPTRE_Vehicles_Air\sabre\data\optre_sabre_mat7_co.paa",
 			"OPTRE_Vehicles_Air\sabre\data\optre_sabre_mat8_co.paa"
     	};
+	};
+
+////// Scifi Vehicles Pack Aircraft //////
+
+	class SEC_TKE_Ext_Dragonfly_A: TKE_Ext_Dragonfly_A
+	{
+		armor=150;
+		scope=2;
+		scopeCurator=2;
+		displayName="[SEC] AH-44/A 'Dragonfly'";
+		editorCategory="SEC_Categ_Main";
+		faction="SEC_Faction_Main";
+		editorsubcategory="SEC_Categ_Vic_Rotary";
+		OPTRE_canThrust = 1;
+		OPTRE_minVelocity=1.4;
+		OPTRE_maxVelocity=167;
+		OPTRE_velocityMult=1;
+		memoryPointDriverOptics="pilot";
+		weapons[]=
+		{
+			"TKE_Ext_Autocannon_30mm_AA",
+			"CMFlareLauncher"
+		};
+		magazines[]=
+		{
+			"TKE_Ext_30mm_HE_250Rnd_Heli",
+			"TKE_Ext_30mm_HE_250Rnd_Heli",
+			"240Rnd_CMFlare_Chaff_Magazine"
+		};
+		class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName="WFOV";
+					initAngleX=0;
+					minAngleX=0;
+					maxAngleX=0;
+					initAngleY=0;
+					minAngleY=0;
+					maxAngleY=0;
+					initFov="(30 / 120)";
+					minFov="(30 / 120)";
+					maxFov="(30 / 120)";
+					directionStabilized=1;
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					thermalMode[]={0,1};
+					gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Generic_wide_F.p3d";
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName="MFOV";
+					initFov="(6 / 120)";
+					minFov="(6 / 120)";
+					maxFov="(6 / 120)";
+					gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Generic_medium_F.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName="NFOV";
+					initFov="(2 / 120)";
+					minFov="(2 / 120)";
+					maxFov="(2 / 120)";
+					gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Generic_narrow_F.p3d";
+				};
+			};
+			minTurn=-180;
+			maxTurn=180;
+			initTurn=0;
+			minElev=-90;
+			maxElev=90;
+			initElev=5;
+			maxXRotSpeed=1;
+			maxYRotSpeed=1;
+			maxMouseXRotSpeed=0.5;
+			maxMouseYRotSpeed=0.5;
+			pilotOpticsShowCursor=1;
+			controllable=1;
+		};
+		class Components: Components
+		{
+			class TransportPylonsComponent
+			{
+				UIPicture="\TKE_Ext_Core_V\data\ui\heli_eden_icon_ca.paa";
+				class pylons
+				{
+					class pylons1
+					{
+						hardpoints[]=
+						{
+							"B_A143_BUZZARD_CENTER_PYLON",
+							"B_MISSILE_PYLON",
+							"O_MISSILE_PYLON",
+							"B_BOMB_PYLON",
+							"B_BIM9X_RAIL",
+							"B_AMRAAM_D_RAIL",
+							"B_AGM65_RAIL",
+							"B_GBU12",
+							"C2_12x",
+							"Anvil1",
+						};
+						attachment="PylonRack_19Rnd_Rocket_Skyfire";
+						priority=10;
+						maxweight=500;
+						UIposition[]={0.44999999,0.30000001};
+					};
+					class pylons2: pylons1
+					{
+						UIposition[]={0.2,0.30000001};
+						mirroredMissilePos=1;
+					};
+					class pylons3: pylons1
+					{
+						hardpoints[]=
+						{
+							"B_A143_BUZZARD_CENTER_PYLON",
+							"B_MISSILE_PYLON",
+							"O_MISSILE_PYLON",
+							"B_BOMB_PYLON",
+							"B_BIM9X_RAIL",
+							"B_BIM9X_DUAL_RAIL",
+							"B_AMRAAM_D_RAIL",
+							"B_AMRAAM_D_DUAL_RAIL",
+							"B_AGM65_RAIL",
+							"B_GBU12",
+							"C2_12x",
+						};
+						attachment="OPTRE_12Rnd_C2GMLS_missiles";
+						UIposition[]={0.5,0.34999999};
+					};
+					class pylons4: pylons3
+					{
+						UIposition[]={0.15000001,0.34999999};
+						mirroredMissilePos=3;
+					};
+					class pylons5: pylons1
+					{
+						hardpoints[]=
+						{
+							"B_BIM9X_RAIL",
+							"SCALPEL_1RND",
+							"B_SHIEKER",
+							"DAR",
+							"DAGR",
+							"C2_12x",
+							"OPTRE_AT_Missiles"
+						};
+						attachment="OPTRE_3Rnd_Jackknife_missile";
+						UIposition[]={0.55000001,0.40000001};
+					};
+					class pylons6: pylons5
+					{
+						UIposition[]={0.1,0.40000001};
+						mirroredMissilePos=5;
+					};
+				};
+			};
+		};
 	};
