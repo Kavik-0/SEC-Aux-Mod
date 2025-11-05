@@ -1318,6 +1318,30 @@ class CfgWeapons
 			"MA_Armor\data\Vests\Reach_ODST\Addons\Reach_Shoulder_Radio\Shoulder_Radio_Green_co.paa"
 		};
 	};
+	class 141st_M56Reach_Patterson_Rifleman: MA_M56R_Vest
+	{
+		author="Reiken";
+		displayName="[141st] M56-R Vest (Patterson)";
+		scope = 2;
+		class XtdGearInfo
+		{
+			model="";
+			Variant="";
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MA_Armor\data\Vests\H3_ODST\H3_Upper_Armor_co.paa",
+			"MA_Armor\data\Vests\H3_ODST\H3_Lower_Armor_co.paa",
+			"MA_Armor\data\Vests\H3_ODST\Addons\Thigh_Pouch_co.paa",
+			"141stArmory\data\Mafia\Patterson_Reach_Armor_Upper_CO.paa",
+			"141stArmory\data\Mafia\Patterson_Reach_Armor_Lower_CO.paa",
+			"MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa",
+			"141stArmory\data\Mafia\Forearm_Vents_MAFIA.paa",
+			"141stArmory\data\Mafia\Sniper_CO_MAFIA.paa",
+			"141stArmory\data\Mafia\CQB_CO_MAFIA.paa",
+			"MA_Armor\data\Vests\Reach_ODST\Addons\Reach_Shoulder_Radio\Shoulder_Radio_Green_co.paa"
+		};
+	};
 	class 141st_M56Reach_Mafia_Marksman: MA_M56R_Sniper_Vest
 	{
 		author="Reiken";

@@ -131,7 +131,110 @@ class CfgWeapons
 	class OPTRE_M247A1;
 	class OPTRE_M247A1_Stripped;
 	class OPTRE_M250;
-
+	class OPTRE_FC_T25_Rifle;
+	class OPTRE_FC_T51_Repeater;
+	class OPTRE_FC_T60_PulseCarbine;
+	class OPTRE_FC_Needler;
+	class OPTRE_FC_T31_NeedleRifle;
+	class OPTRE_FC_T50_ConcussionRifle;
+	class OPTRE_FC_T50_SRS;
+	class OPTRE_FC_T51_Carbine;
+	class OPTRE_FC_T51B_Carbine;
+	class OPTRE_FC_Plasma_Pistol;
+	class OPTRE_FC_T25_Rifle_Folded;
+	class OPTRE_FC_T33_FuelRod_Cannon;
+	class OPTRE_FC_T33_FuelRod_Cannon_Guided;
+	class SEC_SOS_T25_Rifle: OPTRE_FC_T25_Rifle
+	{
+		scope                           = 2;
+		scopeArsenal                    = 2;
+		baseWeapon 						= "SEC_SOS_T25_Rifle";
+		displayName                     = "[SoS] Okarda'phaa-pattern Plasma Rifle";
+	};
+	class SEC_SOS_T25Folded_Rifle: OPTRE_FC_T25_Rifle_Folded
+	{
+		scope                           = 2;
+		scopeArsenal                    = 2;
+		baseWeapon 						= "SEC_SOS_T25Folded_Rifle";
+		displayName                     = "[SoS] Okarda'phaa-pattern Plasma Rifle";
+	};
+	class SEC_SOS_T25DEP: OPTRE_FC_Plasma_Pistol
+	{
+		scope                           = 2;
+		scopeArsenal                    = 2;
+		baseWeapon 						= "SEC_SOS_T25DEP";
+		displayName                     = "[SoS] Eos'Mak-pattern Pistol";
+	};
+	class SEC_SOS_T33FuelRod: OPTRE_FC_T33_FuelRod_Cannon
+	{
+		scope                           = 2;
+		scopeArsenal                    = 2;
+		baseWeapon 						= "SEC_SOS_T33FuelRod";
+		displayName                     = "[SoS] Korva-pattern Flak Launcher";
+	};
+	class SEC_SOS_T33FuelRod_CE: OPTRE_FC_T33_FuelRod_Cannon_Guided
+	{
+		scope                           = 2;
+		scopeArsenal                    = 2;
+		baseWeapon 						= "SEC_SOS_T33FuelRod_CE";
+		displayName                     = "[SoS] Zasqi-pattern Flak Launcher";
+	};
+	class SEC_SOS_T51_Repeater: OPTRE_FC_T51_Repeater
+	{
+		scope                           = 2;
+		scopeArsenal                    = 2;
+		baseWeapon 						= "SEC_SOS_T51_Repeater";
+		displayName                     = "[SoS] Nakata'vho-pattern Plasma Repeater";
+	};
+	class SEC_SOS_T50_SRS: OPTRE_FC_T50_SRS
+	{
+		scope                           = 2;
+		scopeArsenal                    = 2;
+		baseWeapon 						= "SEC_SOS_T50_SRS";
+		displayName                     = "[SoS] Sulok-pattern Beam Rifle";
+	};
+	class SEC_SOS_T60_PulseCarbine: OPTRE_FC_T60_PulseCarbine
+	{
+		scope                           = 2;
+		scopeArsenal                    = 2;
+		baseWeapon 						= "SEC_SOS_T60_PulseCarbine";
+		displayName                     = "[SoS] Erudo'ma'keth-pattern Pulse Carbine";
+	};
+	class SEC_SOS_Needler: OPTRE_FC_Needler
+	{
+		scope                           = 2;
+		scopeArsenal                    = 2;
+		baseWeapon 						= "SEC_SOS_Needler";
+		displayName                     = "[SoS] Nahle'hax-pattern Needler";
+	};
+	class SEC_SOS_T51_Carbine: OPTRE_FC_T51_Carbine
+	{
+		scope                           = 2;
+		scopeArsenal                    = 2;
+		baseWeapon 						= "SEC_SOS_T51_Carbine";
+		displayName                     = "[SoS] Vostu-pattern Carbine";
+	};
+	class SEC_SOS_T51b_Carbine: OPTRE_FC_T51B_Carbine
+	{
+		scope                           = 2;
+		scopeArsenal                    = 2;
+		baseWeapon 						= "SEC_SOS_T51b_Carbine";
+		displayName                     = "[SoS] Mosa-pattern Carbine (Blood of Suban)";
+	};
+	class SEC_SOS_T31_NeedleRifle: OPTRE_FC_T31_NeedleRifle
+	{
+		scope                           = 2;
+		scopeArsenal                    = 2;
+		baseWeapon 						= "SEC_SOS_T31_NeedleRifle";
+		displayName                     = "[SoS] Gadulo-pattern Needle Rifle";
+	};
+	class SEC_SOS_T50_Concussion: OPTRE_FC_T50_ConcussionRifle
+	{
+		scope                           = 2;
+		scopeArsenal                    = 2;
+		baseWeapon 						= "SEC_SOS_T50_Concussion";
+		displayName                     = "[SoS] Elo'Nakada-pattern Concussion Rifle";
+	};
 	class OPTRE_M6C_Flashlight: OPTRE_M6C_Laser
 	{
 		displayName = "M6C Laser (Flashlight)";

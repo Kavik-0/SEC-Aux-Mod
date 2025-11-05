@@ -17,7 +17,7 @@ class CfgWeapons
 		{
 			allowedSlots[] = {801, 901, 701, 605};
 			mass = 2;
-			uniformModel = "\Head_Upscale\mgsr_eyepatch.p3d";
+			uniformModel = "\Head_Upscale\mgsr_eyepatch.p3d";	
 			modelSides[] = {6};
 		};
 	};
@@ -90,4 +90,17 @@ class CfgFaces
 			texture = "a3\Characters_F_Enoch\Heads\data\m_livonianHead_10_co.paa";
 		};
     };
+	class CfgIdentities
+	{
+		class Male01ENG;
+		class upscaledsnake: Male01ENG
+		{
+		face = "umgsr_nakedsnake";
+		glasses = "";
+		name = "Cain-107";
+		nameSound = "Cain-107";
+		pitch = 1.0;
+		speaker = "Male01ENG";
+		};
+	};
 };
