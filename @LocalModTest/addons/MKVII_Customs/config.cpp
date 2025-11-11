@@ -270,6 +270,21 @@ class CfgWeapons
 			"\rubicon_gen3_attachments\data\gen3_agathius_cbrick_co.paa"
 		};
 	};
+	class SEC_Gen3_MKVIIAgathius_Constance: SEC_Gen3_MKVIIAgathius_Grey
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] Mark VII Agathius Shoulderplates (Constance)";
+		descriptionShort="Supplemental deltoid/shoulder armor.";
+		hiddenSelections[]=
+		{
+			"Camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MKVII_Customs\data\MKVII\gen3_agathius_constance_co.paa"
+		};
+	};
 	class TWAL_Gen3_MKVII_Agathius: SEC_Gen3_MKVIIAgathius_Grey
 	{
 		scope=2;
@@ -562,6 +577,23 @@ class CfgWeapons
 		{
 			"MKVII_Customs\data\CELOX\gen3_celoxhelmet_Keegan_CO.paa",
 			"MKVII_Customs\data\CELOX\gen3_celoxvisor_Keegan_CO.paa"
+		};
+	};
+	class SEC_Gen3_MKVIICeloxhelmet_Constance: SEC_Gen3_MKVIICeloxHelmet
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[EAGLE] CELOX-Class Helmet (Constance)";
+		picture="\rubicon_gen3_helmets\data\ui\icon_U_celoxhelm_cgrey.paa";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\CELOX\gen3_celoxhelmet_Constance_CO.paa",
+			"MKVII_Customs\data\CELOX\gen3_celoxvisor_Constance_CO.paa"
 		};
 	};
 	class SEC_Gen3_MKVIIHelmet_Blue: SEC_Gen3_MKVIIhelmet_Recruit
@@ -873,6 +905,19 @@ class CfgWeapons
 		{
 			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
 			uniformClass = B_SEC_SpartanIV_Red; // Needs to be matching Character in cfgVehicles
+			containerClass = Supply40;
+			mass = 40;
+		};
+    };
+	class SEC_Gen3_MKVIICoreConstance : SEC_Gen3_MKVIICoreGrey
+	{
+		scope = 2;
+		displayName = "[EAGLE] MJOLNIR Gen3 MKVII Armor Core (Constance)";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		class ItemInfo : UniformItem
+		{
+			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
+			uniformClass = B_SEC_SpartanIV_Constance; // Needs to be matching Character in cfgVehicles
 			containerClass = Supply40;
 			mass = 40;
 		};
@@ -1242,6 +1287,26 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		{
 			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
 			"\rubicon_gen3_spartaniv\data\gen3_mk7core_cbrick_co.paa"
+		};
+	};
+	class B_SEC_SpartanIV_Constance : B_SEC_SpartanIV_Base
+	{
+		author = "Reiken";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
+		uniformClass = "SEC_Gen3_MKVIICoreConstance"; // Needs to be matching item in cfgWeapons
+		hiddenSelections[]=
+		{
+			"Camo",
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
+			"MKVII_Customs\data\MKVII\gen3_mk7core_constance_CO.paa"
 		};
 	};
 	class B_SEC_SpartanIV_TWAL : B_SEC_SpartanIV_Base
