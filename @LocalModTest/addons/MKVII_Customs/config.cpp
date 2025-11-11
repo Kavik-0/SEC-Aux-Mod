@@ -270,6 +270,82 @@ class CfgWeapons
 			"\rubicon_gen3_attachments\data\gen3_agathius_cbrick_co.paa"
 		};
 	};
+	class TWAL_Gen3_MKVII_Agathius: SEC_Gen3_MKVIIAgathius_Grey
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[T-WAL] Mark VII Nanite Shoulderplates";
+		descriptionShort="Melting to gray goo at the slightest touch, this replication of Mark 7 is constructed out of Forerunner nanites";
+		hiddenSelections[]=
+		{
+			"Camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MKVII_Customs\data\TWAL\gen3_agathius_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"\MKVII_Customs\data\TWAL\gen3_agathius.rvmat"
+		};
+	};
+	class TWAL_Gen3_MKVIIAgathius_Librarian: TWAL_Gen3_MKVII_Agathius
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[T-WAL] Mark VII Nanite Shoulderplates (Composer of Strands)";
+		descriptionShort="Melting to gray goo at the slightest touch, this replication of Mark 7 is marked with a sigil your helmet translates to 'Composer of Strands'";
+		hiddenSelections[]=
+		{
+			"Camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MKVII_Customs\data\TWAL\gen3_agathiuslibrarian_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"\MKVII_Customs\data\TWAL\gen3_agathiuslibrarian.rvmat"
+		};
+	};
+	class TWAL_Gen3_MKVIIAgathius_Didact: TWAL_Gen3_MKVII_Agathius
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[T-WAL] Mark VII Nanite Shoulderplates (Eater of Worlds)";
+		descriptionShort="Melting to gray goo at the slightest touch, this replication of Mark 7 is marked with a sigil your helmet translates to 'Eater of Worlds'";
+		hiddenSelections[]=
+		{
+			"Camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MKVII_Customs\data\TWAL\gen3_agathiusdidact_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"\MKVII_Customs\data\TWAL\gen3_agathiusdidact.rvmat"
+		};
+	};
+	class TWAL_Gen3_MKVIIAgathius_Gravemind: TWAL_Gen3_MKVII_Agathius
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[T-WAL] Mark VII Nanite Shoulderplates (End of the Cycle)";
+		descriptionShort="|| WARNING || INFOHAZARD DETECTED || VISUAL FEED INTERRUPTED ||";
+		hiddenSelections[]=
+		{
+			"Camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MKVII_Customs\data\TWAL\gen3_agathiusgravemind_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"\MKVII_Customs\data\TWAL\gen3_agathiusgravemind.rvmat"
+		};
+	};
 	class SEC_Gen3_MKVIIAgathius_ANVIL: SEC_Gen3_MKVIIAgathius_Grey
 	{
 		scope=2;
@@ -502,6 +578,28 @@ class CfgWeapons
 		{
 			"rubicon_gen3_helmets\data\gen3_mk7helmet_cblue_co.paa",
 			"MKVII_Customs\data\MKVII\sec_mk7visor_co.paa"
+		};
+	};
+	class TWAL_Gen3_MKVIIHelmet_Zealot: SEC_Gen3_MKVIIhelmet_Recruit
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[T-WAL] Mark VII Nanite Helmet";
+		descriptionShort="Melting to gray goo at the slightest touch, this helmet is constructed out of Forerunner nanites, and unusable.";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\TWAL\gen3_mk7helmet_co.paa",
+			"MKVII_Customs\data\TWAL\gen3_mk7visor_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"MKVII_Customs\data\TWAL\gen3_mk7helmet.rvmat",
+			"MKVII_Customs\data\MKVII\gen3_mk7visor.rvmat"
 		};
 	};
 	class SEC_Gen3_MKVIIHelmet_ANVIL: SEC_Gen3_MKVIIhelmet_Recruit
@@ -775,6 +873,21 @@ class CfgWeapons
 		{
 			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
 			uniformClass = B_SEC_SpartanIV_Red; // Needs to be matching Character in cfgVehicles
+			containerClass = Supply40;
+			mass = 40;
+		};
+    };
+	class TWAL_Gen3_MKVIICoreZealot : SEC_Gen3_MKVIICoreGrey
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		displayName = "[T-WAL] Nanite Mark VII Armor Core";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		descriptionShort="Melting to gray goo at the slightest touch, this armor is marked in scratched in white marks, and Forerunner sigils.";
+		class ItemInfo : UniformItem
+		{
+			uniformModel = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
+			uniformClass = B_SEC_SpartanIV_TWAL; // Needs to be matching Character in cfgVehicles
 			containerClass = Supply40;
 			mass = 40;
 		};
@@ -1129,6 +1242,32 @@ class CfgVehicles		// Character classes are defined under cfgVehicles.
 		{
 			"\rubicon_gen3_spartaniv\data\gen3_techsuit_co.paa",
 			"\rubicon_gen3_spartaniv\data\gen3_mk7core_cbrick_co.paa"
+		};
+	};
+	class B_SEC_SpartanIV_TWAL : B_SEC_SpartanIV_Base
+	{
+		author = "Reiken";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		model = "\rubicon_gen3_spartaniv\gen3MarkVIIcore.p3d";
+		picture="S-IVArmory\data\ICONS\MKVIICoreIcon_SA.paa";
+		uniformClass = "TWAL_Gen3_MKVIICoreZealot"; // Needs to be matching item in cfgWeapons
+		descriptionShort="Melting to gray goo at the slightest touch, this armor is marked in scratched in white marks, and Forerunner sigils.";
+		hiddenSelections[]=
+		{
+			"Camo",
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MKVII_Customs\data\TWAL\gen3_techsuit_CO.paa",
+			"MKVII_Customs\data\TWAL\gen3_mk7core_CO.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"MKVII_Customs\data\TWAL\gen3_techsuit.rvmat",
+			"MKVII_Customs\data\TWAL\gen3_mk7core.rvmat"
 		};
 	};
 	class B_SEC_SpartanIV_ANVIL : B_SEC_SpartanIV_Base
