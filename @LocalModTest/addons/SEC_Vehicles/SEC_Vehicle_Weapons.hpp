@@ -771,6 +771,7 @@ class cfgWeapons
 				effectName="MachineGunCloud";
 			};
 		};
+	};
 	class OPTRE_missiles_Jackknife: missiles_SCALPEL
 	{
 		magazines[]=
@@ -1185,5 +1186,4 @@ class cfgWeapons
 			maxRangeProbab=0.0099999998;
 		};	
 	};	
-};
 };
